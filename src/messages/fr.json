@@ -1,0 +1,353 @@
+{
+  "meta": {
+    "title": "Tadnun — Digitalisez votre entreprise",
+    "description": "Tadnun aide les entreprises marocaines à se digitaliser avec des outils modernes, des sites web, des applications et des solutions sur mesure."
+  },
+  "nav": {
+    "sectors": "Secteurs",
+    "approach": "Approche",
+    "about": "À propos",
+    "skills": "Expertise",
+    "cta": "Nous contacter",
+    "skipToContent": "Aller au contenu",
+    "ariaLabel": "Navigation principale",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "hero": {
+    "eyebrow": "Transformation digitale au Maroc",
+    "title1": "Votre secteur a des",
+    "title2": "problèmes concrets.",
+    "title3": "On a les solutions.",
+    "description": "Chaque métier a ses blocages. Paperasse, perte de clients, processus manuels — on les connaît et on les résout avec des outils digitaux adaptés à votre réalité.",
+    "mock": {
+      "projects": "Projets",
+      "activeProjects": "Actifs",
+      "sectors": "Secteurs",
+      "completion": "Avancement moy.",
+      "projectList": "Projets en cours",
+      "viewAll": "Voir tout",
+      "live": "En direct",
+      "statusActive": "En cours",
+      "statusReview": "En revue",
+      "statusComplete": "Déployé",
+      "projTraceability": "Traçabilité export",
+      "projTraceabilityClient": "Coop. Al Amal — Essaouira",
+      "projBooking": "Plateforme de réservation",
+      "projBookingClient": "Riad Noor — Marrakech",
+      "projInventory": "Gestion de stock intelligente",
+      "projInventoryClient": "Café Atlas — Casablanca",
+      "projPatient": "Portail dossier patient",
+      "projPatientClient": "Clinique Dar Salam — Rabat",
+      "milestoneDeployed": "Projet déployé",
+      "milestoneTraining": "Portail patient — formation équipe prévue"
+    }
+  },
+  "sectors": {
+    "eyebrow": "01",
+    "title": "On connaît vos défis",
+    "subtitle": "Des solutions pensées pour les problèmes réels de chaque secteur au Maroc.",
+    "solutionLabel": "NOTRE SOLUTION",
+    "items": {
+      "agriculture": {
+        "name": "Agriculture & Coopératives",
+        "pain": "Vous gérez vos champs et paiements sur des carnets papier. Un agriculteur oublie de noter un traitement et c'est un contrat export de 400,000 DH qui saute pour non-conformité ONSSA.",
+        "solution": "Suivi digital des parcelles et traitements (fonctionne hors ligne), traçabilité automatisée pour l'export, gestion des coopératives avec relevé de paiement par SMS à chaque membre.",
+        "tagline": "Du champ au digital",
+        "quote": "J'ai perdu un contrat parce qu'un agriculteur n'a pas noté quand il a traité ses arbres."
+      },
+      "restaurants": {
+        "name": "Restaurants & Cafés",
+        "pain": "Les touristes passent devant votre restaurant et vont chez le voisin qui a 300 avis Google. Pas de Glovo, pas de réservation en ligne — vos tables restent vides pendant que le concurrent remplit les siennes.",
+        "solution": "Fiche Google Maps optimisée avec système d'avis, intégration Glovo et livraison, réservation en ligne, menu QR, gestion cuisine et suivi du gaspillage alimentaire.",
+        "tagline": "Remplissez vos tables",
+        "quote": "Vendredi soir, je refuse 20 personnes. Mardi, j'ai 25 chaises vides."
+      },
+      "tourism": {
+        "name": "Tourisme & Hôtellerie",
+        "pain": "Booking.com prend 15-20% de commission — c'est 300,000 DH par an que vous envoyez à Amsterdam. Les doubles réservations cassent votre note, et le check-in est encore sur papier.",
+        "solution": "Site de réservation directe avec paiement en ligne, channel manager pour synchroniser Booking/Airbnb, check-in digital, concierge WhatsApp et package 'Prêt pour 2030'.",
+        "tagline": "Réservez sans commission",
+        "quote": "Booking me prend 300,000 DH par an. C'est le salaire de deux employés."
+      },
+      "healthcare": {
+        "name": "Santé & Cliniques",
+        "pain": "4 à 5 patients ne viennent pas chaque jour — c'est 2,000 DH par jour de perdu sur une chaise vide. 8,000 dossiers papier dans 12 armoires, et la facturation AMO prend plus de temps que les soins.",
+        "solution": "Prise de rendez-vous en ligne avec rappels SMS/WhatsApp, dossiers médicaux électroniques conformes CNDP, facturation AMO/CNSS automatisée et portail patient.",
+        "tagline": "Le soin, sans la paperasse",
+        "quote": "On a passé 20 minutes à chercher le dossier d'un patient. On ne l'a jamais retrouvé."
+      },
+      "retail": {
+        "name": "Commerce & Détail",
+        "pain": "Votre boutique n'apparaît pas sur Google. Vous recevez 50 messages WhatsApp par jour et n'arrivez à répondre qu'à 30 — les 20 autres achètent ailleurs. Le stock se compte à la main.",
+        "solution": "Présence Google et réseaux sociaux, catalogue WhatsApp avec réponses automatiques, caisse connectée avec suivi de stock et alertes rupture, paiement mobile CMI.",
+        "tagline": "Vendez partout",
+        "quote": "Mon produit star était en rupture pendant 10 jours. Je ne m'en suis rendu compte que quand une cliente l'a demandé."
+      },
+      "education": {
+        "name": "Éducation & Formation",
+        "pain": "Vous envoyez le calendrier des examens sur WhatsApp — deux heures après, il est noyé sous 150 messages de parents. L'inscription se fait sur papier et 15 parents vous disent qu'ils ont déjà payé.",
+        "solution": "Portail parents avec notes et absences en temps réel, inscription et paiement en ligne avec reçus digitaux, plateforme e-learning et alertes absence instantanées.",
+        "tagline": "L'école connectée",
+        "quote": "En novembre, je passe mes journées à appeler des parents pour les frais."
+      },
+      "realestate": {
+        "name": "Immobilier",
+        "pain": "Vous recevez 30 leads par semaine, vous en rappelez 15. Les 15 autres achètent chez le concurrent. Un MRE de Paris demande une visite virtuelle — vous envoyez 5 photos par WhatsApp. Il achète ailleurs.",
+        "solution": "CRM immobilier avec relances automatiques, diffusion multi-plateforme centralisée (Avito, Mubawab, Facebook), visites virtuelles 3D et portail client.",
+        "tagline": "Chaque prospect compte",
+        "quote": "Le MRE a acheté chez l'agence qui avait une vidéo 360. Pas chez moi."
+      },
+      "logistics": {
+        "name": "Logistique & Transport",
+        "pain": "Chaque soir, 3 heures à rentrer des bons de livraison dans Excel. Quand un client dit qu'il n'a rien reçu, zéro preuve. Vos chauffeurs perdent 1 à 2 heures par jour dans les embouteillages faute d'itinéraires optimisés.",
+        "solution": "Bons de livraison digitaux avec photo, signature et GPS. Optimisation d'itinéraires en temps réel. Portail client avec suivi de colis et notifications automatiques.",
+        "tagline": "Livrez sans stress",
+        "quote": "Mes clients m'appellent 40 fois par jour pour savoir où est leur colis. Je n'ai aucune réponse."
+      }
+    }
+  },
+  "approach": {
+    "eyebrow": "02",
+    "title": "Notre approche",
+    "steps": {
+      "understand": {
+        "num": "01",
+        "title": "On écoute",
+        "body": "Chaque entreprise est unique. On commence par comprendre votre métier, vos blocages et vos objectifs avant d'écrire une seule ligne de code."
+      },
+      "build": {
+        "num": "02",
+        "title": "On construit",
+        "body": "On développe de manière itérative, avec votre retour à chaque étape. Pas de mauvaises surprises, pas de dépassement."
+      },
+      "grow": {
+        "num": "03",
+        "title": "On accompagne",
+        "body": "Le lancement n'est que le début. Support continu, formation et optimisation pour que vos outils évoluent avec votre activité."
+      }
+    }
+  },
+  "expertise": {
+    "eyebrow": "03",
+    "title": "Pourquoi Tadnun",
+    "subtitle": "On ne vend pas de la technologie. On résout vos problèmes concrets.",
+    "items": {
+      "local": {
+        "icon": "\uD83C\uDDF2\uD83C\uDDE6",
+        "title": "Conçu pour le Maroc",
+        "body": "Interfaces en français et darija, intégration CMI et paiement mobile, compatibilité WhatsApp Business. On connaît votre marché parce qu'on y vit."
+      },
+      "simple": {
+        "icon": "\u2728",
+        "title": "Simple à utiliser",
+        "body": "Pas besoin d'être un expert en informatique. Nos outils sont pensés pour des entrepreneurs, pas des développeurs. Si vous savez utiliser WhatsApp, vous saurez utiliser Tadnun."
+      },
+      "support": {
+        "icon": "\uD83E\uDD1D",
+        "title": "Accompagnement humain",
+        "body": "Un interlocuteur dédié qui répond en darija ou en français. Support par WhatsApp, téléphone et sur site. On ne vous laisse jamais seul avec un logiciel."
+      },
+      "price": {
+        "icon": "\uD83D\uDCB0",
+        "title": "Prix adaptés aux PME",
+        "body": "Des formules à partir de 299 DH/mois. Pas de frais cachés, pas de surprise. On croit que la digitalisation doit être accessible, pas réservée aux grandes entreprises."
+      }
+    }
+  },
+  "stats": {
+    "clients": "150+",
+    "clientsLabel": "entreprises accompagnées",
+    "sectors": "8",
+    "sectorsLabel": "secteurs couverts",
+    "uptime": "99.9%",
+    "uptimeLabel": "disponibilité garantie",
+    "support": "24h",
+    "supportLabel": "délai de réponse max"
+  },
+  "transformation": {
+    "eyebrow": "AVANT / APRÈS",
+    "title": "La différence est concrète",
+    "subtitle": "Voici ce qui change quand vous passez au digital avec Tadnun.",
+    "items": {
+      "before1": "Carnet papier pour le stock",
+      "after1": "Stock en temps réel avec alertes rupture",
+      "before2": "Réservations par téléphone, oublis fréquents",
+      "after2": "Réservation en ligne avec confirmation automatique",
+      "before3": "Aucune présence sur Google",
+      "after3": "Fiche Google optimisée avec avis clients",
+      "before4": "Comptabilité au feeling, zéro visibilité",
+      "after4": "Tableaux de bord avec revenus et marges en temps réel",
+      "before5": "Clients perdus faute de suivi",
+      "after5": "CRM avec relances automatiques par WhatsApp",
+      "before6": "Paiement cash uniquement, pas de trace",
+      "after6": "Paiement mobile CMI + historique complet"
+    }
+  },
+  "pricing": {
+    "eyebrow": "05",
+    "title": "Des prix clairs, sans surprise",
+    "subtitle": "Chaque formule inclut l'accompagnement, la formation et le support. Pas de frais cachés.",
+    "tiers": {
+      "starter": {
+        "name": "Essentiel",
+        "price": "299",
+        "unit": "DH/mois",
+        "description": "Pour démarrer votre présence digitale.",
+        "features": ["Fiche Google Maps optimisée", "Site web one-page", "WhatsApp Business setup", "Support par WhatsApp"]
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "999",
+        "unit": "DH/mois",
+        "badge": "Populaire",
+        "description": "Pour digitaliser vos opérations au quotidien.",
+        "features": ["Tout Essentiel +", "Système de réservation / commande", "Caisse connectée ou CRM", "Tableau de bord analytics", "Formation équipe incluse"]
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "2,999",
+        "unit": "DH/mois",
+        "description": "Pour une transformation digitale complète.",
+        "features": ["Tout Pro +", "Application mobile dédiée", "Intégrations avancées (ERP, API)", "Accompagnement stratégique mensuel", "Support prioritaire téléphone"]
+      }
+    },
+    "cta": "Demander un devis",
+    "note": "Premier mois offert. Sans engagement."
+  },
+  "faq": {
+    "eyebrow": "06",
+    "title": "Questions fréquentes",
+    "subtitle": "Ce que nos clients demandent le plus souvent.",
+    "items": {
+      "q1": {
+        "question": "Combien de temps pour mettre en place une solution ?",
+        "answer": "Entre 1 et 4 semaines selon la complexité. Un site web simple est prêt en 5 jours. Un système complet (CRM, POS, intégrations) prend 2 à 4 semaines."
+      },
+      "q2": {
+        "question": "Je ne suis pas à l'aise avec la technologie, c'est un problème ?",
+        "answer": "Pas du tout. Nos outils sont conçus pour être aussi simples que WhatsApp. Et on forme votre équipe sur place, en darija ou en français, jusqu'à ce que tout le monde soit autonome."
+      },
+      "q3": {
+        "question": "Que se passe-t-il si je veux arrêter ?",
+        "answer": "Aucun engagement longue durée. Vous pouvez arrêter à tout moment. Vos données vous appartiennent et on vous les exporte dans un format standard."
+      },
+      "q4": {
+        "question": "Est-ce que ça marche pour une petite entreprise ?",
+        "answer": "C'est exactement pour ça qu'on existe. 80% de nos clients ont moins de 20 employés. On adapte nos solutions et nos tarifs à votre taille et vos besoins."
+      },
+      "q5": {
+        "question": "Vous gérez aussi le design et le contenu ?",
+        "answer": "Oui. On s'occupe du design, de la rédaction, des photos produits et de la mise en ligne. Vous n'avez qu'à valider."
+      },
+      "q6": {
+        "question": "Comment se passe le paiement ?",
+        "answer": "Par virement bancaire ou carte CMI. Mensuel ou annuel (2 mois offerts). Facture conforme DGI à chaque paiement."
+      }
+    }
+  },
+  "urgency": {
+    "eyebrow": "LE MOMENT D'AGIR",
+    "title": "Pendant que vous hésitez, vos concurrents se digitalisent.",
+    "description": "En 2030, le Maroc accueillera la Coupe du Monde. Des millions de visiteurs chercheront des entreprises en ligne. Les entreprises qui ne seront pas visibles n'existeront tout simplement pas.",
+    "stat1": "93%",
+    "stat1Label": "des PME marocaines n'ont pas de présence digitale",
+    "stat2": "2030",
+    "stat2Label": "Coupe du Monde au Maroc — le compte à rebours a commencé",
+    "digitalizationLevel": "NIVEAU DE DIGITALISATION",
+    "cta": "Ne restez pas à la traîne",
+    "competitors": "Concurrents",
+    "yourBusiness": "Votre entreprise",
+    "avgLabel": "Moy. 72%",
+    "punchline": "93% des PME marocaines sont encore à 0%. Vos concurrents avancent. Et vous ?"
+  },
+  "cta": {
+    "eyebrow": "07",
+    "title1": "Prêt à digitaliser",
+    "title2": "votre activité ?",
+    "description": "Parlons de ce que Tadnun peut construire pour vous. Sans jargon, sans pression — juste une conversation sur comment la technologie peut vous aider.",
+    "button": "DISCUTONS",
+    "email": "contact@tadnun.ma"
+  },
+  "footer": {
+    "copy": "Tadnun. Tous droits réservés.",
+    "made": "Fabriqué au Maroc",
+    "tagline": "La digitalisation au service des entreprises marocaines.",
+    "navTitle": "Navigation",
+    "sectorsTitle": "Secteurs",
+    "contactTitle": "Contact"
+  },
+  "common": {
+    "getStarted": "COMMENCER",
+    "exploreSectors": "Découvrir les secteurs",
+    "learnMore": "En savoir plus",
+    "home": "Accueil",
+    "letsTalk": "Discutons"
+  },
+  "ctaBand": {
+    "default": { "title": "Prêt à digitaliser votre activité ?", "cta": "Nous contacter", "desc": "Premier appel de découverte gratuit. Sans engagement, sans jargon.", "seeSectors": "Voir les secteurs" },
+    "about": { "title": "Envie de travailler avec nous ?", "cta": "Parlons-en" },
+    "approach": { "title": "Convaincu par notre approche ?", "cta": "Discutons de votre projet" }
+  },
+  "aboutPage": {
+    "eyebrow": "NOTRE HISTOIRE",
+    "title1": "Né au Maroc.",
+    "title2": "Construit pour le Maroc.",
+    "intro": "On a vu des milliers d'entreprises marocaines se battre avec du papier, des processus manuels et des outils inadaptés. On a créé Tadnun pour changer ça.",
+    "problemEyebrow": "LE CONSTAT",
+    "problemTitle": "Ce qu'on a vu sur le terrain",
+    "problem1Title": "L'agriculteur qui perd ses contrats",
+    "problem1Body": "Un exportateur d'agrumes à Agadir a perdu un contrat de 400,000 DH parce qu'un seul agriculteur n'avait pas noté ses traitements phytosanitaires. Des carnets papier contre des normes européennes — le combat est perdu d'avance.",
+    "problem2Title": "Le restaurateur invisible",
+    "problem2Body": "À Marrakech, un restaurant excellent avec 20 ans d'expérience. Mais zéro présence Google, zéro avis en ligne. Les touristes passent devant et vont chez le concurrent qui a 300 avis. 20 ans d'expertise, invisible en 2 secondes.",
+    "problem3Title": "Le riad qui paie 300,000 DH à Amsterdam",
+    "problem3Body": "Un propriétaire de riad à Fès envoie l'équivalent de deux salaires par an à Booking.com en commissions. Pas de site de réservation directe, pas de channel manager. L'argent part, les outils existent, mais personne ne les connecte.",
+    "differenceEyebrow": "NOTRE DIFFÉRENCE",
+    "differenceTitle": "Pourquoi Tadnun",
+    "differenceBody": "On ne vend pas de la technologie. On résout des problèmes concrets avec des outils adaptés au marché marocain — interfaces en darija, paiement CMI, support WhatsApp, prix accessibles.",
+    "visionEyebrow": "VISION 2030",
+    "visionTitle": "Le Maroc digital de demain",
+    "visionBody": "En 2030, le Maroc accueille la Coupe du Monde. Des millions de visiteurs chercheront des entreprises en ligne. Les 93% de PME sans présence digitale n'existeront tout simplement pas. On est là pour que ça n'arrive pas.",
+    "valuesEyebrow": "NOS VALEURS",
+    "valuesTitle": "Ce qui nous guide",
+    "value1Title": "Proximité",
+    "value1Body": "On parle darija, on se déplace chez vous, on forme votre équipe sur place.",
+    "value2Title": "Simplicité",
+    "value2Body": "Si vous savez utiliser WhatsApp, vous savez utiliser nos outils.",
+    "value3Title": "Impact",
+    "value3Body": "On mesure notre succès par vos résultats, pas par le nombre de features.",
+    "value4Title": "Honnêteté",
+    "value4Body": "Pas de frais cachés, pas de jargon, pas de promesses qu'on ne peut pas tenir."
+  },
+  "contactPage": {
+    "eyebrow": "CONTACT",
+    "title": "Parlons de votre projet",
+    "subtitle": "Premier appel de découverte gratuit. On écoute, on comprend, et on vous dit honnêtement si on peut vous aider.",
+    "altTitle": "Ou contactez-nous directement",
+    "altEmail": "contact@tadnun.ma",
+    "altWhatsapp": "Écrire sur WhatsApp",
+    "altHours": "Réponse sous 24h, du lundi au vendredi."
+  },
+  "approachPage": {
+    "eyebrow": "NOTRE APPROCHE",
+    "title": "Comment on travaille",
+    "subtitle": "Pas de méthode rigide. On s'adapte à votre rythme, à votre équipe, et à votre budget.",
+    "sectorSubtitle": "Comment nous travaillons avec {sector}"
+  },
+  "sectorPage": {
+    "realityTitle": "La réalité de votre secteur",
+    "beforeAfterEyebrow": "AVANT / APRÈS",
+    "beforeAfterTitle": "Ce qui change concrètement",
+    "solutionsTitle": "Ce qu'on construit pour vous",
+    "whyTadnunFor": "Pourquoi Tadnun pour {sector}",
+    "howWeWork": "Comment on travaille avec {sector}",
+    "ecosystemTitle": "Un écosystème connecté",
+    "ecosystemDesc": "On connecte les plateformes que vous utilisez déjà — et celles dont vous avez besoin. L'intégration, c'est notre métier.",
+    "connectedVia": "Connecté via Tadnun",
+    "faqTitle": "Questions fréquentes",
+    "ctaTitle": "Prêt à transformer votre activité ?",
+    "ctaDesc": "Premier appel de découverte gratuit. Sans engagement.",
+    "ctaButton": "NOUS CONTACTER",
+    "approachButton": "Notre approche"
+  }
+}
