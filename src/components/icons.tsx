@@ -1,12 +1,6 @@
 "use client";
 
 import {
-  KnifeFork,
-  Hotel,
-  Stethoscope,
-  ShoppingBag,
-  Home,
-  Transport,
   Local,
   AfferentFour,
   HeadsetOne,
@@ -42,20 +36,31 @@ import {
   BuildingOne,
   Globe,
   BachelorCap,
+  ShoppingBag,
 } from "@icon-park/react";
+import {
+  OliveBranch,
+  Tagine,
+  RiadArch,
+  CrescentPulse,
+  SoukLantern,
+  BookStar,
+  Minaret,
+  CargoRoute,
+} from "./sector-icons";
 import type { ComponentType } from "react";
 
 type IconProps = { size?: number; strokeWidth?: number; className?: string };
 
 export const sectorIconMap: Record<string, ComponentType<IconProps>> = {
-  agriculture: AreaMap,
-  restaurants: KnifeFork,
-  tourism: Hotel,
-  healthcare: Stethoscope,
-  retail: ShoppingBag,
-  education: BachelorCap,
-  realestate: Home,
-  logistics: Transport,
+  agriculture: OliveBranch,
+  restaurants: Tagine,
+  tourism: RiadArch,
+  healthcare: CrescentPulse,
+  retail: SoukLantern,
+  education: BookStar,
+  realestate: Minaret,
+  logistics: CargoRoute,
 };
 
 export const expertiseIconMap: Record<string, ComponentType<IconProps>> = {

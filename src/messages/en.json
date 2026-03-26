@@ -216,33 +216,47 @@
     "note": "First month free. No commitment."
   },
   "faq": {
-    "eyebrow": "06",
+    "eyebrow": "FAQ",
     "title": "Frequently asked questions",
-    "subtitle": "What our clients ask the most.",
+    "subtitle": "Honest answers to the questions Moroccan business owners ask us every day.",
+    "ctaButton": "Still have questions?",
+    "categories": {
+      "getting-started": "Getting started",
+      "service": "Our service",
+      "pricing": "Pricing"
+    },
     "items": {
       "q1": {
-        "question": "How long does setup take?",
-        "answer": "Between 1 and 4 weeks depending on complexity. A simple website is ready in 5 days. A full system (CRM, POS, integrations) takes 2-4 weeks."
+        "question": "How long does it take to get started?",
+        "answer": "Between 1 and 4 weeks depending on complexity. A simple website is ready in 5 days. A full system (CRM, POS, integrations) takes 2-4 weeks. We handle everything — you just validate."
       },
       "q2": {
         "question": "I'm not comfortable with technology — is that a problem?",
-        "answer": "Not at all. Our tools are designed to be as simple as WhatsApp. We train your team on-site, in Darija or French, until everyone is autonomous."
+        "answer": "Not at all. Our tools are designed to be as simple as WhatsApp. We train your team on-site, in Darija or French, until everyone is autonomous. If you can send a voice note, you can use our tools."
       },
       "q3": {
-        "question": "What if I want to stop?",
-        "answer": "No long-term commitment. You can cancel anytime. Your data belongs to you and we export it in a standard format."
+        "question": "What if I want to stop? Am I locked in?",
+        "answer": "No long-term commitment. You can cancel anytime. Your data belongs to you and we export it in a standard format. We believe in earning your trust every month, not trapping you in a contract."
       },
       "q4": {
-        "question": "Does this work for small businesses?",
-        "answer": "That's exactly why we exist. 80% of our clients have fewer than 20 employees. We adapt our solutions and pricing to your size and needs."
+        "question": "Does this work for small businesses with fewer than 10 people?",
+        "answer": "That's exactly who we built this for. 80% of our clients have fewer than 20 employees. We adapt our solutions and pricing to your size — no bloated enterprise features you'll never use."
       },
       "q5": {
-        "question": "Do you handle design and content too?",
-        "answer": "Yes. We handle design, copywriting, product photos, and go-live. You just approve."
+        "question": "Do you handle design, content, and photos too?",
+        "answer": "Yes, everything. Design, copywriting in French and Arabic, product photography, and go-live. You focus on your business — we handle the digital side from A to Z."
       },
       "q6": {
-        "question": "How does payment work?",
-        "answer": "Bank transfer or CMI card. Monthly or annual (2 months free). DGI-compliant invoice with every payment."
+        "question": "How does pricing work?",
+        "answer": "Bank transfer or CMI card. Monthly or annual plans (2 months free on annual). DGI-compliant invoice with every payment. No hidden fees, no surprises — the price we quote is the price you pay."
+      },
+      "q7": {
+        "question": "Will my data be safe?",
+        "answer": "Absolutely. We use encrypted servers, automatic daily backups, and follow Moroccan data protection regulations. Your business data stays yours — we never share it with third parties."
+      },
+      "q8": {
+        "question": "I already have a website / social media — why do I need this?",
+        "answer": "A Facebook page or basic website is a start, but it doesn't automate your operations. We connect your online presence to real business tools — bookings, inventory, CRM, payments — so you save hours every day, not just look good online."
       }
     }
   },
@@ -320,13 +334,45 @@
     "value4Body": "No hidden fees, no jargon, no promises we can't keep."
   },
   "contactPage": {
-    "eyebrow": "CONTACT",
-    "title": "Let's talk about your project",
-    "subtitle": "First discovery call is free. We listen, we understand, and we honestly tell you if we can help.",
-    "altTitle": "Or contact us directly",
+    "eyebrow": "LET'S TALK",
+    "title1": "One",
+    "titleAccent": "WhatsApp",
+    "title2": "message, and we're off.",
+    "subtitle": "We reply within an hour. No sales pitch, just a real conversation about your business.",
+    "whatsappCta": "Message on WhatsApp",
+    "whatsappPrefill": "Hi, I'm interested in digitalizing my business.",
+    "whatsappPrefillSector": "Hi, I'm in the {sector} sector and would like to discuss digitalization.",
+    "trustLine": "150+ businesses have trusted us",
+    "processTitle": "What to expect",
+    "step1": "You message us",
+    "step1Desc": "A simple WhatsApp message is enough",
+    "step2": "We reply in < 1h",
+    "step2Desc": "During business hours",
+    "step3": "Free discovery call",
+    "step3Desc": "15 min to understand your needs",
+    "step4": "Custom proposal",
+    "step4Desc": "Delivered within 48h",
+    "availableNow": "Available now",
+    "availableTomorrow": "We'll reply tomorrow morning",
+    "avgResponse": "Average response time: 23 min",
+    "secondaryTitle": "Prefer another channel?",
     "altEmail": "contact@tadnun.ma",
-    "altWhatsapp": "Message on WhatsApp",
-    "altHours": "Response within 24h, Monday to Friday."
+    "altPhone": "+212 6XX XXX XXX",
+    "formToggle": "Send a written message",
+    "formName": "Full name",
+    "formNamePlaceholder": "Your name",
+    "formContact": "Phone or email",
+    "formContactPlaceholder": "+212 6XX XXX XXX or email",
+    "formSector": "Your sector",
+    "formSectorPlaceholder": "Select a sector",
+    "formMessage": "Tell us about your project",
+    "formMessagePlaceholder": "What are your main challenges? What would you like to digitalize?",
+    "formSend": "Send",
+    "formSuccess": "Thank you!",
+    "formSuccessMsg": "We'll get back to you within 24h.",
+    "sectorOther": "Other",
+    "basedIn": "Based in Morocco",
+    "supportLang": "Support in French and Darija"
   },
   "approachPage": {
     "eyebrow": "OUR APPROACH",
@@ -349,5 +395,13 @@
     "ctaDesc": "First discovery call is free. No commitment.",
     "ctaButton": "CONTACT US",
     "approachButton": "Our approach"
+  },
+  "contactChat": {
+    "online": "online",
+    "today": "Today",
+    "userMsg": "Hi! I'd like to digitalize my restaurant. Where do I start?",
+    "replyMsg1": "Welcome! Great to hear that. We work with 30+ restaurants across Morocco.",
+    "replyMsg2": "Let's book a free 15-min call to understand your needs. When works for you?",
+    "inputPlaceholder": "Type a message"
   }
 }

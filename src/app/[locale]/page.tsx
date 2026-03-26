@@ -269,22 +269,7 @@ export default function Home() {
       {/* ─── FAQ ─── */}
       <section aria-labelledby="faq-heading" className="mx-auto max-w-6xl px-6 py-24">
         <ScrollReveal>
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
-            {/* Left: heading */}
-            <div className="lg:col-span-2">
-              <h2 id="faq-heading" className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground leading-[1.15]">
-                {t("faq.title")}
-              </h2>
-              <p className="mt-3 text-muted text-sm leading-relaxed">
-                {t("faq.subtitle")}
-              </p>
-            </div>
-
-            {/* Right: accordion */}
-            <div className="lg:col-span-3">
-              <FaqSection />
-            </div>
-          </div>
+          <FaqSection />
         </ScrollReveal>
       </section>
 

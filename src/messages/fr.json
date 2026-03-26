@@ -216,33 +216,47 @@
     "note": "Premier mois offert. Sans engagement."
   },
   "faq": {
-    "eyebrow": "06",
+    "eyebrow": "FAQ",
     "title": "Questions fréquentes",
-    "subtitle": "Ce que nos clients demandent le plus souvent.",
+    "subtitle": "Des réponses honnêtes aux questions que les entrepreneurs marocains nous posent chaque jour.",
+    "ctaButton": "Encore des questions ?",
+    "categories": {
+      "getting-started": "Démarrage",
+      "service": "Notre service",
+      "pricing": "Tarification"
+    },
     "items": {
       "q1": {
-        "question": "Combien de temps pour mettre en place une solution ?",
-        "answer": "Entre 1 et 4 semaines selon la complexité. Un site web simple est prêt en 5 jours. Un système complet (CRM, POS, intégrations) prend 2 à 4 semaines."
+        "question": "Combien de temps pour démarrer ?",
+        "answer": "Entre 1 et 4 semaines selon la complexité. Un site web simple est prêt en 5 jours. Un système complet (CRM, POS, intégrations) prend 2 à 4 semaines. On s'occupe de tout — vous n'avez qu'à valider."
       },
       "q2": {
         "question": "Je ne suis pas à l'aise avec la technologie, c'est un problème ?",
-        "answer": "Pas du tout. Nos outils sont conçus pour être aussi simples que WhatsApp. Et on forme votre équipe sur place, en darija ou en français, jusqu'à ce que tout le monde soit autonome."
+        "answer": "Pas du tout. Nos outils sont conçus pour être aussi simples que WhatsApp. On forme votre équipe sur place, en darija ou en français, jusqu'à ce que tout le monde soit autonome. Si vous savez envoyer un vocal, vous savez utiliser nos outils."
       },
       "q3": {
-        "question": "Que se passe-t-il si je veux arrêter ?",
-        "answer": "Aucun engagement longue durée. Vous pouvez arrêter à tout moment. Vos données vous appartiennent et on vous les exporte dans un format standard."
+        "question": "Et si je veux arrêter ? Je suis engagé ?",
+        "answer": "Aucun engagement longue durée. Vous pouvez arrêter à tout moment. Vos données vous appartiennent et on vous les exporte dans un format standard. On croit qu'il faut mériter votre confiance chaque mois, pas vous enfermer dans un contrat."
       },
       "q4": {
-        "question": "Est-ce que ça marche pour une petite entreprise ?",
-        "answer": "C'est exactement pour ça qu'on existe. 80% de nos clients ont moins de 20 employés. On adapte nos solutions et nos tarifs à votre taille et vos besoins."
+        "question": "Ça marche pour une petite entreprise de moins de 10 personnes ?",
+        "answer": "C'est exactement pour eux qu'on a conçu ça. 80% de nos clients ont moins de 20 employés. On adapte nos solutions et nos tarifs à votre taille — pas de fonctionnalités enterprise que vous n'utiliserez jamais."
       },
       "q5": {
-        "question": "Vous gérez aussi le design et le contenu ?",
-        "answer": "Oui. On s'occupe du design, de la rédaction, des photos produits et de la mise en ligne. Vous n'avez qu'à valider."
+        "question": "Vous gérez aussi le design, le contenu et les photos ?",
+        "answer": "Oui, tout. Design, rédaction en français et en arabe, photos produits et mise en ligne. Vous vous concentrez sur votre activité — on gère le digital de A à Z."
       },
       "q6": {
-        "question": "Comment se passe le paiement ?",
-        "answer": "Par virement bancaire ou carte CMI. Mensuel ou annuel (2 mois offerts). Facture conforme DGI à chaque paiement."
+        "question": "Comment fonctionne la tarification ?",
+        "answer": "Par virement bancaire ou carte CMI. Mensuel ou annuel (2 mois offerts). Facture conforme DGI à chaque paiement. Pas de frais cachés, pas de surprises — le prix qu'on annonce est le prix que vous payez."
+      },
+      "q7": {
+        "question": "Mes données seront-elles en sécurité ?",
+        "answer": "Absolument. On utilise des serveurs chiffrés, des sauvegardes automatiques quotidiennes, et on respecte la réglementation marocaine sur la protection des données. Vos données restent les vôtres — on ne les partage jamais avec des tiers."
+      },
+      "q8": {
+        "question": "J'ai déjà un site / des réseaux sociaux — pourquoi j'aurais besoin de ça ?",
+        "answer": "Une page Facebook ou un site basique c'est un début, mais ça n'automatise pas vos opérations. On connecte votre présence en ligne à de vrais outils métier — réservations, stock, CRM, paiements — pour que vous gagniez des heures chaque jour, pas juste une belle vitrine."
       }
     }
   },
@@ -320,13 +334,45 @@
     "value4Body": "Pas de frais cachés, pas de jargon, pas de promesses qu'on ne peut pas tenir."
   },
   "contactPage": {
-    "eyebrow": "CONTACT",
-    "title": "Parlons de votre projet",
-    "subtitle": "Premier appel de découverte gratuit. On écoute, on comprend, et on vous dit honnêtement si on peut vous aider.",
-    "altTitle": "Ou contactez-nous directement",
+    "eyebrow": "PARLONS-EN",
+    "title1": "Un message",
+    "titleAccent": "WhatsApp",
+    "title2": "et c'est parti.",
+    "subtitle": "On répond en moins d'une heure. Pas de commercial, juste une vraie conversation sur votre activité.",
+    "whatsappCta": "Écrire sur WhatsApp",
+    "whatsappPrefill": "Bonjour, je suis intéressé(e) par la digitalisation de mon activité.",
+    "whatsappPrefillSector": "Bonjour, je suis dans le secteur {sector} et j'aimerais discuter de la digitalisation de mon activité.",
+    "trustLine": "150+ entreprises nous ont fait confiance",
+    "processTitle": "Comment ça se passe",
+    "step1": "Vous nous écrivez",
+    "step1Desc": "Un simple message WhatsApp suffit",
+    "step2": "On répond en < 1h",
+    "step2Desc": "Pendant les heures de bureau",
+    "step3": "Appel découverte gratuit",
+    "step3Desc": "15 min pour comprendre vos besoins",
+    "step4": "Proposition sur mesure",
+    "step4Desc": "Reçue sous 48h",
+    "availableNow": "Disponible maintenant",
+    "availableTomorrow": "On vous répond demain matin",
+    "avgResponse": "Temps de réponse moyen : 23 min",
+    "secondaryTitle": "Vous préférez un autre canal ?",
     "altEmail": "contact@tadnun.ma",
-    "altWhatsapp": "Écrire sur WhatsApp",
-    "altHours": "Réponse sous 24h, du lundi au vendredi."
+    "altPhone": "+212 6XX XXX XXX",
+    "formToggle": "Envoyer un message écrit",
+    "formName": "Nom complet",
+    "formNamePlaceholder": "Votre nom",
+    "formContact": "Téléphone ou email",
+    "formContactPlaceholder": "+212 6XX XXX XXX ou email",
+    "formSector": "Votre secteur",
+    "formSectorPlaceholder": "Sélectionnez un secteur",
+    "formMessage": "Parlez-nous de votre projet",
+    "formMessagePlaceholder": "Quels sont vos principaux défis ? Qu'aimeriez-vous digitaliser ?",
+    "formSend": "Envoyer",
+    "formSuccess": "Merci !",
+    "formSuccessMsg": "Nous vous recontacterons dans les 24h.",
+    "sectorOther": "Autre",
+    "basedIn": "Basés au Maroc",
+    "supportLang": "Support en français et darija"
   },
   "approachPage": {
     "eyebrow": "NOTRE APPROCHE",
@@ -349,5 +395,13 @@
     "ctaDesc": "Premier appel de découverte gratuit. Sans engagement.",
     "ctaButton": "NOUS CONTACTER",
     "approachButton": "Notre approche"
+  },
+  "contactChat": {
+    "online": "en ligne",
+    "today": "Aujourd'hui",
+    "userMsg": "Bonjour ! Je veux digitaliser mon restaurant. Par où commencer ?",
+    "replyMsg1": "Bienvenue ! On accompagne déjà 30+ restaurants au Maroc.",
+    "replyMsg2": "On planifie un appel découverte gratuit de 15 min ? Quel créneau vous convient ?",
+    "inputPlaceholder": "Tapez un message"
   }
 }
