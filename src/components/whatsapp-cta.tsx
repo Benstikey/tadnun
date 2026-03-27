@@ -4,7 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { getSectorFromParams } from "@/lib/sector-context";
 
-const WHATSAPP_NUMBER = "212600000000";
+const WHATSAPP_NUMBER = "212632431557";
 
 export function WhatsAppCta() {
   const t = useTranslations("contactPage");

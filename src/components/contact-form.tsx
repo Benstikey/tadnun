@@ -54,6 +54,37 @@ export function ContactForm() {
   ) || "";
 
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSending(true);
+    setError("");
+
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      contact: (form.elements.namedItem("contact") as HTMLInputElement).value,
+      sector: (form.elements.namedItem("sector") as HTMLSelectElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+      setSubmitted(true);
+    } catch {
+      setError(t("formError"));
+    } finally {
+      setSending(false);
+    }
+  }
 
   if (submitted) {
     return (
@@ -71,10 +102,7 @@ export function ContactForm() {
 
   return (
     <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitted(true);
-      }}
+      onSubmit={handleSubmit}
       className="space-y-4 rounded-2xl border border-border bg-surface p-6"
     >
       <div>
@@ -138,11 +166,28 @@ export function ContactForm() {
         />
       </div>
 
+      {error && (
+        <p className="text-sm text-red-600 bg-red-50 rounded-lg px-4 py-2">
+          {error}
+        </p>
+      )}
+
       <button
         type="submit"
-        className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-foreground px-8 py-3 text-sm font-semibold text-background hover:bg-foreground/90 active:scale-[0.97] transition-all duration-150 cursor-pointer hover:-translate-y-px hover:shadow-lg hover:shadow-foreground/10"
+        disabled={sending}
+        className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-foreground px-8 py-3 text-sm font-semibold text-background hover:bg-foreground/90 active:scale-[0.97] transition-all duration-150 cursor-pointer hover:-translate-y-px hover:shadow-lg hover:shadow-foreground/10 disabled:opacity-60 disabled:pointer-events-none"
       >
-        {t("formSend")}
+        {sending ? (
+          <span className="inline-flex items-center gap-2">
+            <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" className="opacity-25" />
+              <path d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" fill="currentColor" className="opacity-75" />
+            </svg>
+            {t("formSending")}
+          </span>
+        ) : (
+          t("formSend")
+        )}
       </button>
     </form>
   );

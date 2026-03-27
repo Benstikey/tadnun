@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Tadnun — Digitalisez votre entreprise",
-    "description": "Tadnun aide les entreprises marocaines à se digitaliser avec des outils modernes, des sites web, des applications et des solutions sur mesure."
+    "title": "Tadnun — Transformation Digitale pour les Entreprises Marocaines",
+    "description": "Tadnun construit des solutions digitales sur mesure pour les entreprises marocaines — de l'agriculture à la logistique. Logiciels, applications et outils adaptés aux secteurs, intégrations et langues locales."
   },
   "nav": {
     "sectors": "Secteurs",
@@ -19,7 +19,7 @@
     "title1": "Votre secteur a des",
     "title2": "problèmes concrets.",
     "title3": "On a les solutions.",
-    "description": "Chaque métier a ses blocages. Paperasse, perte de clients, processus manuels — on les connaît et on les résout avec des outils digitaux adaptés à votre réalité.",
+    "description": "Chaque entreprise a ses blocages. Paperasse, clients perdus, processus manuels — on les connaît et on les résout avec des outils digitaux construits pour les entreprises marocaines.",
     "mock": {
       "projects": "Projets",
       "activeProjects": "Actifs",
@@ -41,12 +41,13 @@
       "projPatientClient": "Clinique Dar Salam — Rabat",
       "milestoneDeployed": "Projet déployé",
       "milestoneTraining": "Portail patient — formation équipe prévue"
-    }
+    },
+    "location": "🇲🇦  Au service des entreprises marocaines"
   },
   "sectors": {
     "eyebrow": "01",
     "title": "On connaît vos défis",
-    "subtitle": "Des solutions pensées pour les problèmes réels de chaque secteur au Maroc.",
+    "subtitle": "8 secteurs, un seul pays. Nous construisons des outils digitaux pour les entreprises marocaines — adaptés aux réalités locales, aux intégrations locales, à la langue locale.",
     "solutionLabel": "NOTRE SOLUTION",
     "items": {
       "agriculture": {
@@ -397,7 +398,7 @@
     "avgResponse": "Temps de réponse moyen : 23 min",
     "secondaryTitle": "Vous préférez un autre canal ?",
     "altEmail": "contact@tadnun.ma",
-    "altPhone": "+212 6XX XXX XXX",
+    "altPhone": "+212 632 431 557",
     "formToggle": "Envoyer un message écrit",
     "formName": "Nom complet",
     "formNamePlaceholder": "Votre nom",
@@ -412,7 +413,9 @@
     "formSuccessMsg": "Nous vous recontacterons dans les 24h.",
     "sectorOther": "Autre",
     "basedIn": "Basés au Maroc",
-    "supportLang": "Support en français et darija"
+    "supportLang": "Support en français et darija",
+    "formError": "Une erreur est survenue. Réessayez ou contactez-nous via WhatsApp.",
+    "formSending": "Envoi..."
   },
   "approachPage": {
     "eyebrow": "NOTRE APPROCHE",

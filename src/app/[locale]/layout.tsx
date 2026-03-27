@@ -5,7 +5,10 @@ import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
+import { JsonLd } from "@/components/json-ld";
 import "./globals.css";
+
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.ma";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-geist-sans",
@@ -33,9 +36,75 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
+  const pageUrl = `${BASE_URL}/${locale}`;
+
   return {
-    title: t("title"),
+    metadataBase: new URL(BASE_URL),
+    title: {
+      default: t("title"),
+      template: `%s — Tadnun`,
+    },
     description: t("description"),
+    keywords: [
+      "digital transformation Morocco",
+      "digitalisation Maroc",
+      "التحول الرقمي المغرب",
+      "Moroccan business software",
+      "logiciel entreprise Maroc",
+      "Tadnun",
+      "تدنون",
+      "Morocco SME digitalization",
+      "digitalisation PME Maroc",
+    ],
+    authors: [{ name: "Tadnun", url: BASE_URL }],
+    creator: "Tadnun",
+    publisher: "Tadnun",
+    formatDetection: {
+      email: false,
+      telephone: false,
+    },
+
+    // Open Graph
+    openGraph: {
+      type: "website",
+      siteName: "Tadnun",
+      title: t("title"),
+      description: t("description"),
+      url: pageUrl,
+      locale: locale === "ar" ? "ar_MA" : locale === "fr" ? "fr_MA" : "en",
+      images: [
+        {
+          url: `${BASE_URL}/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: "Tadnun — Digital Transformation for Moroccan Businesses",
+        },
+      ],
+    },
+
+    // Twitter Card
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: [`${BASE_URL}/og-image.png`],
+    },
+
+    // Hreflang alternates for all locales
+    alternates: {
+      canonical: pageUrl,
+      languages: {
+        fr: `${BASE_URL}/fr`,
+        en: `${BASE_URL}/en`,
+        ar: `${BASE_URL}/ar`,
+        "x-default": `${BASE_URL}/fr`,
+      },
+    },
+
+    // Verification (add when you have search console)
+    // verification: {
+    //   google: "your-google-verification-code",
+    // },
   };
 }
 
@@ -65,6 +134,7 @@ export default async function LocaleLayout({
       className={`${jakarta.variable} ${fraunces.variable} ${notoArabic.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col">
+        <JsonLd locale={locale} />
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>

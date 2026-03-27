@@ -53,6 +53,9 @@ export default function Home() {
                   </svg>
                 </a>
               </div>
+              <p className="hero-stagger hero-stagger-5 mt-6 text-[12px] text-muted font-mono tracking-wider">
+                {t("hero.location")}
+              </p>
             </div>
 
             {/* Right: app preview */}

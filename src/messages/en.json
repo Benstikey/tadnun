@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Tadnun — Digitalize Your Business",
-    "description": "Tadnun helps Moroccan businesses digitalize with modern tools, websites, apps, and tailored digital solutions."
+    "title": "Tadnun — Digital Transformation for Moroccan Businesses",
+    "description": "Tadnun builds custom digital solutions for Moroccan businesses — from agriculture to logistics. Software, apps, and tools tailored to local sectors, integrations, and language."
   },
   "nav": {
     "sectors": "Sectors",
@@ -19,7 +19,7 @@
     "title1": "Your industry has",
     "title2": "real problems.",
     "title3": "We have the solutions.",
-    "description": "Every business has its blockers. Paperwork, lost customers, manual processes — we know them and we solve them with digital tools built for your reality.",
+    "description": "Every business has its blockers. Paperwork, lost customers, manual processes — we know them and we solve them with digital tools built for Moroccan businesses.",
     "mock": {
       "projects": "Projects",
       "activeProjects": "Active",
@@ -41,12 +41,13 @@
       "projPatientClient": "Clinique Dar Salam — Rabat",
       "milestoneDeployed": "Project deployed",
       "milestoneTraining": "Patient Portal — team training next"
-    }
+    },
+    "location": "🇲🇦  Serving businesses across Morocco"
   },
   "sectors": {
     "eyebrow": "01",
     "title": "We know your challenges",
-    "subtitle": "Solutions designed for the real problems of each sector in Morocco.",
+    "subtitle": "8 sectors, one country. We build digital tools for Moroccan businesses — tailored to local realities, local integrations, local language.",
     "solutionLabel": "OUR SOLUTION",
     "items": {
       "agriculture": {
@@ -397,7 +398,7 @@
     "avgResponse": "Average response time: 23 min",
     "secondaryTitle": "Prefer another channel?",
     "altEmail": "contact@tadnun.ma",
-    "altPhone": "+212 6XX XXX XXX",
+    "altPhone": "+212 632 431 557",
     "formToggle": "Send a written message",
     "formName": "Full name",
     "formNamePlaceholder": "Your name",
@@ -412,7 +413,9 @@
     "formSuccessMsg": "We'll get back to you within 24h.",
     "sectorOther": "Other",
     "basedIn": "Based in Morocco",
-    "supportLang": "Support in French and Darija"
+    "supportLang": "Support in French and Darija",
+    "formError": "Something went wrong. Please try again or reach out via WhatsApp.",
+    "formSending": "Sending..."
   },
   "approachPage": {
     "eyebrow": "OUR APPROACH",
