@@ -10,6 +10,7 @@ import { JsonLd } from "@/components/json-ld";
 import "./globals.css";
 
 const GTM_ID = "GTM-MPT7HMNM";
+const GA_ID = "G-W1D7NNYKQE";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.ma";
 
@@ -137,6 +138,7 @@ export default async function LocaleLayout({
       className={`${jakarta.variable} ${fraunces.variable} ${notoArabic.variable} antialiased`}
     >
       <head>
+        {/* Google Tag Manager */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -146,6 +148,21 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','${GTM_ID}');`,
+          }}
+        />
+        {/* Google Analytics (gtag.js) */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');`,
           }}
         />
       </head>
