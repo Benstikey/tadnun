@@ -319,8 +319,8 @@
   "ctaBand": {
     "default": {
       "title": "Ready to digitalize your business?",
-      "cta": "Contact us",
-      "desc": "First discovery call is free. No commitment, no jargon.",
+      "cta": "Book my free consultation",
+      "desc": "15 minutes to understand your needs. No commitment, no jargon. 150+ businesses have already taken the first step.",
       "seeSectors": "See sectors",
       "secondary": "See sectors"
     },
@@ -408,9 +408,12 @@
     "formSectorPlaceholder": "Select a sector",
     "formMessage": "Tell us about your project",
     "formMessagePlaceholder": "What are your main challenges? What would you like to digitalize?",
-    "formSend": "Send",
-    "formSuccess": "Thank you!",
-    "formSuccessMsg": "We'll get back to you within 24h.",
+    "formSend": "Get my free consultation",
+    "formTrust": "Free, no commitment. We reply within 24h.",
+    "formOptional": "Optional",
+    "formSuccess": "Message received!",
+    "formSuccessMsg": "We'll get back to you within 24h. Prefer a faster response?",
+    "formSuccessWhatsapp": "Message us on WhatsApp",
     "sectorOther": "Other",
     "basedIn": "Based in Morocco",
     "supportLang": "Support in French and Darija",

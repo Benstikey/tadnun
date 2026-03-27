@@ -319,8 +319,8 @@
   "ctaBand": {
     "default": {
       "title": "Prêt à digitaliser votre activité ?",
-      "cta": "Nous contacter",
-      "desc": "Premier appel de découverte gratuit. Sans engagement, sans jargon.",
+      "cta": "Réserver ma consultation gratuite",
+      "desc": "15 minutes pour comprendre vos besoins. Sans engagement, sans jargon. Plus de 150 entreprises ont déjà franchi le pas.",
       "seeSectors": "Voir les secteurs",
       "secondary": "Voir les secteurs"
     },
@@ -408,9 +408,12 @@
     "formSectorPlaceholder": "Sélectionnez un secteur",
     "formMessage": "Parlez-nous de votre projet",
     "formMessagePlaceholder": "Quels sont vos principaux défis ? Qu'aimeriez-vous digitaliser ?",
-    "formSend": "Envoyer",
-    "formSuccess": "Merci !",
-    "formSuccessMsg": "Nous vous recontacterons dans les 24h.",
+    "formSend": "Demander ma consultation gratuite",
+    "formTrust": "Gratuit, sans engagement. Nous répondons sous 24h.",
+    "formOptional": "Facultatif",
+    "formSuccess": "Message reçu !",
+    "formSuccessMsg": "Nous vous recontacterons dans les 24h. Vous préférez une réponse plus rapide ?",
+    "formSuccessWhatsapp": "Écrivez-nous sur WhatsApp",
     "sectorOther": "Autre",
     "basedIn": "Basés au Maroc",
     "supportLang": "Support en français et darija",

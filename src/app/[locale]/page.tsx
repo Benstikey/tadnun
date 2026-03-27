@@ -39,24 +39,26 @@ export default function Home() {
               </p>
               <div className="hero-stagger hero-stagger-4 mt-10 flex flex-wrap items-center gap-4">
                 <a
-                  href={`/${locale}/sectors`}
+                  href={`/${locale}/contact`}
                   className="inline-flex items-center justify-center rounded-full bg-foreground px-8 py-3.5 text-sm font-semibold text-background hover:bg-foreground/90 active:scale-[0.97] transition-all hover:-translate-y-px shadow-sm"
                 >
-                  {t("common.exploreSectors")}
+                  {t("common.letsTalk")}
                 </a>
                 <a
-                  href={`/${locale}/contact`}
+                  href={`/${locale}/sectors`}
                   className="group inline-flex items-center gap-2 text-sm font-semibold text-foreground border border-border rounded-full px-5 py-2.5 hover:border-foreground/30 hover:bg-foreground/[0.04] transition-all"
                 >
-                  {t("nav.cta")}
+                  {t("common.exploreSectors")}
                   <svg width="13" height="13" viewBox="0 0 16 16" fill="none" className="rtl:-scale-x-100 transition-transform group-hover:translate-x-0.5">
                     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </a>
               </div>
-              <p className="hero-stagger hero-stagger-5 mt-6 text-[12px] text-muted font-mono tracking-wider">
-                {t("hero.location")}
-              </p>
+              <div className="hero-stagger hero-stagger-5 mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-muted font-mono tracking-wider">
+                <span>{t("hero.location")}</span>
+                <span className="hidden sm:inline text-border">|</span>
+                <span>{t("stats.clients")} {t("stats.clientsLabel")}</span>
+              </div>
             </div>
 
             {/* Right: app preview */}
@@ -226,6 +228,18 @@ export default function Home() {
               </ScrollReveal>
             );
           })}
+        </div>
+      </section>
+
+      {/* ─── Social Proof Stats ─── */}
+      <section className="border-y border-border bg-surface/30">
+        <div className="mx-auto max-w-6xl px-6 py-10 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+          {(["clients", "sectors", "uptime", "support"] as const).map((key) => (
+            <div key={key}>
+              <p className="text-2xl sm:text-3xl font-serif italic text-foreground">{t(`stats.${key}`)}</p>
+              <p className="mt-1.5 text-[13px] text-muted">{t(`stats.${key}Label`)}</p>
+            </div>
+          ))}
         </div>
       </section>
 
