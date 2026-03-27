@@ -11,10 +11,20 @@ import { getSectorFromParams } from "@/lib/sector-context";
 import { sectorDetails } from "@/data/sector-details";
 import type { Metadata } from "next";
 
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contactPage" });
-  return { title: `${t("title1")} ${t("titleAccent")} ${t("title2")} — Tadnun` };
+  const pageUrl = `${BASE_URL}/${locale}/contact`;
+  return {
+    title: `${t("title1")} ${t("titleAccent")} ${t("title2")} — Tadnun`,
+    description: t("subtitle"),
+    alternates: {
+      canonical: pageUrl,
+      languages: { fr: `${BASE_URL}/fr/contact`, en: `${BASE_URL}/en/contact`, ar: `${BASE_URL}/ar/contact` },
+    },
+  };
 }
 
 export default async function ContactPage({

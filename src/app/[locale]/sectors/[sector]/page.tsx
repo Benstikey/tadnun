@@ -10,6 +10,7 @@ import { BeforeAfterRow } from "@/components/before-after-row";
 import { SectorIntegrationHub } from "@/components/integration-hub";
 import { SectionHeading } from "@/components/section-heading";
 import { IconBox } from "@/components/icon-box";
+import { SectorJsonLd } from "@/components/json-ld";
 import { sectorDetails } from "@/data/sector-details";
 import { validSectors, type SectorKey } from "@/lib/sector-context";
 import type { Metadata } from "next";
@@ -67,11 +68,21 @@ const sectorSolutions: Record<SectorKey, { iconKey: string; name: string; nameFr
   ],
 };
 
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; sector: string }> }): Promise<Metadata> {
   const { locale, sector } = await params;
   if (!validSectors.includes(sector as SectorKey)) return {};
   const t = await getTranslations({ locale, namespace: "sectors.items" });
-  return { title: `${t(`${sector}.name`)} — Tadnun`, description: t(`${sector}.solution`) };
+  const pageUrl = `${BASE_URL}/${locale}/sectors/${sector}`;
+  return {
+    title: `${t(`${sector}.name`)} — Tadnun`,
+    description: t(`${sector}.solution`),
+    alternates: {
+      canonical: pageUrl,
+      languages: { fr: `${BASE_URL}/fr/sectors/${sector}`, en: `${BASE_URL}/en/sectors/${sector}`, ar: `${BASE_URL}/ar/sectors/${sector}` },
+    },
+  };
 }
 
 export default async function SectorPage({ params }: { params: Promise<{ locale: string; sector: string }> }) {
@@ -86,6 +97,16 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
 
   return (
     <PageShell>
+        <SectorJsonLd
+          locale={locale}
+          sectorSlug={sector}
+          sectorName={sectorName}
+          sectorDescription={t(`sectors.items.${sector}.solution`)}
+          faqItems={details.faq.map((f) => ({
+            question: isEn ? f.qEn : f.q,
+            answer: isEn ? f.aEn : f.a,
+          }))}
+        />
         {/* Hero */}
         <section aria-labelledby="sector-heading" className="mx-auto max-w-6xl px-6 pt-24 pb-16">
           <h1 id="sector-heading" className="font-serif italic text-4xl sm:text-6xl leading-[1.1] tracking-tight text-foreground">

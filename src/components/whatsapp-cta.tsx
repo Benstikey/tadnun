@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { getSectorFromParams } from "@/lib/sector-context";
+import { trackEvent } from "@/lib/analytics";
 
 const WHATSAPP_NUMBER = "212632431557";
 
@@ -30,6 +31,7 @@ export function WhatsAppCta() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackEvent("whatsapp_cta_clicked", { sector: sectorKey || "none" })}
       className="group inline-flex items-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 text-sm font-semibold text-white shadow-sm shadow-[#25D366]/20 hover:shadow-lg hover:shadow-[#25D366]/25 hover:bg-[#22c55e] hover:-translate-y-px transition-all active:scale-[0.97]"
     >
       <WhatsAppIcon className="w-5 h-5 shrink-0" />

@@ -16,10 +16,20 @@ const sectorStoryMap: Partial<Record<SectorKey, "1" | "2" | "3">> = {
   tourism: "3",      // riad
 };
 
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "aboutPage" });
-  return { title: `${t("title1")} ${t("title2")} — Tadnun` };
+  const pageUrl = `${BASE_URL}/${locale}/about`;
+  return {
+    title: `${t("title1")} ${t("title2")} — Tadnun`,
+    description: t("intro"),
+    alternates: {
+      canonical: pageUrl,
+      languages: { fr: `${BASE_URL}/fr/about`, en: `${BASE_URL}/en/about`, ar: `${BASE_URL}/ar/about` },
+    },
+  };
 }
 
 export default async function AboutPage({

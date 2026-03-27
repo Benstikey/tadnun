@@ -27,10 +27,20 @@ const signIcons = [
   <svg key="s6" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>,
 ];
 
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "sectorsPage" });
-  return { title: `${t("title")} ${t("titleAccent")} — Tadnun` };
+  const pageUrl = `${BASE_URL}/${locale}/sectors`;
+  return {
+    title: `${t("title")} ${t("titleAccent")} — Tadnun`,
+    description: t("subtitle"),
+    alternates: {
+      canonical: pageUrl,
+      languages: { fr: `${BASE_URL}/fr/sectors`, en: `${BASE_URL}/en/sectors`, ar: `${BASE_URL}/ar/sectors` },
+    },
+  };
 }
 
 export default async function SectorsListPage({ params }: { params: Promise<{ locale: string }> }) {

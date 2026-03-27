@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { getSectorFromParams } from "@/lib/sector-context";
+import { trackEvent } from "@/lib/analytics";
 
 const sectorKeys = [
   "agriculture",
@@ -78,6 +79,7 @@ export function ContactForm() {
       });
 
       if (!res.ok) throw new Error("Failed to send");
+      trackEvent("contact_form_submitted", { sector: data.sector || "none" });
       setSubmitted(true);
     } catch {
       setError(t("formError"));

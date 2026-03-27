@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.ma";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
 const LOCALES = ["fr", "en", "ar"] as const;
 
 const SECTORS = [

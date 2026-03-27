@@ -7,6 +7,7 @@ import { CtaBand } from "@/components/cta-band";
 import { PageShell } from "@/components/page-shell";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { FaqSection } from "@/components/faq";
+import { HomeFaqJsonLd } from "@/components/json-ld";
 import { sectorDetails } from "@/data/sector-details";
 
 const sectorKeys = [
@@ -284,6 +285,14 @@ export default function Home() {
       </section>
 
       {/* ─── FAQ ─── */}
+      <HomeFaqJsonLd
+        items={
+          (["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"] as const).map((key) => ({
+            question: t(`faq.items.${key}.question`),
+            answer: t(`faq.items.${key}.answer`),
+          }))
+        }
+      />
       <section aria-labelledby="faq-heading" className="mx-auto max-w-6xl px-6 py-24">
         <ScrollReveal>
           <FaqSection />

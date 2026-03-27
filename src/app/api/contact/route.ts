@@ -30,7 +30,7 @@ export async function POST(request: Request) {
             <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Sector</td><td style="padding:8px;border:1px solid #ddd">${escapeHtml(sector || "Not specified")}</td></tr>
             <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold">Message</td><td style="padding:8px;border:1px solid #ddd">${escapeHtml(message || "—")}</td></tr>
           </table>
-          <p style="margin-top:16px;color:#666;font-size:12px">Sent from tadnun.ma contact form</p>
+          <p style="margin-top:16px;color:#666;font-size:12px">Sent from tadnun.com contact form</p>
         `,
       });
     } else {

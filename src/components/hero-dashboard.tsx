@@ -137,7 +137,7 @@ export function HeroDashboard({ labels }: HeroDashboardProps) {
                 <path d="M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z" stroke="currentColor" strokeWidth="1.5"/>
                 <path d="M14 14l-2.5-2.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
               </svg>
-              app.tadnun.ma/{labels.projects.toLowerCase()}
+              app.tadnun.com/{labels.projects.toLowerCase()}
             </div>
           </div>
         </div>

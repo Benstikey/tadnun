@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { trackEvent } from "@/lib/analytics";
 
 const faqKeys = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"] as const;
 
@@ -60,7 +61,11 @@ export function FaqSection() {
                 <h3>
                   <button
                     id={buttonId}
-                    onClick={() => setOpen(isOpen ? null : key)}
+                    onClick={() => {
+                      const next = isOpen ? null : key;
+                      setOpen(next);
+                      if (next) trackEvent("faq_opened", { question_key: key, category });
+                    }}
                     className="w-full flex items-start gap-4 py-6 text-left cursor-pointer"
                     aria-expanded={isOpen}
                     aria-controls={panelId}

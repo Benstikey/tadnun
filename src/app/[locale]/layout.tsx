@@ -12,7 +12,7 @@ import "./globals.css";
 const GTM_ID = "GTM-MPT7HMNM";
 const GA_ID = "G-W1D7NNYKQE";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.ma";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-geist-sans",
