@@ -134,22 +134,22 @@
     "subtitle": "On ne vend pas de la technologie. On résout vos problèmes concrets.",
     "items": {
       "local": {
-        "icon": "\uD83C\uDDF2\uD83C\uDDE6",
+        "icon": "🇲🇦",
         "title": "Conçu pour le Maroc",
         "body": "Interfaces en français et darija, intégration CMI et paiement mobile, compatibilité WhatsApp Business. On connaît votre marché parce qu'on y vit."
       },
       "simple": {
-        "icon": "\u2728",
+        "icon": "✨",
         "title": "Simple à utiliser",
         "body": "Pas besoin d'être un expert en informatique. Nos outils sont pensés pour des entrepreneurs, pas des développeurs. Si vous savez utiliser WhatsApp, vous saurez utiliser Tadnun."
       },
       "support": {
-        "icon": "\uD83E\uDD1D",
+        "icon": "🤝",
         "title": "Accompagnement humain",
         "body": "Un interlocuteur dédié qui répond en darija ou en français. Support par WhatsApp, téléphone et sur site. On ne vous laisse jamais seul avec un logiciel."
       },
       "price": {
-        "icon": "\uD83D\uDCB0",
+        "icon": "💰",
         "title": "Prix adaptés aux PME",
         "body": "Des formules à partir de 299 DH/mois. Pas de frais cachés, pas de surprise. On croit que la digitalisation doit être accessible, pas réservée aux grandes entreprises."
       }
@@ -194,7 +194,12 @@
         "price": "299",
         "unit": "DH/mois",
         "description": "Pour démarrer votre présence digitale.",
-        "features": ["Fiche Google Maps optimisée", "Site web one-page", "WhatsApp Business setup", "Support par WhatsApp"]
+        "features": [
+          "Fiche Google Maps optimisée",
+          "Site web one-page",
+          "WhatsApp Business setup",
+          "Support par WhatsApp"
+        ]
       },
       "pro": {
         "name": "Pro",
@@ -202,14 +207,26 @@
         "unit": "DH/mois",
         "badge": "Populaire",
         "description": "Pour digitaliser vos opérations au quotidien.",
-        "features": ["Tout Essentiel +", "Système de réservation / commande", "Caisse connectée ou CRM", "Tableau de bord analytics", "Formation équipe incluse"]
+        "features": [
+          "Tout Essentiel +",
+          "Système de réservation / commande",
+          "Caisse connectée ou CRM",
+          "Tableau de bord analytics",
+          "Formation équipe incluse"
+        ]
       },
       "premium": {
         "name": "Premium",
         "price": "2,999",
         "unit": "DH/mois",
         "description": "Pour une transformation digitale complète.",
-        "features": ["Tout Pro +", "Application mobile dédiée", "Intégrations avancées (ERP, API)", "Accompagnement stratégique mensuel", "Support prioritaire téléphone"]
+        "features": [
+          "Tout Pro +",
+          "Application mobile dédiée",
+          "Intégrations avancées (ERP, API)",
+          "Accompagnement stratégique mensuel",
+          "Support prioritaire téléphone"
+        ]
       }
     },
     "cta": "Demander un devis",
@@ -299,9 +316,25 @@
     "letsTalk": "Discutons"
   },
   "ctaBand": {
-    "default": { "title": "Prêt à digitaliser votre activité ?", "cta": "Nous contacter", "desc": "Premier appel de découverte gratuit. Sans engagement, sans jargon.", "seeSectors": "Voir les secteurs" },
-    "about": { "title": "Envie de travailler avec nous ?", "cta": "Parlons-en" },
-    "approach": { "title": "Convaincu par notre approche ?", "cta": "Discutons de votre projet" }
+    "default": {
+      "title": "Prêt à digitaliser votre activité ?",
+      "cta": "Nous contacter",
+      "desc": "Premier appel de découverte gratuit. Sans engagement, sans jargon.",
+      "seeSectors": "Voir les secteurs",
+      "secondary": "Voir les secteurs"
+    },
+    "about": {
+      "title": "On n'est pas une agence de plus. On est votre équipe digitale.",
+      "desc": "Premier appel gratuit. On vous dit honnêtement si on peut vous aider — et exactement comment.",
+      "cta": "Réservons un appel",
+      "secondary": "Notre approche"
+    },
+    "approach": {
+      "title": "Votre business mérite mieux qu'un outil générique de plus.",
+      "desc": "45 minutes pour cartographier vos blocages et construire un plan d'action concret. Sans engagement, sans jargon.",
+      "cta": "Réserver mon diagnostic gratuit",
+      "secondary": "Découvrir les secteurs"
+    }
   },
   "aboutPage": {
     "eyebrow": "NOTRE HISTOIRE",
@@ -414,5 +447,61 @@
     "replyMsg1": "Bienvenue ! On accompagne déjà 30+ restaurants au Maroc.",
     "replyMsg2": "On planifie un appel découverte gratuit de 15 min ? Quel créneau vous convient ?",
     "inputPlaceholder": "Tapez un message"
+  },
+  "sectorsPage": {
+    "eyebrow": "Secteurs",
+    "title": "Chaque secteur a ses blocages.",
+    "titleAccent": "On les connaît.",
+    "subtitle": "On ne vend pas de logiciels génériques. On résout des problèmes précis, secteur par secteur — avec des intégrations pensées pour le marché marocain.",
+    "signsEyebrow": "VOUS VOUS RECONNAISSEZ ?",
+    "signsTitle": "Votre business a besoin du digital si…",
+    "signs": [
+      {
+        "title": "Vous gérez encore sur papier ou WhatsApp",
+        "body": "Commandes, stocks, paiements, RDV — tout tient sur des carnets et des groupes WhatsApp qui débordent."
+      },
+      {
+        "title": "Vos concurrents apparaissent sur Google. Pas vous.",
+        "body": "Les clients cherchent en ligne, trouvent vos concurrents, et n'arrivent jamais jusqu'à vous."
+      },
+      {
+        "title": "L'admin mange votre temps au lieu de votre métier",
+        "body": "Facturation, rapports, relances — des heures chaque semaine que vous ne passerez jamais à servir vos clients."
+      },
+      {
+        "title": "Vous ne savez pas exactement combien vous gagnez",
+        "body": "Sans suivi en temps réel, vous découvrez les problèmes de marge trop tard pour agir."
+      },
+      {
+        "title": "Vous perdez des clients que vous n'arrivez pas à rappeler",
+        "body": "Des leads qui tombent, des messages sans réponse, des opportunités qui vont chez le concurrent."
+      },
+      {
+        "title": "Vous ne pouvez pas prouver ce que vous faites",
+        "body": "Pas de traçabilité, pas de reporting, pas de preuve — un risque à chaque contrôle ou audit."
+      }
+    ],
+    "gridEyebrow": "NOS SECTEURS",
+    "gridTitle": "Quel secteur vous correspond ?",
+    "gridSubtitle": "Cliquez sur votre secteur pour voir les solutions, intégrations et résultats concrets.",
+    "deepDive": "Voir les solutions",
+    "roiLabel": "résultat clé",
+    "otherEyebrow": "VOUS NE VOYEZ PAS VOTRE SECTEUR ?",
+    "otherTitle": "On travaille avec tous les secteurs.",
+    "otherBody": "Agriculture, restauration, santé — ce sont nos priorités. Mais la digitalisation ne s'arrête pas là. Si vous avez un problème opérationnel, une friction dans votre process, ou une opportunité que vous n'arrivez pas à saisir — on veut l'entendre.",
+    "otherCta": "Parlez-nous de votre activité",
+    "otherIndustries": [
+      "Artisanat",
+      "Finance & Assurance",
+      "Juridique",
+      "Industrie & Production",
+      "Services B2B",
+      "Administration publique",
+      "E-commerce",
+      "Beauté & Bien-être"
+    ],
+    "ctaTitle": "Prêt à transformer votre secteur ?",
+    "ctaBody": "Premier diagnostic gratuit. On identifie vos 3 plus grands blocages en 45 minutes — sans engagement.",
+    "ctaButton": "Réserver mon diagnostic"
   }
 }

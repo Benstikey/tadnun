@@ -31,7 +31,7 @@ export function Nav() {
   const sectorName = activeSector ? t(`sectors.items.${activeSector}.name`) : null;
 
   const navLinks = [
-    { href: `/${locale}/#sectors`, label: t("nav.sectors") },
+    { href: `/${locale}/sectors`, label: t("nav.sectors") },
     { href: `/${locale}/approach${sectorSuffix}`, label: t("nav.approach") },
     { href: `/${locale}/about${sectorSuffix}`, label: t("nav.about") },
   ];
@@ -54,9 +54,11 @@ export function Nav() {
           <div className="flex items-center gap-3 shrink-0">
             <a
               href={`/${locale}/`}
-              className="font-serif italic text-[22px] tracking-tight text-foreground hover:text-accent transition-colors"
+              className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
             >
-              Tadnun
+              <span className="font-serif italic text-[22px] tracking-tight text-foreground">
+                Tadnun
+              </span>
             </a>
             {activeSector && sectorName && (
               <a

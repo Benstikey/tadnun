@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { PageShell } from "@/components/page-shell";
-import { Breadcrumbs } from "@/components/breadcrumbs";
 import { SolutionIcon } from "@/components/icons";
 import { SectorFaq } from "@/components/sector-faq";
 import { RelatedSectors } from "@/components/related-sectors";
@@ -88,11 +87,7 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
   return (
     <PageShell>
         {/* Hero */}
-        <section aria-labelledby="sector-heading" className="mx-auto max-w-6xl px-6 pt-20 pb-16">
-          <Breadcrumbs items={[
-            { label: t("nav.sectors"), href: `/${locale}/#sectors` },
-            { label: sectorName },
-          ]} />
+        <section aria-labelledby="sector-heading" className="mx-auto max-w-6xl px-6 pt-24 pb-16">
           <h1 id="sector-heading" className="font-serif italic text-4xl sm:text-6xl leading-[1.1] tracking-tight text-foreground">
             {sectorName}
           </h1>

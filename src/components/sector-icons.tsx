@@ -6,7 +6,7 @@ interface SectorSvgProps {
   className?: string;
 }
 
-/* ── Agriculture — Olive branch with fruit ── */
+/* ── Agriculture — Wheat stalk with 3-grain fan ── */
 export function OliveBranch({ size = 24, className }: SectorSvgProps) {
   return (
     <svg
@@ -17,63 +17,55 @@ export function OliveBranch({ size = 24, className }: SectorSvgProps) {
       className={className}
       aria-hidden="true"
     >
-      {/* Main branch — gentle curve */}
+      {/* Stalk */}
       <path
-        d="M4 20C6 16 10 10 20 4"
+        d="M12 22V10"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
       />
-      {/* Leaf pair 1 */}
-      <path
-        d="M8 15c-1.5-1-1.2-3.2.5-3.5 1.7-.3 2.8 1.5 1.5 3"
-        stroke="currentColor"
-        strokeWidth="1.3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M11 14.5c1.5-.8 3.2-.2 3 1.5-.2 1.7-2.2 2-3.2.8"
-        stroke="currentColor"
-        strokeWidth="1.3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      {/* Leaf pair 2 */}
-      <path
-        d="M13 10c-1.2-1.2-.6-3 1-3.2 1.6-.2 2.5 1.5 1.4 2.8"
-        stroke="currentColor"
-        strokeWidth="1.3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M15.5 10.5c1.3-1 3-.5 3 1s-1.8 2.2-3 1.2"
-        stroke="currentColor"
-        strokeWidth="1.3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      {/* Olive fruit */}
+      {/* Center grain head — vertical ellipse */}
       <ellipse
-        cx="9.5"
-        cy="11.5"
-        rx="1.2"
-        ry="1.5"
-        transform="rotate(-20 9.5 11.5)"
+        cx="12"
+        cy="5.5"
+        rx="1.5"
+        ry="3.5"
         stroke="currentColor"
-        strokeWidth="1.3"
-        fill="currentColor"
+        strokeWidth="1.4"
       />
+      {/* Left grain — angled */}
       <ellipse
-        cx="14.5"
-        cy="7.5"
+        cx="8.5"
+        cy="7"
         rx="1.1"
-        ry="1.4"
-        transform="rotate(-30 14.5 7.5)"
+        ry="2.8"
+        transform="rotate(-30 8.5 7)"
         stroke="currentColor"
         strokeWidth="1.3"
-        fill="currentColor"
+      />
+      {/* Right grain — angled */}
+      <ellipse
+        cx="15.5"
+        cy="7"
+        rx="1.1"
+        ry="2.8"
+        transform="rotate(30 15.5 7)"
+        stroke="currentColor"
+        strokeWidth="1.3"
+      />
+      {/* Leaf left — curves up-left from stalk */}
+      <path
+        d="M12 15 Q9 14 7.5 11.5"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      {/* Leaf right — curves up-right from stalk */}
+      <path
+        d="M12 17.5 Q15 16.5 16.5 14"
+        stroke="currentColor"
+        strokeWidth="1.3"
+        strokeLinecap="round"
       />
     </svg>
   );
@@ -173,7 +165,7 @@ export function RiadArch({ size = 24, className }: SectorSvgProps) {
   );
 }
 
-/* ── Healthcare — Crescent + pulse ── */
+/* ── Healthcare — Stethoscope ── */
 export function CrescentPulse({ size = 24, className }: SectorSvgProps) {
   return (
     <svg
@@ -184,21 +176,38 @@ export function CrescentPulse({ size = 24, className }: SectorSvgProps) {
       className={className}
       aria-hidden="true"
     >
-      {/* Crescent moon — Moroccan identity */}
+      {/* Left ear tip */}
+      <circle cx="6" cy="2.5" r="1.1" fill="currentColor" />
+      {/* Right ear tip */}
+      <circle cx="18" cy="2.5" r="1.1" fill="currentColor" />
+      {/* Left tube — curves from ear down to center junction */}
       <path
-        d="M7 4a7 7 0 1 0 0 12 5.5 5.5 0 0 1 0-12Z"
+        d="M6 3.5 C6 9 9.5 11 12 12"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
-        strokeLinejoin="round"
       />
-      {/* Heartbeat / pulse line running through */}
+      {/* Right tube — mirrors left */}
       <path
-        d="M2 14h4l1.5-3 2 6 2-8 1.5 5H22"
+        d="M18 3.5 C18 9 14.5 11 12 12"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
-        strokeLinejoin="round"
+      />
+      {/* Stem — single tube going down */}
+      <path
+        d="M12 12 L12 17"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      {/* Diaphragm — chest piece circle */}
+      <circle
+        cx="12"
+        cy="19.5"
+        r="2.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
       />
     </svg>
   );

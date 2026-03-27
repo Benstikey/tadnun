@@ -1,6 +1,5 @@
 import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
-import { Breadcrumbs } from "@/components/breadcrumbs";
 import { WhatsAppCta } from "@/components/whatsapp-cta";
 import { AvailabilityBadge } from "@/components/availability-badge";
 import { ContactProcess } from "@/components/contact-process";
@@ -34,21 +33,11 @@ export default async function ContactPage({
   const sectorName = sectorKey ? t(`sectors.items.${sectorKey}.name`) : null;
   const isEn = locale === "en";
 
-  const breadcrumbItems = sectorKey
-    ? [
-        { label: t("nav.sectors"), href: `/${locale}/#sectors` },
-        { label: sectorName!, href: `/${locale}/sectors/${sectorKey}` },
-        { label: t("nav.cta") },
-      ]
-    : [{ label: t("nav.cta") }];
-
   const testimonial = details?.testimonials?.[0] ?? null;
 
   return (
     <PageShell>
-      <div className="mx-auto max-w-6xl px-6 pt-20 pb-24">
-        <Breadcrumbs items={breadcrumbItems} />
-
+      <div className="mx-auto max-w-6xl px-6 pt-24 pb-16 lg:pt-28">
         {/* ─── Hero: WhatsApp-first ─── */}
         <section aria-labelledby="contact-heading" className="pt-4 pb-20">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">

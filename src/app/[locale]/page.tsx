@@ -3,7 +3,7 @@ import { SectorIcon } from "@/components/icons";
 import { IconBox } from "@/components/icon-box";
 import { UrgencyRace } from "@/components/visuals";
 import { HeroDashboard } from "@/components/hero-dashboard";
-
+import { CtaBand } from "@/components/cta-band";
 import { PageShell } from "@/components/page-shell";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { FaqSection } from "@/components/faq";
@@ -21,7 +21,7 @@ export default function Home() {
     <PageShell>
       {/* ─── Hero ─── */}
       <section aria-labelledby="hero-heading" className="relative overflow-hidden">
-        <div className="mx-auto max-w-6xl px-6 pt-28 pb-20 lg:pt-40 lg:pb-32">
+        <div className="mx-auto max-w-6xl px-6 pt-24 pb-16 lg:pt-28 lg:pb-20">
           <div className="grid lg:grid-cols-12 gap-12 items-end">
             {/* Left: headline */}
             <div className="lg:col-span-7">
@@ -38,17 +38,19 @@ export default function Home() {
               </p>
               <div className="hero-stagger hero-stagger-4 mt-10 flex flex-wrap items-center gap-4">
                 <a
-                  href="#sectors"
+                  href={`/${locale}/sectors`}
                   className="inline-flex items-center justify-center rounded-full bg-foreground px-8 py-3.5 text-sm font-semibold text-background hover:bg-foreground/90 active:scale-[0.97] transition-all hover:-translate-y-px shadow-sm"
                 >
                   {t("common.exploreSectors")}
                 </a>
                 <a
                   href={`/${locale}/contact`}
-                  className="group inline-flex items-center gap-2 text-sm text-foreground/60 hover:text-foreground transition-colors font-medium"
+                  className="group inline-flex items-center gap-2 text-sm font-semibold text-foreground border border-border rounded-full px-5 py-2.5 hover:border-foreground/30 hover:bg-foreground/[0.04] transition-all"
                 >
                   {t("nav.cta")}
-                  <span className="inline-block group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform rtl:-scale-x-100">&rarr;</span>
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="none" className="rtl:-scale-x-100 transition-transform group-hover:translate-x-0.5">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                 </a>
               </div>
             </div>
@@ -89,13 +91,24 @@ export default function Home() {
       {/* ─── Sectors ─── */}
       <section id="sectors" aria-labelledby="sectors-heading" className="mx-auto max-w-6xl px-6 pt-24 pb-24">
         <ScrollReveal>
-          <div className="max-w-2xl">
-            <h2 id="sectors-heading" className="font-serif italic text-3xl sm:text-4xl lg:text-5xl tracking-tight text-foreground leading-[1.1]">
-              {t("sectors.title")}
-            </h2>
-            <p className="mt-5 text-muted text-base max-w-lg leading-relaxed">
-              {t("sectors.subtitle")}
-            </p>
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 max-w-full">
+            <div className="max-w-2xl">
+              <h2 id="sectors-heading" className="font-serif italic text-3xl sm:text-4xl lg:text-5xl tracking-tight text-foreground leading-[1.1]">
+                {t("sectors.title")}
+              </h2>
+              <p className="mt-5 text-muted text-base max-w-lg leading-relaxed">
+                {t("sectors.subtitle")}
+              </p>
+            </div>
+            <a
+              href={`/${locale}/sectors`}
+              className="group inline-flex items-center gap-2 shrink-0 text-sm font-semibold text-foreground border border-border rounded-full px-5 py-2.5 hover:border-foreground/30 hover:bg-foreground/[0.04] transition-all"
+            >
+              {t("common.exploreSectors")}
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="rtl:-scale-x-100 transition-transform group-hover:translate-x-0.5">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
           </div>
         </ScrollReveal>
 
@@ -277,33 +290,13 @@ export default function Home() {
       <div className="section-divide" />
 
       {/* ─── Bottom CTA ─── */}
-      <section aria-labelledby="cta-heading" className="mx-auto max-w-6xl px-6 py-28 lg:py-36">
-        <ScrollReveal>
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 id="cta-heading" className="font-serif italic text-3xl sm:text-4xl lg:text-[3.25rem] tracking-tight text-foreground leading-[1.08]">
-              {t("ctaBand.default.title")}
-            </h2>
-            <p className="mt-5 text-muted max-w-lg mx-auto text-base leading-relaxed">
-              {t("ctaBand.default.desc")}
-            </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
-              <a
-                href={`/${locale}/contact`}
-                className="inline-flex items-center justify-center rounded-full bg-accent px-10 py-4 text-[15px] font-semibold text-white shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/25 hover:bg-accent-dark active:scale-[0.97] transition-all hover:-translate-y-px"
-              >
-                {t("ctaBand.default.cta")}
-              </a>
-              <a
-                href="#sectors"
-                className="group inline-flex items-center gap-2 text-sm text-foreground/60 hover:text-foreground transition-colors font-medium"
-              >
-                {t("ctaBand.default.seeSectors")}
-                <span className="group-hover:-translate-y-0.5 transition-transform">&uarr;</span>
-              </a>
-            </div>
-          </div>
-        </ScrollReveal>
-      </section>
+      <CtaBand
+        titleKey="ctaBand.default.title"
+        ctaKey="ctaBand.default.cta"
+        descKey="ctaBand.default.desc"
+        secondaryKey="ctaBand.default.secondary"
+        secondaryHref={`/${locale}/sectors`}
+      />
     </PageShell>
   );
 }

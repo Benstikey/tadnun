@@ -207,3 +207,8 @@ h3 { font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem); }
     scroll-behavior: auto !important;
   }
 }
+
+@keyframes progressFill {
+  from { width: 0%; }
+  to   { width: 100%; }
+}

@@ -134,22 +134,22 @@
     "subtitle": "We don't sell technology. We solve your real problems.",
     "items": {
       "local": {
-        "icon": "\uD83C\uDDF2\uD83C\uDDE6",
+        "icon": "🇲🇦",
         "title": "Built for Morocco",
         "body": "French and Darija interfaces, CMI and mobile payment integration, WhatsApp Business compatibility. We know your market because we live in it."
       },
       "simple": {
-        "icon": "\u2728",
+        "icon": "✨",
         "title": "Simple to use",
         "body": "No IT expertise needed. Our tools are designed for entrepreneurs, not developers. If you can use WhatsApp, you can use Tadnun."
       },
       "support": {
-        "icon": "\uD83E\uDD1D",
+        "icon": "🤝",
         "title": "Human support",
         "body": "A dedicated contact who speaks Darija and French. Support via WhatsApp, phone, and on-site. We never leave you alone with software."
       },
       "price": {
-        "icon": "\uD83D\uDCB0",
+        "icon": "💰",
         "title": "SME-friendly pricing",
         "body": "Plans starting at 299 MAD/month. No hidden fees, no surprises. We believe digitalization should be accessible, not reserved for big companies."
       }
@@ -194,7 +194,12 @@
         "price": "299",
         "unit": "MAD/mo",
         "description": "Start your digital presence.",
-        "features": ["Optimized Google Maps listing", "One-page website", "WhatsApp Business setup", "WhatsApp support"]
+        "features": [
+          "Optimized Google Maps listing",
+          "One-page website",
+          "WhatsApp Business setup",
+          "WhatsApp support"
+        ]
       },
       "pro": {
         "name": "Pro",
@@ -202,14 +207,26 @@
         "unit": "MAD/mo",
         "badge": "Popular",
         "description": "Digitalize your daily operations.",
-        "features": ["Everything in Starter +", "Booking / ordering system", "Connected POS or CRM", "Analytics dashboard", "Team training included"]
+        "features": [
+          "Everything in Starter +",
+          "Booking / ordering system",
+          "Connected POS or CRM",
+          "Analytics dashboard",
+          "Team training included"
+        ]
       },
       "premium": {
         "name": "Premium",
         "price": "2,999",
         "unit": "MAD/mo",
         "description": "Complete digital transformation.",
-        "features": ["Everything in Pro +", "Dedicated mobile app", "Advanced integrations (ERP, API)", "Monthly strategy consulting", "Priority phone support"]
+        "features": [
+          "Everything in Pro +",
+          "Dedicated mobile app",
+          "Advanced integrations (ERP, API)",
+          "Monthly strategy consulting",
+          "Priority phone support"
+        ]
       }
     },
     "cta": "Request a quote",
@@ -299,9 +316,25 @@
     "letsTalk": "Let's talk"
   },
   "ctaBand": {
-    "default": { "title": "Ready to digitalize your business?", "cta": "Contact us", "desc": "First discovery call is free. No commitment, no jargon.", "seeSectors": "See sectors" },
-    "about": { "title": "Want to work with us?", "cta": "Let's talk" },
-    "approach": { "title": "Convinced by our approach?", "cta": "Let's discuss your project" }
+    "default": {
+      "title": "Ready to digitalize your business?",
+      "cta": "Contact us",
+      "desc": "First discovery call is free. No commitment, no jargon.",
+      "seeSectors": "See sectors",
+      "secondary": "See sectors"
+    },
+    "about": {
+      "title": "We're not just another agency. We're your digital team.",
+      "desc": "First call is free. We'll tell you honestly whether we can help — and exactly how.",
+      "cta": "Book a call",
+      "secondary": "Our approach"
+    },
+    "approach": {
+      "title": "Your business deserves more than another generic tool.",
+      "desc": "45 minutes to map your blockers and build a concrete action plan. No commitment, no jargon.",
+      "cta": "Book my free diagnostic",
+      "secondary": "Explore sectors"
+    }
   },
   "aboutPage": {
     "eyebrow": "OUR STORY",
@@ -414,5 +447,61 @@
     "replyMsg1": "Welcome! Great to hear that. We work with 30+ restaurants across Morocco.",
     "replyMsg2": "Let's book a free 15-min call to understand your needs. When works for you?",
     "inputPlaceholder": "Type a message"
+  },
+  "sectorsPage": {
+    "eyebrow": "Sectors",
+    "title": "Every sector has its blockers.",
+    "titleAccent": "We know them all.",
+    "subtitle": "We don't sell generic software. We solve specific problems, sector by sector — with integrations built for the Moroccan market.",
+    "signsEyebrow": "SOUND FAMILIAR?",
+    "signsTitle": "Your business needs to go digital if…",
+    "signs": [
+      {
+        "title": "You're still managing on paper or WhatsApp",
+        "body": "Orders, stock, payments, appointments — everything lives in notebooks and overflowing WhatsApp groups."
+      },
+      {
+        "title": "Your competitors show up on Google. You don't.",
+        "body": "Customers search online, find your competitors, and never make it to you."
+      },
+      {
+        "title": "Admin eats your time instead of your trade",
+        "body": "Invoicing, reports, follow-ups — hours every week you'll never spend serving customers."
+      },
+      {
+        "title": "You don't know exactly how much you're making",
+        "body": "Without real-time tracking, you discover margin problems too late to act."
+      },
+      {
+        "title": "You're losing customers you can't follow up with",
+        "body": "Leads that drop, messages without replies, opportunities that go to a competitor."
+      },
+      {
+        "title": "You can't prove what you do",
+        "body": "No traceability, no reporting, no proof — a risk at every inspection or audit."
+      }
+    ],
+    "gridEyebrow": "OUR SECTORS",
+    "gridTitle": "Which sector is yours?",
+    "gridSubtitle": "Click your sector to see specific solutions, integrations, and real results.",
+    "deepDive": "See solutions",
+    "roiLabel": "key result",
+    "otherEyebrow": "DON'T SEE YOUR SECTOR?",
+    "otherTitle": "We work across all sectors.",
+    "otherBody": "Agriculture, restaurants, healthcare — those are our priorities. But digitalization doesn't stop there. If you have an operational problem, friction in your workflow, or an opportunity you can't capture — we want to hear it.",
+    "otherCta": "Tell us about your business",
+    "otherIndustries": [
+      "Crafts & Artisan",
+      "Finance & Insurance",
+      "Legal",
+      "Industry & Manufacturing",
+      "B2B Services",
+      "Public Administration",
+      "E-commerce",
+      "Beauty & Wellness"
+    ],
+    "ctaTitle": "Ready to transform your sector?",
+    "ctaBody": "Free first diagnostic. We identify your 3 biggest blockers in 45 minutes — no commitment.",
+    "ctaButton": "Book my diagnostic"
   }
 }

@@ -1,6 +1,5 @@
 import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
-import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ApproachTimeline, AnimatedStat } from "@/components/visuals";
 import { BeforeAfterRow } from "@/components/before-after-row";
 import { ExpertiseIcon } from "@/components/icons";
@@ -32,15 +31,6 @@ export default async function ApproachPage({
   const sectorKey = getSectorFromParams(resolvedSearchParams);
   const details = sectorKey ? sectorDetails[sectorKey] : null;
   const sectorName = sectorKey ? t(`sectors.items.${sectorKey}.name`) : null;
-
-  // Breadcrumbs: sector-aware when param exists
-  const breadcrumbItems = sectorKey
-    ? [
-        { label: t("nav.sectors"), href: `/${locale}/#sectors` },
-        { label: sectorName!, href: `/${locale}/sectors/${sectorKey}` },
-        { label: t("nav.approach") },
-      ]
-    : [{ label: t("nav.approach") }];
 
   // Before/After data: sector-specific or generic
   const workflowData = details
@@ -77,9 +67,7 @@ export default async function ApproachPage({
 
   return (
     <PageShell>
-      <section aria-labelledby="approach-heading" className="mx-auto max-w-6xl px-6 pt-20 pb-16">
-        <Breadcrumbs items={breadcrumbItems} />
-
+      <section aria-labelledby="approach-heading" className="mx-auto max-w-6xl px-6 pt-24 pb-16">
         <p className="text-accent text-xs font-mono tracking-widest mb-2">
           {t("approachPage.eyebrow")}
         </p>
@@ -184,7 +172,14 @@ export default async function ApproachPage({
 
       <div className="border-t border-border" />
 
-      <CtaBand titleKey="ctaBand.approach.title" ctaKey="ctaBand.approach.cta" sectorKey={sectorKey} />
+      <CtaBand
+        titleKey="ctaBand.approach.title"
+        ctaKey="ctaBand.approach.cta"
+        descKey="ctaBand.approach.desc"
+        secondaryKey="ctaBand.approach.secondary"
+        secondaryHref={`/${locale}/sectors`}
+        sectorKey={sectorKey}
+      />
     </PageShell>
   );
 }

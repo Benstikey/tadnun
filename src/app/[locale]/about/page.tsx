@@ -1,6 +1,5 @@
 import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
-import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Vision2030Visual } from "@/components/visuals";
 import { SectorIntegrationHub } from "@/components/integration-hub";
 import { RealityVisual } from "@/components/reality-visual";
@@ -38,15 +37,6 @@ export default async function AboutPage({
   const sectorKey = getSectorFromParams(resolvedSearchParams);
   const sectorName = sectorKey ? t(`sectors.items.${sectorKey}.name`) : null;
 
-  // Breadcrumbs: sector-aware when param exists
-  const breadcrumbItems = sectorKey
-    ? [
-        { label: t("nav.sectors"), href: `/${locale}/#sectors` },
-        { label: sectorName!, href: `/${locale}/sectors/${sectorKey}` },
-        { label: t("nav.about") },
-      ]
-    : [{ label: t("nav.about") }];
-
   // Determine which story to highlight (if any)
   const highlightedStory = sectorKey ? sectorStoryMap[sectorKey] ?? null : null;
 
@@ -58,9 +48,7 @@ export default async function AboutPage({
   return (
     <PageShell>
       {/* Hero */}
-      <section aria-labelledby="about-heading" className="mx-auto max-w-6xl px-6 pt-20 pb-24">
-        <Breadcrumbs items={breadcrumbItems} />
-
+      <section aria-labelledby="about-heading" className="mx-auto max-w-6xl px-6 pt-24 pb-16">
         <p className="text-accent text-xs font-mono tracking-widest mb-2">
           {t("aboutPage.eyebrow")}
         </p>
@@ -222,7 +210,14 @@ export default async function AboutPage({
 
       <div className="border-t border-border" />
 
-      <CtaBand titleKey="ctaBand.about.title" ctaKey="ctaBand.about.cta" sectorKey={sectorKey} />
+      <CtaBand
+        titleKey="ctaBand.about.title"
+        ctaKey="ctaBand.about.cta"
+        descKey="ctaBand.about.desc"
+        secondaryKey="ctaBand.about.secondary"
+        secondaryHref={`/${locale}/approach`}
+        sectorKey={sectorKey}
+      />
     </PageShell>
   );
 }
