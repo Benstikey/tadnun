@@ -152,7 +152,7 @@
       "price": {
         "icon": "💰",
         "title": "SME-friendly pricing",
-        "body": "Plans starting at 299 MAD/month. No hidden fees, no surprises. We believe digitalization should be accessible, not reserved for big companies."
+        "body": "Pricing adapted to your business size. No hidden fees, no surprises. We believe digitalization should be accessible, not reserved for big companies."
       }
     }
   },
@@ -187,51 +187,41 @@
   },
   "pricing": {
     "eyebrow": "05",
-    "title": "Clear pricing, no surprises",
-    "subtitle": "Every plan includes setup, training, and support. No hidden fees.",
-    "tiers": {
-      "starter": {
-        "name": "Starter",
-        "price": "299",
-        "unit": "MAD/mo",
-        "description": "Start your digital presence.",
-        "features": [
-          "Optimized Google Maps listing",
-          "One-page website",
-          "WhatsApp Business setup",
-          "WhatsApp support"
-        ]
+    "title": "Your investment, built around your business",
+    "subtitle": "No generic packages. Every solution is sized to your needs, your sector, and your team.",
+    "pillars": {
+      "tailored": {
+        "icon": "📐",
+        "title": "Built for your size",
+        "body": "80% of our clients have fewer than 20 employees. We adapt our solutions and pricing to match your reality — not the other way around."
       },
-      "pro": {
-        "name": "Pro",
-        "price": "999",
-        "unit": "MAD/mo",
-        "badge": "Popular",
-        "description": "Digitalize your daily operations.",
-        "features": [
-          "Everything in Starter +",
-          "Booking / ordering system",
-          "Connected POS or CRM",
-          "Analytics dashboard",
-          "Team training included"
-        ]
+      "transparent": {
+        "icon": "📄",
+        "title": "No hidden fees",
+        "body": "The price we agree on is the price you pay. DGI-compliant invoice with every payment. Bank transfer or CMI card."
       },
-      "premium": {
-        "name": "Premium",
-        "price": "2,999",
-        "unit": "MAD/mo",
-        "description": "Complete digital transformation.",
-        "features": [
-          "Everything in Pro +",
-          "Dedicated mobile app",
-          "Advanced integrations (ERP, API)",
-          "Monthly strategy consulting",
-          "Priority phone support"
-        ]
+      "flexible": {
+        "icon": "🔓",
+        "title": "No lock-in",
+        "body": "Cancel anytime. Your data is yours and we export it in standard format. We earn your trust every month."
       }
     },
-    "cta": "Request a quote",
-    "note": "First month free. No commitment."
+    "costOfInaction": {
+      "title": "What staying analog really costs",
+      "items": {
+        "contracts": { "value": "400K MAD", "label": "lost in one missed log entry" },
+        "commissions": { "value": "300K MAD/yr", "label": "sent abroad in commissions" },
+        "noshows": { "value": "2,000 MAD/day", "label": "in empty appointment slots" }
+      }
+    },
+    "process": {
+      "title": "How it works",
+      "step1": "Free 15-min call to understand your needs",
+      "step2": "Detailed proposal with exact pricing within 48h",
+      "step3": "You decide — no pressure, no follow-up sales calls"
+    },
+    "cta": "Book your free consultation",
+    "note": "150+ businesses have already taken this step."
   },
   "faq": {
     "eyebrow": "FAQ",
@@ -266,7 +256,7 @@
       },
       "q6": {
         "question": "How does pricing work?",
-        "answer": "Bank transfer or CMI card. Monthly or annual plans (2 months free on annual). DGI-compliant invoice with every payment. No hidden fees, no surprises — the price we quote is the price you pay."
+        "answer": "Every project gets a custom proposal based on your specific needs. Tadnun sends you exact pricing within 48h of your first call — no guessing, no surprises. Payment by bank transfer or CMI card. DGI-compliant invoice with every payment."
       },
       "q7": {
         "question": "Will my data be safe?",

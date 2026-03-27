@@ -152,7 +152,7 @@
       "price": {
         "icon": "💰",
         "title": "Prix adaptés aux PME",
-        "body": "Des formules à partir de 299 DH/mois. Pas de frais cachés, pas de surprise. On croit que la digitalisation doit être accessible, pas réservée aux grandes entreprises."
+        "body": "Tarification adaptée à la taille de votre entreprise. Pas de frais cachés, pas de surprise. On croit que la digitalisation doit être accessible, pas réservée aux grandes entreprises."
       }
     }
   },
@@ -187,51 +187,41 @@
   },
   "pricing": {
     "eyebrow": "05",
-    "title": "Des prix clairs, sans surprise",
-    "subtitle": "Chaque formule inclut l'accompagnement, la formation et le support. Pas de frais cachés.",
-    "tiers": {
-      "starter": {
-        "name": "Essentiel",
-        "price": "299",
-        "unit": "DH/mois",
-        "description": "Pour démarrer votre présence digitale.",
-        "features": [
-          "Fiche Google Maps optimisée",
-          "Site web one-page",
-          "WhatsApp Business setup",
-          "Support par WhatsApp"
-        ]
+    "title": "Votre investissement, construit autour de votre activité",
+    "subtitle": "Pas de formule générique. Chaque solution est dimensionnée à vos besoins, votre secteur et votre équipe.",
+    "pillars": {
+      "tailored": {
+        "icon": "📐",
+        "title": "Adapté à votre taille",
+        "body": "80% de nos clients ont moins de 20 employés. On adapte nos solutions et nos tarifs à votre réalité — pas l'inverse."
       },
-      "pro": {
-        "name": "Pro",
-        "price": "999",
-        "unit": "DH/mois",
-        "badge": "Populaire",
-        "description": "Pour digitaliser vos opérations au quotidien.",
-        "features": [
-          "Tout Essentiel +",
-          "Système de réservation / commande",
-          "Caisse connectée ou CRM",
-          "Tableau de bord analytics",
-          "Formation équipe incluse"
-        ]
+      "transparent": {
+        "icon": "📄",
+        "title": "Pas de frais cachés",
+        "body": "Le prix convenu est le prix que vous payez. Facture conforme DGI à chaque paiement. Virement bancaire ou carte CMI."
       },
-      "premium": {
-        "name": "Premium",
-        "price": "2,999",
-        "unit": "DH/mois",
-        "description": "Pour une transformation digitale complète.",
-        "features": [
-          "Tout Pro +",
-          "Application mobile dédiée",
-          "Intégrations avancées (ERP, API)",
-          "Accompagnement stratégique mensuel",
-          "Support prioritaire téléphone"
-        ]
+      "flexible": {
+        "icon": "🔓",
+        "title": "Sans engagement",
+        "body": "Arrêtez quand vous voulez. Vos données vous appartiennent et on vous les exporte en format standard. On mérite votre confiance chaque mois."
       }
     },
-    "cta": "Demander un devis",
-    "note": "Premier mois offert. Sans engagement."
+    "costOfInaction": {
+      "title": "Ce que ça coûte vraiment de rester au papier",
+      "items": {
+        "contracts": { "value": "400K MAD", "label": "perdus pour un seul oubli de traçabilité" },
+        "commissions": { "value": "300K MAD/an", "label": "envoyés à l'étranger en commissions" },
+        "noshows": { "value": "2 000 MAD/jour", "label": "en rendez-vous manqués" }
+      }
+    },
+    "process": {
+      "title": "Comment ça marche",
+      "step1": "Appel gratuit de 15 min pour comprendre vos besoins",
+      "step2": "Proposition détaillée avec tarif exact sous 48h",
+      "step3": "Vous décidez — sans pression, sans relance commerciale"
+    },
+    "cta": "Réserver ma consultation gratuite",
+    "note": "150+ entreprises ont déjà franchi le pas."
   },
   "faq": {
     "eyebrow": "FAQ",
@@ -266,7 +256,7 @@
       },
       "q6": {
         "question": "Comment fonctionne la tarification ?",
-        "answer": "Par virement bancaire ou carte CMI. Mensuel ou annuel (2 mois offerts). Facture conforme DGI à chaque paiement. Pas de frais cachés, pas de surprises — le prix qu'on annonce est le prix que vous payez."
+        "answer": "Chaque projet reçoit une proposition sur mesure basée sur vos besoins spécifiques. Tadnun vous envoie un tarif exact sous 48h après votre premier appel — pas de devinette, pas de surprise. Paiement par virement bancaire ou carte CMI. Facture conforme DGI à chaque paiement."
       },
       "q7": {
         "question": "Mes données seront-elles en sécurité ?",
