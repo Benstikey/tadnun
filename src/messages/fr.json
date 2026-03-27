@@ -108,7 +108,7 @@
     }
   },
   "approach": {
-    "eyebrow": "02",
+    "eyebrow": "COMMENT ON TRAVAILLE",
     "title": "Notre approche",
     "steps": {
       "understand": {
@@ -129,7 +129,7 @@
     }
   },
   "expertise": {
-    "eyebrow": "03",
+    "eyebrow": "POURQUOI NOUS",
     "title": "Pourquoi Tadnun",
     "subtitle": "On ne vend pas de la technologie. On résout vos problèmes concrets.",
     "items": {
@@ -316,6 +316,13 @@
     "problem2Body": "À Marrakech, un restaurant excellent avec 20 ans d'expérience. Mais zéro présence Google, zéro avis en ligne. Les touristes passent devant et vont chez le concurrent qui a 300 avis. 20 ans d'expertise, invisible en 2 secondes.",
     "problem3Title": "Le riad qui paie 300,000 DH à Amsterdam",
     "problem3Body": "Un propriétaire de riad à Fès envoie l'équivalent de deux salaires par an à Booking.com en commissions. Pas de site de réservation directe, pas de channel manager. L'argent part, les outils existent, mais personne ne les connecte.",
+    "realityPaperTrail": "LE COÛT DU PAPIER",
+    "realityLostContracts": "Perdu pour une seule fiche manquante",
+    "realityLostContractsValue": "400K DH",
+    "realityZeroPresence": "Visibilité en ligne pour 20 ans d'expertise",
+    "realityZeroPresenceValue": "0 avis",
+    "realityCommissions": "Envoyés à l'étranger en commissions par an",
+    "realityCommissionsValue": "300K DH",
     "differenceEyebrow": "NOTRE DIFFÉRENCE",
     "differenceTitle": "Pourquoi Tadnun",
     "differenceBody": "On ne vend pas de la technologie. On résout des problèmes concrets avec des outils adaptés au marché marocain — interfaces en darija, paiement CMI, support WhatsApp, prix accessibles.",
@@ -381,15 +388,19 @@
     "sectorSubtitle": "Comment nous travaillons avec {sector}"
   },
   "sectorPage": {
+    "realityEyebrow": "LE CONSTAT",
     "realityTitle": "La réalité de votre secteur",
     "beforeAfterEyebrow": "AVANT / APRÈS",
     "beforeAfterTitle": "Ce qui change concrètement",
+    "solutionsEyebrow": "SOLUTIONS",
     "solutionsTitle": "Ce qu'on construit pour vous",
     "whyTadnunFor": "Pourquoi Tadnun pour {sector}",
     "howWeWork": "Comment on travaille avec {sector}",
+    "ecosystemEyebrow": "INTÉGRATIONS",
     "ecosystemTitle": "Un écosystème connecté",
     "ecosystemDesc": "On connecte les plateformes que vous utilisez déjà — et celles dont vous avez besoin. L'intégration, c'est notre métier.",
     "connectedVia": "Connecté via Tadnun",
+    "faqEyebrow": "FAQ",
     "faqTitle": "Questions fréquentes",
     "ctaTitle": "Prêt à transformer votre activité ?",
     "ctaDesc": "Premier appel de découverte gratuit. Sans engagement.",

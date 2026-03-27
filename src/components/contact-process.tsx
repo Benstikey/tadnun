@@ -19,9 +19,9 @@ export function ContactProcess() {
         {steps.map(({ key, icon: Icon }, i) => (
           <div
             key={key}
-            className="bg-surface p-6 flex flex-col gap-3"
+            className="group bg-surface p-6 flex flex-col gap-3 transition-colors duration-200 hover:bg-foreground/[0.02]"
           >
-            <Icon className="w-5 h-5 text-foreground/50" />
+            <Icon className="w-5 h-5 text-foreground/50 transition-colors duration-200 group-hover:text-accent/70" />
             <p className="font-semibold text-foreground text-[15px] leading-snug">
               {t(key)}
             </p>

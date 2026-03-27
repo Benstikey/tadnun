@@ -38,12 +38,19 @@ export function SectorFaq({ items, isFr }: { items: FaqItem[]; isFr: boolean }) 
               id={panelId}
               role="region"
               aria-labelledby={buttonId}
-              className={`overflow-hidden transition-all duration-200 ${isOpen ? "max-h-96 pb-5" : "max-h-0"}`}
-              hidden={!isOpen}
+              className="grid transition-all duration-300 ease-out"
+              style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
             >
-              <p className="text-muted text-[14px] leading-relaxed max-w-2xl">
-                {isFr ? item.a : item.aEn}
-              </p>
+              <div className="overflow-hidden">
+                <div className="pb-5">
+                  <p
+                    className="text-muted text-[14px] leading-relaxed max-w-2xl transition-opacity duration-300"
+                    style={{ opacity: isOpen ? 1 : 0 }}
+                  >
+                    {isFr ? item.a : item.aEn}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         );

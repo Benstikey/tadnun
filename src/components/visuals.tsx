@@ -309,31 +309,34 @@ export function ApproachTimeline({
   steps: { num: string; title: string; body: string }[];
 }) {
   return (
-    <div className="mt-16 grid sm:grid-cols-3 gap-6">
-      {steps.map((step, i) => (
-        <ScrollRevealInner key={i} delay={i * 120}>
-          <div className="relative rounded-2xl border border-border bg-surface p-7 h-full">
-            {/* Step number */}
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-accent text-white font-serif italic text-sm">
-              {step.num}
-            </span>
-            {/* Arrow connector (hidden on last) */}
-            {i < steps.length - 1 && (
-              <div className="hidden sm:block absolute top-10 -end-3 z-10 w-6 h-6 text-border rtl:-scale-x-100">
-                <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
-                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+    <div className="mt-16 relative">
+      {/* Horizontal connector line (desktop) */}
+      <div className="hidden sm:block absolute top-[28px] inset-x-0 h-px bg-border z-0" />
+
+      <div className="grid sm:grid-cols-3 gap-0">
+        {steps.map((step, i) => (
+          <ScrollRevealInner key={i} delay={i * 150}>
+            <div className="relative flex flex-col items-start sm:items-center text-start sm:text-center px-6">
+              {/* Step dot + number */}
+              <div className="relative z-10 mb-6">
+                <div className="w-14 h-14 rounded-full bg-background border-2 border-accent/30 flex items-center justify-center transition-colors">
+                  <span className="font-serif italic text-lg text-accent">
+                    {step.num}
+                  </span>
+                </div>
               </div>
-            )}
-            <h3 className="text-foreground font-medium text-lg mt-4">
-              {step.title}
-            </h3>
-            <p className="mt-2 text-muted text-[14px] leading-relaxed">
-              {step.body}
-            </p>
-          </div>
-        </ScrollRevealInner>
-      ))}
+
+              {/* Content */}
+              <h3 className="text-foreground font-semibold text-lg leading-snug">
+                {step.title}
+              </h3>
+              <p className="mt-3 text-muted text-[14px] leading-relaxed max-w-[280px]">
+                {step.body}
+              </p>
+            </div>
+          </ScrollRevealInner>
+        ))}
+      </div>
     </div>
   );
 }

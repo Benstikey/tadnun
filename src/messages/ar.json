@@ -108,7 +108,7 @@
     }
   },
   "approach": {
-    "eyebrow": "02",
+    "eyebrow": "كيفاش كنخدمو",
     "title": "المنهجية ديالنا",
     "steps": {
       "understand": {
@@ -129,7 +129,7 @@
     }
   },
   "expertise": {
-    "eyebrow": "03",
+    "eyebrow": "علاش حنا",
     "title": "علاش Tadnun",
     "subtitle": "ما كنبيعوش التكنولوجيا. كنحلّو المشاكل الحقيقية ديالك.",
     "items": {
@@ -344,6 +344,13 @@
     "problem2Body": "في مراكش، مطعم ممتاز بـ 20 سنة ديال التجربة. ولكن صفر تواجد على Google، صفر تقييمات أونلاين. السياح كيدوزو قدامو وكيمشيو عند المنافس اللي عنده 300 تقييم. 20 سنة ديال الخبرة، خفي في ثانيتين.",
     "problem3Title": "الرياض اللي كيسيفط 300,000 درهم لأمستردام",
     "problem3Body": "مول رياض في فاس كيسيفط ما يساوي جوج صالير في العام لـ Booking.com في العمولات. بلا موقع حجز مباشر، بلا channel manager. الفلوس كتمشي، الأدوات موجودة، ولكن حتى واحد ما كيربطهم.",
+    "realityPaperTrail": "ثمن البقاء بالورق",
+    "realityLostContracts": "ضاع بسبب فيشة وحدة ناقصة",
+    "realityLostContractsValue": "400K درهم",
+    "realityZeroPresence": "التواجد أونلاين ديال 20 عام ديال الخبرة",
+    "realityZeroPresenceValue": "0 تقييمات",
+    "realityCommissions": "كتمشي للخارج في العمولات كل عام",
+    "realityCommissionsValue": "300K درهم",
     "differenceEyebrow": "الفرق ديالنا",
     "differenceTitle": "علاش Tadnun",
     "differenceBody": "ما كنبيعوش التكنولوجيا. كنحلّو مشاكل حقيقية بأدوات مصممة للسوق المغربي — واجهات بالدارجة، خلاص CMI، دعم WhatsApp، أثمنة في المتناول.",
@@ -409,15 +416,19 @@
     "sectorSubtitle": "كيفاش كنخدمو مع {sector}"
   },
   "sectorPage": {
+    "realityEyebrow": "الواقع",
     "realityTitle": "واقع القطاع ديالك",
     "beforeAfterEyebrow": "قبل / بعد",
     "beforeAfterTitle": "اللي كيتبدل فالحقيقة",
+    "solutionsEyebrow": "الحلول",
     "solutionsTitle": "اش كنبنيو ليك",
     "whyTadnunFor": "علاش Tadnun ل{sector}",
     "howWeWork": "كيفاش كنخدمو مع {sector}",
+    "ecosystemEyebrow": "التكامل",
     "ecosystemTitle": "نظام متصل",
     "ecosystemDesc": "كنربطو المنصات اللي كتخدم بيها — واللي خاصك. الربط هو الخبرة ديالنا.",
     "connectedVia": "مربوط عبر تدنون",
+    "faqEyebrow": "أسئلة شائعة",
     "faqTitle": "أسئلة شائعة",
     "ctaTitle": "واجد تحول النشاط ديالك؟",
     "ctaDesc": "أول مكالمة اكتشاف مجانية. بلا التزام.",

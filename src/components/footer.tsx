@@ -25,7 +25,7 @@ export function Footer() {
           </div>
           <a
             href={`/${locale}/contact`}
-            className="inline-flex items-center gap-2 rounded-full bg-background text-foreground px-6 py-3 text-sm font-semibold hover:bg-background/90 transition-all self-start sm:self-auto"
+            className="inline-flex items-center gap-2 rounded-full bg-background text-foreground px-6 py-3 text-sm font-semibold hover:bg-background/90 active:scale-[0.97] transition-all duration-150 hover:-translate-y-px hover:shadow-lg hover:shadow-background/10 self-start sm:self-auto"
           >
             {t("common.letsTalk")}
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="opacity-60 rtl:-scale-x-100">
@@ -51,7 +51,7 @@ export function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-background/50 hover:text-background transition-colors"
+                  className="nav-link-underline text-sm text-background/50 hover:text-background transition-colors"
                 >
                   {link.label}
                 </a>

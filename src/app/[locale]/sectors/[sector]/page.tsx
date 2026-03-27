@@ -9,6 +9,8 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import { AnimatedStat, ApproachTimeline } from "@/components/visuals";
 import { BeforeAfterRow } from "@/components/before-after-row";
 import { SectorIntegrationHub } from "@/components/integration-hub";
+import { SectionHeading } from "@/components/section-heading";
+import { IconBox } from "@/components/icon-box";
 import { sectorDetails } from "@/data/sector-details";
 import { validSectors, type SectorKey } from "@/lib/sector-context";
 import type { Metadata } from "next";
@@ -115,10 +117,11 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
 
         {/* Pain Points */}
         <section aria-labelledby="reality-heading" className="mx-auto max-w-6xl px-6 pt-20 pb-24">
-          <p className="text-section-num text-xs font-mono tracking-widest mb-2">01</p>
-          <h2 id="reality-heading" className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground">
-            {t("sectorPage.realityTitle")}
-          </h2>
+          <SectionHeading
+            eyebrow={t("sectorPage.realityEyebrow")}
+            title={t("sectorPage.realityTitle")}
+            id="reality-heading"
+          />
           <div className="mt-14 space-y-10">
             {details.painPoints.map((p, i) => (
               <div key={i} className="max-w-2xl">
@@ -151,12 +154,10 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
           {/* How we work with [sector] */}
           <div className="mt-24">
             <ScrollReveal>
-              <p className="text-section-num text-xs font-mono tracking-widest mb-2">
-                {t("approach.steps.understand.num")}–{t("approach.steps.grow.num")}
-              </p>
-              <h2 className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground">
-                {t("sectorPage.howWeWork", { sector: sectorName.toLowerCase() })}
-              </h2>
+              <SectionHeading
+                eyebrow={t("approach.eyebrow")}
+                title={t("sectorPage.howWeWork", { sector: sectorName.toLowerCase() })}
+              />
             </ScrollReveal>
 
             <ApproachTimeline
@@ -175,12 +176,11 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
 
         {/* Process Transformation */}
         <section aria-labelledby="transformation-heading" className="mx-auto max-w-6xl px-6 py-24">
-          <p className="text-accent text-xs font-mono tracking-widest mb-2">
-            {t("sectorPage.beforeAfterEyebrow")}
-          </p>
-          <h2 id="transformation-heading" className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground">
-            {t("sectorPage.beforeAfterTitle")}
-          </h2>
+          <SectionHeading
+            eyebrow={t("sectorPage.beforeAfterEyebrow")}
+            title={t("sectorPage.beforeAfterTitle")}
+            id="transformation-heading"
+          />
           <div className="mt-14 space-y-4">
             {details.workflows.map((w, i) => (
               <BeforeAfterRow
@@ -197,17 +197,18 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
 
         {/* Solutions */}
         <section aria-labelledby="solutions-heading" className="mx-auto max-w-6xl px-6 py-24">
-          <p className="text-section-num text-xs font-mono tracking-widest mb-2">02</p>
-          <h2 id="solutions-heading" className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground">
-            {t("sectorPage.solutionsTitle")}
-          </h2>
+          <SectionHeading
+            eyebrow={t("sectorPage.solutionsEyebrow")}
+            title={t("sectorPage.solutionsTitle")}
+            id="solutions-heading"
+          />
           <div className="mt-14 grid gap-6 sm:grid-cols-2">
             {solutions.map((sol, i) => (
               <div key={i} className="rounded-2xl border border-border bg-surface p-7 flex flex-col gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-foreground/5 flex items-center justify-center text-foreground/50">
+                  <IconBox size="sm">
                     <SolutionIcon iconKey={sol.iconKey} size={20} />
-                  </div>
+                  </IconBox>
                   <h3 className="font-semibold text-foreground text-base">{isEn ? sol.name : sol.nameFr}</h3>
                 </div>
                 <p className="text-foreground/70 text-[14px] leading-relaxed">{isEn ? sol.desc : sol.descFr}</p>
@@ -253,13 +254,12 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
 
         {/* Integration Ecosystem */}
         <section aria-labelledby="ecosystem-heading" className="mx-auto max-w-6xl px-6 pt-24 pb-20">
-          <p className="text-section-num text-xs font-mono tracking-widest mb-2">03</p>
-          <h2 id="ecosystem-heading" className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground">
-            {t("sectorPage.ecosystemTitle")}
-          </h2>
-          <p className="mt-4 text-muted max-w-lg">
-            {t("sectorPage.ecosystemDesc")}
-          </p>
+          <SectionHeading
+            eyebrow={t("sectorPage.ecosystemEyebrow")}
+            title={t("sectorPage.ecosystemTitle")}
+            subtitle={t("sectorPage.ecosystemDesc")}
+            id="ecosystem-heading"
+          />
           <div className="mt-14">
             <SectorIntegrationHub
               integrations={details.integrations.map((integ) => ({
@@ -276,10 +276,11 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
 
         {/* FAQ */}
         <section aria-labelledby="sector-faq-heading" className="mx-auto max-w-6xl px-6 py-24">
-          <p className="text-section-num text-xs font-mono tracking-widest mb-2">04</p>
-          <h2 id="sector-faq-heading" className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground">
-            {t("sectorPage.faqTitle")}
-          </h2>
+          <SectionHeading
+            eyebrow={t("sectorPage.faqEyebrow")}
+            title={t("sectorPage.faqTitle")}
+            id="sector-faq-heading"
+          />
           <div className="mt-14">
             <SectorFaq items={details.faq} isFr={!isEn} />
           </div>

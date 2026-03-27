@@ -40,7 +40,7 @@ export function FaqSection() {
         <div className="mt-8 flex items-center gap-3">
           <a
             href={`/${locale}/contact`}
-            className="inline-flex items-center justify-center rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background hover:bg-foreground/90 transition-all hover:-translate-y-px"
+            className="inline-flex items-center justify-center rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background hover:bg-foreground/90 active:scale-[0.97] transition-all duration-150 hover:-translate-y-px hover:shadow-lg hover:shadow-foreground/10"
           >
             {t("ctaButton")}
           </a>
@@ -110,7 +110,10 @@ export function FaqSection() {
                 >
                   <div className="overflow-hidden">
                     <div className="pb-6">
-                      <p className="text-muted text-[14px] leading-relaxed">
+                      <p
+                        className="text-muted text-[14px] leading-relaxed transition-opacity duration-300"
+                        style={{ opacity: isOpen ? 1 : 0 }}
+                      >
                         {t(`items.${key}.answer`)}
                       </p>
                     </div>

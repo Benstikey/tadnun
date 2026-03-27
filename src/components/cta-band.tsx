@@ -31,7 +31,7 @@ export function CtaBand({
       <div className="mt-8 flex items-center gap-4">
         <a
           href={contactHref}
-          className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-white shadow-sm shadow-accent/20 hover:shadow-lg hover:shadow-accent/25 hover:bg-accent/90 transition-all hover:-translate-y-px"
+          className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-white shadow-sm shadow-accent/20 hover:shadow-lg hover:shadow-accent/25 hover:bg-accent/90 active:scale-[0.97] active:shadow-sm transition-all duration-150 hover:-translate-y-px"
         >
           {t(ctaKey)}
         </a>

@@ -6,6 +6,7 @@ import { BeforeAfterRow } from "@/components/before-after-row";
 import { ExpertiseIcon } from "@/components/icons";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { CtaBand } from "@/components/cta-band";
+import { SectionHeading } from "@/components/section-heading";
 import { getSectorFromParams, type SectorKey } from "@/lib/sector-context";
 import { sectorDetails } from "@/data/sector-details";
 import type { Metadata } from "next";
@@ -97,15 +98,11 @@ export default async function ApproachPage({
       {/* Transformation Before/After */}
       <section className="mx-auto max-w-6xl px-6 pt-20 pb-24">
         <ScrollReveal>
-          <p className="text-accent text-xs font-mono tracking-widest mb-2">
-            {t("transformation.eyebrow")}
-          </p>
-          <h2 className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground">
-            {t("transformation.title")}
-          </h2>
-          <p className="mt-4 text-muted max-w-lg">
-            {t("transformation.subtitle")}
-          </p>
+          <SectionHeading
+            eyebrow={t("transformation.eyebrow")}
+            title={t("transformation.title")}
+            subtitle={t("transformation.subtitle")}
+          />
         </ScrollReveal>
 
         <div className="mt-14 space-y-4">
@@ -125,12 +122,10 @@ export default async function ApproachPage({
       {/* 3-Step Approach */}
       <section className="mx-auto max-w-6xl px-6 py-24">
         <ScrollReveal>
-          <p className="text-section-num text-xs font-mono tracking-widest mb-2">
-            {t("approach.eyebrow")}
-          </p>
-          <h2 className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground">
-            {t("approach.title")}
-          </h2>
+          <SectionHeading
+            eyebrow={t("approach.eyebrow")}
+            title={t("approach.title")}
+          />
         </ScrollReveal>
 
         <ApproachTimeline steps={timelineSteps} />
@@ -141,15 +136,11 @@ export default async function ApproachPage({
       {/* Why Tadnun */}
       <section className="mx-auto max-w-6xl px-6 pt-24 pb-20">
         <ScrollReveal>
-          <p className="text-section-num text-xs font-mono tracking-widest mb-2">
-            {t("expertise.eyebrow")}
-          </p>
-          <h2 className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground">
-            {t("expertise.title")}
-          </h2>
-          <p className="mt-4 text-muted max-w-lg">
-            {t("expertise.subtitle")}
-          </p>
+          <SectionHeading
+            eyebrow={t("expertise.eyebrow")}
+            title={t("expertise.title")}
+            subtitle={t("expertise.subtitle")}
+          />
         </ScrollReveal>
 
         <div className="mt-16 grid sm:grid-cols-2 gap-8">

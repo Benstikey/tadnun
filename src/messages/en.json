@@ -108,7 +108,7 @@
     }
   },
   "approach": {
-    "eyebrow": "02",
+    "eyebrow": "HOW WE WORK",
     "title": "Our approach",
     "steps": {
       "understand": {
@@ -129,7 +129,7 @@
     }
   },
   "expertise": {
-    "eyebrow": "03",
+    "eyebrow": "WHY US",
     "title": "Why Tadnun",
     "subtitle": "We don't sell technology. We solve your real problems.",
     "items": {
@@ -316,6 +316,13 @@
     "problem2Body": "In Marrakech, an excellent restaurant with 20 years of experience. But zero Google presence, zero online reviews. Tourists walk past to the competitor with 300 reviews. 20 years of expertise, invisible in 2 seconds.",
     "problem3Title": "The riad paying 300,000 MAD to Amsterdam",
     "problem3Body": "A riad owner in Fes sends two employees' salaries per year to Booking.com in commissions. No direct booking site, no channel manager. The money leaves, the tools exist, but nobody connects them.",
+    "realityPaperTrail": "THE COST OF STAYING ANALOG",
+    "realityLostContracts": "Lost in one missed log entry",
+    "realityLostContractsValue": "400K MAD",
+    "realityZeroPresence": "Online visibility for 20 years of expertise",
+    "realityZeroPresenceValue": "0 reviews",
+    "realityCommissions": "Sent abroad in commissions yearly",
+    "realityCommissionsValue": "300K MAD",
     "differenceEyebrow": "OUR DIFFERENCE",
     "differenceTitle": "Why Tadnun",
     "differenceBody": "We don't sell technology. We solve real problems with tools adapted to the Moroccan market — Darija interfaces, CMI payment, WhatsApp support, accessible pricing.",
@@ -381,15 +388,19 @@
     "sectorSubtitle": "How we work with {sector}"
   },
   "sectorPage": {
+    "realityEyebrow": "THE REALITY",
     "realityTitle": "The reality of your sector",
     "beforeAfterEyebrow": "BEFORE / AFTER",
     "beforeAfterTitle": "What actually changes",
+    "solutionsEyebrow": "SOLUTIONS",
     "solutionsTitle": "What we build for you",
     "whyTadnunFor": "Why Tadnun for {sector}",
     "howWeWork": "How we work with {sector}",
+    "ecosystemEyebrow": "INTEGRATIONS",
     "ecosystemTitle": "A connected ecosystem",
     "ecosystemDesc": "We connect the platforms you already use — and the ones you need. Integration is what we do.",
     "connectedVia": "Connected via Tadnun",
+    "faqEyebrow": "FAQ",
     "faqTitle": "Frequently asked questions",
     "ctaTitle": "Ready to transform your business?",
     "ctaDesc": "First discovery call is free. No commitment.",

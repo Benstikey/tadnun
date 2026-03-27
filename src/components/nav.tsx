@@ -75,7 +75,7 @@ export function Nav() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-[13px] text-muted hover:text-foreground px-3.5 py-2.5 rounded-lg hover:bg-foreground/[0.04] transition-all"
+                  className="nav-link-underline text-[13px] text-muted hover:text-foreground px-3.5 py-2.5 rounded-lg hover:bg-foreground/[0.04] transition-all"
                 >
                   {link.label}
                 </a>
@@ -88,7 +88,7 @@ export function Nav() {
             <LocaleSwitcher />
             <a
               href={`/${locale}/contact${sectorSuffix}`}
-              className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-[13px] font-semibold text-background hover:bg-foreground/85 transition-all hover:-translate-y-px"
+              className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-[13px] font-semibold text-background hover:bg-foreground/85 active:scale-[0.97] transition-all duration-150 hover:-translate-y-px hover:shadow-lg hover:shadow-foreground/10"
             >
               <span>{t("common.letsTalk")}</span>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="opacity-60 rtl:-scale-x-100">
@@ -106,28 +106,37 @@ export function Nav() {
             aria-label={mobileOpen ? t("nav.closeMenu") : t("nav.openMenu")}
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
-              {mobileOpen ? (
-                <>
-                  <line x1="5" y1="5" x2="15" y2="15" />
-                  <line x1="5" y1="15" x2="15" y2="5" />
-                </>
-              ) : (
-                <>
-                  <line x1="3" y1="6" x2="17" y2="6" />
-                  <line x1="3" y1="10" x2="17" y2="10" />
-                  <line x1="7" y1="14" x2="17" y2="14" />
-                </>
-              )}
+              {/* Three lines that morph into X via CSS transitions */}
+              <line
+                x1={mobileOpen ? 5 : 3} y1={mobileOpen ? 5 : 6}
+                x2={mobileOpen ? 15 : 17} y2={mobileOpen ? 15 : 6}
+                className="transition-all duration-300 ease-out"
+                style={{ transformOrigin: "center" }}
+              />
+              <line
+                x1="3" y1="10" x2="17" y2="10"
+                className="transition-all duration-200"
+                style={{ opacity: mobileOpen ? 0 : 1 }}
+              />
+              <line
+                x1={mobileOpen ? 5 : 7} y1={mobileOpen ? 15 : 14}
+                x2={mobileOpen ? 15 : 17} y2={mobileOpen ? 5 : 14}
+                className="transition-all duration-300 ease-out"
+                style={{ transformOrigin: "center" }}
+              />
             </svg>
           </button>
         </div>
 
         {/* Mobile nav */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-out ${
-            mobileOpen ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className="md:hidden grid transition-all duration-300 ease-out"
+          style={{
+            gridTemplateRows: mobileOpen ? "1fr" : "0fr",
+            opacity: mobileOpen ? 1 : 0,
+          }}
         >
+          <div className="overflow-hidden">
           <div className="border-t border-border bg-background px-6 pb-6 pt-4">
             <div className="flex flex-col gap-0.5">
               {navLinks.map((link) => (
@@ -154,6 +163,7 @@ export function Nav() {
                 </svg>
               </a>
             </div>
+          </div>
           </div>
         </div>
       </nav>

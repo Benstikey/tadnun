@@ -1,5 +1,6 @@
 import { useTranslations, useLocale } from "next-intl";
 import { SectorIcon } from "@/components/icons";
+import { IconBox } from "@/components/icon-box";
 import { UrgencyRace } from "@/components/visuals";
 import { HeroDashboard } from "@/components/hero-dashboard";
 
@@ -24,18 +25,18 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-12 items-end">
             {/* Left: headline */}
             <div className="lg:col-span-7">
-              <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-5">
+              <p className="hero-stagger hero-stagger-1 text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-5">
                 {t("hero.eyebrow")}
               </p>
-              <h1 id="hero-heading" className="font-serif italic text-4xl sm:text-5xl lg:text-[4.25rem] leading-[1.06] tracking-tight text-foreground">
+              <h1 id="hero-heading" className="hero-stagger hero-stagger-2 font-serif italic text-4xl sm:text-5xl lg:text-[4.25rem] leading-[1.06] tracking-tight text-foreground">
                 {t("hero.title1")}{" "}
                 <span className="text-accent">{t("hero.title2")}</span>{" "}
                 {t("hero.title3")}
               </h1>
-              <p className="mt-8 text-muted text-lg leading-relaxed max-w-lg">
+              <p className="hero-stagger hero-stagger-3 mt-8 text-muted text-lg leading-relaxed max-w-lg">
                 {t("hero.description")}
               </p>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
+              <div className="hero-stagger hero-stagger-4 mt-10 flex flex-wrap items-center gap-4">
                 <a
                   href="#sectors"
                   className="inline-flex items-center justify-center rounded-full bg-foreground px-8 py-3.5 text-sm font-semibold text-background hover:bg-foreground/90 active:scale-[0.97] transition-all hover:-translate-y-px shadow-sm"
@@ -120,9 +121,9 @@ export default function Home() {
                         {t(`sectors.items.${key}.tagline`)}
                       </p>
                     </div>
-                    <div className="w-11 h-11 rounded-xl bg-foreground/[0.04] flex items-center justify-center text-foreground/40 shrink-0 group-hover:bg-accent/8 group-hover:text-accent/60 transition-colors">
+                    <IconBox size="lg" hoverAccent>
                       <SectorIcon sectorKey={key} size={22} />
-                    </div>
+                    </IconBox>
                   </div>
 
                   <p className="text-foreground/65 text-[14px] leading-relaxed">
@@ -150,7 +151,7 @@ export default function Home() {
                     )}
                     <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-accent whitespace-nowrap shrink-0">
                       {t("common.learnMore")}
-                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="rtl:-scale-x-100">
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="rtl:-scale-x-100 transition-transform duration-200 group-hover:translate-x-1 rtl:group-hover:-translate-x-1">
                         <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </span>
@@ -174,9 +175,9 @@ export default function Home() {
                   className="group relative flex flex-col gap-3 rounded-xl border border-border/80 bg-surface/60 p-6 transition-all duration-300 hover:border-foreground/15 hover:bg-surface hover:shadow-md hover:-translate-y-0.5 h-full"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-foreground/[0.04] flex items-center justify-center text-foreground/40 shrink-0 group-hover:bg-accent/8 group-hover:text-accent/60 transition-colors">
+                    <IconBox size="sm" hoverAccent>
                       <SectorIcon sectorKey={key} size={18} />
-                    </div>
+                    </IconBox>
                     <div>
                       <h3 className="font-semibold text-foreground text-[15px] leading-tight">
                         {t(`sectors.items.${key}.name`)}
@@ -200,7 +201,7 @@ export default function Home() {
 
                   <span className="mt-auto inline-flex items-center gap-1 text-[11px] font-semibold text-accent whitespace-nowrap">
                     {t("common.learnMore")}
-                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" className="rtl:-scale-x-100">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" className="rtl:-scale-x-100 transition-transform duration-200 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5">
                       <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </span>

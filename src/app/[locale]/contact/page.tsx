@@ -7,6 +7,7 @@ import { ContactProcess } from "@/components/contact-process";
 import { ContactForm } from "@/components/contact-form";
 import { ContactChatPreview } from "@/components/contact-chat-preview";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { IconBox } from "@/components/icon-box";
 import { getSectorFromParams } from "@/lib/sector-context";
 import { sectorDetails } from "@/data/sector-details";
 import type { Metadata } from "next";
@@ -137,12 +138,12 @@ export default async function ContactPage({
                   href={`mailto:${t("contactPage.altEmail")}`}
                   className="group flex items-center gap-3 rounded-xl border border-border bg-surface p-4 hover:border-foreground/15 hover:shadow-sm transition-all"
                 >
-                  <div className="w-9 h-9 rounded-lg bg-foreground/[0.04] flex items-center justify-center text-foreground/50 shrink-0 group-hover:text-accent transition-colors">
+                  <IconBox size="sm" hoverAccent>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="2" y="4" width="20" height="16" rx="2" />
                       <path d="M22 7l-10 6L2 7" />
                     </svg>
-                  </div>
+                  </IconBox>
                   <div>
                     <p className="text-[11px] text-muted uppercase tracking-wider">Email</p>
                     <p className="text-sm text-foreground font-medium">{t("contactPage.altEmail")}</p>
@@ -154,11 +155,11 @@ export default async function ContactPage({
                   href={`tel:${t("contactPage.altPhone").replace(/\s/g, "")}`}
                   className="group flex items-center gap-3 rounded-xl border border-border bg-surface p-4 hover:border-foreground/15 hover:shadow-sm transition-all"
                 >
-                  <div className="w-9 h-9 rounded-lg bg-foreground/[0.04] flex items-center justify-center text-foreground/50 shrink-0 group-hover:text-accent transition-colors">
+                  <IconBox size="sm" hoverAccent>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                     </svg>
-                  </div>
+                  </IconBox>
                   <div>
                     <p className="text-[11px] text-muted uppercase tracking-wider">{locale === "ar" ? "التيليفون" : locale === "fr" ? "Téléphone" : "Phone"}</p>
                     <p className="text-sm text-foreground font-medium">{t("contactPage.altPhone")}</p>
