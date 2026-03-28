@@ -55,7 +55,7 @@ export function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="nav-link-underline text-sm text-background/50 hover:text-background transition-colors"
+                  className="text-sm text-background/50 hover:text-background transition-colors"
                 >
                   {link.label}
                 </a>

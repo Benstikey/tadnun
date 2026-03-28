@@ -197,6 +197,72 @@ h3 { font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem); }
   inset-inline-start: 20%;
 }
 
+/* Prose table styling for blog + compare articles */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose thead {
+  border-bottom: 2px solid var(--border);
+}
+
+.prose th {
+  text-align: start;
+  font-weight: 600;
+  color: var(--foreground);
+  padding: 10px 14px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.prose td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--foreground);
+  opacity: 0.8;
+  vertical-align: top;
+}
+
+.prose tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.prose tbody tr:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+/* Make tables horizontally scrollable on mobile */
+.prose table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prose thead,
+.prose tbody,
+.prose tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+@media (max-width: 640px) {
+  .prose thead,
+  .prose tbody,
+  .prose tr {
+    table-layout: auto;
+  }
+  .prose th,
+  .prose td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+
 /* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *,
