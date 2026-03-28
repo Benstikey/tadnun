@@ -114,7 +114,7 @@ export default async function ComparePage({
                       <span className="text-[10px] font-mono uppercase tracking-wider text-accent bg-accent/[0.06] rounded-full px-2.5 py-0.5 self-start">
                         {typeLabel(page.type)}
                       </span>
-                      <h3 className="font-serif italic text-foreground text-[17px] leading-snug tracking-tight group-hover:text-accent transition-colors">
+                      <h3 className="font-serif italic text-foreground text-base leading-snug tracking-tight group-hover:text-accent transition-colors">
                         {page.title}
                       </h3>
                       <p className="text-muted text-[14px] leading-relaxed line-clamp-3">

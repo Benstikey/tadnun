@@ -133,7 +133,7 @@ export default async function BlogPage({
                           </span>
                         )}
                       </div>
-                      <h3 className="font-serif italic text-foreground text-[15px] leading-snug tracking-tight group-hover:text-accent transition-colors">
+                      <h3 className="font-serif italic text-foreground text-base leading-snug tracking-tight group-hover:text-accent transition-colors">
                         {post.title}
                       </h3>
                       <p className="text-muted text-[14px] leading-relaxed line-clamp-3">

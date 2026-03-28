@@ -82,7 +82,7 @@ export default async function ApproachPage({
         <p className="text-accent text-xs font-mono tracking-widest mb-2">
           {t("approachPage.eyebrow")}
         </p>
-        <h1 id="approach-heading" className="font-serif italic text-4xl sm:text-6xl tracking-tight text-foreground">
+        <h1 id="approach-heading" className="font-serif italic text-4xl sm:text-5xl tracking-tight text-foreground">
           {t("approachPage.title")}
         </h1>
         <p className="mt-6 text-muted text-lg max-w-xl leading-relaxed">

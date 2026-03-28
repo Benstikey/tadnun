@@ -62,7 +62,7 @@ export default async function AboutPage({
         <p className="text-accent text-xs font-mono tracking-widest mb-2">
           {t("aboutPage.eyebrow")}
         </p>
-        <h1 id="about-heading" className="font-serif italic text-4xl sm:text-6xl tracking-tight text-foreground leading-[1.1]">
+        <h1 id="about-heading" className="font-serif italic text-4xl sm:text-5xl tracking-tight text-foreground leading-[1.1]">
           {t("aboutPage.title1")}
           <br />
           {t("aboutPage.title2")}
