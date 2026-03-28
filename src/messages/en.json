@@ -503,7 +503,7 @@
   "quiz": {
     "title": "Digital Readiness Score",
     "subtitle": "In 2 minutes, discover where your business stands.",
-    "start": "Start the test",
+    "start": "Free 2-min diagnostic",
     "next": "Next",
     "seeResults": "See my score",
     "progress": "Question {current} of {total}",

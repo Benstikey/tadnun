@@ -30,10 +30,11 @@ export function Nav() {
   const sectorSuffix = activeSector ? `?sector=${activeSector}` : "";
   const sectorName = activeSector ? t(`sectors.items.${activeSector}.name`) : null;
 
-  const navLinks = [
+  const navLinks: { href: string; label: string; accent?: boolean }[] = [
     { href: `/${locale}/sectors`, label: t("nav.sectors") },
     { href: `/${locale}/approach${sectorSuffix}`, label: t("nav.approach") },
     { href: `/${locale}/about${sectorSuffix}`, label: t("nav.about") },
+    { href: `/${locale}/tools/quiz`, label: t("quiz.start"), accent: true },
   ];
 
   return (
@@ -77,7 +78,11 @@ export function Nav() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="nav-link-underline text-[13px] text-muted hover:text-foreground px-3.5 py-2.5 rounded-lg hover:bg-foreground/[0.04] transition-all"
+                  className={`nav-link-underline text-[13px] px-3.5 py-2.5 rounded-lg transition-all ${
+                    link.accent
+                      ? "text-accent font-medium hover:bg-accent/[0.06]"
+                      : "text-muted hover:text-foreground hover:bg-foreground/[0.04]"
+                  }`}
                 >
                   {link.label}
                 </a>

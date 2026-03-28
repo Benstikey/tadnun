@@ -503,7 +503,7 @@
   "quiz": {
     "title": "Test de Maturité Digitale",
     "subtitle": "En 2 minutes, découvrez où en est votre entreprise.",
-    "start": "Commencer le test",
+    "start": "Diagnostic gratuit 2 min",
     "next": "Suivant",
     "seeResults": "Voir mon score",
     "progress": "Question {current} sur {total}",
