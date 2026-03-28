@@ -16,6 +16,7 @@
     "outbound:cron": "tsx scripts/outbound/run.ts cron"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.80.0",
     "@fontsource/noto-sans-arabic": "^5.2.10",
     "@icon-park/react": "^1.4.2",
     "@supabase/supabase-js": "^2.100.1",
