@@ -71,7 +71,7 @@ export default async function CompareDetailPage({
 
         {/* Body */}
         <div
-          className="mt-10 prose prose-neutral max-w-none overflow-x-auto
+          className="mt-10 prose prose-neutral max-w-none
             prose-headings:font-serif prose-headings:italic prose-headings:tracking-tight
             prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
             prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3

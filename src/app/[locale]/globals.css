@@ -199,8 +199,8 @@ h3 { font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem); }
 
 /* Prose table styling for blog + compare articles */
 .prose table {
-  width: max-content;
-  min-width: 100%;
+  width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   font-size: 14px;
   margin-top: 1.5rem;
@@ -208,6 +208,12 @@ h3 { font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem); }
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
+}
+
+.prose th,
+.prose td {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .prose thead {
