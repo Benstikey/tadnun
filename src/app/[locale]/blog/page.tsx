@@ -90,9 +90,9 @@ export default async function BlogPage({
                         </span>
                       )}
                     </div>
-                    <h2 className="font-serif italic text-2xl sm:text-3xl tracking-tight text-foreground leading-[1.15] group-hover:text-accent transition-colors">
+                    <h3 className="font-serif italic text-xl sm:text-2xl tracking-tight text-foreground leading-[1.15] group-hover:text-accent transition-colors">
                       {featured.title}
-                    </h2>
+                    </h3>
                     <p className="text-muted text-[15px] leading-relaxed">
                       {featured.description}
                     </p>
@@ -133,9 +133,9 @@ export default async function BlogPage({
                           </span>
                         )}
                       </div>
-                      <h2 className="font-semibold text-foreground text-[17px] leading-snug group-hover:text-accent transition-colors">
+                      <h3 className="font-serif italic text-foreground text-[15px] leading-snug tracking-tight group-hover:text-accent transition-colors">
                         {post.title}
-                      </h2>
+                      </h3>
                       <p className="text-muted text-[14px] leading-relaxed line-clamp-3">
                         {post.description}
                       </p>

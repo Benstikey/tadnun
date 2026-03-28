@@ -101,14 +101,11 @@ export default async function SectorsListPage({ params }: { params: Promise<{ lo
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {signs.map((sign, i) => (
             <ScrollReveal key={i} delay={i * 50}>
-              <div className="flex flex-col gap-3 rounded-xl border border-border/70 bg-surface/60 p-6">
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-accent/8 text-accent shrink-0">
-                    {signIcons[i]}
-                  </div>
-                  <span className="text-[11px] font-mono text-muted/60">0{i + 1}</span>
+              <div className="group flex flex-col gap-4 rounded-2xl border border-border/60 bg-surface/50 p-7 transition-all duration-300 hover:border-accent/20 hover:bg-surface hover:shadow-sm h-full">
+                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-accent/8 text-accent transition-colors duration-300 group-hover:bg-accent/12">
+                  {signIcons[i]}
                 </div>
-                <p className="font-semibold text-foreground text-[14px] leading-snug">{sign.title}</p>
+                <p className="font-semibold text-foreground text-[15px] leading-snug">{sign.title}</p>
                 <p className="text-muted text-[13px] leading-relaxed">{sign.body}</p>
               </div>
             </ScrollReveal>
