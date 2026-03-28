@@ -217,9 +217,9 @@
     },
     "process": {
       "title": "Comment ça marche",
-      "step1": "Appel gratuit de 15 min pour comprendre vos besoins",
-      "step2": "Proposition détaillée avec tarif exact sous 48h",
-      "step3": "Vous décidez — sans pression, sans relance commerciale"
+      "step1": { "title": "Appel découverte", "body": "15 min pour comprendre vos besoins, vos outils actuels et vos priorités." },
+      "step2": { "title": "Proposition sur mesure", "body": "Sous 48h : plan détaillé avec périmètre, délais et tarif exact." },
+      "step3": { "title": "Vous décidez", "body": "Sans pression, sans relance commerciale. On avance quand vous êtes prêt." }
     },
     "cta": "Réserver ma consultation gratuite",
     "note": "150+ entreprises ont déjà franchi le pas."

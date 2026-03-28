@@ -233,21 +233,34 @@ export default async function ApproachPage({
 
         {/* Process */}
         <ScrollReveal>
-          <div className="mt-12">
-            <h3 className="font-semibold text-foreground text-base">
+          <div className="mt-14">
+            <h3 className="font-serif italic text-xl text-foreground">
               {t("pricing.process.title")}
             </h3>
-            <div className="mt-5 grid gap-4 sm:grid-cols-3">
-              {([1, 2, 3] as const).map((n) => (
-                <div key={n} className="flex items-start gap-3">
-                  <span className="shrink-0 w-7 h-7 rounded-full bg-foreground/5 flex items-center justify-center text-[12px] font-semibold text-foreground/60">
-                    {n}
-                  </span>
-                  <p className="text-[14px] text-muted leading-relaxed pt-0.5">
-                    {t(`pricing.process.step${n}`)}
-                  </p>
-                </div>
-              ))}
+            <div className="mt-8 relative">
+              {/* Connector line (desktop) */}
+              <div className="hidden sm:block absolute top-[22px] left-[22px] right-[22px] h-px bg-border z-0" />
+
+              <div className="grid gap-8 sm:grid-cols-3 sm:gap-0">
+                {([1, 2, 3] as const).map((n, i) => (
+                  <ScrollReveal key={n} delay={i * 120}>
+                    <div className="relative flex flex-col items-start sm:items-center sm:text-center px-4">
+                      {/* Step number */}
+                      <div className="relative z-10 mb-4">
+                        <div className="w-11 h-11 rounded-full bg-background border-2 border-accent/25 flex items-center justify-center">
+                          <span className="font-serif italic text-base text-accent">{n}</span>
+                        </div>
+                      </div>
+                      <h4 className="font-semibold text-foreground text-[15px]">
+                        {t(`pricing.process.step${n}.title`)}
+                      </h4>
+                      <p className="mt-2 text-muted text-[13px] leading-relaxed max-w-[240px]">
+                        {t(`pricing.process.step${n}.body`)}
+                      </p>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
             </div>
           </div>
         </ScrollReveal>

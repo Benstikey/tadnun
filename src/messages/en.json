@@ -217,9 +217,9 @@
     },
     "process": {
       "title": "How it works",
-      "step1": "Free 15-min call to understand your needs",
-      "step2": "Detailed proposal with exact pricing within 48h",
-      "step3": "You decide — no pressure, no follow-up sales calls"
+      "step1": { "title": "Discovery call", "body": "15 min to understand your needs, current tools and priorities." },
+      "step2": { "title": "Custom proposal", "body": "Within 48h: detailed plan with scope, timeline and exact pricing." },
+      "step3": { "title": "You decide", "body": "No pressure, no follow-up sales calls. We move when you're ready." }
     },
     "cta": "Book your free consultation",
     "note": "150+ businesses have already taken this step."
