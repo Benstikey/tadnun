@@ -17,7 +17,7 @@ const SECTORS = [
   "logistics",
 ] as const;
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
 
   // Static pages
@@ -77,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog articles
   for (const locale of LOCALES) {
-    const posts = getBlogPosts(locale);
+    const posts = await getBlogPosts(locale);
     for (const post of posts) {
       entries.push({
         url: `${BASE_URL}/${locale}/blog/${post.slug}`,

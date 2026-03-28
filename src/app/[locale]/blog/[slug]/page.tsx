@@ -8,7 +8,8 @@ import { getBlogPost, getAllBlogSlugs } from "@/lib/blog";
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
 
 export async function generateStaticParams() {
-  return getAllBlogSlugs().map(({ slug, locale }) => ({ slug, locale }));
+  const slugs = await getAllBlogSlugs();
+  return slugs.map(({ slug, locale }) => ({ slug, locale }));
 }
 
 export async function generateMetadata({
