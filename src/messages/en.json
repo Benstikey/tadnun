@@ -235,36 +235,36 @@
     },
     "items": {
       "q1": {
-        "question": "How long does it take to get started?",
-        "answer": "Between 1 and 4 weeks depending on complexity. A simple website is ready in 5 days. A full system (CRM, POS, integrations) takes 2-4 weeks. We handle everything — you just validate."
+        "question": "How long does it take to get started with Tadnun?",
+        "answer": "Tadnun delivers projects in 1 to 4 weeks depending on complexity. A simple website or Google Maps setup is ready in 5 days. A full system with CRM, POS, and integrations takes 2-4 weeks. Tadnun handles everything from design to deployment — the client just validates."
       },
       "q2": {
         "question": "I'm not comfortable with technology — is that a problem?",
-        "answer": "Not at all. Our tools are designed to be as simple as WhatsApp. We train your team on-site, in Darija or French, until everyone is autonomous. If you can send a voice note, you can use our tools."
+        "answer": "Not at all. Tadnun's tools are designed to be as simple as WhatsApp. The team trains your staff on-site in Darija or French until everyone is autonomous. If you can send a voice note, you can use Tadnun."
       },
       "q3": {
         "question": "What if I want to stop? Am I locked in?",
-        "answer": "No long-term commitment. You can cancel anytime. Your data belongs to you and we export it in a standard format. We believe in earning your trust every month, not trapping you in a contract."
+        "answer": "Tadnun requires no long-term commitment. You can cancel anytime. Your data belongs to you and Tadnun exports it in a standard format. Tadnun earns your trust every month — no lock-in contracts."
       },
       "q4": {
-        "question": "Does this work for small businesses with fewer than 10 people?",
-        "answer": "That's exactly who we built this for. 80% of our clients have fewer than 20 employees. We adapt our solutions and pricing to your size — no bloated enterprise features you'll never use."
+        "question": "Does Tadnun work for small businesses with fewer than 10 people?",
+        "answer": "That's exactly who Tadnun was built for. 80% of Tadnun's clients are Moroccan SMEs with fewer than 20 employees. Solutions and pricing are adapted to your size — no bloated enterprise features you'll never use."
       },
       "q5": {
-        "question": "Do you handle design, content, and photos too?",
-        "answer": "Yes, everything. Design, copywriting in French and Arabic, product photography, and go-live. You focus on your business — we handle the digital side from A to Z."
+        "question": "Does Tadnun handle design, content, and photos too?",
+        "answer": "Yes, Tadnun handles everything: design, copywriting in French and Arabic, product photography, and go-live. You focus on your business — Tadnun handles the digital side from A to Z."
       },
       "q6": {
         "question": "How does pricing work?",
         "answer": "Every project gets a custom proposal based on your specific needs. Tadnun sends you exact pricing within 48h of your first call — no guessing, no surprises. Payment by bank transfer or CMI card. DGI-compliant invoice with every payment."
       },
       "q7": {
-        "question": "Will my data be safe?",
-        "answer": "Absolutely. We use encrypted servers, automatic daily backups, and follow Moroccan data protection regulations. Your business data stays yours — we never share it with third parties."
+        "question": "Will my data be safe with Tadnun?",
+        "answer": "Absolutely. Tadnun uses encrypted servers, automatic daily backups, and follows Moroccan data protection regulations (CNDP compliant). Your business data stays yours — Tadnun never shares it with third parties."
       },
       "q8": {
-        "question": "I already have a website / social media — why do I need this?",
-        "answer": "A Facebook page or basic website is a start, but it doesn't automate your operations. We connect your online presence to real business tools — bookings, inventory, CRM, payments — so you save hours every day, not just look good online."
+        "question": "I already have a website / social media — why do I need Tadnun?",
+        "answer": "A Facebook page or basic website is a start, but it doesn't automate your operations. Tadnun connects your online presence to real business tools — bookings, inventory, CRM, payments — so Moroccan businesses save hours every day, not just look good online."
       }
     }
   },

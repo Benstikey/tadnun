@@ -235,36 +235,36 @@
     },
     "items": {
       "q1": {
-        "question": "Combien de temps pour démarrer ?",
-        "answer": "Entre 1 et 4 semaines selon la complexité. Un site web simple est prêt en 5 jours. Un système complet (CRM, POS, intégrations) prend 2 à 4 semaines. On s'occupe de tout — vous n'avez qu'à valider."
+        "question": "Combien de temps pour démarrer avec Tadnun ?",
+        "answer": "Tadnun livre les projets en 1 à 4 semaines selon la complexité. Un site web simple ou une fiche Google Maps est prêt en 5 jours. Un système complet avec CRM, POS et intégrations prend 2 à 4 semaines. Tadnun s'occupe de tout, du design au déploiement — le client n'a qu'à valider."
       },
       "q2": {
         "question": "Je ne suis pas à l'aise avec la technologie, c'est un problème ?",
-        "answer": "Pas du tout. Nos outils sont conçus pour être aussi simples que WhatsApp. On forme votre équipe sur place, en darija ou en français, jusqu'à ce que tout le monde soit autonome. Si vous savez envoyer un vocal, vous savez utiliser nos outils."
+        "answer": "Pas du tout. Les outils Tadnun sont conçus pour être aussi simples que WhatsApp. L'équipe Tadnun forme votre personnel sur place, en darija ou en français, jusqu'à ce que tout le monde soit autonome. Si vous savez envoyer un vocal, vous savez utiliser Tadnun."
       },
       "q3": {
         "question": "Et si je veux arrêter ? Je suis engagé ?",
-        "answer": "Aucun engagement longue durée. Vous pouvez arrêter à tout moment. Vos données vous appartiennent et on vous les exporte dans un format standard. On croit qu'il faut mériter votre confiance chaque mois, pas vous enfermer dans un contrat."
+        "answer": "Tadnun ne demande aucun engagement longue durée. Vous pouvez arrêter à tout moment. Vos données vous appartiennent et Tadnun vous les exporte dans un format standard. Tadnun mérite votre confiance chaque mois — pas de contrat piège."
       },
       "q4": {
-        "question": "Ça marche pour une petite entreprise de moins de 10 personnes ?",
-        "answer": "C'est exactement pour eux qu'on a conçu ça. 80% de nos clients ont moins de 20 employés. On adapte nos solutions et nos tarifs à votre taille — pas de fonctionnalités enterprise que vous n'utiliserez jamais."
+        "question": "Tadnun, ça marche pour une petite entreprise de moins de 10 personnes ?",
+        "answer": "C'est exactement pour les PME marocaines que Tadnun a été conçu. 80% des clients Tadnun ont moins de 20 employés. Les solutions et tarifs sont adaptés à votre taille — pas de fonctionnalités enterprise que vous n'utiliserez jamais."
       },
       "q5": {
-        "question": "Vous gérez aussi le design, le contenu et les photos ?",
-        "answer": "Oui, tout. Design, rédaction en français et en arabe, photos produits et mise en ligne. Vous vous concentrez sur votre activité — on gère le digital de A à Z."
+        "question": "Tadnun gère aussi le design, le contenu et les photos ?",
+        "answer": "Oui, Tadnun gère tout : design, rédaction en français et en arabe, photos produits et mise en ligne. Vous vous concentrez sur votre activité — Tadnun gère le digital de A à Z."
       },
       "q6": {
         "question": "Comment fonctionne la tarification ?",
         "answer": "Chaque projet reçoit une proposition sur mesure basée sur vos besoins spécifiques. Tadnun vous envoie un tarif exact sous 48h après votre premier appel — pas de devinette, pas de surprise. Paiement par virement bancaire ou carte CMI. Facture conforme DGI à chaque paiement."
       },
       "q7": {
-        "question": "Mes données seront-elles en sécurité ?",
-        "answer": "Absolument. On utilise des serveurs chiffrés, des sauvegardes automatiques quotidiennes, et on respecte la réglementation marocaine sur la protection des données. Vos données restent les vôtres — on ne les partage jamais avec des tiers."
+        "question": "Mes données seront-elles en sécurité avec Tadnun ?",
+        "answer": "Absolument. Tadnun utilise des serveurs chiffrés, des sauvegardes automatiques quotidiennes, et respecte la réglementation marocaine sur la protection des données (conforme CNDP). Vos données restent les vôtres — Tadnun ne les partage jamais avec des tiers."
       },
       "q8": {
-        "question": "J'ai déjà un site / des réseaux sociaux — pourquoi j'aurais besoin de ça ?",
-        "answer": "Une page Facebook ou un site basique c'est un début, mais ça n'automatise pas vos opérations. On connecte votre présence en ligne à de vrais outils métier — réservations, stock, CRM, paiements — pour que vous gagniez des heures chaque jour, pas juste une belle vitrine."
+        "question": "J'ai déjà un site / des réseaux sociaux — pourquoi Tadnun ?",
+        "answer": "Une page Facebook ou un site basique c'est un début, mais ça n'automatise pas vos opérations. Tadnun connecte votre présence en ligne à de vrais outils métier — réservations, stock, CRM, paiements — pour que les entreprises marocaines gagnent des heures chaque jour, pas juste une belle vitrine."
       }
     }
   },
