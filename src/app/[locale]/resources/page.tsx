@@ -10,11 +10,13 @@ interface ResourceItem {
   href: string;
 }
 
-const RESOURCE_ITEMS: ResourceItem[] = [
-  { key: "checklist", href: "#" },
-  { key: "infographic", href: "#" },
-  { key: "restaurantGuide", href: "#" },
-];
+function getResourceItems(locale: string): ResourceItem[] {
+  return [
+    { key: "checklist", href: `/${locale}/blog/checklist-10-signes-perte-argent` },
+    { key: "infographic", href: `/${locale}/blog/infographie-cout-vs-retour-digitalisation` },
+    { key: "restaurantGuide", href: `/${locale}/blog/guide-digital-restaurant-maroc` },
+  ];
+}
 
 export async function generateMetadata({
   params,
@@ -68,7 +70,7 @@ export default async function ResourcesPage({
       {/* ─── Resource grid ─── */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {RESOURCE_ITEMS.map((item, i) => (
+          {getResourceItems(locale).map((item, i) => (
             <ScrollReveal key={item.key} delay={i * 60}>
               <a
                 href={item.href}
