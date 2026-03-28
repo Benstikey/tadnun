@@ -8,7 +8,7 @@ export function CtaBand({
   secondaryKey,
   secondaryHref,
   sectorKey,
-  withVisual = false,
+  withVisual = true,
 }: {
   titleKey?: string;
   ctaKey?: string;

@@ -227,7 +227,6 @@ export default async function AboutPage({
         secondaryKey="ctaBand.about.secondary"
         secondaryHref={`/${locale}/approach`}
         sectorKey={sectorKey}
-        withVisual
       />
     </PageShell>
   );
