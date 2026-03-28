@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import html from "remark-html";
 
 const COMPARE_DIR = path.join(process.cwd(), "src/content/compare");
@@ -55,7 +56,7 @@ export async function getComparePage(slug: string): Promise<ComparePage | null> 
 
   const raw = fs.readFileSync(filePath, "utf-8");
   const { data, content: markdown } = matter(raw);
-  const result = await remark().use(html).process(markdown);
+  const result = await remark().use(remarkGfm).use(html).process(markdown);
 
   return {
     slug,

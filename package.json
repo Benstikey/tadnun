@@ -6,31 +6,46 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "outbound": "tsx scripts/outbound/run.ts",
+    "outbound:pipeline": "tsx scripts/outbound/run.ts pipeline",
+    "outbound:prospect": "tsx scripts/outbound/run.ts prospect",
+    "outbound:send": "tsx scripts/outbound/run.ts send",
+    "outbound:report": "tsx scripts/outbound/run.ts report",
+    "outbound:stats": "tsx scripts/outbound/run.ts stats",
+    "outbound:cron": "tsx scripts/outbound/run.ts cron"
   },
   "dependencies": {
     "@fontsource/noto-sans-arabic": "^5.2.10",
     "@icon-park/react": "^1.4.2",
+    "@supabase/supabase-js": "^2.100.1",
     "@tailwindcss/typography": "^0.5.19",
     "@vercel/analytics": "^2.0.1",
+    "better-sqlite3": "^12.8.0",
+    "dotenv": "^17.3.1",
     "gray-matter": "^4.0.3",
     "next": "16.2.1",
     "next-intl": "^4.8.3",
+    "node-cron": "^4.2.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-icons": "^5.6.0",
     "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
     "remark-html": "^16.0.1",
     "resend": "^6.9.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20",
+    "@types/node-cron": "^3.0.11",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
