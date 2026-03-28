@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 import { cities } from "@/data/cities";
+import { getBlogPosts } from "@/lib/blog";
+import { getComparePages } from "@/lib/compare";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
 const LOCALES = ["fr", "en", "ar"] as const;
@@ -19,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   // Static pages
-  const staticPages = ["", "/approach", "/about", "/contact", "/sectors", "/tools/quiz", "/blog", "/compare"];
+  const staticPages = ["", "/approach", "/about", "/contact", "/sectors", "/tools/quiz", "/blog", "/compare", "/resources"];
 
   for (const page of staticPages) {
     for (const locale of LOCALES) {
@@ -70,6 +72,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
           },
         });
       }
+    }
+  }
+
+  // Blog articles
+  for (const locale of LOCALES) {
+    const posts = getBlogPosts(locale);
+    for (const post of posts) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/blog/${post.slug}`,
+        lastModified: new Date(post.date),
+        changeFrequency: "monthly",
+        priority: 0.6,
+      });
+    }
+  }
+
+  // Comparison pages
+  for (const locale of LOCALES) {
+    const pages = getComparePages(locale);
+    for (const page of pages) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/compare/${page.slug}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.6,
+      });
     }
   }
 
