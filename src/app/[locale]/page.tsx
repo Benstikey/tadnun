@@ -45,10 +45,10 @@ export default function Home() {
                   {t("common.letsTalk")}
                 </a>
                 <a
-                  href={`/${locale}/sectors`}
+                  href={`/${locale}/tools/quiz`}
                   className="group inline-flex items-center gap-2 text-sm font-semibold text-foreground border border-border rounded-full px-5 py-2.5 hover:border-foreground/30 hover:bg-foreground/[0.04] transition-all"
                 >
-                  {t("common.exploreSectors")}
+                  {t("quiz.start")}
                   <svg width="13" height="13" viewBox="0 0 16 16" fill="none" className="rtl:-scale-x-100 transition-transform group-hover:translate-x-0.5">
                     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
