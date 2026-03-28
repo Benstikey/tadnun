@@ -50,12 +50,8 @@ const NAV_ITEMS = [
   },
   {
     label: "Outbound",
-    href: "/outbound",
+    href: "/outbound/prospects",
     icon: Target,
-    children: [
-      { label: "Prospects", href: "/outbound/prospects" },
-      { label: "Emails", href: "/outbound/emails" },
-    ],
   },
 ];
 
