@@ -31,7 +31,11 @@ export function LocaleSwitcher() {
   }, []);
 
   const switchTo = (code: string) => {
-    router.replace(pathname, { locale: code });
+    // Blog/compare article slugs are language-specific — redirect to listing page
+    const blogMatch = pathname.match(/^\/blog\/.+/);
+    const compareMatch = pathname.match(/^\/compare\/.+/);
+    const target = blogMatch ? "/blog" : compareMatch ? "/compare" : pathname;
+    router.replace(target, { locale: code });
     setOpen(false);
   };
 
