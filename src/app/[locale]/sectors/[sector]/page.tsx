@@ -12,6 +12,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { IconBox } from "@/components/icon-box";
 import { SectorJsonLd } from "@/components/json-ld";
 import { sectorDetails } from "@/data/sector-details";
+import { cities } from "@/data/cities";
 import { validSectors, type SectorKey } from "@/lib/sector-context";
 import type { Metadata } from "next";
 
@@ -306,6 +307,37 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
 
         {/* Related Sectors */}
         <RelatedSectors currentSector={sector} />
+
+        {/* City links */}
+        {(() => {
+          const sectorCities = cities.filter((c) => c.strongSectors.includes(sector));
+          if (sectorCities.length === 0) return null;
+          const isAr = locale === "ar";
+          return (
+            <section className="mx-auto max-w-6xl px-6 py-16">
+              <p className="text-[11px] font-mono tracking-[0.2em] text-accent uppercase mb-4">
+                {locale === "fr" ? "PAR VILLE" : isAr ? "حسب المدينة" : "BY CITY"}
+              </p>
+              <h2 className="font-serif italic text-2xl tracking-tight text-foreground">
+                {locale === "fr" ? `${sectorName} dans votre ville` : isAr ? `${sectorName} في مدينتك` : `${sectorName} in your city`}
+              </h2>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {sectorCities.map((city) => (
+                  <a
+                    key={city.slug}
+                    href={`/${locale}/sectors/${sector}/${city.slug}`}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-border px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:border-foreground/20 hover:bg-foreground/[0.03] transition-all"
+                  >
+                    {isAr ? city.nameAr : city.name}
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" className="opacity-40 rtl:-scale-x-100">
+                      <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
+                ))}
+              </div>
+            </section>
+          );
+        })()}
 
         {/* CTA */}
         <div className="border-t border-border" />
