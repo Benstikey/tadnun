@@ -511,6 +511,7 @@
     "empty": "Comparison pages coming soon.",
     "altLabel": "Alternative to",
     "categoryLabel": "Best in Morocco",
+    "navLabel": "Comparisons",
     "backToCompare": "All comparisons",
     "metaTitle": "Comparisons — Tadnun",
     "metaDescription": "Compare Tadnun vs Odoo, HubSpot, freelancers, and other solutions for Moroccan businesses."
@@ -528,6 +529,7 @@
     "eyebrow": "FREE RESOURCES",
     "title": "Download, read, act",
     "subtitle": "Checklists, guides, and toolkits built from real Moroccan business data. Yours for free — no email required.",
+    "navLabel": "Resources",
     "download": "Download free",
     "metaTitle": "Free Resources — Tadnun",
     "metaDescription": "Download free guides, checklists, and tools to help your Moroccan business go digital. Practical resources for every sector.",
@@ -552,6 +554,7 @@
   "quiz": {
     "title": "Digital Readiness Score",
     "subtitle": "In 2 minutes, discover where your business stands.",
+    "navLabel": "Free diagnostic",
     "start": "Free 2-min diagnostic",
     "next": "Next",
     "seeResults": "See my score",

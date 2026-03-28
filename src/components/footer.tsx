@@ -47,9 +47,9 @@ export function Footer() {
                 { href: `/${locale}/approach`, label: t("nav.approach") },
                 { href: `/${locale}/about`, label: t("nav.about") },
                 { href: `/${locale}/blog`, label: t("nav.blog") },
-                { href: `/${locale}/compare`, label: t("compare.eyebrow") },
-                { href: `/${locale}/resources`, label: t("resources.eyebrow") },
-                { href: `/${locale}/tools/quiz`, label: t("quiz.start") },
+                { href: `/${locale}/compare`, label: t("compare.navLabel") },
+                { href: `/${locale}/resources`, label: t("resources.navLabel") },
+                { href: `/${locale}/tools/quiz`, label: t("quiz.navLabel") },
                 { href: `/${locale}/contact`, label: t("nav.cta") },
               ].map((link) => (
                 <a

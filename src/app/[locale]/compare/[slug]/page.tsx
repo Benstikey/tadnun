@@ -71,7 +71,7 @@ export default async function CompareDetailPage({
 
         {/* Body */}
         <div
-          className="mt-10 prose prose-neutral max-w-none
+          className="mt-10 prose prose-neutral max-w-none overflow-x-auto
             prose-headings:font-serif prose-headings:italic prose-headings:tracking-tight
             prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
             prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3
@@ -79,9 +79,6 @@ export default async function CompareDetailPage({
             prose-li:text-[15px] prose-li:text-foreground/80
             prose-strong:text-foreground prose-strong:font-semibold
             prose-a:text-accent prose-a:no-underline hover:prose-a:underline
-            prose-table:text-[14px]
-            prose-th:text-start prose-th:font-semibold prose-th:text-foreground prose-th:bg-foreground/[0.03] prose-th:px-4 prose-th:py-2.5
-            prose-td:px-4 prose-td:py-2.5 prose-td:border-border
             prose-blockquote:border-accent/30 prose-blockquote:text-foreground/60 prose-blockquote:italic"
           dangerouslySetInnerHTML={{ __html: page.content }}
         />
