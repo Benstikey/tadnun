@@ -277,6 +277,9 @@
     "stat2": "2030",
     "stat2Label": "World Cup in Morocco — the countdown has started",
     "digitalizationLevel": "DIGITALIZATION LEVEL",
+    "countdownDays": "days",
+    "countdownHours": "hours",
+    "countdownMinutes": "min",
     "cta": "Don't get left behind",
     "competitors": "Competitors",
     "yourBusiness": "Your business",
@@ -499,6 +502,14 @@
     "ctaTitle": "Ready to transform your sector?",
     "ctaBody": "Free first diagnostic. We identify your 3 biggest blockers in 45 minutes — no commitment.",
     "ctaButton": "Book my diagnostic"
+  },
+  "blog": {
+    "eyebrow": "RESOURCES",
+    "title": "Guides & insights",
+    "subtitle": "Practical advice for Moroccan businesses going digital — sector by sector.",
+    "empty": "Articles coming soon. Stay tuned.",
+    "metaTitle": "Blog — Tadnun",
+    "metaDescription": "Guides, case studies, and insights on digital transformation for Moroccan businesses."
   },
   "quiz": {
     "title": "Digital Readiness Score",

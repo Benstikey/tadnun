@@ -277,6 +277,9 @@
     "stat2": "2030",
     "stat2Label": "Coupe du Monde au Maroc — le compte à rebours a commencé",
     "digitalizationLevel": "NIVEAU DE DIGITALISATION",
+    "countdownDays": "jours",
+    "countdownHours": "heures",
+    "countdownMinutes": "min",
     "cta": "Ne restez pas à la traîne",
     "competitors": "Concurrents",
     "yourBusiness": "Votre entreprise",
@@ -499,6 +502,14 @@
     "ctaTitle": "Prêt à transformer votre secteur ?",
     "ctaBody": "Premier diagnostic gratuit. On identifie vos 3 plus grands blocages en 45 minutes — sans engagement.",
     "ctaButton": "Réserver mon diagnostic"
+  },
+  "blog": {
+    "eyebrow": "RESSOURCES",
+    "title": "Guides & conseils",
+    "subtitle": "Des conseils pratiques pour les entreprises marocaines qui passent au digital — secteur par secteur.",
+    "empty": "Articles à venir. Restez connectés.",
+    "metaTitle": "Blog — Tadnun",
+    "metaDescription": "Guides, études de cas et conseils sur la transformation digitale des entreprises marocaines."
   },
   "quiz": {
     "title": "Test de Maturité Digitale",

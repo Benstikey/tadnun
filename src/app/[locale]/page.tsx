@@ -7,6 +7,7 @@ import { CtaBand } from "@/components/cta-band";
 import { PageShell } from "@/components/page-shell";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { FaqSection } from "@/components/faq";
+import { Countdown } from "@/components/countdown";
 import { HomeFaqJsonLd } from "@/components/json-ld";
 import { sectorDetails } from "@/data/sector-details";
 
@@ -260,7 +261,7 @@ export default function Home() {
               </p>
 
               {/* Stats */}
-              <div className="mt-12 grid grid-cols-2 gap-6">
+              <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="rounded-xl border border-background/10 bg-background/[0.04] p-5">
                   <span className="block text-4xl sm:text-5xl font-serif italic text-accent leading-none">{t("urgency.stat1")}</span>
                   <span className="mt-3 block text-[13px] text-background/50 leading-snug">
@@ -268,7 +269,11 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="rounded-xl border border-background/10 bg-background/[0.04] p-5">
-                  <span className="block text-4xl sm:text-5xl font-serif italic text-background leading-none">{t("urgency.stat2")}</span>
+                  <Countdown labels={{
+                    days: t("urgency.countdownDays"),
+                    hours: t("urgency.countdownHours"),
+                    minutes: t("urgency.countdownMinutes"),
+                  }} />
                   <span className="mt-3 block text-[13px] text-background/50 leading-snug">
                     {t("urgency.stat2Label")}
                   </span>
