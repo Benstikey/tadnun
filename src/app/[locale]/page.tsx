@@ -322,6 +322,7 @@ export default function Home() {
         descKey="ctaBand.default.desc"
         secondaryKey="ctaBand.default.secondary"
         secondaryHref={`/${locale}/sectors`}
+        withVisual
       />
     </PageShell>
   );
