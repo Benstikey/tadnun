@@ -41,6 +41,7 @@ export default async function ApproachPage({
   const sectorKey = getSectorFromParams(resolvedSearchParams);
   const details = sectorKey ? sectorDetails[sectorKey] : null;
   const sectorName = sectorKey ? t(`sectors.items.${sectorKey}.name`) : null;
+  const sectorSuffix = sectorKey ? `?sector=${sectorKey}` : "";
 
   // Before/After data: sector-specific or generic
   const workflowData = details
@@ -178,6 +179,91 @@ export default async function ApproachPage({
                 </ScrollReveal>
               ))}
         </div>
+      </section>
+
+      {/* ─── Your Investment ─── */}
+      <section className="mx-auto max-w-6xl px-6 py-24">
+        <ScrollReveal>
+          <SectionHeading
+            eyebrow={t("pricing.eyebrow")}
+            title={t("pricing.title")}
+          />
+          <p className="mt-4 text-muted text-base leading-relaxed max-w-xl">
+            {t("pricing.subtitle")}
+          </p>
+        </ScrollReveal>
+
+        {/* Pillars */}
+        <div className="mt-14 grid gap-6 sm:grid-cols-3">
+          {(["tailored", "transparent", "flexible"] as const).map((key, i) => (
+            <ScrollReveal key={key} delay={i * 80}>
+              <div className="rounded-2xl border border-border bg-surface p-6 h-full">
+                <span className="text-2xl">{t(`pricing.pillars.${key}.icon`)}</span>
+                <h3 className="mt-3 font-semibold text-foreground text-[15px]">
+                  {t(`pricing.pillars.${key}.title`)}
+                </h3>
+                <p className="mt-2 text-muted text-[14px] leading-relaxed">
+                  {t(`pricing.pillars.${key}.body`)}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+
+        {/* Cost of inaction */}
+        <ScrollReveal>
+          <div className="mt-12 rounded-2xl border border-accent/15 bg-accent/[0.03] p-8">
+            <h3 className="font-serif italic text-xl text-foreground">
+              {t("pricing.costOfInaction.title")}
+            </h3>
+            <div className="mt-6 grid gap-6 sm:grid-cols-3">
+              {(["contracts", "commissions", "noshows"] as const).map((key) => (
+                <div key={key}>
+                  <span className="block text-2xl font-serif italic text-accent">
+                    {t(`pricing.costOfInaction.items.${key}.value`)}
+                  </span>
+                  <span className="mt-1 block text-[13px] text-muted">
+                    {t(`pricing.costOfInaction.items.${key}.label`)}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Process */}
+        <ScrollReveal>
+          <div className="mt-12">
+            <h3 className="font-semibold text-foreground text-base">
+              {t("pricing.process.title")}
+            </h3>
+            <div className="mt-5 grid gap-4 sm:grid-cols-3">
+              {([1, 2, 3] as const).map((n) => (
+                <div key={n} className="flex items-start gap-3">
+                  <span className="shrink-0 w-7 h-7 rounded-full bg-foreground/5 flex items-center justify-center text-[12px] font-semibold text-foreground/60">
+                    {n}
+                  </span>
+                  <p className="text-[14px] text-muted leading-relaxed pt-0.5">
+                    {t(`pricing.process.step${n}`)}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* CTA */}
+        <ScrollReveal>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href={`/${locale}/contact${sectorSuffix}`}
+              className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-white shadow-sm shadow-accent/20 hover:shadow-lg hover:shadow-accent/25 hover:bg-accent/90 active:scale-[0.97] transition-all duration-150 hover:-translate-y-px"
+            >
+              {t("pricing.cta")}
+            </a>
+            <p className="text-[13px] text-muted">{t("pricing.note")}</p>
+          </div>
+        </ScrollReveal>
       </section>
 
       <div className="border-t border-border" />

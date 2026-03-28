@@ -34,6 +34,7 @@ export function Nav() {
     { href: `/${locale}/sectors`, label: t("nav.sectors") },
     { href: `/${locale}/approach${sectorSuffix}`, label: t("nav.approach") },
     { href: `/${locale}/about${sectorSuffix}`, label: t("nav.about") },
+    { href: `/${locale}/blog`, label: t("nav.blog") },
     { href: `/${locale}/tools/quiz`, label: t("quiz.start"), accent: true },
   ];
 
