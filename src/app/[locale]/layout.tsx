@@ -105,6 +105,14 @@ export async function generateMetadata({
       },
     },
 
+    // Favicon
+    icons: {
+      icon: [
+        { url: "/favicon.svg", type: "image/svg+xml" },
+      ],
+      apple: "/apple-touch-icon.png",
+    },
+
     // Verification (add when you have search console)
     // verification: {
     //   google: "your-google-verification-code",
