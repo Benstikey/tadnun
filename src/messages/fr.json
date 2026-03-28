@@ -504,6 +504,17 @@
     "ctaBody": "Premier diagnostic gratuit. On identifie vos 3 plus grands blocages en 45 minutes — sans engagement.",
     "ctaButton": "Réserver mon diagnostic"
   },
+  "compare": {
+    "eyebrow": "COMPARATIFS",
+    "title": "Comment Tadnun se compare",
+    "subtitle": "Des comparaisons honnetes pour vous aider a choisir la bonne solution pour votre entreprise marocaine.",
+    "empty": "Pages de comparaison a venir.",
+    "altLabel": "Alternative a",
+    "categoryLabel": "Meilleur au Maroc",
+    "backToCompare": "Tous les comparatifs",
+    "metaTitle": "Comparatifs — Tadnun",
+    "metaDescription": "Comparez Tadnun vs Odoo, HubSpot, freelances et autres solutions pour les entreprises marocaines."
+  },
   "blog": {
     "eyebrow": "RESSOURCES",
     "title": "Guides & conseils",

@@ -504,6 +504,17 @@
     "ctaBody": "Free first diagnostic. We identify your 3 biggest blockers in 45 minutes — no commitment.",
     "ctaButton": "Book my diagnostic"
   },
+  "compare": {
+    "eyebrow": "COMPARISONS",
+    "title": "How Tadnun compares",
+    "subtitle": "Honest, side-by-side comparisons to help you choose the right solution for your Moroccan business.",
+    "empty": "Comparison pages coming soon.",
+    "altLabel": "Alternative to",
+    "categoryLabel": "Best in Morocco",
+    "backToCompare": "All comparisons",
+    "metaTitle": "Comparisons — Tadnun",
+    "metaDescription": "Compare Tadnun vs Odoo, HubSpot, freelancers, and other solutions for Moroccan businesses."
+  },
   "blog": {
     "eyebrow": "RESOURCES",
     "title": "Guides & insights",
