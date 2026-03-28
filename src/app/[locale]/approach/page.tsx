@@ -231,50 +231,49 @@ export default async function ApproachPage({
           </div>
         </ScrollReveal>
 
-        {/* Process */}
+        {/* Process + CTA */}
         <ScrollReveal>
-          <div className="mt-14">
+          <div className="mt-14 rounded-2xl border border-border bg-surface/50 p-8 sm:p-10">
             <h3 className="font-serif italic text-xl text-foreground">
               {t("pricing.process.title")}
             </h3>
-            <div className="mt-8 relative">
-              {/* Connector line (desktop) */}
-              <div className="hidden sm:block absolute top-[22px] left-[22px] right-[22px] h-px bg-border z-0" />
 
-              <div className="grid gap-8 sm:grid-cols-3 sm:gap-0">
-                {([1, 2, 3] as const).map((n, i) => (
-                  <ScrollReveal key={n} delay={i * 120}>
-                    <div className="relative flex flex-col items-start sm:items-center sm:text-center px-4">
-                      {/* Step number */}
-                      <div className="relative z-10 mb-4">
-                        <div className="w-11 h-11 rounded-full bg-background border-2 border-accent/25 flex items-center justify-center">
-                          <span className="font-serif italic text-base text-accent">{n}</span>
-                        </div>
+            <div className="mt-8 space-y-0">
+              {([1, 2, 3] as const).map((n, i) => (
+                <ScrollReveal key={n} delay={i * 100}>
+                  <div className="flex items-start gap-5 relative">
+                    {/* Vertical connector */}
+                    <div className="flex flex-col items-center shrink-0">
+                      <div className="w-9 h-9 rounded-full border-2 border-accent/25 bg-background flex items-center justify-center relative z-10">
+                        <span className="font-serif italic text-sm text-accent">{n}</span>
                       </div>
-                      <h4 className="font-semibold text-foreground text-[15px]">
+                      {n < 3 && (
+                        <div className="w-px h-full bg-border absolute top-9 left-[18px] rtl:left-auto rtl:right-[18px]" />
+                      )}
+                    </div>
+
+                    <div className={n < 3 ? "pb-8" : "pb-0"}>
+                      <h4 className="font-semibold text-foreground text-[15px] pt-1.5">
                         {t(`pricing.process.step${n}.title`)}
                       </h4>
-                      <p className="mt-2 text-muted text-[13px] leading-relaxed max-w-[240px]">
+                      <p className="mt-1.5 text-muted text-[13px] leading-relaxed max-w-md">
                         {t(`pricing.process.step${n}.body`)}
                       </p>
                     </div>
-                  </ScrollReveal>
-                ))}
-              </div>
+                  </div>
+                </ScrollReveal>
+              ))}
             </div>
-          </div>
-        </ScrollReveal>
 
-        {/* CTA */}
-        <ScrollReveal>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href={`/${locale}/contact${sectorSuffix}`}
-              className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-white shadow-sm shadow-accent/20 hover:shadow-lg hover:shadow-accent/25 hover:bg-accent/90 active:scale-[0.97] transition-all duration-150 hover:-translate-y-px"
-            >
-              {t("pricing.cta")}
-            </a>
-            <p className="text-[13px] text-muted">{t("pricing.note")}</p>
+            <div className="mt-8 pt-8 border-t border-border flex flex-wrap items-center gap-4">
+              <a
+                href={`/${locale}/contact${sectorSuffix}`}
+                className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-white shadow-sm shadow-accent/20 hover:shadow-lg hover:shadow-accent/25 hover:bg-accent/90 active:scale-[0.97] transition-all duration-150 hover:-translate-y-px"
+              >
+                {t("pricing.cta")}
+              </a>
+              <p className="text-[13px] text-muted">{t("pricing.note")}</p>
+            </div>
           </div>
         </ScrollReveal>
       </section>
