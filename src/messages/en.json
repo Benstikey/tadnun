@@ -524,6 +524,31 @@
     "metaTitle": "Blog — Tadnun",
     "metaDescription": "Guides, case studies, and insights on digital transformation for Moroccan businesses."
   },
+  "resources": {
+    "eyebrow": "FREE RESOURCES",
+    "title": "Guides & tools",
+    "subtitle": "Practical resources to help Moroccan businesses go digital — checklists, guides, and sector-specific toolkits. Free, no strings attached.",
+    "download": "Download free",
+    "metaTitle": "Free Resources — Tadnun",
+    "metaDescription": "Download free guides, checklists, and tools to help your Moroccan business go digital. Practical resources for every sector.",
+    "items": {
+      "checklist": {
+        "title": "10 signs your business is losing money without knowing it",
+        "description": "A quick checklist to evaluate your situation in 2 minutes. If you check 3 or more, your business is probably losing between 50,000 and 500,000 MAD per year.",
+        "format": "PDF Checklist"
+      },
+      "infographic": {
+        "title": "Digitalization: what it costs vs what it returns",
+        "description": "A visual comparison with real MAD figures from Moroccan SMEs. See what businesses lose without digitalization — and what they gain with it.",
+        "format": "Infographic"
+      },
+      "restaurantGuide": {
+        "title": "The digital kit for your Moroccan restaurant",
+        "description": "Google, Glovo, food waste: 5 concrete steps to digitalize your restaurant. With real results from restaurants in Marrakech and Casablanca.",
+        "format": "PDF Guide"
+      }
+    }
+  },
   "quiz": {
     "title": "Digital Readiness Score",
     "subtitle": "In 2 minutes, discover where your business stands.",

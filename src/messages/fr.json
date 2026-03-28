@@ -524,6 +524,31 @@
     "metaTitle": "Blog — Tadnun",
     "metaDescription": "Guides, études de cas et conseils sur la transformation digitale des entreprises marocaines."
   },
+  "resources": {
+    "eyebrow": "RESSOURCES GRATUITES",
+    "title": "Guides & outils",
+    "subtitle": "Des ressources pratiques pour aider les entreprises marocaines à passer au digital — checklists, guides et kits sectoriels. Gratuit, sans condition.",
+    "download": "Télécharger gratuitement",
+    "metaTitle": "Ressources Gratuites — Tadnun",
+    "metaDescription": "Téléchargez des guides, checklists et outils gratuits pour digitaliser votre entreprise marocaine. Ressources pratiques pour chaque secteur.",
+    "items": {
+      "checklist": {
+        "title": "10 signes que votre entreprise perd de l'argent sans le savoir",
+        "description": "Une checklist rapide pour évaluer votre situation en 2 minutes. Si vous cochez 3 ou plus, votre entreprise perd probablement entre 50 000 et 500 000 DH par an.",
+        "format": "Checklist PDF"
+      },
+      "infographic": {
+        "title": "Digitalisation : ce que ça coûte vs ce que ça rapporte",
+        "description": "Une comparaison visuelle avec les vrais chiffres en DH des PME marocaines. Découvrez ce que les entreprises perdent sans digitalisation — et ce qu'elles gagnent avec.",
+        "format": "Infographie"
+      },
+      "restaurantGuide": {
+        "title": "Le kit digital pour votre restaurant marocain",
+        "description": "Google, Glovo, gaspillage : 5 étapes concrètes pour digitaliser votre restaurant. Avec les vrais résultats de restaurants à Marrakech et Casablanca.",
+        "format": "Guide PDF"
+      }
+    }
+  },
   "quiz": {
     "title": "Test de Maturité Digitale",
     "subtitle": "En 2 minutes, découvrez où en est votre entreprise.",
