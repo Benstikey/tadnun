@@ -6,6 +6,7 @@ import { ExpertiseIcon } from "@/components/icons";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { CtaBand } from "@/components/cta-band";
 import { SectionHeading } from "@/components/section-heading";
+import { ProcessVisual } from "@/components/process-visual";
 import { getSectorFromParams, type SectorKey } from "@/lib/sector-context";
 import { sectorDetails } from "@/data/sector-details";
 import type { Metadata } from "next";
@@ -234,35 +235,45 @@ export default async function ApproachPage({
         {/* Process + CTA */}
         <ScrollReveal>
           <div className="mt-14 rounded-2xl border border-border bg-surface/50 p-8 sm:p-10">
-            <h3 className="font-serif italic text-xl text-foreground">
-              {t("pricing.process.title")}
-            </h3>
+            <div className="flex flex-col lg:flex-row lg:gap-12">
+              {/* Left — steps */}
+              <div className="flex-1 min-w-0">
+                <h3 className="font-serif italic text-xl text-foreground">
+                  {t("pricing.process.title")}
+                </h3>
 
-            <div className="mt-8 space-y-0">
-              {([1, 2, 3] as const).map((n, i) => (
-                <ScrollReveal key={n} delay={i * 100}>
-                  <div className="flex items-start gap-5 relative">
-                    {/* Vertical connector */}
-                    <div className="flex flex-col items-center shrink-0">
-                      <div className="w-9 h-9 rounded-full border-2 border-accent/25 bg-background flex items-center justify-center relative z-10">
-                        <span className="font-serif italic text-sm text-accent">{n}</span>
+                <div className="mt-8 space-y-0">
+                  {([1, 2, 3] as const).map((n, i) => (
+                    <ScrollReveal key={n} delay={i * 100}>
+                      <div className="flex items-start gap-5 relative">
+                        {/* Vertical connector */}
+                        <div className="flex flex-col items-center shrink-0">
+                          <div className="w-9 h-9 rounded-full border-2 border-accent/25 bg-background flex items-center justify-center relative z-10">
+                            <span className="font-serif italic text-sm text-accent">{n}</span>
+                          </div>
+                          {n < 3 && (
+                            <div className="w-px h-full bg-border absolute top-9 left-[18px] rtl:left-auto rtl:right-[18px]" />
+                          )}
+                        </div>
+
+                        <div className={n < 3 ? "pb-8" : "pb-0"}>
+                          <h4 className="font-semibold text-foreground text-[15px] pt-1.5">
+                            {t(`pricing.process.step${n}.title`)}
+                          </h4>
+                          <p className="mt-1.5 text-muted text-[13px] leading-relaxed max-w-md">
+                            {t(`pricing.process.step${n}.body`)}
+                          </p>
+                        </div>
                       </div>
-                      {n < 3 && (
-                        <div className="w-px h-full bg-border absolute top-9 left-[18px] rtl:left-auto rtl:right-[18px]" />
-                      )}
-                    </div>
+                    </ScrollReveal>
+                  ))}
+                </div>
+              </div>
 
-                    <div className={n < 3 ? "pb-8" : "pb-0"}>
-                      <h4 className="font-semibold text-foreground text-[15px] pt-1.5">
-                        {t(`pricing.process.step${n}.title`)}
-                      </h4>
-                      <p className="mt-1.5 text-muted text-[13px] leading-relaxed max-w-md">
-                        {t(`pricing.process.step${n}.body`)}
-                      </p>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              ))}
+              {/* Right — visual */}
+              <div className="hidden lg:flex items-center justify-center shrink-0 w-[300px]">
+                <ProcessVisual isFr={locale === "fr"} />
+              </div>
             </div>
 
             <div className="mt-8 pt-8 border-t border-border flex flex-wrap items-center gap-4">
