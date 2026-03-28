@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { cities } from "@/data/cities";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
 const LOCALES = ["fr", "en", "ar"] as const;
@@ -50,6 +51,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
           ),
         },
       });
+    }
+  }
+
+  // Sector x City pages (programmatic SEO)
+  for (const city of cities) {
+    for (const sector of city.strongSectors) {
+      for (const locale of LOCALES) {
+        entries.push({
+          url: `${BASE_URL}/${locale}/sectors/${sector}/${city.slug}`,
+          lastModified: new Date(),
+          changeFrequency: "monthly",
+          priority: 0.6,
+          alternates: {
+            languages: Object.fromEntries(
+              LOCALES.map((l) => [l, `${BASE_URL}/${l}/sectors/${sector}/${city.slug}`])
+            ),
+          },
+        });
+      }
     }
   }
 
