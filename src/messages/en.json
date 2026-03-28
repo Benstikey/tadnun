@@ -499,5 +499,79 @@
     "ctaTitle": "Ready to transform your sector?",
     "ctaBody": "Free first diagnostic. We identify your 3 biggest blockers in 45 minutes — no commitment.",
     "ctaButton": "Book my diagnostic"
+  },
+  "quiz": {
+    "title": "Digital Readiness Score",
+    "subtitle": "In 2 minutes, discover where your business stands.",
+    "start": "Start the test",
+    "next": "Next",
+    "seeResults": "See my score",
+    "progress": "Question {current} of {total}",
+    "sectorQuestion": "What sector is your business in?",
+    "sectorOther": "Other",
+    "q1": {
+      "question": "How do customers find you today?",
+      "a": "Word of mouth only",
+      "b": "Social media (Facebook, Instagram)",
+      "c": "Google listing + social media",
+      "d": "Website, Google, social media, online reviews"
+    },
+    "q2": {
+      "question": "How do you manage customers and contacts?",
+      "a": "In my head or on paper",
+      "b": "WhatsApp contact lists",
+      "c": "Excel or Google Sheets",
+      "d": "CRM or dedicated software"
+    },
+    "q3": {
+      "question": "How do customers book or order from you?",
+      "a": "By phone or in person only",
+      "b": "Via WhatsApp",
+      "c": "Via a third-party platform (Booking, Glovo, etc.)",
+      "d": "Online booking/ordering on my own site"
+    },
+    "q4": {
+      "question": "How do you track income and expenses?",
+      "a": "I don't track precisely",
+      "b": "Paper notebook",
+      "c": "Excel or Google Sheets",
+      "d": "Accounting software or connected POS"
+    },
+    "q5": {
+      "question": "How do you coordinate with your team?",
+      "a": "Verbally, day to day",
+      "b": "WhatsApp group",
+      "c": "Paper boards or schedules",
+      "d": "Digital tool (online scheduler, dedicated app)"
+    },
+    "q6": {
+      "question": "How do you store business data (clients, inventory, documents)?",
+      "a": "Paper, binders, notebooks",
+      "b": "Phone (photos, notes, WhatsApp)",
+      "c": "Computer files (Word, Excel)",
+      "d": "Secure cloud system with backups"
+    },
+    "results": {
+      "title": "Your score",
+      "outOf": "/ 100",
+      "average": "Average Moroccan SME: 18/100",
+      "critical": { "label": "Critical Gap", "desc": "Your business runs in analog mode. You are losing money, customers, and time every day — without realizing it." },
+      "behind": { "label": "Falling Behind", "desc": "You've started, but your tools don't talk to each other. Data gets lost between WhatsApp, Excel, and paper." },
+      "progress": { "label": "Getting There", "desc": "You're ahead of most Moroccan businesses. A few key integrations could transform your operations." },
+      "leader": { "label": "Digital Leader", "desc": "Impressive! You're among the top 5% of digitalized Moroccan businesses." },
+      "ctaTitle": "Let's discuss your score",
+      "ctaDesc": "15 minutes, free, no commitment.",
+      "ctaWhatsapp": "Message us on WhatsApp",
+      "ctaSectors": "See solutions for your sector",
+      "shareTitle": "Share your score",
+      "shareText": "I scored {score}/100 on the Digital Readiness test by Tadnun. What's your score?",
+      "copyLink": "Copy link",
+      "copied": "Copied!",
+      "retake": "Retake the test"
+    },
+    "meta": {
+      "title": "Digital Readiness Score — Tadnun",
+      "description": "Take the free 2-minute test to discover your business's digital readiness level. Get a personalized score and recommendations for your sector."
+    }
   }
 }

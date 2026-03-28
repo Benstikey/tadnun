@@ -499,5 +499,79 @@
     "ctaTitle": "Prêt à transformer votre secteur ?",
     "ctaBody": "Premier diagnostic gratuit. On identifie vos 3 plus grands blocages en 45 minutes — sans engagement.",
     "ctaButton": "Réserver mon diagnostic"
+  },
+  "quiz": {
+    "title": "Test de Maturité Digitale",
+    "subtitle": "En 2 minutes, découvrez où en est votre entreprise.",
+    "start": "Commencer le test",
+    "next": "Suivant",
+    "seeResults": "Voir mon score",
+    "progress": "Question {current} sur {total}",
+    "sectorQuestion": "Dans quel secteur exercez-vous ?",
+    "sectorOther": "Autre",
+    "q1": {
+      "question": "Comment les clients vous trouvent-ils aujourd'hui ?",
+      "a": "Bouche à oreille uniquement",
+      "b": "Réseaux sociaux (Facebook, Instagram)",
+      "c": "Fiche Google + réseaux sociaux",
+      "d": "Site web, Google, réseaux sociaux, avis en ligne"
+    },
+    "q2": {
+      "question": "Comment gérez-vous vos clients et vos contacts ?",
+      "a": "Dans ma tête ou sur papier",
+      "b": "Carnets de contacts WhatsApp",
+      "c": "Fichier Excel ou Google Sheets",
+      "d": "CRM ou logiciel dédié"
+    },
+    "q3": {
+      "question": "Comment vos clients réservent ou commandent ?",
+      "a": "Par téléphone ou en personne uniquement",
+      "b": "Via WhatsApp",
+      "c": "Via une plateforme tierce (Booking, Glovo, Doctolib...)",
+      "d": "Système de réservation/commande en ligne sur mon propre site"
+    },
+    "q4": {
+      "question": "Comment suivez-vous vos revenus et vos dépenses ?",
+      "a": "Je ne suis pas précisément",
+      "b": "Cahier ou carnet",
+      "c": "Excel ou Google Sheets",
+      "d": "Logiciel de comptabilité ou caisse enregistreuse connectée"
+    },
+    "q5": {
+      "question": "Comment communiquez-vous avec votre équipe ?",
+      "a": "À l'oral, au jour le jour",
+      "b": "Groupe WhatsApp",
+      "c": "Tableaux ou planning papier",
+      "d": "Outil digital (planning en ligne, application dédiée)"
+    },
+    "q6": {
+      "question": "Comment stockez-vous les données de votre activité (clients, stock, documents) ?",
+      "a": "Papier, classeurs, cahiers",
+      "b": "Téléphone (photos, notes, WhatsApp)",
+      "c": "Fichiers sur ordinateur (Word, Excel)",
+      "d": "Système cloud sécurisé avec sauvegardes"
+    },
+    "results": {
+      "title": "Votre score",
+      "outOf": "/ 100",
+      "average": "Moyenne des PME marocaines : 18/100",
+      "critical": { "label": "Alerte rouge", "desc": "Votre entreprise fonctionne en mode analogique. Vous perdez de l'argent, des clients et du temps chaque jour — sans le savoir." },
+      "behind": { "label": "En retard", "desc": "Vous avez commencé, mais vos outils ne se parlent pas. Des données se perdent entre WhatsApp, Excel et le papier." },
+      "progress": { "label": "En progrès", "desc": "Vous êtes en avance sur la plupart des entreprises marocaines. Quelques intégrations clés pourraient transformer vos opérations." },
+      "leader": { "label": "Leader digital", "desc": "Impressionnant ! Vous faites partie des 5% d'entreprises marocaines les plus digitalisées." },
+      "ctaTitle": "Discutons de votre score",
+      "ctaDesc": "15 minutes, gratuit, sans engagement.",
+      "ctaWhatsapp": "Écrivez-nous sur WhatsApp",
+      "ctaSectors": "Voir les solutions pour votre secteur",
+      "shareTitle": "Partagez votre score",
+      "shareText": "J'ai obtenu {score}/100 au test de maturité digitale de Tadnun. Et vous ?",
+      "copyLink": "Copier le lien",
+      "copied": "Copié !",
+      "retake": "Refaire le test"
+    },
+    "meta": {
+      "title": "Test de Maturité Digitale — Tadnun",
+      "description": "Faites le test gratuit en 2 minutes pour découvrir le niveau de maturité digitale de votre entreprise. Score personnalisé et recommandations par secteur."
+    }
   }
 }
