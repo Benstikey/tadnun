@@ -10,6 +10,7 @@ import { FaqSection } from "@/components/faq";
 import { HomeFaqJsonLd } from "@/components/json-ld";
 import { TrackedLink } from "@/components/tracked-link";
 import { sectorDetails } from "@/data/sector-details";
+import { CalculatorPromoVisual } from "@/components/calculator-promo-visual";
 
 const sectorKeys = [
   "agriculture", "restaurants", "tourism", "healthcare",
@@ -196,7 +197,7 @@ export default function Home() {
               <ScrollReveal key={key} delay={i * 40}>
                 <a
                   href={`/${locale}/sectors/${key}`}
-                  className="group relative flex flex-col gap-3 rounded-xl border border-border/80 bg-surface/60 p-6 transition-all duration-300 hover:border-foreground/15 hover:bg-surface hover:shadow-md hover:-translate-y-0.5 h-full"
+                  className="group relative flex flex-col gap-3 rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:border-foreground/15 hover:shadow-md hover:-translate-y-0.5 h-full"
                 >
                   <div className="flex items-center gap-3">
                     <IconBox size="sm" hoverAccent>
@@ -252,25 +253,30 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 py-20">
         <ScrollReveal>
           <div className="relative rounded-2xl border border-border bg-surface p-8 sm:p-12 lg:p-16 overflow-hidden">
-            <div className="relative max-w-lg">
-              <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-4">
-                {t("calculator.home.eyebrow")}
-              </p>
-              <h2 className="font-serif italic text-2xl sm:text-3xl lg:text-4xl tracking-tight text-foreground leading-[1.12]">
-                {t("calculator.home.title")}
-              </h2>
-              <p className="mt-4 text-muted leading-relaxed">
-                {t("calculator.home.description")}
-              </p>
-              <a
-                href={`/${locale}/calculator`}
-                className="mt-8 inline-flex items-center gap-2.5 rounded-full bg-foreground px-7 py-3 text-sm font-semibold text-background hover:bg-foreground/85 active:scale-[0.97] transition-all hover:-translate-y-px shadow-sm"
-              >
-                {t("calculator.home.cta")}
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="opacity-60 rtl:-scale-x-100">
-                  <path d="M2 7h10m0 0L8.5 3.5M12 7l-3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+              <div className="relative">
+                <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-4">
+                  {t("calculator.home.eyebrow")}
+                </p>
+                <h2 className="font-serif italic text-2xl sm:text-3xl lg:text-4xl tracking-tight text-foreground leading-[1.12]">
+                  {t("calculator.home.title")}
+                </h2>
+                <p className="mt-4 text-muted leading-relaxed">
+                  {t("calculator.home.description")}
+                </p>
+                <a
+                  href={`/${locale}/calculator`}
+                  className="mt-8 inline-flex items-center gap-2.5 rounded-full bg-foreground px-7 py-3 text-sm font-semibold text-background hover:bg-foreground/85 active:scale-[0.97] transition-all hover:-translate-y-px shadow-sm"
+                >
+                  {t("calculator.home.cta")}
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="opacity-60 rtl:-scale-x-100">
+                    <path d="M2 7h10m0 0L8.5 3.5M12 7l-3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <div className="hidden lg:block">
+                <CalculatorPromoVisual />
+              </div>
             </div>
           </div>
         </ScrollReveal>
