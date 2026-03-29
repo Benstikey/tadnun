@@ -555,7 +555,7 @@
     "title": "اختبار الجاهزية الرقمية",
     "subtitle": "في دقيقتين، اكتشف فين واصلة المقاولة ديالك.",
     "navLabel": "تشخيص مجاني",
-    "start": "تشخيص مجاني في دقيقتين",
+    "start": "تشخيص مجاني",
     "next": "التالي",
     "seeResults": "شوف النتيجة ديالي",
     "progress": "سؤال {current} من {total}",
@@ -624,6 +624,120 @@
     "meta": {
       "title": "اختبار الجاهزية الرقمية — تدنون",
       "description": "دير الاختبار المجاني في دقيقتين باش تعرف مستوى الجاهزية الرقمية ديال المقاولة ديالك. نتيجة مخصصة وتوصيات حسب القطاع."
+    }
+  },
+  "calculator": {
+    "metaTitle": "حاسبة التوفير",
+    "metaDescription": "قدّر شحال يمكن لمقاولتك توفر مع الحلول الرقمية. حساب مخصص حسب القطاع والحلول.",
+    "eyebrow": "محاكي التأثير",
+    "headline": "شحال كيكلفك الورق كل شهر؟",
+    "subheadline": "اختار القطاع ديالك. علّم على اللي مازال كتدير باليد. شوف الأرقام.",
+    "solutionsTitle": "الحلول اللي تقدر تفعّل",
+    "inputsTitle": "الهيكل ديالك",
+    "painPointsTitle": "اللي مازال كتدير باليد",
+    "painPointsTotal": "الوقت الضايع تقديرياً",
+    "perWeek": "أسبوع",
+    "adminTime": "وقت إداري",
+    "sectors": {
+      "retail": "تجارة / محل",
+      "restaurant": "مطعم / قهوة",
+      "salon": "صالون تجميل / حلاق",
+      "medical": "عيادة / كابيني",
+      "services": "خدمات / وكالة",
+      "pme": "مقاولة صغيرة / آخر"
+    },
+    "solutions": {
+      "retail": {
+        "stockManagement": "تسيير المخزون الأوتوماتيكي",
+        "salesTracking": "تتبع المبيعات فالوقت الحقيقي",
+        "crm": "CRM ديال الزبناء"
+      },
+      "restaurant": {
+        "ordering": "طلبات رقمية",
+        "reservations": "تسيير الحجوزات",
+        "performanceTracking": "تتبع الأداء"
+      },
+      "salon": {
+        "onlineBooking": "حجز المواعيد أونلاين",
+        "reminders": "تذكيرات أوتوماتيكية للزبناء",
+        "clientHistory": "تاريخ الزبون"
+      },
+      "medical": {
+        "patientManagement": "تسيير المرضى",
+        "digitalRecords": "ملفات طبية رقمية",
+        "appointmentSystem": "نظام المواعيد"
+      },
+      "services": {
+        "invoicing": "فوترة أوتوماتيكية",
+        "leadTracking": "تتبع العملاء المحتملين",
+        "dataCentralization": "مركزة البيانات"
+      },
+      "pme": {
+        "processAutomation": "أتمتة العمليات",
+        "analytics": "لوحات القيادة والتحليلات",
+        "collaboration": "أدوات التعاون"
+      }
+    },
+    "manualTasks": {
+      "retail": {
+        "manualStockCount": "كنحسب المخزون باليد",
+        "paperInvoices": "كندير الفواتير على الورق",
+        "excelTracking": "كنتبع المبيعات فـ Excel",
+        "phoneOrders": "كناخد الطلبات بالتيليفون"
+      },
+      "restaurant": {
+        "phoneReservations": "الزبناء كيتصلو باش يحجزو",
+        "paperOrders": "الطلبات كتمشي بالورق",
+        "manualInventory": "كنراجع المخزون باليد",
+        "cashReconciliation": "كنقارن الكاس باليد"
+      },
+      "salon": {
+        "phoneBookings": "الزبناء كيتصلو باش ياخدو موعد",
+        "noShowCalls": "كنعيط للي ما جاوش واحد بواحد",
+        "paperAgenda": "كنخدم بأجندة ورقية",
+        "clientMemory": "كنتفكر تفضيلات الزبناء من راسي"
+      },
+      "medical": {
+        "paperRecords": "ملفات المرضى على الورق",
+        "phoneAppointments": "المواعيد كتاخد بالتيليفون",
+        "manualBilling": "كندير الفوترة يدوياً",
+        "fileSearching": "كنقلب فالأرشيف على الملفات"
+      },
+      "services": {
+        "manualInvoicing": "كنخلق كل فاتورة من الصفر",
+        "spreadsheetCrm": "كنتبع الزبناء فـ tableur",
+        "emailChasing": "كنطارد الخلاص بالإيمايل",
+        "reportBuilding": "كنبني التقارير باليد"
+      },
+      "pme": {
+        "paperworkGeneral": "الأوراق كتاكل الوقت كل يوم",
+        "manualReporting": "التقارير كتبنا باليد",
+        "emailOverload": "الإيمايلات الداخلية كتاخد بزاف وقت",
+        "meetingOverhead": "بزاف ديال الاجتماعات باش نتنسقو"
+      }
+    },
+    "inputs": {
+      "employees": "حجم الفريق",
+      "avgRevenue": "الدخل المتوسط لكل زبون",
+      "employeesAvg": "موظفين فالمتوسط"
+    },
+    "resultsLabel": "التوفير المتوقع ديالك",
+    "youCanSave": "التوفير الممكن",
+    "perMonth": "شهر",
+    "noResults": "فعّل حل واحد على الأقل",
+    "results": {
+      "hoursSaved": "ساعات مسترجعة",
+      "revenueRecovered": "دخل مسترجع",
+      "clientsRecovered": "زبناء محتافظ عليهم"
+    },
+    "cta": "نتناقشو على الحالة ديالك",
+    "ctaSubtext": "استشارة مجانية — بلا التزام",
+    "nav": "حاسبة",
+    "home": {
+      "eyebrow": "محاكي مجاني",
+      "title": "قدّر التوفير ديالك ف 30 ثانية",
+      "description": "اختار القطاع ديالك، علّم على اللي مازال كتدير باليد، وشوف شحال يمكن ليك تسترجع كل شهر.",
+      "cta": "بدا المحاكي"
     }
   }
 }

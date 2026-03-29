@@ -555,7 +555,7 @@
     "title": "Digital Readiness Score",
     "subtitle": "In 2 minutes, discover where your business stands.",
     "navLabel": "Free diagnostic",
-    "start": "Free 2-min diagnostic",
+    "start": "Free diagnostic",
     "next": "Next",
     "seeResults": "See my score",
     "progress": "Question {current} of {total}",
@@ -624,6 +624,120 @@
     "meta": {
       "title": "Digital Readiness Score — Tadnun",
       "description": "Take the free 2-minute test to discover your business's digital readiness level. Get a personalized score and recommendations for your sector."
+    }
+  },
+  "calculator": {
+    "metaTitle": "Savings Calculator",
+    "metaDescription": "Estimate how much your business can save with digital solutions. Personalized calculation by sector and solutions.",
+    "eyebrow": "Impact simulator",
+    "headline": "How much is paperwork costing you every month?",
+    "subheadline": "Pick your sector. Check what you still do by hand. Watch the numbers.",
+    "solutionsTitle": "Solutions to activate",
+    "inputsTitle": "Your setup",
+    "painPointsTitle": "What you still do manually",
+    "painPointsTotal": "Estimated time lost",
+    "perWeek": "wk",
+    "adminTime": "admin time",
+    "sectors": {
+      "retail": "Retail / Store",
+      "restaurant": "Restaurant / Café",
+      "salon": "Beauty Salon / Barber",
+      "medical": "Clinic / Medical Office",
+      "services": "Services / Agency",
+      "pme": "SME / Other"
+    },
+    "solutions": {
+      "retail": {
+        "stockManagement": "Automated inventory management",
+        "salesTracking": "Real-time sales tracking",
+        "crm": "Customer CRM"
+      },
+      "restaurant": {
+        "ordering": "Digital ordering",
+        "reservations": "Reservation management",
+        "performanceTracking": "Performance tracking"
+      },
+      "salon": {
+        "onlineBooking": "Online appointment booking",
+        "reminders": "Automatic client reminders",
+        "clientHistory": "Client history"
+      },
+      "medical": {
+        "patientManagement": "Patient management",
+        "digitalRecords": "Digital medical records",
+        "appointmentSystem": "Appointment system"
+      },
+      "services": {
+        "invoicing": "Automated invoicing",
+        "leadTracking": "Lead tracking",
+        "dataCentralization": "Data centralization"
+      },
+      "pme": {
+        "processAutomation": "Process automation",
+        "analytics": "Dashboards & analytics",
+        "collaboration": "Collaboration tools"
+      }
+    },
+    "manualTasks": {
+      "retail": {
+        "manualStockCount": "I count inventory by hand",
+        "paperInvoices": "I do invoices on paper",
+        "excelTracking": "I track sales in Excel",
+        "phoneOrders": "I take orders by phone"
+      },
+      "restaurant": {
+        "phoneReservations": "Customers call to book a table",
+        "paperOrders": "Orders go through paper tickets",
+        "manualInventory": "I check stock manually",
+        "cashReconciliation": "I reconcile the register by hand"
+      },
+      "salon": {
+        "phoneBookings": "Clients call to book appointments",
+        "noShowCalls": "I chase no-shows one by one",
+        "paperAgenda": "I use a paper agenda",
+        "clientMemory": "I remember client preferences from memory"
+      },
+      "medical": {
+        "paperRecords": "Patient files are on paper",
+        "phoneAppointments": "Appointments are booked by phone",
+        "manualBilling": "I handle billing manually",
+        "fileSearching": "I search through paper archives"
+      },
+      "services": {
+        "manualInvoicing": "I create each invoice from scratch",
+        "spreadsheetCrm": "I track clients in a spreadsheet",
+        "emailChasing": "I chase late payments by email",
+        "reportBuilding": "I build reports manually"
+      },
+      "pme": {
+        "paperworkGeneral": "Paperwork eats time every day",
+        "manualReporting": "Reports are built by hand",
+        "emailOverload": "Internal emails take too long",
+        "meetingOverhead": "Too many meetings to coordinate"
+      }
+    },
+    "inputs": {
+      "employees": "Team size",
+      "avgRevenue": "Average revenue per client",
+      "employeesAvg": "employees avg."
+    },
+    "resultsLabel": "Your estimated savings",
+    "youCanSave": "Potential savings",
+    "perMonth": "month",
+    "noResults": "Activate at least one solution",
+    "results": {
+      "hoursSaved": "Hours recovered",
+      "revenueRecovered": "Revenue recovered",
+      "clientsRecovered": "Clients retained"
+    },
+    "cta": "Let's discuss your case",
+    "ctaSubtext": "Free consultation — no commitment",
+    "nav": "Calculator",
+    "home": {
+      "eyebrow": "Free simulator",
+      "title": "Estimate your savings in 30 seconds",
+      "description": "Pick your sector, check what you still do by hand, and see how much you can recover every month.",
+      "cta": "Launch the simulator"
     }
   }
 }

@@ -555,7 +555,7 @@
     "title": "Test de Maturité Digitale",
     "subtitle": "En 2 minutes, découvrez où en est votre entreprise.",
     "navLabel": "Diagnostic gratuit",
-    "start": "Diagnostic gratuit 2 min",
+    "start": "Diagnostic gratuit",
     "next": "Suivant",
     "seeResults": "Voir mon score",
     "progress": "Question {current} sur {total}",
@@ -624,6 +624,120 @@
     "meta": {
       "title": "Test de Maturité Digitale — Tadnun",
       "description": "Faites le test gratuit en 2 minutes pour découvrir le niveau de maturité digitale de votre entreprise. Score personnalisé et recommandations par secteur."
+    }
+  },
+  "calculator": {
+    "metaTitle": "Calculateur d'Économies",
+    "metaDescription": "Estimez combien votre entreprise peut économiser grâce à la digitalisation. Calcul personnalisé par secteur et solutions.",
+    "eyebrow": "Simulateur d'impact",
+    "headline": "Combien vous coûte le papier chaque mois ?",
+    "subheadline": "Sélectionnez votre secteur. Cochez ce que vous faites encore à la main. Regardez les chiffres.",
+    "solutionsTitle": "Solutions à activer",
+    "inputsTitle": "Votre structure",
+    "painPointsTitle": "Ce que vous faites encore manuellement",
+    "painPointsTotal": "Temps perdu estimé",
+    "perWeek": "sem",
+    "adminTime": "temps admin",
+    "sectors": {
+      "retail": "Commerce / Magasin",
+      "restaurant": "Restaurant / Café",
+      "salon": "Salon de beauté / Barber",
+      "medical": "Clinique / Cabinet",
+      "services": "Services / Agence",
+      "pme": "PME / Autres"
+    },
+    "solutions": {
+      "retail": {
+        "stockManagement": "Gestion des stocks automatisée",
+        "salesTracking": "Suivi des ventes en temps réel",
+        "crm": "CRM clients"
+      },
+      "restaurant": {
+        "ordering": "Commandes digitalisées",
+        "reservations": "Gestion des réservations",
+        "performanceTracking": "Suivi des performances"
+      },
+      "salon": {
+        "onlineBooking": "Prise de rendez-vous en ligne",
+        "reminders": "Rappels automatiques clients",
+        "clientHistory": "Historique client"
+      },
+      "medical": {
+        "patientManagement": "Gestion des patients",
+        "digitalRecords": "Dossiers médicaux digitaux",
+        "appointmentSystem": "Système de rendez-vous"
+      },
+      "services": {
+        "invoicing": "Facturation automatisée",
+        "leadTracking": "Suivi des leads",
+        "dataCentralization": "Centralisation des données"
+      },
+      "pme": {
+        "processAutomation": "Automatisation des processus",
+        "analytics": "Tableaux de bord & analytics",
+        "collaboration": "Outils de collaboration"
+      }
+    },
+    "manualTasks": {
+      "retail": {
+        "manualStockCount": "Je compte le stock à la main",
+        "paperInvoices": "Je fais les factures sur papier",
+        "excelTracking": "Je suis les ventes sur Excel",
+        "phoneOrders": "Je prends les commandes par téléphone"
+      },
+      "restaurant": {
+        "phoneReservations": "Les clients appellent pour réserver",
+        "paperOrders": "Les commandes passent par papier",
+        "manualInventory": "Je vérifie le stock manuellement",
+        "cashReconciliation": "Je rapproche la caisse à la main"
+      },
+      "salon": {
+        "phoneBookings": "Les clients appellent pour prendre RDV",
+        "noShowCalls": "Je rappelle les no-shows un par un",
+        "paperAgenda": "J'utilise un agenda papier",
+        "clientMemory": "Je me souviens des préférences clients de tête"
+      },
+      "medical": {
+        "paperRecords": "Les dossiers patients sont sur papier",
+        "phoneAppointments": "Les RDV se prennent par téléphone",
+        "manualBilling": "Je fais la facturation manuellement",
+        "fileSearching": "Je cherche les dossiers dans les archives"
+      },
+      "services": {
+        "manualInvoicing": "Je crée chaque facture manuellement",
+        "spreadsheetCrm": "Je suis mes clients sur un tableur",
+        "emailChasing": "Je relance les impayés par email",
+        "reportBuilding": "Je construis mes rapports à la main"
+      },
+      "pme": {
+        "paperworkGeneral": "La paperasse prend du temps chaque jour",
+        "manualReporting": "Les rapports sont faits manuellement",
+        "emailOverload": "Les emails internes prennent trop de temps",
+        "meetingOverhead": "Trop de réunions pour se coordonner"
+      }
+    },
+    "inputs": {
+      "employees": "Taille de l'équipe",
+      "avgRevenue": "Revenu moyen par client",
+      "employeesAvg": "employés en moy."
+    },
+    "resultsLabel": "Vos économies estimées",
+    "youCanSave": "Économie potentielle",
+    "perMonth": "mois",
+    "noResults": "Activez au moins une solution",
+    "results": {
+      "hoursSaved": "Heures récupérées",
+      "revenueRecovered": "Revenu récupéré",
+      "clientsRecovered": "Clients retenus"
+    },
+    "cta": "Discutons de votre cas",
+    "ctaSubtext": "Consultation gratuite — sans engagement",
+    "nav": "Calculateur",
+    "home": {
+      "eyebrow": "Simulateur gratuit",
+      "title": "Estimez vos économies en 30 secondes",
+      "description": "Sélectionnez votre secteur, cochez ce que vous faites encore à la main, et découvrez combien vous pouvez récupérer chaque mois.",
+      "cta": "Lancer le simulateur"
     }
   }
 }
