@@ -57,12 +57,19 @@ export function ScrollReveal({
       }
     };
 
+    // bfcache restore: when browser back/forward restores the page, show all
+    const onPageShow = (e: PageTransitionEvent) => {
+      if (e.persisted) setVisible(true);
+    };
+
     observer.observe(el);
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("pageshow", onPageShow);
 
     return () => {
       observer.disconnect();
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("pageshow", onPageShow);
     };
   }, []);
 
