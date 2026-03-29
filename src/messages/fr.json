@@ -152,8 +152,8 @@
       },
       "price": {
         "icon": "💰",
-        "title": "Prix adaptés aux PME",
-        "body": "Tarification adaptée à la taille de votre entreprise. Pas de frais cachés, pas de surprise. On croit que la digitalisation doit être accessible, pas réservée aux grandes entreprises."
+        "title": "Prix adaptés à votre entreprise",
+        "body": "Tarification adaptée à la taille et aux besoins de votre activité. Pas de frais cachés, pas de surprise. On croit que la digitalisation doit être accessible à toutes les entreprises."
       }
     }
   },
@@ -248,8 +248,8 @@
         "answer": "Tadnun ne demande aucun engagement longue durée. Vous pouvez arrêter à tout moment. Vos données vous appartiennent et Tadnun vous les exporte dans un format standard. Tadnun mérite votre confiance chaque mois — pas de contrat piège."
       },
       "q4": {
-        "question": "Tadnun, ça marche pour une petite entreprise de moins de 10 personnes ?",
-        "answer": "C'est exactement pour les PME marocaines que Tadnun a été conçu. 80% des clients Tadnun ont moins de 20 employés. Les solutions et tarifs sont adaptés à votre taille — pas de fonctionnalités enterprise que vous n'utiliserez jamais."
+        "question": "Tadnun, ça marche pour mon entreprise quelle que soit sa taille ?",
+        "answer": "Tadnun accompagne les entreprises marocaines de toutes tailles — du commerce de quartier à la société multi-sites. Les solutions et tarifs sont adaptés à vos besoins réels, pas à une formule standard."
       },
       "q5": {
         "question": "Tadnun gère aussi le design, le contenu et les photos ?",
@@ -274,7 +274,7 @@
     "title": "Pendant que vous hésitez, vos concurrents se digitalisent.",
     "description": "En 2030, le Maroc accueillera la Coupe du Monde. Des millions de visiteurs chercheront des entreprises en ligne. Les entreprises qui ne seront pas visibles n'existeront tout simplement pas.",
     "stat1": "93%",
-    "stat1Label": "des PME marocaines n'ont pas de présence digitale",
+    "stat1Label": "des entreprises marocaines n'ont pas de présence digitale",
     "stat2": "2030",
     "stat2Label": "Coupe du Monde au Maroc — le compte à rebours a commencé",
     "digitalizationLevel": "NIVEAU DE DIGITALISATION",
@@ -285,7 +285,7 @@
     "competitors": "Concurrents",
     "yourBusiness": "Votre entreprise",
     "avgLabel": "Moy. 72%",
-    "punchline": "93% des PME marocaines sont encore à 0%. Vos concurrents avancent. Et vous ?"
+    "punchline": "93% des entreprises marocaines sont encore à 0%. Vos concurrents avancent. Et vous ?"
   },
   "cta": {
     "eyebrow": "07",
@@ -356,7 +356,7 @@
     "differenceBody": "On ne vend pas de la technologie. On résout des problèmes concrets avec des outils adaptés au marché marocain — interfaces en darija, paiement CMI, support WhatsApp, prix accessibles.",
     "visionEyebrow": "VISION 2030",
     "visionTitle": "Le Maroc digital de demain",
-    "visionBody": "En 2030, le Maroc accueille la Coupe du Monde. Des millions de visiteurs chercheront des entreprises en ligne. Les 93% de PME sans présence digitale n'existeront tout simplement pas. On est là pour que ça n'arrive pas.",
+    "visionBody": "En 2030, le Maroc accueille la Coupe du Monde. Des millions de visiteurs chercheront des entreprises en ligne. Les 93% d'entreprises sans présence digitale n'existeront tout simplement pas. On est là pour que ça n'arrive pas.",
     "valuesEyebrow": "NOS VALEURS",
     "valuesTitle": "Ce qui nous guide",
     "value1Title": "Proximité",
@@ -541,7 +541,7 @@
       },
       "infographic": {
         "title": "Digitalisation : ce que ça coûte vs ce que ça rapporte",
-        "description": "Une comparaison visuelle avec les vrais chiffres en DH des PME marocaines. Découvrez ce que les entreprises perdent sans digitalisation — et ce qu'elles gagnent avec.",
+        "description": "Une comparaison visuelle avec les vrais chiffres en DH des entreprises marocaines. Découvrez ce que les entreprises perdent sans digitalisation — et ce qu'elles gagnent avec.",
         "format": "Infographie"
       },
       "restaurantGuide": {
@@ -606,7 +606,7 @@
     "results": {
       "title": "Votre score",
       "outOf": "/ 100",
-      "average": "Moyenne des PME marocaines : 18/100",
+      "average": "Moyenne des entreprises marocaines : 18/100",
       "critical": { "label": "Alerte rouge", "desc": "Votre entreprise fonctionne en mode analogique. Vous perdez de l'argent, des clients et du temps chaque jour — sans le savoir." },
       "behind": { "label": "En retard", "desc": "Vous avez commencé, mais vos outils ne se parlent pas. Des données se perdent entre WhatsApp, Excel et le papier." },
       "progress": { "label": "En progrès", "desc": "Vous êtes en avance sur la plupart des entreprises marocaines. Quelques intégrations clés pourraient transformer vos opérations." },

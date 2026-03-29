@@ -152,8 +152,8 @@
       },
       "price": {
         "icon": "💰",
-        "title": "SME-friendly pricing",
-        "body": "Pricing adapted to your business size. No hidden fees, no surprises. We believe digitalization should be accessible, not reserved for big companies."
+        "title": "Pricing adapted to your business",
+        "body": "Pricing adapted to your size and needs. No hidden fees, no surprises. We believe digitalization should be accessible to every business."
       }
     }
   },
@@ -248,8 +248,8 @@
         "answer": "Tadnun requires no long-term commitment. You can cancel anytime. Your data belongs to you and Tadnun exports it in a standard format. Tadnun earns your trust every month — no lock-in contracts."
       },
       "q4": {
-        "question": "Does Tadnun work for small businesses with fewer than 10 people?",
-        "answer": "That's exactly who Tadnun was built for. 80% of Tadnun's clients are Moroccan SMEs with fewer than 20 employees. Solutions and pricing are adapted to your size — no bloated enterprise features you'll never use."
+        "question": "Does Tadnun work for businesses of any size?",
+        "answer": "Tadnun works with Moroccan businesses of all sizes — from neighborhood shops to multi-location companies. Solutions and pricing are adapted to your actual needs, not a one-size-fits-all formula."
       },
       "q5": {
         "question": "Does Tadnun handle design, content, and photos too?",
@@ -274,7 +274,7 @@
     "title": "While you hesitate, your competitors are going digital.",
     "description": "In 2030, Morocco will host the World Cup. Millions of visitors will search for businesses online. Companies that aren't visible simply won't exist.",
     "stat1": "93%",
-    "stat1Label": "of Moroccan SMEs have no digital presence",
+    "stat1Label": "of Moroccan businesses have no digital presence",
     "stat2": "2030",
     "stat2Label": "World Cup in Morocco — the countdown has started",
     "digitalizationLevel": "DIGITALIZATION LEVEL",
@@ -285,7 +285,7 @@
     "competitors": "Competitors",
     "yourBusiness": "Your business",
     "avgLabel": "Avg. 72%",
-    "punchline": "93% of Moroccan SMEs are still at 0%. Your competitors are moving. Are you?"
+    "punchline": "93% of Moroccan businesses are still at 0%. Your competitors are moving. Are you?"
   },
   "cta": {
     "eyebrow": "07",
@@ -356,7 +356,7 @@
     "differenceBody": "We don't sell technology. We solve real problems with tools adapted to the Moroccan market — Darija interfaces, CMI payment, WhatsApp support, accessible pricing.",
     "visionEyebrow": "VISION 2030",
     "visionTitle": "Tomorrow's digital Morocco",
-    "visionBody": "In 2030, Morocco hosts the World Cup. Millions of visitors will search for businesses online. The 93% of SMEs without a digital presence simply won't exist. We're here to make sure that doesn't happen.",
+    "visionBody": "In 2030, Morocco hosts the World Cup. Millions of visitors will search for businesses online. The 93% of businesses without a digital presence simply won't exist. We're here to make sure that doesn't happen.",
     "valuesEyebrow": "OUR VALUES",
     "valuesTitle": "What guides us",
     "value1Title": "Proximity",
@@ -541,7 +541,7 @@
       },
       "infographic": {
         "title": "Digitalization: what it costs vs what it returns",
-        "description": "A visual comparison with real MAD figures from Moroccan SMEs. See what businesses lose without digitalization — and what they gain with it.",
+        "description": "A visual comparison with real MAD figures from Moroccan businesses. See what businesses lose without digitalization — and what they gain with it.",
         "format": "Infographic"
       },
       "restaurantGuide": {
@@ -606,7 +606,7 @@
     "results": {
       "title": "Your score",
       "outOf": "/ 100",
-      "average": "Average Moroccan SME: 18/100",
+      "average": "Average Moroccan business: 18/100",
       "critical": { "label": "Critical Gap", "desc": "Your business runs in analog mode. You are losing money, customers, and time every day — without realizing it." },
       "behind": { "label": "Falling Behind", "desc": "You've started, but your tools don't talk to each other. Data gets lost between WhatsApp, Excel, and paper." },
       "progress": { "label": "Getting There", "desc": "You're ahead of most Moroccan businesses. A few key integrations could transform your operations." },
