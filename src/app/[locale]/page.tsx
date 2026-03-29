@@ -114,7 +114,7 @@ export default function Home() {
             </div>
             <a
               href={`/${locale}/sectors`}
-              className="group inline-flex items-center gap-2 shrink-0 text-sm font-semibold text-foreground border border-border rounded-full px-5 py-2.5 hover:border-foreground/30 hover:bg-foreground/[0.04] transition-all"
+              className="group inline-flex items-center gap-2 self-start text-sm font-semibold text-foreground border border-border rounded-full px-5 py-2.5 hover:border-foreground/30 hover:bg-foreground/[0.04] transition-all"
             >
               {t("common.exploreSectors")}
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="rtl:-scale-x-100 transition-transform group-hover:translate-x-0.5">
@@ -252,7 +252,7 @@ export default function Home() {
       {/* ─── Calculator promo ─── */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <ScrollReveal>
-          <div className="relative rounded-2xl border border-border bg-surface p-6 sm:p-10 lg:p-16 overflow-hidden">
+          <div className="relative rounded-2xl border border-border bg-surface p-8 sm:p-12 lg:p-16 overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <div className="relative">
                 <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-4">
@@ -284,8 +284,8 @@ export default function Home() {
 
       {/* ─── Urgency — full-bleed dark section ─── */}
       <section aria-labelledby="urgency-heading" className="bg-foreground text-background relative grain">
-        <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-28">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+        <div className="mx-auto max-w-6xl px-6 py-24 lg:py-28">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
             {/* Left: messaging */}
             <div>
               <p className="text-[11px] font-mono tracking-[0.2em] text-background/35 uppercase mb-4">
@@ -348,7 +348,7 @@ export default function Home() {
           }))
         }
       />
-      <section aria-labelledby="faq-heading" className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-24">
+      <section aria-labelledby="faq-heading" className="mx-auto max-w-6xl px-6 py-24">
         <ScrollReveal>
           <FaqSection />
         </ScrollReveal>
