@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { createClient } from "@supabase/supabase-js";
 
 const TO_EMAIL = "wassimbenchekroun0@gmail.com";
 
@@ -15,7 +16,20 @@ export async function POST(request: Request) {
       );
     }
 
-    // If Resend is configured, send via Resend
+    // Save to Supabase
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    if (supabaseUrl && supabaseKey) {
+      const supabase = createClient(supabaseUrl, supabaseKey);
+      await supabase.from("leads").insert({
+        name,
+        contact,
+        sector: sector || null,
+        message: message || null,
+      });
+    }
+
+    // Send email notification via Resend
     if (process.env.RESEND_API_KEY) {
       const resend = new Resend(process.env.RESEND_API_KEY);
       await resend.emails.send({
@@ -33,9 +47,6 @@ export async function POST(request: Request) {
           <p style="margin-top:16px;color:#666;font-size:12px">Sent from tadnun.com contact form</p>
         `,
       });
-    } else {
-      // Log to console if Resend not configured (dev fallback)
-      console.log("[Contact Form] New submission:", { name, contact, sector, message });
     }
 
     return NextResponse.json({ success: true });
