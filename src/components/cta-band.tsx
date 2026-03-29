@@ -45,7 +45,7 @@ export function CtaBand({
               <a
                 href={contactHref}
                 onClick={() => trackEvent("cta_clicked", { location: "cta_band", label: t(ctaKey), sector: sectorKey || "none" })}
-                className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-white shadow-sm shadow-accent/20 hover:shadow-lg hover:shadow-accent/25 hover:bg-accent/90 active:scale-[0.97] active:shadow-sm transition-all duration-150 hover:-translate-y-px"
+                className="inline-flex items-center justify-center rounded-full bg-accent px-6 sm:px-8 py-3.5 text-sm font-semibold text-white whitespace-nowrap shadow-sm shadow-accent/20 hover:shadow-lg hover:shadow-accent/25 hover:bg-accent/90 active:scale-[0.97] active:shadow-sm transition-all duration-150 hover:-translate-y-px"
               >
                 {t(ctaKey)}
               </a>

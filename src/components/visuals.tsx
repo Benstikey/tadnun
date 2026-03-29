@@ -313,26 +313,28 @@ export function ApproachTimeline({
       {/* Horizontal connector line (desktop) */}
       <div className="hidden sm:block absolute top-[28px] inset-x-0 h-px bg-border z-0" />
 
-      <div className="grid sm:grid-cols-3 gap-0">
+      <div className="grid sm:grid-cols-3 gap-10 sm:gap-0">
         {steps.map((step, i) => (
           <ScrollRevealInner key={i} delay={i * 150}>
-            <div className="relative flex flex-col items-start sm:items-center text-start sm:text-center px-6">
+            <div className="relative flex items-start gap-4 sm:flex-col sm:items-center sm:text-center sm:px-6">
               {/* Step dot + number */}
-              <div className="relative z-10 mb-6">
-                <div className="w-14 h-14 rounded-full bg-background border-2 border-accent/30 flex items-center justify-center transition-colors">
-                  <span className="font-serif italic text-lg text-accent">
+              <div className="relative z-10 shrink-0">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-background border-2 border-accent/30 flex items-center justify-center transition-colors">
+                  <span className="font-serif italic text-base sm:text-lg text-accent">
                     {step.num}
                   </span>
                 </div>
               </div>
 
               {/* Content */}
-              <h3 className="text-foreground font-semibold text-lg leading-snug">
-                {step.title}
-              </h3>
-              <p className="mt-3 text-muted text-[14px] leading-relaxed max-w-[280px]">
-                {step.body}
-              </p>
+              <div className="sm:mt-6">
+                <h3 className="text-foreground font-semibold text-base sm:text-lg leading-snug">
+                  {step.title}
+                </h3>
+                <p className="mt-2 sm:mt-3 text-muted text-[13px] sm:text-[14px] leading-relaxed sm:max-w-[280px]">
+                  {step.body}
+                </p>
+              </div>
             </div>
           </ScrollRevealInner>
         ))}

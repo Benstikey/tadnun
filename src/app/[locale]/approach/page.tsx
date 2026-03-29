@@ -120,7 +120,7 @@ export default async function ApproachPage({
       <div className="border-t border-border" />
 
       {/* 3-Step Approach */}
-      <section className="mx-auto max-w-6xl px-6 py-24">
+      <section className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-24">
         <ScrollReveal>
           <SectionHeading
             eyebrow={t("approach.eyebrow")}
@@ -234,7 +234,7 @@ export default async function ApproachPage({
 
         {/* Process + CTA */}
         <ScrollReveal>
-          <div className="mt-14 rounded-2xl border border-border bg-surface/50 p-8 sm:p-10">
+          <div className="mt-14 rounded-2xl border border-border bg-surface/50 p-6 sm:p-8 lg:p-10">
             <div className="flex flex-col lg:flex-row lg:gap-12">
               {/* Left — steps */}
               <div className="flex-1 min-w-0">
@@ -276,10 +276,10 @@ export default async function ApproachPage({
               </div>
             </div>
 
-            <div className="mt-8 pt-8 border-t border-border flex flex-wrap items-center gap-4">
+            <div className="mt-8 pt-8 border-t border-border flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-4">
               <a
                 href={`/${locale}/contact${sectorSuffix}`}
-                className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-white shadow-sm shadow-accent/20 hover:shadow-lg hover:shadow-accent/25 hover:bg-accent/90 active:scale-[0.97] transition-all duration-150 hover:-translate-y-px"
+                className="inline-flex items-center justify-center rounded-full bg-accent px-6 sm:px-8 py-3.5 text-sm font-semibold text-white whitespace-nowrap shadow-sm shadow-accent/20 hover:shadow-lg hover:shadow-accent/25 hover:bg-accent/90 active:scale-[0.97] transition-all duration-150 hover:-translate-y-px"
               >
                 {t("pricing.cta")}
               </a>

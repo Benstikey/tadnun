@@ -348,7 +348,7 @@ export default function Home() {
           }))
         }
       />
-      <section aria-labelledby="faq-heading" className="mx-auto max-w-6xl px-6 py-24">
+      <section aria-labelledby="faq-heading" className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-24">
         <ScrollReveal>
           <FaqSection />
         </ScrollReveal>
