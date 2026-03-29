@@ -82,9 +82,9 @@ export default async function ResourcesPage({
                 </span>
 
                 {/* Title */}
-                <h2 className="font-serif italic text-foreground text-base leading-snug tracking-tight group-hover:text-accent transition-colors">
+                <h3 className="font-serif italic text-foreground text-base leading-snug tracking-tight group-hover:text-accent transition-colors">
                   {t(`items.${item.key}.title`)}
-                </h2>
+                </h3>
 
                 {/* Description */}
                 <p className="text-muted text-[14px] leading-relaxed line-clamp-3">

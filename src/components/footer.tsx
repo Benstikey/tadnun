@@ -18,7 +18,7 @@ export function Footer() {
         {/* Upper: brand + CTA */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 pb-12 border-b border-background/10">
           <div>
-            <span className="font-serif italic text-3xl">Tadnun</span>
+            <span className="font-serif italic text-3xl" style={{ fontFamily: "var(--font-playfair), serif", fontStyle: "italic" }}>Tadnun</span>
             <p className="mt-2 text-background/50 text-sm leading-relaxed max-w-[280px]">
               {t("footer.tagline")}
             </p>

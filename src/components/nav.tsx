@@ -70,7 +70,7 @@ export function Nav() {
               href={`/${locale}/`}
               className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
             >
-              <span className="font-serif italic text-[22px] tracking-tight text-foreground">
+              <span className="font-serif italic text-[22px] tracking-tight text-foreground" style={{ fontFamily: "var(--font-playfair), serif", fontStyle: "italic" }}>
                 Tadnun
               </span>
             </a>
