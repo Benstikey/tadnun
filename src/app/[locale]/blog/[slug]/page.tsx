@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
 import { CtaBand } from "@/components/cta-band";
 import { PageTracker } from "@/components/page-tracker";
+import { BlogPostJsonLd } from "@/components/json-ld";
 import { getBlogPost, getAllBlogSlugs } from "@/lib/blog";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
@@ -42,6 +43,14 @@ export default async function BlogPostPage({
 
   return (
     <PageShell>
+      <BlogPostJsonLd
+        locale={locale}
+        slug={slug}
+        title={post.title}
+        description={post.description ?? null}
+        date={post.date ?? null}
+        sector={post.sector ?? null}
+      />
       <PageTracker event="blog_article_read" params={{ slug, locale, sector: post.sector || "none" }} />
       <article className="mx-auto max-w-3xl px-6 pt-20 pb-16">
         {/* Breadcrumb */}

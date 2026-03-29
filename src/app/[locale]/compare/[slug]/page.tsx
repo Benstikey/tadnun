@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
 import { CtaBand } from "@/components/cta-band";
 import { PageTracker } from "@/components/page-tracker";
+import { ComparePageJsonLd } from "@/components/json-ld";
 import { getComparePage, getAllCompareSlugs } from "@/lib/compare";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
@@ -41,6 +42,12 @@ export default async function CompareDetailPage({
 
   return (
     <PageShell>
+      <ComparePageJsonLd
+        locale={locale}
+        slug={slug}
+        title={page.title}
+        description={page.description ?? null}
+      />
       <PageTracker event="compare_page_viewed" params={{ slug, locale }} />
       <article className="mx-auto max-w-3xl px-6 pt-20 pb-16">
         {/* Breadcrumb */}

@@ -36,7 +36,23 @@ export function JsonLd({ locale }: { locale: string }) {
       "@type": "Country",
       name: "Morocco",
     },
-    sameAs: [],
+    sameAs: [
+      "https://www.linkedin.com/company/tadnun",
+    ],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+212632431557",
+        contactType: "sales",
+        availableLanguage: ["French", "English", "Arabic"],
+      },
+      {
+        "@type": "ContactPoint",
+        url: "https://wa.me/212632431557",
+        contactType: "customer support",
+        availableLanguage: ["French", "Arabic"],
+      },
+    ],
     knowsAbout: SECTORS,
     knowsLanguage: ["fr", "en", "ar"],
   };
@@ -232,6 +248,178 @@ export function SectorJsonLd({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+    </>
+  );
+}
+
+/**
+ * Blog article schema — BlogPosting + BreadcrumbList.
+ */
+export function BlogPostJsonLd({
+  locale,
+  slug,
+  title,
+  description,
+  date,
+  sector,
+}: {
+  locale: string;
+  slug: string;
+  title: string;
+  description: string | null;
+  date: string | null;
+  sector: string | null;
+}) {
+  const articleUrl = `${BASE_URL}/${locale}/blog/${slug}`;
+
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description: description || title,
+    url: articleUrl,
+    datePublished: date || new Date().toISOString(),
+    dateModified: date || new Date().toISOString(),
+    author: {
+      "@type": "Organization",
+      name: "Tadnun",
+      url: BASE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Tadnun",
+      url: BASE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/logo.svg`,
+      },
+    },
+    inLanguage: locale,
+    ...(sector && { articleSection: sector }),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": articleUrl,
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Tadnun",
+        item: `${BASE_URL}/${locale}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${BASE_URL}/${locale}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: title,
+        item: articleUrl,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+    </>
+  );
+}
+
+/**
+ * Compare page schema — Article + BreadcrumbList.
+ */
+export function ComparePageJsonLd({
+  locale,
+  slug,
+  title,
+  description,
+}: {
+  locale: string;
+  slug: string;
+  title: string;
+  description: string | null;
+}) {
+  const pageUrl = `${BASE_URL}/${locale}/compare/${slug}`;
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description: description || title,
+    url: pageUrl,
+    author: {
+      "@type": "Organization",
+      name: "Tadnun",
+      url: BASE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Tadnun",
+      url: BASE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/logo.svg`,
+      },
+    },
+    inLanguage: locale,
+    articleSection: "Comparisons",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": pageUrl,
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Tadnun",
+        item: `${BASE_URL}/${locale}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: locale === "fr" ? "Comparaisons" : locale === "ar" ? "المقارنات" : "Comparisons",
+        item: `${BASE_URL}/${locale}/compare`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: title,
+        item: pageUrl,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </>
   );
