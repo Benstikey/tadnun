@@ -6,12 +6,12 @@ import { useRouter, usePathname } from "@/i18n/navigation";
 import { trackEvent } from "@/lib/analytics";
 
 const locales = [
-  { code: "fr", label: "Francais", flag: "🇫🇷", short: "FR" },
+  { code: "fr", label: "Français", flag: "🇫🇷", short: "FR" },
   { code: "en", label: "English", flag: "🇬🇧", short: "EN" },
   { code: "ar", label: "العربية", flag: "🇲🇦", short: "AR" },
 ] as const;
 
-export function LocaleSwitcher() {
+export function LocaleSwitcher({ dropUp = false }: { dropUp?: boolean }) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -41,6 +41,10 @@ export function LocaleSwitcher() {
     setOpen(false);
   };
 
+  const dropdownPosition = dropUp
+    ? "bottom-full mb-2 origin-bottom-start rtl:origin-bottom-end"
+    : "top-full mt-2 origin-top-end rtl:origin-top-start";
+
   return (
     <div ref={ref} className="relative">
       <button
@@ -63,7 +67,7 @@ export function LocaleSwitcher() {
           height="10"
           viewBox="0 0 10 10"
           fill="none"
-          className={`text-muted transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`text-muted transition-transform duration-200 ${open ? (dropUp ? "" : "rotate-180") : (dropUp ? "rotate-180" : "")}`}
         >
           <path d="M2 4l3 3 3-3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
@@ -71,7 +75,7 @@ export function LocaleSwitcher() {
 
       {/* Dropdown */}
       <div
-        className={`absolute end-0 top-full mt-2 w-44 rounded-xl border border-border bg-surface shadow-lg shadow-foreground/5 overflow-hidden transition-all duration-200 origin-top-right rtl:origin-top-left ${
+        className={`absolute ${dropUp ? "start-0" : "end-0"} ${dropdownPosition} w-44 rounded-xl border border-border bg-surface shadow-lg shadow-foreground/5 overflow-hidden transition-all duration-200 ${
           open
             ? "opacity-100 scale-100 pointer-events-auto"
             : "opacity-0 scale-95 pointer-events-none"

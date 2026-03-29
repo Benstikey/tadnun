@@ -22,6 +22,16 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
   const pathSector = pathname.match(/\/sectors\/(\w+)/)?.[1] as SectorKey | undefined;
   const paramSector = searchParams.get("sector") as SectorKey | undefined;
   const activeSector = (pathSector && validSectors.includes(pathSector)) ? pathSector
@@ -47,7 +57,7 @@ export function Nav() {
       </a>
       <nav
         className={`sticky top-0 z-50 border-b transition-all duration-300 ${
-          scrolled
+          scrolled || mobileOpen
             ? "bg-background/95 backdrop-blur-lg border-border/80"
             : "bg-transparent border-transparent"
         }`}
@@ -118,7 +128,6 @@ export function Nav() {
             aria-label={mobileOpen ? t("nav.closeMenu") : t("nav.openMenu")}
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
-              {/* Three lines that morph into X via CSS transitions */}
               <line
                 x1={mobileOpen ? 5 : 3} y1={mobileOpen ? 5 : 6}
                 x2={mobileOpen ? 15 : 17} y2={mobileOpen ? 15 : 6}
@@ -139,31 +148,49 @@ export function Nav() {
             </svg>
           </button>
         </div>
+      </nav>
 
-        {/* Mobile nav */}
+      {/* Mobile nav — overlay */}
+      <div
+        className={`md:hidden fixed inset-0 z-40 transition-opacity duration-300 ${
+          mobileOpen ? "pointer-events-auto" : "pointer-events-none"
+        }`}
+      >
+        {/* Backdrop */}
         <div
-          className="md:hidden grid transition-all duration-300 ease-out"
-          style={{
-            gridTemplateRows: mobileOpen ? "1fr" : "0fr",
-            opacity: mobileOpen ? 1 : 0,
-          }}
+          className={`absolute inset-0 bg-foreground/20 transition-opacity duration-300 ${
+            mobileOpen ? "opacity-100" : "opacity-0"
+          }`}
+          onClick={() => setMobileOpen(false)}
+        />
+
+        {/* Panel */}
+        <div
+          className={`absolute top-[calc(57px+1px)] inset-x-0 bg-background border-b border-border shadow-xl transition-all duration-300 ease-out ${
+            mobileOpen
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-2"
+          }`}
         >
-          <div className="overflow-hidden">
-          <div className="border-t border-border bg-background px-6 pb-6 pt-4">
+          <div className="px-6 pb-6 pt-4 max-h-[calc(100dvh-58px)] overflow-y-auto">
             <div className="flex flex-col gap-0.5">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="py-3.5 text-[16px] text-foreground/70 hover:text-foreground transition-colors border-b border-border/50 last:border-0"
+                  className={`py-3.5 text-[16px] transition-colors border-b border-border/50 last:border-0 ${
+                    link.accent
+                      ? "text-accent font-medium"
+                      : "text-foreground/70 hover:text-foreground"
+                  }`}
                 >
                   {link.label}
                 </a>
               ))}
             </div>
             <div className="flex items-center justify-between mt-5 pt-4 border-t border-border/50">
-              <LocaleSwitcher />
+              <LocaleSwitcher dropUp />
               <a
                 href={`/${locale}/contact${sectorSuffix}`}
                 onClick={() => setMobileOpen(false)}
@@ -176,9 +203,8 @@ export function Nav() {
               </a>
             </div>
           </div>
-          </div>
         </div>
-      </nav>
+      </div>
     </>
   );
 }
