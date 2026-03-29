@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
 import { CtaBand } from "@/components/cta-band";
+import { PageTracker } from "@/components/page-tracker";
 import { getBlogPost, getAllBlogSlugs } from "@/lib/blog";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
@@ -41,6 +42,7 @@ export default async function BlogPostPage({
 
   return (
     <PageShell>
+      <PageTracker event="blog_article_read" params={{ slug, locale, sector: post.sector || "none" }} />
       <article className="mx-auto max-w-3xl px-6 pt-20 pb-16">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-[12px] text-muted mb-10">

@@ -11,6 +11,7 @@ import { SectorIntegrationHub } from "@/components/integration-hub";
 import { SectionHeading } from "@/components/section-heading";
 import { IconBox } from "@/components/icon-box";
 import { SectorJsonLd } from "@/components/json-ld";
+import { PageTracker } from "@/components/page-tracker";
 import { sectorDetails } from "@/data/sector-details";
 import { cities } from "@/data/cities";
 import { validSectors, type SectorKey } from "@/lib/sector-context";
@@ -98,6 +99,7 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
 
   return (
     <PageShell>
+        <PageTracker event="sector_page_viewed" params={{ sector, locale }} />
         <SectorJsonLd
           locale={locale}
           sectorSlug={sector}

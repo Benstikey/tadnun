@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { usePathname, useSearchParams } from "next/navigation";
 import { LocaleSwitcher } from "./locale-switcher";
+import { trackEvent } from "@/lib/analytics";
 import { validSectors, type SectorKey } from "@/lib/sector-context";
 
 export function Nav() {
@@ -35,6 +36,7 @@ export function Nav() {
     { href: `/${locale}/approach${sectorSuffix}`, label: t("nav.approach") },
     { href: `/${locale}/about${sectorSuffix}`, label: t("nav.about") },
     { href: `/${locale}/blog`, label: t("nav.blog") },
+    { href: `/${locale}/calculator`, label: t("calculator.nav") },
     { href: `/${locale}/tools/quiz`, label: t("quiz.start"), accent: true },
   ];
 
@@ -79,6 +81,7 @@ export function Nav() {
                 <a
                   key={link.href}
                   href={link.href}
+                  onClick={() => trackEvent("nav_link_clicked", { label: link.label, href: link.href })}
                   className={`nav-link-underline text-[13px] px-3.5 py-2.5 rounded-lg transition-all ${
                     link.accent
                       ? "text-accent font-medium hover:bg-accent/[0.06]"
@@ -96,6 +99,7 @@ export function Nav() {
             <LocaleSwitcher />
             <a
               href={`/${locale}/contact${sectorSuffix}`}
+              onClick={() => trackEvent("cta_clicked", { location: "nav", label: t("common.letsTalk") })}
               className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-[13px] font-semibold text-background hover:bg-foreground/85 active:scale-[0.97] transition-all duration-150 hover:-translate-y-px hover:shadow-lg hover:shadow-foreground/10"
             >
               <span>{t("common.letsTalk")}</span>

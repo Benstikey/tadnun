@@ -1,4 +1,7 @@
+"use client";
+
 import { useTranslations, useLocale } from "next-intl";
+import { trackEvent } from "@/lib/analytics";
 import { CtaVisual } from "./cta-visual";
 
 export function CtaBand({
@@ -41,6 +44,7 @@ export function CtaBand({
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href={contactHref}
+                onClick={() => trackEvent("cta_clicked", { location: "cta_band", label: t(ctaKey), sector: sectorKey || "none" })}
                 className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-white shadow-sm shadow-accent/20 hover:shadow-lg hover:shadow-accent/25 hover:bg-accent/90 active:scale-[0.97] active:shadow-sm transition-all duration-150 hover:-translate-y-px"
               >
                 {t(ctaKey)}

@@ -8,6 +8,7 @@ import { PageShell } from "@/components/page-shell";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { FaqSection } from "@/components/faq";
 import { HomeFaqJsonLd } from "@/components/json-ld";
+import { TrackedLink } from "@/components/tracked-link";
 import { sectorDetails } from "@/data/sector-details";
 
 const sectorKeys = [
@@ -38,21 +39,25 @@ export default function Home() {
                 {t("hero.description")}
               </p>
               <div className="hero-stagger hero-stagger-4 mt-10 flex flex-wrap items-center gap-4">
-                <a
+                <TrackedLink
                   href={`/${locale}/contact`}
+                  event="cta_clicked"
+                  params={{ location: "hero", label: "lets_talk" }}
                   className="inline-flex items-center justify-center rounded-full bg-foreground px-8 py-3.5 text-sm font-semibold text-background hover:bg-foreground/90 active:scale-[0.97] transition-all hover:-translate-y-px shadow-sm"
                 >
                   {t("common.letsTalk")}
-                </a>
-                <a
+                </TrackedLink>
+                <TrackedLink
                   href={`/${locale}/tools/quiz`}
+                  event="quiz_cta_clicked"
+                  params={{ location: "hero" }}
                   className="group inline-flex items-center gap-2 text-sm font-semibold text-foreground border border-border rounded-full px-5 py-2.5 hover:border-foreground/30 hover:bg-foreground/[0.04] transition-all"
                 >
                   {t("quiz.start")}
                   <svg width="13" height="13" viewBox="0 0 16 16" fill="none" className="rtl:-scale-x-100 transition-transform group-hover:translate-x-0.5">
                     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                </a>
+                </TrackedLink>
               </div>
               <div className="hero-stagger hero-stagger-5 mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-muted font-mono tracking-wider">
                 <span>{t("hero.location")}</span>
@@ -275,12 +280,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <a
+              <TrackedLink
                 href={`/${locale}/contact`}
+                event="cta_clicked"
+                params={{ location: "urgency_section", label: "urgency_cta" }}
                 className="mt-10 inline-flex items-center justify-center rounded-full bg-accent text-white px-8 py-3.5 text-sm font-semibold hover:bg-accent-dark active:scale-[0.97] transition-all hover:-translate-y-px shadow-lg shadow-accent/20"
               >
                 {t("urgency.cta")}
-              </a>
+              </TrackedLink>
             </div>
 
             {/* Right: race visualization */}

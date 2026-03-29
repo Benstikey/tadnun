@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/navigation";
+import { trackEvent } from "@/lib/analytics";
 
 const locales = [
   { code: "fr", label: "Francais", flag: "🇫🇷", short: "FR" },
@@ -31,6 +32,7 @@ export function LocaleSwitcher() {
   }, []);
 
   const switchTo = (code: string) => {
+    trackEvent("locale_switched", { from: locale, to: code });
     // Blog/compare article slugs are language-specific — redirect to listing page
     const blogMatch = pathname.match(/^\/blog\/.+/);
     const compareMatch = pathname.match(/^\/compare\/.+/);
