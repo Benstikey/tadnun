@@ -182,6 +182,8 @@ export default async function ApproachPage({
         </div>
       </section>
 
+      <div className="border-t border-border" />
+
       {/* ─── Your Investment ─── */}
       <section className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-24">
         <ScrollReveal>
