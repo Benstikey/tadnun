@@ -135,7 +135,7 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
         </section>
 
         {/* Pain Points */}
-        <section aria-labelledby="reality-heading" className="mx-auto max-w-6xl px-6 pt-20 pb-24">
+        <section aria-labelledby="reality-heading" className="mx-auto max-w-6xl px-6 pt-16 pb-20 sm:pt-20 sm:pb-24">
           <SectionHeading
             eyebrow={t("sectorPage.realityEyebrow")}
             title={t("sectorPage.realityTitle")}
@@ -194,7 +194,7 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
         <div className="border-t border-border" />
 
         {/* Process Transformation */}
-        <section aria-labelledby="transformation-heading" className="mx-auto max-w-6xl px-6 py-24">
+        <section aria-labelledby="transformation-heading" className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-24">
           <SectionHeading
             eyebrow={t("sectorPage.beforeAfterEyebrow")}
             title={t("sectorPage.beforeAfterTitle")}
@@ -215,7 +215,7 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
         <div className="border-t border-border" />
 
         {/* Solutions */}
-        <section aria-labelledby="solutions-heading" className="mx-auto max-w-6xl px-6 py-24">
+        <section aria-labelledby="solutions-heading" className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-24">
           <SectionHeading
             eyebrow={t("sectorPage.solutionsEyebrow")}
             title={t("sectorPage.solutionsTitle")}
@@ -247,7 +247,7 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
         <div className="border-t border-border" />
 
         {/* Why Tadnun for [sector] */}
-        <section aria-labelledby="why-heading" className="mx-auto max-w-6xl px-6 py-24">
+        <section aria-labelledby="why-heading" className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-24">
           <ScrollReveal>
             <h2 id="why-heading" className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground">
               {t("sectorPage.whyTadnunFor", { sector: sectorName.toLowerCase() })}
@@ -272,7 +272,7 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
         <div className="border-t border-border" />
 
         {/* Integration Ecosystem */}
-        <section aria-labelledby="ecosystem-heading" className="mx-auto max-w-6xl px-6 pt-24 pb-20">
+        <section aria-labelledby="ecosystem-heading" className="mx-auto max-w-6xl px-6 pt-16 pb-16 sm:pt-20 sm:pb-20 lg:pt-24">
           <SectionHeading
             eyebrow={t("sectorPage.ecosystemEyebrow")}
             title={t("sectorPage.ecosystemTitle")}
@@ -294,7 +294,7 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
         <div className="border-t border-border" />
 
         {/* FAQ */}
-        <section aria-labelledby="sector-faq-heading" className="mx-auto max-w-6xl px-6 py-24">
+        <section aria-labelledby="sector-faq-heading" className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-24">
           <SectionHeading
             eyebrow={t("sectorPage.faqEyebrow")}
             title={t("sectorPage.faqTitle")}
@@ -343,7 +343,7 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
 
         {/* CTA */}
         <div className="border-t border-border" />
-        <section aria-labelledby="sector-cta-heading" className="mx-auto max-w-6xl px-6 py-24">
+        <section aria-labelledby="sector-cta-heading" className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-24">
           <h2 id="sector-cta-heading" className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground max-w-xl">
             {t("sectorPage.ctaTitle")}
           </h2>

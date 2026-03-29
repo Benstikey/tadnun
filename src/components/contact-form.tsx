@@ -90,7 +90,7 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-2xl border border-emerald-200 bg-emerald-50/50 p-8 text-center animate-[fadeScale_0.4s_ease-out]">
+      <div className="rounded-2xl border border-emerald-200 bg-emerald-50/50 p-6 sm:p-8 text-center animate-[fadeScale_0.4s_ease-out]">
         <SuccessCheck />
         <p className="font-serif italic text-2xl text-foreground">
           {t("formSuccess")}

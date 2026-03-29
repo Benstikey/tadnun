@@ -252,7 +252,7 @@ export default function Home() {
       {/* ─── Calculator promo ─── */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <ScrollReveal>
-          <div className="relative rounded-2xl border border-border bg-surface p-8 sm:p-12 lg:p-16 overflow-hidden">
+          <div className="relative rounded-2xl border border-border bg-surface p-6 sm:p-10 lg:p-16 overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <div className="relative">
                 <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-4">
@@ -284,8 +284,8 @@ export default function Home() {
 
       {/* ─── Urgency — full-bleed dark section ─── */}
       <section aria-labelledby="urgency-heading" className="bg-foreground text-background relative grain">
-        <div className="mx-auto max-w-6xl px-6 py-24 lg:py-28">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-28">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
             {/* Left: messaging */}
             <div>
               <p className="text-[11px] font-mono tracking-[0.2em] text-background/35 uppercase mb-4">

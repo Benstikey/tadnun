@@ -205,7 +205,7 @@ export default async function SectorsListPage({ params }: { params: Promise<{ lo
       {/* ─── Other Industries ─── */}
       <section className="mx-auto max-w-6xl px-6 pb-20">
         <ScrollReveal>
-          <div className="rounded-2xl border border-border bg-surface/40 p-10 lg:p-14">
+          <div className="rounded-2xl border border-border bg-surface/40 p-6 sm:p-10 lg:p-14">
             <p className="text-[11px] font-mono tracking-[0.2em] text-accent uppercase mb-4">
               {t("sectorsPage.otherEyebrow")}
             </p>

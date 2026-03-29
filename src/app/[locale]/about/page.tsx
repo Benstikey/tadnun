@@ -75,7 +75,7 @@ export default async function AboutPage({
       <div className="border-t border-border" />
 
       {/* The Problem We Saw */}
-      <section className="mx-auto max-w-6xl px-6 pt-20 pb-24">
+      <section className="mx-auto max-w-6xl px-6 pt-16 pb-20 sm:pt-20 sm:pb-24">
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-20 items-start">
           {/* Left: stories */}
           <div className="lg:col-span-7">
@@ -135,7 +135,7 @@ export default async function AboutPage({
       <div className="border-t border-border" />
 
       {/* What Tadnun Does Differently + Integration Hub */}
-      <section className="mx-auto max-w-6xl px-6 py-24">
+      <section className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
             <div>

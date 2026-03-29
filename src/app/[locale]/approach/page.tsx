@@ -96,7 +96,7 @@ export default async function ApproachPage({
       <div className="border-t border-border" />
 
       {/* Transformation Before/After */}
-      <section className="mx-auto max-w-6xl px-6 pt-20 pb-24">
+      <section className="mx-auto max-w-6xl px-6 pt-16 pb-20 sm:pt-20 sm:pb-24">
         <ScrollReveal>
           <SectionHeading
             eyebrow={t("transformation.eyebrow")}
@@ -134,7 +134,7 @@ export default async function ApproachPage({
       <div className="border-t border-border" />
 
       {/* Why Tadnun */}
-      <section className="mx-auto max-w-6xl px-6 pt-24 pb-20">
+      <section className="mx-auto max-w-6xl px-6 pt-16 pb-16 sm:pt-20 sm:pb-20 lg:pt-24">
         <ScrollReveal>
           <SectionHeading
             eyebrow={t("expertise.eyebrow")}
@@ -183,7 +183,7 @@ export default async function ApproachPage({
       </section>
 
       {/* ─── Your Investment ─── */}
-      <section className="mx-auto max-w-6xl px-6 py-24">
+      <section className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-24">
         <ScrollReveal>
           <SectionHeading
             eyebrow={t("pricing.eyebrow")}

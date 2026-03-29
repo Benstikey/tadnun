@@ -95,7 +95,7 @@ export function QuizClient({ locale }: { locale: string }) {
   // ─── Intro ───
   if (step === "intro") {
     return (
-      <section className="mx-auto max-w-2xl px-6 py-24 text-center">
+      <section className="mx-auto max-w-2xl px-6 py-16 sm:py-24 text-center">
         <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-4">
           {locale === "fr" ? "OUTIL GRATUIT" : locale === "ar" ? "أداة مجانية" : "FREE TOOL"}
         </p>
@@ -121,7 +121,7 @@ export function QuizClient({ locale }: { locale: string }) {
   // ─── Sector Selection ───
   if (step === "sector") {
     return (
-      <section className="mx-auto max-w-2xl px-6 py-24">
+      <section className="mx-auto max-w-2xl px-6 py-16 sm:py-24">
         <h2 className="font-serif italic text-2xl sm:text-3xl tracking-tight text-foreground text-center">
           {t("sectorQuestion")}
         </h2>
@@ -150,7 +150,7 @@ export function QuizClient({ locale }: { locale: string }) {
   if (step === "questions") {
     const qKey = QUESTION_KEYS[currentQ];
     return (
-      <section className="mx-auto max-w-2xl px-6 py-24">
+      <section className="mx-auto max-w-2xl px-6 py-16 sm:py-24">
         {/* Progress bar */}
         <div className="mb-10">
           <div className="flex items-center justify-between text-[12px] text-muted font-mono mb-2">
@@ -199,7 +199,7 @@ export function QuizClient({ locale }: { locale: string }) {
 
   // ─── Results ───
   return (
-    <section className="mx-auto max-w-2xl px-6 py-24">
+    <section className="mx-auto max-w-2xl px-6 py-16 sm:py-24">
       {/* Score display */}
       <div className="text-center">
         <div className="inline-flex items-baseline gap-2">
