@@ -46,7 +46,7 @@ export function SectionHeading({
       {eyebrow && <p className={eyebrowCls}>{eyebrow}</p>}
       <Tag
         id={id}
-        className={`font-serif italic ${sizeClasses[size]} tracking-tight text-foreground leading-[1.1]`}
+        className={`font-serif italic ${sizeClasses[size]} tracking-tight leading-[1.1]`}
       >
         {title}
       </Tag>
