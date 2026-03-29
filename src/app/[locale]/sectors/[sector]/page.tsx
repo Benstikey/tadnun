@@ -155,7 +155,7 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
             {details.testimonials.map((tst, i) => (
               <div key={i} className="rounded-2xl border border-border bg-surface p-7">
                 <p className="text-foreground/70 text-[14px] italic leading-relaxed">
-                  &ldquo;{isEn ? (tst.quoteEn || tst.quote) : tst.quote}&rdquo;
+                  &ldquo;{locale === "ar" ? tst.quoteAr : locale === "en" ? tst.quoteEn : tst.quote}&rdquo;
                 </p>
                 <div className="mt-4 flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-foreground/10 flex items-center justify-center text-foreground/40 text-xs font-medium">
@@ -163,7 +163,7 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
                   </div>
                   <div>
                     <p className="text-foreground text-sm font-medium">{tst.name}</p>
-                    <p className="text-muted text-xs">{tst.role}, {tst.city}</p>
+                    <p className="text-muted text-xs">{locale === "ar" ? tst.roleAr : locale === "en" ? tst.roleEn : tst.role}, {tst.city}</p>
                   </div>
                 </div>
               </div>

@@ -88,11 +88,11 @@ export default async function ContactPage({
                 <ScrollReveal delay={250}>
                   <blockquote className="mt-10 max-w-lg border-s-2 border-accent/30 ps-5 py-1">
                     <p className="text-[14px] text-foreground/60 leading-relaxed italic">
-                      &ldquo;{isEn ? (testimonial.quoteEn ?? testimonial.quote) : testimonial.quote}&rdquo;
+                      &ldquo;{locale === "ar" ? testimonial.quoteAr : locale === "en" ? testimonial.quoteEn : testimonial.quote}&rdquo;
                     </p>
                     <cite className="mt-2 block text-[13px] text-foreground not-italic font-medium">
                       {testimonial.name}
-                      <span className="text-muted font-normal"> &middot; {testimonial.role}, {testimonial.city}</span>
+                      <span className="text-muted font-normal"> &middot; {locale === "ar" ? testimonial.roleAr : locale === "en" ? testimonial.roleEn : testimonial.role}, {testimonial.city}</span>
                     </cite>
                   </blockquote>
                 </ScrollReveal>

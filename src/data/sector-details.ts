@@ -1,6 +1,6 @@
 export type SectorDetail = {
   painPoints: { title: string; titleEn: string; body: string; bodyEn: string }[];
-  testimonials: { quote: string; quoteEn?: string; name: string; role: string; city: string }[];
+  testimonials: { quote: string; quoteEn: string; quoteAr: string; name: string; role: string; roleEn: string; roleAr: string; city: string }[];
   integrations: { name: string; desc: string; descEn: string }[];
   roi: { stat: string; label: string; labelEn: string }[];
   workflows: { before: string; beforeEn: string; after: string; afterEn: string }[];
@@ -22,8 +22,8 @@ export const sectorDetails: Record<string, SectorDetail> = {
       { title: "Gaspillage d'eau et d'intrants", titleEn: "Water and input waste", body: "Sans donnees de consommation par parcelle, vous irriguez a l'aveugle. L'aquifere du Souss-Massa est en stress critique — et votre facture d'eau double tous les 3 ans.", bodyEn: "Without per-field consumption data, you irrigate blindly. The Souss-Massa aquifer is critically stressed — and your water bill doubles every 3 years." },
     ],
     testimonials: [
-      { quote: "Avant Tadnun, je perdais 2 semaines chaque saison a resoudre des litiges de paiement avec les membres. Maintenant, chacun voit son releve sur son telephone.", name: "Fatima", role: "Presidente de cooperative d'argan", city: "Essaouira" },
-      { quote: "On a failli perdre notre certification GlobalGAP parce qu'un agriculteur n'avait pas note ses traitements. Avec le suivi digital, c'est automatique.", name: "Hassan", role: "Exportateur d'agrumes", city: "Agadir" },
+      { quote: "Avant Tadnun, je perdais 2 semaines chaque saison à résoudre des litiges de paiement avec les membres. Maintenant, chacun voit son relevé sur son téléphone.", quoteEn: "Before Tadnun, I spent 2 weeks every season resolving payment disputes with members. Now everyone can see their statement on their phone.", quoteAr: "قبل تدنون، كنت كنضيّع أسبوعين كل موسم باش نحل مشاكل الخلاص مع الأعضاء. دابا كل واحد كيشوف كشف حسابو فالتيليفون.", name: "Fatima", role: "Présidente de coopérative d'argan", roleEn: "Argan cooperative president", roleAr: "رئيسة تعاونية الأركان", city: "Essaouira" },
+      { quote: "On a failli perdre notre certification GlobalGAP parce qu'un agriculteur n'avait pas noté ses traitements. Avec le suivi digital, c'est automatique.", quoteEn: "We almost lost our GlobalGAP certification because one farmer hadn't logged his treatments. With digital tracking, it's automatic.", quoteAr: "كنّا غادي نخسرو شهادة GlobalGAP حيت فلاح واحد ما سجّلش المعالجات ديالو. مع التتبع الرقمي، ولّا أوتوماتيك.", name: "Hassan", role: "Exportateur d'agrumes", roleEn: "Citrus exporter", roleAr: "مصدّر حوامض", city: "Agadir" },
     ],
     integrations: [
       { name: "ONSSA", desc: "Conformite phytosanitaire et generation automatique des certificats d'export", descEn: "Phytosanitary compliance and automatic export certificate generation" },
@@ -68,8 +68,8 @@ export const sectorDetails: Record<string, SectorDetail> = {
       { title: "Gaspillage alimentaire invisible", titleEn: "Invisible food waste", body: "Vous jetez 15-20% de vos achats chaque semaine sans le savoir. Sans suivi des couts matiere, votre marge reelle est peut-etre 7 points en dessous de ce que vous pensez.", bodyEn: "You throw away 15-20% of your purchases every week without knowing it. Without food cost tracking, your real margin might be 7 points below what you think." },
     ],
     testimonials: [
-      { quote: "Depuis qu'on a notre fiche Google optimisee, on recoit 40% de clients en plus le week-end. Les touristes nous trouvent directement sur Maps.", name: "Karim", role: "Restaurateur", city: "Marrakech" },
-      { quote: "On perdait 6 commandes Glovo par semaine a cause du rush. Maintenant tout arrive sur un seul ecran en cuisine. Zero erreur depuis 3 mois.", name: "Samira", role: "Gerante de fast-casual", city: "Casablanca" },
+      { quote: "Depuis qu'on a notre fiche Google optimisée, on reçoit 40% de clients en plus le week-end. Les touristes nous trouvent directement sur Maps.", quoteEn: "Since we optimized our Google listing, we get 40% more customers on weekends. Tourists find us directly on Maps.", quoteAr: "من بعد ما حسّنا فيشة Google ديالنا، ولّينا كنستاقبلو 40% زيادة فالويكاند. السيّاح كيلقاونا مباشرة فـ Maps.", name: "Karim", role: "Restaurateur", roleEn: "Restaurant owner", roleAr: "صاحب مطعم", city: "Marrakech" },
+      { quote: "On perdait 6 commandes Glovo par semaine à cause du rush. Maintenant tout arrive sur un seul écran en cuisine. Zéro erreur depuis 3 mois.", quoteEn: "We were losing 6 Glovo orders a week because of the rush. Now everything comes to one screen in the kitchen. Zero errors for 3 months.", quoteAr: "كنّا كنخسرو 6 طلبات Glovo فالسيمانة بسبب الضغط. دابا كلشي كيوصل لشاشة وحدة فالكوزينة. صفر غلط من 3 شهور.", name: "Samira", role: "Gérante de fast-casual", roleEn: "Fast-casual manager", roleAr: "مديرة مطعم", city: "Casablanca" },
     ],
     integrations: [
       { name: "Glovo & Jumia Food", desc: "Reception centralisee de toutes les commandes livraison sur un seul ecran", descEn: "Centralized reception of all delivery orders on one screen" },
@@ -115,8 +115,8 @@ export const sectorDetails: Record<string, SectorDetail> = {
       { title: "Zero preparation pour 2030", titleEn: "Zero preparation for 2030", body: "La Coupe du Monde arrive. Des millions de visiteurs chercheront un hebergement en ligne. Si vous n'avez pas de site de reservation directe, de paiement international et de presence multilingue — vous serez invisible.", bodyEn: "The World Cup is coming. Millions of visitors will search for accommodation online. If you don't have a direct booking site, international payment, and multilingual presence — you'll be invisible." },
     ],
     testimonials: [
-      { quote: "En 6 mois, on est passe de 15% a 45% de reservations directes. On a economise presque 200,000 DH en commissions cette annee.", name: "Youssef", role: "Proprietaire de riad", city: "Fes" },
-      { quote: "Les clients adorent le message WhatsApp pre-arrivee avec le plan pour trouver le riad dans la medina. Notre note Google est passee de 4.2 a 4.8.", name: "Nadia", role: "Gerante d'hotel boutique", city: "Chefchaouen" },
+      { quote: "En 6 mois, on est passé de 15% à 45% de réservations directes. On a économisé presque 200 000 DH en commissions cette année.", quoteEn: "In 6 months, we went from 15% to 45% direct bookings. We saved almost 200,000 MAD in commissions this year.", quoteAr: "ف 6 شهور، دزنا من 15% ل 45% حجوزات مباشرة. وفّرنا تقريباً 200,000 درهم فالعمولات هاد العام.", name: "Youssef", role: "Propriétaire de riad", roleEn: "Riad owner", roleAr: "مول رياض", city: "Fès" },
+      { quote: "Les clients adorent le message WhatsApp pré-arrivée avec le plan pour trouver le riad dans la médina. Notre note Google est passée de 4.2 à 4.8.", quoteEn: "Guests love the pre-arrival WhatsApp message with directions to find the riad in the medina. Our Google rating went from 4.2 to 4.8.", quoteAr: "الزبائن كيعجبهم رسالة WhatsApp قبل ما يوصلو مع الخريطة باش يلقاو الرياض فالمدينة. تقييم Google ديالنا طلع من 4.2 ل 4.8.", name: "Nadia", role: "Gérante d'hôtel boutique", roleEn: "Boutique hotel manager", roleAr: "مديرة فندق", city: "Chefchaouen" },
     ],
     integrations: [
       { name: "Booking.com Channel Manager", desc: "Synchronisation en temps reel des disponibilites et tarifs", descEn: "Real-time availability and rate sync" },
@@ -162,8 +162,8 @@ export const sectorDetails: Record<string, SectorDetail> = {
       { title: "La facturation AMO devore votre temps", titleEn: "AMO billing eats your time", body: "Avec la generalisation de la couverture sociale, vous passez plus de temps a remplir des formulaires CNSS/CNOPS qu'a soigner des patients. Et les rejets de remboursement s'accumulent.", bodyEn: "With the expansion of social coverage, you spend more time filling CNSS/CNOPS forms than treating patients. And reimbursement rejections pile up." },
     ],
     testimonials: [
-      { quote: "Les no-shows ont baisse de 60% en un mois juste avec les rappels WhatsApp. Ca represente 25,000 DH de revenus recuperes chaque mois.", name: "Dr. Amina", role: "Dentiste", city: "Casablanca" },
-      { quote: "Avant, on passait 4 heures par jour sur la facturation AMO. Maintenant c'est automatise — je peux voir 6 patients de plus par semaine.", name: "Dr. Mehdi", role: "Medecin generaliste", city: "Rabat" },
+      { quote: "Les no-shows ont baissé de 60% en un mois juste avec les rappels WhatsApp. Ça représente 25 000 DH de revenus récupérés chaque mois.", quoteEn: "No-shows dropped 60% in one month just with WhatsApp reminders. That's 25,000 MAD in recovered revenue every month.", quoteAr: "الغيابات نقصو ب 60% فشهر واحد غير بالتذكيرات ديال WhatsApp. هادشي كيمثّل 25,000 درهم كل شهر مسترجعين.", name: "Dr. Amina", role: "Dentiste", roleEn: "Dentist", roleAr: "طبيبة أسنان", city: "Casablanca" },
+      { quote: "Avant, on passait 4 heures par jour sur la facturation AMO. Maintenant c'est automatisé — je peux voir 6 patients de plus par semaine.", quoteEn: "We used to spend 4 hours a day on AMO billing. Now it's automated — I can see 6 more patients per week.", quoteAr: "كنّا كنقضيو 4 ساعات فالنهار على فاتورات AMO. دابا ولّات أوتوماتيك — كنقدر نشوف 6 مرضى زيادة فالسيمانة.", name: "Dr. Mehdi", role: "Médecin généraliste", roleEn: "General practitioner", roleAr: "طبيب عام", city: "Rabat" },
     ],
     integrations: [
       { name: "AMO / CNSS / CNOPS", desc: "Facturation et teletransmission conformes aux nomenclatures marocaines", descEn: "Billing and teletransmission compliant with Moroccan nomenclatures" },
@@ -208,8 +208,8 @@ export const sectorDetails: Record<string, SectorDetail> = {
       { title: "Stock compte a la main", titleEn: "Stock counted by hand", body: "Votre produit star est en rupture depuis 10 jours — vous ne le savez pas jusqu'a ce qu'un client le demande. Pendant ce temps, 50 unites d'un produit lent prennent la poussiere.", bodyEn: "Your best seller has been out of stock for 10 days — you don't know until a customer asks. Meanwhile, 50 units of a slow mover gather dust." },
     ],
     testimonials: [
-      { quote: "Depuis le catalogue WhatsApp automatise, je reponds a 100% des messages. Mes ventes ont augmente de 35% en 2 mois.", name: "Rachida", role: "Proprietaire de boutique cosmetique", city: "Tanger" },
-      { quote: "Je ne savais meme pas que Google Business Profile existait. En 3 semaines, on a eu 50 avis et les clients mentionnent Google en arrivant.", name: "Omar", role: "Commercant textile", city: "Casablanca" },
+      { quote: "Depuis le catalogue WhatsApp automatisé, je réponds à 100% des messages. Mes ventes ont augmenté de 35% en 2 mois.", quoteEn: "Since the automated WhatsApp catalog, I reply to 100% of messages. My sales increased 35% in 2 months.", quoteAr: "من بعد كاتالوغ WhatsApp الأوتوماتيك، كنجاوب على 100% ديال الرسائل. المبيعات زادو ب 35% ف شهرين.", name: "Rachida", role: "Propriétaire de boutique cosmétique", roleEn: "Cosmetics shop owner", roleAr: "صاحبة بوتيك تجميل", city: "Tanger" },
+      { quote: "Je ne savais même pas que Google Business Profile existait. En 3 semaines, on a eu 50 avis et les clients mentionnent Google en arrivant.", quoteEn: "I didn't even know Google Business Profile existed. In 3 weeks, we got 50 reviews and customers mention Google when they walk in.", quoteAr: "ما كنتش عارف حتى أن Google Business Profile كاين. ف 3 سيمانات، جمعنا 50 تقييم والزبائن كيقولو لقيناكم فـ Google.", name: "Omar", role: "Commerçant textile", roleEn: "Textile merchant", roleAr: "تاجر نسيج", city: "Casablanca" },
     ],
     integrations: [
       { name: "CMI & CashPlus", desc: "Terminal de paiement pour cartes marocaines et paiement mobile", descEn: "Payment terminal for Moroccan cards and mobile payment" },
@@ -254,8 +254,8 @@ export const sectorDetails: Record<string, SectorDetail> = {
       { title: "Absences signalees trop tard", titleEn: "Absences reported too late", body: "Les parents apprennent que leur enfant a seche 5 jours... trois semaines apres. Sans suivi en temps reel, vous perdez la confiance des familles.", bodyEn: "Parents learn their child skipped 5 days... three weeks later. Without real-time tracking, you lose families' trust." },
     ],
     testimonials: [
-      { quote: "Les paiements en retard ont chute de 70% depuis qu'on envoie les rappels automatiques par WhatsApp. Les parents apprecient la transparence.", name: "Mme Bennani", role: "Directrice d'ecole privee", city: "Fes" },
-      { quote: "On a elimine les groupes WhatsApp parents. Maintenant les annonces passent par le portail — les parents lisent, personne ne peut polluer.", name: "M. Alami", role: "Fondateur de centre de formation", city: "Rabat" },
+      { quote: "Les paiements en retard ont chuté de 70% depuis qu'on envoie les rappels automatiques par WhatsApp. Les parents apprécient la transparence.", quoteEn: "Late payments dropped 70% since we started sending automatic WhatsApp reminders. Parents appreciate the transparency.", quoteAr: "التأخر فالخلاص نقص ب 70% من بعد ما بدينا نصيفطو تذكيرات أوتوماتيك ب WhatsApp. الوالدين كيقدّرو الشفافية.", name: "Mme Bennani", role: "Directrice d'école privée", roleEn: "Private school director", roleAr: "مديرة مدرسة خاصة", city: "Fès" },
+      { quote: "On a éliminé les groupes WhatsApp parents. Maintenant les annonces passent par le portail — les parents lisent, personne ne peut polluer.", quoteEn: "We eliminated the parent WhatsApp groups. Now announcements go through the portal — parents read them, nobody can spam.", quoteAr: "حيّدنا قروبات WhatsApp ديال الوالدين. دابا الإعلانات كتمشي عبر البورتال — الوالدين كيقراو، حد ما يقدر يلوّث.", name: "M. Alami", role: "Fondateur de centre de formation", roleEn: "Training center founder", roleAr: "مؤسس مركز تكوين", city: "Rabat" },
     ],
     integrations: [
       { name: "CMI Paiement", desc: "Paiement en ligne des frais de scolarite par carte ou virement", descEn: "Online tuition payment by card or transfer" },
@@ -300,8 +300,8 @@ export const sectorDetails: Record<string, SectorDetail> = {
       { title: "Les MRE achetent ailleurs", titleEn: "Diaspora buyers go elsewhere", body: "Un Marocain a Paris veut acheter a Tanger. Il demande une visite virtuelle — vous envoyez 5 photos WhatsApp. Il achete chez l'agence qui avait une video 360.", bodyEn: "A Moroccan in Paris wants to buy in Tangier. They ask for a virtual tour — you send 5 WhatsApp photos. They buy from the agency that had a 360 video." },
     ],
     testimonials: [
-      { quote: "Depuis le CRM, on rappelle chaque prospect en moins de 5 minutes. Notre taux de conversion a triple en 4 mois.", name: "Amine", role: "Directeur d'agence immobiliere", city: "Casablanca" },
-      { quote: "Un MRE a Lyon a achete un appartement a 1.8M DH entierement a distance grace a la visite virtuelle. Avant, on aurait perdu cette vente.", name: "Leila", role: "Agent immobilier", city: "Tanger" },
+      { quote: "Depuis le CRM, on rappelle chaque prospect en moins de 5 minutes. Notre taux de conversion a triplé en 4 mois.", quoteEn: "Since the CRM, we call back every prospect in under 5 minutes. Our conversion rate tripled in 4 months.", quoteAr: "من بعد CRM، كنردّو على كل بروسبكت فأقل من 5 دقائق. معدل التحويل تضاعف 3 مرات ف 4 شهور.", name: "Amine", role: "Directeur d'agence immobilière", roleEn: "Real estate agency director", roleAr: "مدير وكالة عقارية", city: "Casablanca" },
+      { quote: "Un MRE à Lyon a acheté un appartement à 1.8M DH entièrement à distance grâce à la visite virtuelle. Avant, on aurait perdu cette vente.", quoteEn: "A Moroccan expat in Lyon bought a 1.8M MAD apartment entirely remotely thanks to the virtual tour. Before, we would have lost that sale.", quoteAr: "واحد MRE فليون شرى شقة ب 1.8 مليون درهم كاملة عن بعد بفضل الزيارة الافتراضية. قبل، كنّا غادي نخسرو هاد البيعة.", name: "Leila", role: "Agent immobilier", roleEn: "Real estate agent", roleAr: "وكيلة عقارية", city: "Tanger" },
     ],
     integrations: [
       { name: "Avito Immobilier", desc: "Publication et mise a jour automatique de vos annonces", descEn: "Automatic listing publication and updates" },
@@ -346,8 +346,8 @@ export const sectorDetails: Record<string, SectorDetail> = {
       { title: "Clients qui appellent 40 fois par jour", titleEn: "Clients calling 40 times a day", body: "Vos clients n'ont aucune visibilite sur leurs colis. Ils appellent, vous appelez le chauffeur, le chauffeur ne repond pas. Boucle de frustration pour tout le monde.", bodyEn: "Your clients have zero visibility on their packages. They call you, you call the driver, the driver doesn't answer. Frustration loop for everyone." },
     ],
     testimonials: [
-      { quote: "Le portail de suivi client a reduit nos appels entrants de 65%. Mes 2 standardistes peuvent enfin faire autre chose.", name: "Rachid", role: "Directeur de societe de livraison", city: "Casablanca" },
-      { quote: "L'optimisation d'itineraires nous fait economiser 800 litres de gasoil par mois. Le systeme s'est rembourse en 6 semaines.", name: "Mourad", role: "Transporteur inter-villes", city: "Agadir" },
+      { quote: "Le portail de suivi client a réduit nos appels entrants de 65%. Mes 2 standardistes peuvent enfin faire autre chose.", quoteEn: "The client tracking portal reduced our incoming calls by 65%. My 2 receptionists can finally do other things.", quoteAr: "بورتال تتبع الزبائن نقّص المكالمات الداخلة ب 65%. الاستقبال ديالي ولّاو يقدرو يديرو حوايج أخرى.", name: "Rachid", role: "Directeur de société de livraison", roleEn: "Delivery company director", roleAr: "مدير شركة توصيل", city: "Casablanca" },
+      { quote: "L'optimisation d'itinéraires nous fait économiser 800 litres de gasoil par mois. Le système s'est remboursé en 6 semaines.", quoteEn: "Route optimization saves us 800 liters of diesel per month. The system paid for itself in 6 weeks.", quoteAr: "تحسين المسارات كيوفّر لينا 800 لتر ديال الگازوال فالشهر. السيستيم رجّع ثمنو ف 6 سيمانات.", name: "Mourad", role: "Transporteur inter-villes", roleEn: "Inter-city transporter", roleAr: "ناقل بين المدن", city: "Agadir" },
     ],
     integrations: [
       { name: "GPS & OBD-II", desc: "Geolocalisation en temps reel et telemetrie vehicule (vitesse, consommation)", descEn: "Real-time geolocation and vehicle telemetry (speed, consumption)" },

@@ -159,7 +159,7 @@ export default function Home() {
                   {testimonial && (
                     <blockquote className="border-s-2 border-accent/25 ps-4 py-1">
                       <p className="text-[13px] text-foreground/50 leading-relaxed italic line-clamp-2">
-                        &ldquo;{testimonial.quote}&rdquo;
+                        &ldquo;{locale === "ar" ? testimonial.quoteAr : locale === "en" ? testimonial.quoteEn : testimonial.quote}&rdquo;
                       </p>
                       <cite className="mt-1.5 block text-[11px] text-muted not-italic">
                         {testimonial.name}, {testimonial.city}

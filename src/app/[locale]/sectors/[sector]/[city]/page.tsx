@@ -202,10 +202,10 @@ export default async function SectorCityPage({
                 <ScrollReveal key={i} delay={i * 80}>
                   <blockquote className="rounded-2xl border border-border bg-surface p-6 h-full">
                     <p className="text-foreground/70 text-[15px] leading-relaxed italic">
-                      &ldquo;{t.quoteEn && isEn ? t.quoteEn : t.quote}&rdquo;
+                      &ldquo;{locale === "ar" ? t.quoteAr : locale === "en" ? t.quoteEn : t.quote}&rdquo;
                     </p>
                     <cite className="mt-4 block text-[13px] text-muted not-italic">
-                      {t.name}, {t.role} — {t.city}
+                      {t.name}, {locale === "ar" ? t.roleAr : locale === "en" ? t.roleEn : t.role} — {t.city}
                     </cite>
                   </blockquote>
                 </ScrollReveal>
