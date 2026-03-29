@@ -127,7 +127,7 @@ export function ContactForm() {
           id="name"
           name="name"
           required
-          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent/60 focus:shadow-[0_0_0_3px_rgba(212,69,59,0.06)] transition-all duration-200"
+          className="w-full rounded-lg border border-border bg-background px-4 py-3.5 text-sm text-foreground placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent/60 focus:shadow-[0_0_0_3px_rgba(212,69,59,0.06)] transition-all duration-200"
           placeholder={t("formNamePlaceholder")}
         />
       </div>
@@ -141,7 +141,7 @@ export function ContactForm() {
           id="contact"
           name="contact"
           required
-          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent/60 focus:shadow-[0_0_0_3px_rgba(212,69,59,0.06)] transition-all duration-200"
+          className="w-full rounded-lg border border-border bg-background px-4 py-3.5 text-sm text-foreground placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent/60 focus:shadow-[0_0_0_3px_rgba(212,69,59,0.06)] transition-all duration-200"
           placeholder={t("formContactPlaceholder")}
         />
       </div>
@@ -154,7 +154,7 @@ export function ContactForm() {
           id="sector"
           name="sector"
           defaultValue={preselectedSector}
-          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent/60 focus:shadow-[0_0_0_3px_rgba(212,69,59,0.06)] transition-all duration-200"
+          className="w-full rounded-lg border border-border bg-background px-4 py-3.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent/60 focus:shadow-[0_0_0_3px_rgba(212,69,59,0.06)] transition-all duration-200"
         >
           <option value="">{t("formSectorPlaceholder")}</option>
           {sectorKeys.map((key) => (
@@ -174,7 +174,7 @@ export function ContactForm() {
           id="message"
           name="message"
           rows={4}
-          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent/60 focus:shadow-[0_0_0_3px_rgba(212,69,59,0.06)] transition-all duration-200 resize-none"
+          className="w-full rounded-lg border border-border bg-background px-4 py-3.5 text-sm text-foreground placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent/60 focus:shadow-[0_0_0_3px_rgba(212,69,59,0.06)] transition-all duration-200 resize-none"
           placeholder={t("formMessagePlaceholder")}
         />
       </div>

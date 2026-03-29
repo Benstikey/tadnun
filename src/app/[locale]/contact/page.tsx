@@ -47,7 +47,7 @@ export default async function ContactPage({
 
   return (
     <PageShell>
-      <div className="mx-auto max-w-6xl px-6 pt-24 pb-16 lg:pt-28">
+      <div className="mx-auto max-w-6xl px-6 pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-28">
         {/* ─── Hero: WhatsApp-first ─── */}
         <section aria-labelledby="contact-heading" className="pt-4 pb-20">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -114,7 +114,7 @@ export default async function ContactPage({
         </ScrollReveal>
 
         {/* ─── Secondary: Form + other channels ─── */}
-        <section className="mt-20 grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+        <section className="mt-20 grid lg:grid-cols-5 gap-8 lg:gap-16 items-center">
           {/* Form */}
           <div className="lg:col-span-3">
             <ScrollReveal>

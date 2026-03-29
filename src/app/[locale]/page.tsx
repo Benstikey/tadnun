@@ -24,7 +24,7 @@ export default function Home() {
     <PageShell>
       {/* ─── Hero ─── */}
       <section aria-labelledby="hero-heading" className="relative overflow-hidden">
-        <div className="mx-auto max-w-6xl px-6 pt-24 pb-16 lg:pt-28 lg:pb-20">
+        <div className="mx-auto max-w-6xl px-6 pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-28 lg:pb-20">
           <div className="grid lg:grid-cols-12 gap-12 items-end">
             {/* Left: headline */}
             <div className="lg:col-span-7">
@@ -135,7 +135,7 @@ export default function Home() {
               <ScrollReveal key={key} delay={i * 80}>
                 <a
                   href={`/${locale}/sectors/${key}`}
-                  className="group relative flex flex-col gap-5 rounded-2xl border border-border bg-surface p-8 lg:p-10 transition-all duration-300 hover:border-foreground/15 hover:shadow-lg hover:-translate-y-0.5 h-full"
+                  className="group relative flex flex-col gap-5 rounded-2xl border border-border bg-surface p-6 sm:p-8 lg:p-10 transition-all duration-300 hover:border-foreground/15 hover:shadow-lg hover:-translate-y-0.5 h-full"
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div>
@@ -239,7 +239,7 @@ export default function Home() {
 
       {/* ─── Social Proof Stats ─── */}
       <section className="border-y border-border bg-surface/30">
-        <div className="mx-auto max-w-6xl px-6 py-10 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+        <div className="mx-auto max-w-6xl px-6 py-10 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 text-center">
           {(["clients", "sectors", "uptime", "support"] as const).map((key) => (
             <div key={key}>
               <p className="text-2xl sm:text-3xl font-serif italic text-foreground">{t(`stats.${key}`)}</p>

@@ -48,7 +48,7 @@ export default async function ComparePage({
   return (
     <PageShell>
       {/* ─── Hero ─── */}
-      <section className="mx-auto max-w-6xl px-6 pt-24 pb-16 lg:pt-28 lg:pb-20">
+      <section className="mx-auto max-w-6xl px-6 pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-28 lg:pb-20">
         <ScrollReveal>
           <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-5">
             {tCompare("eyebrow")}
@@ -76,7 +76,7 @@ export default async function ComparePage({
               <ScrollReveal>
                 <a
                   href={`/${locale}/compare/${featured.slug}`}
-                  className="group grid lg:grid-cols-2 gap-8 rounded-2xl border border-border bg-surface p-8 lg:p-10 transition-all duration-300 hover:border-foreground/15 hover:shadow-lg hover:-translate-y-0.5"
+                  className="group grid lg:grid-cols-2 gap-8 rounded-2xl border border-border bg-surface p-6 sm:p-8 lg:p-10 transition-all duration-300 hover:border-foreground/15 hover:shadow-lg hover:-translate-y-0.5"
                 >
                   <div className="flex flex-col justify-center gap-4">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-accent bg-accent/[0.06] rounded-full px-2.5 py-0.5 self-start">

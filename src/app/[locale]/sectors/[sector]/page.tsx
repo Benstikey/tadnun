@@ -111,7 +111,7 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
           }))}
         />
         {/* Hero */}
-        <section aria-labelledby="sector-heading" className="mx-auto max-w-6xl px-6 pt-24 pb-16">
+        <section aria-labelledby="sector-heading" className="mx-auto max-w-6xl px-6 pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-16">
           <h1 id="sector-heading" className="font-serif italic text-4xl sm:text-6xl leading-[1.1] tracking-tight text-foreground">
             {sectorName}
           </h1>

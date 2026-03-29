@@ -68,7 +68,7 @@ export function Footer() {
             <p className="text-[10px] font-mono uppercase tracking-[0.15em] text-background/30 mb-4">
               {t("footer.sectorsTitle")}
             </p>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-2.5">
+            <div className="grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-2.5">
               {sectorKeys.map((key) => (
                 <a
                   key={key}

@@ -29,8 +29,8 @@ export function CtaBand({
     : `/${locale}/contact`;
 
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24">
-      <div className="rounded-2xl border border-border bg-surface/50 px-10 py-12 lg:px-14 lg:py-14">
+    <section className="mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:py-24">
+      <div className="rounded-2xl border border-border bg-surface/50 px-6 py-10 sm:px-10 sm:py-12 lg:px-14 lg:py-14">
         <div className={withVisual ? "flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10" : ""}>
           <div className="max-w-xl">
             <h2 className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground leading-[1.1]">

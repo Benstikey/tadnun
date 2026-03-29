@@ -113,7 +113,7 @@ export function Nav() {
           <button
             type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-foreground/5 -me-1.5 text-foreground transition-colors"
+            className="md:hidden flex items-center justify-center w-11 h-11 rounded-lg hover:bg-foreground/5 -me-1.5 text-foreground transition-colors"
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? t("nav.closeMenu") : t("nav.openMenu")}
           >

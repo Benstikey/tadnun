@@ -66,7 +66,7 @@ export default async function SectorsListPage({ params }: { params: Promise<{ lo
   return (
     <PageShell>
       {/* ─── Hero ─── */}
-      <section className="mx-auto max-w-6xl px-6 pt-24 pb-16 lg:pt-28 lg:pb-20">
+      <section className="mx-auto max-w-6xl px-6 pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-28 lg:pb-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
             <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-5">
