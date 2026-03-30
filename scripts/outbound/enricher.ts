@@ -3,6 +3,7 @@
 // ============================================================
 
 import { WEBSITE_SCRAPE_DELAY_MS, ENRICH_BATCH_SIZE } from "./config";
+import { verifyEmail } from "./verifier";
 import {
   getProspectsToEnrich,
   getProspectsWithoutWebsite,
@@ -112,13 +113,22 @@ export async function runEnrichment(): Promise<number> {
 
   let enriched = 0;
   let noEmail = 0;
+  let invalid = 0;
 
   for (const p of batch) {
     const email = await enrichProspect(p);
     if (email) {
-      await updateProspect(p.id, { email, status: "enriched" });
-      enriched++;
-      console.log(`  ✓ ${p.name} → ${email}`);
+      // Verify before accepting
+      const check = await verifyEmail(email);
+      if (check.valid) {
+        await updateProspect(p.id, { email, status: "enriched" });
+        enriched++;
+        console.log(`  ✓ ${p.name} → ${email}`);
+      } else {
+        await updateProspect(p.id, { status: "enriched" });
+        invalid++;
+        console.log(`  ✗ ${p.name} → ${email} — rejected: ${check.reason}`);
+      }
     } else {
       await updateProspect(p.id, { status: "enriched" });
       noEmail++;
@@ -132,7 +142,7 @@ export async function runEnrichment(): Promise<number> {
     await updateProspect(p.id, { status: "enriched" });
   }
 
-  await logActivity(null, "enrichment_complete", `Enriched: ${enriched}, No email: ${noEmail + noWebsite.length}`);
-  console.log(`[enricher] Done — ${enriched} emails found, ${noEmail + noWebsite.length} without email\n`);
+  await logActivity(null, "enrichment_complete", `Enriched: ${enriched}, No email: ${noEmail + noWebsite.length}, Invalid: ${invalid}`);
+  console.log(`[enricher] Done — ${enriched} verified, ${invalid} rejected, ${noEmail + noWebsite.length} without email\n`);
   return enriched;
 }

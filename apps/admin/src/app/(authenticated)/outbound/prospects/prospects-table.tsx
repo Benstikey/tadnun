@@ -29,6 +29,7 @@ interface Props {
     sector: string;
     city: string;
     q: string;
+    has_email: string;
   };
 }
 
@@ -105,7 +106,17 @@ export function ProspectsTable({ prospects, currentPage, totalPages, totalCount,
           ))}
         </select>
 
-        {(activeFilters.sector || activeFilters.city || activeFilters.status || activeFilters.q) && (
+        <select
+          value={activeFilters.has_email}
+          onChange={(e) => updateFilter("has_email", e.target.value)}
+          className="px-3 py-1.5 text-[13px] border border-[var(--border)] rounded-md bg-[var(--surface)] focus:outline-none focus:ring-1 focus:ring-[var(--foreground)]"
+        >
+          <option value="">All emails</option>
+          <option value="yes">With email</option>
+          <option value="no">Without email</option>
+        </select>
+
+        {(activeFilters.sector || activeFilters.city || activeFilters.status || activeFilters.q || activeFilters.has_email) && (
           <button
             onClick={() => router.push("/outbound/prospects")}
             className="px-2 py-1.5 text-[12px] text-[var(--muted)] hover:text-[var(--foreground)]"

@@ -338,6 +338,288 @@ const logistics: SectorSequence = {
 
 // --------------- Template Registry ---------------
 
+// --------------- General Services (spa, salon, fitness, car rental, etc.) ---------------
+
+const general: SectorSequence = {
+  step1: {
+    subject: "visibilité Google",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Quand un client à {{city}} cherche votre type de service sur Google, est-ce qu'il vous trouve — ou est-ce qu'il tombe sur votre concurrent ?</p>
+<p>La plupart des commerces à {{city}} gèrent encore leurs réservations par téléphone et WhatsApp. Pendant ce temps, ceux qui ont un système de réservation en ligne et une fiche Google optimisée captent les clients à leur place.</p>
+<p>On accompagne plus de 150 entreprises marocaines là-dessus. Ça mérite 15 minutes ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step2: {
+    subject: "votre concurrent",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Votre concurrent à {{city}} a probablement le même service que vous. La différence, c'est que les clients le trouvent en premier sur Google, réservent en ligne en 30 secondes, et reçoivent un rappel automatique la veille.</p>
+<p>Vous, vous êtes encore en train de répondre aux appels et aux messages WhatsApp un par un.</p>
+<p>On met en place exactement ça pour des entreprises marocaines — réservation en ligne, fiche Google, rappels automatiques. Adapté à votre taille.</p>
+<p>Intéressé ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step3: {
+    subject: "dernier message",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Je comprends que ce n'est peut-être pas le moment — pas de souci.</p>
+<p>Avec 2030 et les millions de visiteurs attendus au Maroc, les entreprises à {{city}} qui seront visibles en ligne et qui auront automatisé leurs réservations auront un avantage énorme sur les autres.</p>
+<p>Si le sujet se pose un jour : tadnun.com</p>
+<p>Bonne continuation.</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+};
+
+// --------------- Tech / Digital Agencies ---------------
+
+const tech: SectorSequence = {
+  step1: {
+    subject: "gestion interne",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Vous aidez vos clients à se digitaliser — mais côté interne, comment vous gérez vos projets et vos clients ? Excel, WhatsApp, Trello ?</p>
+<p>On développe des outils sur mesure pour des entreprises marocaines — CRM, portails clients, gestion de projets. Pas du SaaS générique, mais des solutions adaptées à votre façon de travailler.</p>
+<p>Ça mérite un échange ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step2: {
+    subject: "portail client",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Vos clients vous envoient des messages WhatsApp pour suivre l'avancement de leur projet. Vous passez du temps à répondre au lieu de produire.</p>
+<p>Un portail client où ils voient l'avancement en temps réel, valident les livrables et retrouvent leurs factures — ça change tout. C'est ce qu'on met en place pour des entreprises au Maroc.</p>
+<p>Intéressé ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step3: {
+    subject: "dernier message",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Pas de souci si ce n'est pas le moment. Si un jour vous cherchez à structurer votre gestion interne ou à offrir un portail à vos clients :</p>
+<p>tadnun.com</p>
+<p>Bonne continuation.</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+};
+
+// --------------- Architecture / BTP ---------------
+
+const architecture: SectorSequence = {
+  step1: {
+    subject: "suivi de chantier",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Entre les plans, les clients, les artisans et les délais — comment vous suivez tout ça aujourd'hui ? La plupart des cabinets d'architecture au Maroc jonglent entre WhatsApp, email et carnets.</p>
+<p>On développe des outils de suivi de projet sur mesure pour des entreprises marocaines. Un seul endroit pour vos projets, vos clients et vos échéances.</p>
+<p>Intéressé ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step2: {
+    subject: "échéances projet",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Un retard de chantier, c'est souvent un artisan qui n'a pas été relancé à temps ou un client qui n'a pas validé un plan. Pas un problème technique — un problème de suivi.</p>
+<p>On met en place des outils de gestion de projet avec relances automatiques, validation en ligne et suivi des échéances. Adapté aux cabinets marocains, pas un logiciel enterprise surdimensionné.</p>
+<p>Ça vous parle ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step3: {
+    subject: "dernier message",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Si un jour la gestion de vos projets et de vos clients devient un sujet :</p>
+<p>tadnun.com</p>
+<p>Bonne continuation.</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+};
+
+// --------------- Manufacturing / Printing ---------------
+
+const manufacturing: SectorSequence = {
+  step1: {
+    subject: "commandes et suivi",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Combien de commandes passent par téléphone et WhatsApp chaque jour ? Et combien de fois un client rappelle pour demander où en est sa commande ?</p>
+<p>On a développé des outils de gestion de commandes et de suivi de production pour des entreprises marocaines. Le client suit sa commande en ligne, vous gérez tout sur un seul écran.</p>
+<p>Ça vous parle ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step2: {
+    subject: "suivi de production",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Un client appelle pour savoir si sa commande est prête. Votre équipe arrête ce qu'elle fait pour vérifier. Multiplié par dix appels par jour, c'est du temps de production perdu.</p>
+<p>Avec un suivi en ligne, le client voit l'avancement sans vous appeler. Vous produisez, il est informé. C'est ce qu'on met en place pour des entreprises au Maroc.</p>
+<p>Intéressé ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step3: {
+    subject: "dernier message",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Si un jour le suivi de vos commandes ou de votre production devient un sujet :</p>
+<p>tadnun.com</p>
+<p>Bonne continuation.</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+};
+
+// --------------- Accounting / Fiduciaire ---------------
+
+const accounting: SectorSequence = {
+  step1: {
+    subject: "échéances fiscales",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Entre les déclarations DGI, les échéances CNSS et les dossiers clients — comment vous vous assurez que rien ne passe entre les mailles ?</p>
+<p>On développe des outils de gestion sur mesure pour des cabinets marocains. Suivi des échéances, portail client, rappels automatiques. Fini les oublis.</p>
+<p>15 minutes pour en discuter ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step2: {
+    subject: "portail client",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Vos clients vous appellent pour savoir où en est leur dossier. Vous passez du temps à répondre au lieu de travailler dessus.</p>
+<p>Un portail où chaque client voit l'état de ses déclarations, dépose ses documents et retrouve ses factures — ça change la relation. C'est ce qu'on met en place pour des cabinets au Maroc.</p>
+<p>Intéressé ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step3: {
+    subject: "dernier message",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Si un jour la gestion de vos dossiers clients ou de vos échéances devient un sujet :</p>
+<p>tadnun.com</p>
+<p>Bonne continuation.</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+};
+
+// --------------- Legal / Avocats ---------------
+
+const legal: SectorSequence = {
+  step1: {
+    subject: "dossiers clients",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Un cabinet d'avocats à {{city}} gère des dizaines de dossiers en parallèle — audiences, délais, pièces, relances. La plupart font ça entre des classeurs et des rappels WhatsApp.</p>
+<p>On développe des outils de gestion de dossiers sur mesure pour des professionnels marocains. Chaque dossier, chaque échéance, chaque document — au même endroit.</p>
+<p>Intéressé ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step2: {
+    subject: "audiences et délais",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Oublier une audience ou un délai de procédure, ça arrive — et ça coûte cher. Le problème, ce n'est pas la compétence, c'est l'outil de suivi.</p>
+<p>On met en place des systèmes de gestion avec alertes automatiques, suivi des échéances et historique complet de chaque dossier. Adapté aux cabinets marocains.</p>
+<p>Ça vous parle ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step3: {
+    subject: "dernier message",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Si un jour la gestion de vos dossiers ou de vos échéances devient un sujet :</p>
+<p>tadnun.com</p>
+<p>Bonne continuation.</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+};
+
+// --------------- Lab / Analyses médicales ---------------
+
+const lab: SectorSequence = {
+  step1: {
+    subject: "résultats patients",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Vos patients appellent pour savoir si leurs résultats sont prêts ? Et votre équipe passe du temps à chercher des dossiers au lieu de faire des analyses ?</p>
+<p>On a développé des portails de résultats en ligne et des outils de gestion pour des structures médicales au Maroc. Le patient consulte ses résultats en ligne, vous gagnez du temps.</p>
+<p>Ça mérite 15 minutes ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step2: {
+    subject: "appels patients",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Chaque appel pour demander "mes résultats sont prêts ?" interrompt votre équipe. Multiplié par vingt appels par jour, c'est du temps perdu.</p>
+<p>Un portail en ligne où le patient reçoit un SMS quand ses résultats sont disponibles et les consulte lui-même — ça libère votre équipe. C'est ce qu'on met en place pour des laboratoires au Maroc.</p>
+<p>Intéressé ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step3: {
+    subject: "dernier message",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Si un jour la gestion de vos résultats patients ou de votre labo devient un sujet :</p>
+<p>tadnun.com</p>
+<p>Bonne continuation.</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+};
+
+// --------------- Call Center ---------------
+
+const callcenter: SectorSequence = {
+  step1: {
+    subject: "performance agents",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Comment vous suivez la performance de vos agents aujourd'hui ? Tableaux Excel, rapports manuels ?</p>
+<p>On développe des dashboards et des outils de reporting sur mesure pour des entreprises marocaines. Données en temps réel, sans ressaisie manuelle.</p>
+<p>Intéressé ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step2: {
+    subject: "reporting temps réel",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Un rapport qui arrive une semaine après les faits ne sert à rien. Vous avez besoin de voir ce qui se passe maintenant — pas la semaine dernière.</p>
+<p>On met en place des dashboards en temps réel connectés à vos outils existants. Pas de ressaisie, pas d'Excel. C'est ce qu'on fait pour des entreprises au Maroc.</p>
+<p>Ça vous parle ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+  step3: {
+    subject: "dernier message",
+    bodyHtml: wrapHtml(`
+<p>Bonjour,</p>
+<p>Si un jour le reporting ou la gestion de vos équipes devient un sujet :</p>
+<p>tadnun.com</p>
+<p>Bonne continuation.</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
+    `),
+  },
+};
+
 const SEQUENCES: Record<string, SectorSequence> = {
   tourism,
   restaurants,
@@ -347,6 +629,23 @@ const SEQUENCES: Record<string, SectorSequence> = {
   retail,
   education,
   logistics,
+  tech,
+  architecture,
+  manufacturing,
+  accounting,
+  legal,
+  lab,
+  callcenter,
+  // General sectors
+  wellness: general,
+  fitness: general,
+  beauty: general,
+  events: general,
+  carrental: general,
+  auto: general,
+  veterinary: general,
+  photography: general,
+  printing: general,
 };
 
 export function getSequenceForSector(sector: string): SectorSequence | null {

@@ -9,6 +9,7 @@ interface PageProps {
     city?: string;
     q?: string;
     page?: string;
+    has_email?: string;
   }>;
 }
 
@@ -29,6 +30,8 @@ export default async function ProspectsPage({ searchParams }: PageProps) {
   if (params.sector) query = query.eq("sector", params.sector);
   if (params.city) query = query.ilike("city", `%${params.city}%`);
   if (params.q) query = query.ilike("name", `%${params.q}%`);
+  if (params.has_email === "yes") query = query.not("email", "is", null);
+  if (params.has_email === "no") query = query.is("email", null);
 
   const { data, count } = await query;
   const prospects = (data as Prospect[]) ?? [];
@@ -67,6 +70,7 @@ export default async function ProspectsPage({ searchParams }: PageProps) {
           sector: params.sector ?? "",
           city: params.city ?? "",
           q: params.q ?? "",
+          has_email: params.has_email ?? "",
         }}
       />
     </div>
