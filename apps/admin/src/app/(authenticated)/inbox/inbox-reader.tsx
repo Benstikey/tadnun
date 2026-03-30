@@ -95,6 +95,22 @@ export function InboxReader({ email }: Props) {
               : `Scheduled: ${new Date(email.scheduled_for).toLocaleDateString("en", { weekday: "short", month: "short", day: "numeric", year: "numeric" })}`
             }
           </p>
+          {/* Tracking status */}
+          {email.sent_at && (
+            <div className="flex gap-3 mt-1.5 text-[11px]">
+              <span className={email.delivered_at ? "text-[var(--foreground)]" : "text-[var(--muted)]"}>
+                {email.delivered_at ? "Delivered" : "Delivery pending"}
+              </span>
+              {email.opened_at && (
+                <span className="text-[var(--foreground)]">
+                  Opened{email.open_count > 1 ? ` ${email.open_count}x` : ""} — {new Date(email.opened_at).toLocaleDateString("en", { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" })}
+                </span>
+              )}
+              {email.bounced_at && (
+                <span className="text-[var(--danger)]">Bounced</span>
+              )}
+            </div>
+          )}
         </div>
       </div>
 

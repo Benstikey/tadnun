@@ -174,6 +174,10 @@ export interface InboxEmail {
   status: string;
   resend_id: string | null;
   created_at: string;
+  opened_at: string | null;
+  delivered_at: string | null;
+  bounced_at: string | null;
+  open_count: number;
   prospect_name: string;
   prospect_email: string;
   prospect_sector: string;

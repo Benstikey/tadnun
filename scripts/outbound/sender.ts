@@ -35,6 +35,7 @@ export async function runSender(): Promise<{ sent: number; failed: number }> {
     try {
       const result = await resend.emails.send({
         from: `${ENV.SENDER_NAME} <${ENV.SENDER_EMAIL}>`,
+        replyTo: ENV.REPLY_TO_EMAIL,
         to: [email.prospect_email],
         subject: email.subject,
         html: email.body_html,

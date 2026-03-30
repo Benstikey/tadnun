@@ -92,6 +92,7 @@ export function InboxList({ emails, selectedId, onSelect, onCompose, currentPage
                   e.status === "sent" ? "bg-[var(--foreground)]" : e.status === "failed" ? "bg-[var(--danger)]" : "bg-[var(--border)]"
                 }`} />
                 <span className="text-[13px] font-medium truncate flex-1">{e.prospect_name}</span>
+                {e.opened_at && <span className="text-[10px] text-[var(--muted)]" title={`Opened ${e.open_count}x`}>opened</span>}
                 <span className="text-[11px] text-[var(--muted)] tabular-nums flex-shrink-0">
                   {formatDate(e.sent_at ?? e.scheduled_for)}
                 </span>
