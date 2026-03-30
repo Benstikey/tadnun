@@ -38,8 +38,8 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   const eyebrowCls =
     eyebrowColor === "accent"
-      ? "text-accent text-xs font-mono tracking-widest mb-2"
-      : "text-background/40 text-xs font-mono tracking-widest mb-2";
+      ? "text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-2"
+      : "text-background/40 text-[11px] font-mono tracking-[0.2em] uppercase mb-2";
 
   return (
     <div>

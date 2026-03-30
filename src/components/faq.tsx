@@ -31,7 +31,7 @@ export function FaqSection() {
         </p>
         <h2
           id="faq-heading"
-          className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground leading-[1.12]"
+          className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground leading-[1.1]"
         >
           {t("title")}
         </h2>

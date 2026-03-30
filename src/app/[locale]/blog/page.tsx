@@ -50,7 +50,7 @@ export default async function BlogPage({
           <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-5">
             {tBlog("eyebrow")}
           </p>
-          <h1 className="font-serif italic text-4xl sm:text-5xl lg:text-[4rem] leading-[1.06] tracking-tight text-foreground">
+          <h1 className="font-serif italic text-4xl sm:text-5xl lg:text-[4rem] leading-[1.1] tracking-tight text-foreground">
             {tBlog("title")}
           </h1>
           <p className="mt-6 text-muted text-lg leading-relaxed max-w-xl">
@@ -90,7 +90,7 @@ export default async function BlogPage({
                         </span>
                       )}
                     </div>
-                    <h3 className="font-serif italic text-xl sm:text-2xl tracking-tight text-foreground leading-[1.15] group-hover:text-accent transition-colors">
+                    <h3 className="font-serif italic text-xl sm:text-2xl tracking-tight text-foreground leading-[1.1] group-hover:text-accent transition-colors">
                       {featured.title}
                     </h3>
                     <p className="text-muted text-[15px] leading-relaxed">

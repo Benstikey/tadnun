@@ -154,10 +154,11 @@ export default async function SectorPage({ params }: { params: Promise<{ locale:
           <div className="mt-16 grid sm:grid-cols-2 gap-6">
             {details.testimonials.map((tst, i) => (
               <div key={i} className="rounded-2xl border border-border bg-surface p-7">
-                <p className="text-foreground/70 text-[14px] italic leading-relaxed">
+                <p className="text-foreground/60 text-[14px] italic leading-relaxed">
                   &ldquo;{locale === "ar" ? tst.quoteAr : locale === "en" ? tst.quoteEn : tst.quote}&rdquo;
                 </p>
                 <div className="mt-4 flex items-center gap-3">
+
                   <div className="w-8 h-8 rounded-full bg-foreground/10 flex items-center justify-center text-foreground/40 text-xs font-medium">
                     {tst.name[0]}
                   </div>

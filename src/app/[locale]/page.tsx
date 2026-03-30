@@ -31,7 +31,7 @@ export default function Home() {
               <p className="hero-stagger hero-stagger-1 text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-5">
                 {t("hero.eyebrow")}
               </p>
-              <h1 id="hero-heading" className="hero-stagger hero-stagger-2 font-serif italic text-4xl sm:text-5xl lg:text-[4.25rem] leading-[1.06] tracking-tight text-foreground">
+              <h1 id="hero-heading" className="hero-stagger hero-stagger-2 font-serif italic text-4xl sm:text-5xl lg:text-[4.25rem] leading-[1.1] tracking-tight text-foreground">
                 {t("hero.title1")}{" "}
                 <span className="text-accent">{t("hero.title2")}</span>{" "}
                 {t("hero.title3")}
@@ -151,14 +151,14 @@ export default function Home() {
                     </IconBox>
                   </div>
 
-                  <p className="text-foreground/65 text-[14px] leading-relaxed">
+                  <p className="text-foreground/60 text-[14px] leading-relaxed">
                     {t(`sectors.items.${key}.pain`)}
                   </p>
 
                   {/* Testimonial — only on featured cards */}
                   {testimonial && (
                     <blockquote className="border-s-2 border-accent/25 ps-4 py-1">
-                      <p className="text-[13px] text-foreground/50 leading-relaxed italic line-clamp-2">
+                      <p className="text-[13px] text-foreground/60 leading-relaxed italic line-clamp-2">
                         &ldquo;{locale === "ar" ? testimonial.quoteAr : locale === "en" ? testimonial.quoteEn : testimonial.quote}&rdquo;
                       </p>
                       <cite className="mt-1.5 block text-[11px] text-muted not-italic">
@@ -188,7 +188,7 @@ export default function Home() {
         </div>
 
         {/* Remaining sectors — compact grid */}
-        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {sectorKeys.slice(2).map((key, i) => {
             const details = sectorDetails[key];
             const topRoi = details?.roi?.[0];
@@ -258,7 +258,7 @@ export default function Home() {
                 <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-4">
                   {t("calculator.home.eyebrow")}
                 </p>
-                <h2 className="font-serif italic text-2xl sm:text-3xl lg:text-4xl tracking-tight text-foreground leading-[1.12]">
+                <h2 className="font-serif italic text-2xl sm:text-3xl lg:text-4xl tracking-tight text-foreground leading-[1.1]">
                   {t("calculator.home.title")}
                 </h2>
                 <p className="mt-4 text-muted leading-relaxed">
@@ -266,7 +266,7 @@ export default function Home() {
                 </p>
                 <a
                   href={`/${locale}/calculator`}
-                  className="mt-8 inline-flex items-center gap-2.5 rounded-full bg-foreground px-7 py-3 text-sm font-semibold text-background hover:bg-foreground/85 active:scale-[0.97] transition-all hover:-translate-y-px shadow-sm"
+                  className="mt-8 inline-flex items-center gap-2.5 rounded-full bg-foreground px-8 py-3.5 text-sm font-semibold text-background hover:bg-foreground/85 active:scale-[0.97] transition-all hover:-translate-y-px shadow-sm"
                 >
                   {t("calculator.home.cta")}
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="opacity-60 rtl:-scale-x-100">
@@ -291,7 +291,7 @@ export default function Home() {
               <p className="text-[11px] font-mono tracking-[0.2em] text-background/35 uppercase mb-4">
                 {t("urgency.eyebrow")}
               </p>
-              <h2 id="urgency-heading" className="font-serif italic text-3xl sm:text-4xl lg:text-[2.75rem] tracking-tight leading-[1.12]">
+              <h2 id="urgency-heading" className="font-serif italic text-3xl sm:text-4xl lg:text-[2.75rem] tracking-tight leading-[1.1]">
                 {t("urgency.title")}
               </h2>
               <p className="mt-5 text-background/60 max-w-md text-base leading-relaxed">

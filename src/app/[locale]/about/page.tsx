@@ -58,7 +58,7 @@ export default async function AboutPage({
   return (
     <PageShell>
       {/* Hero */}
-      <section aria-labelledby="about-heading" className="mx-auto max-w-6xl px-6 pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-16">
+      <section aria-labelledby="about-heading" className="mx-auto max-w-6xl px-6 pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-28 lg:pb-20">
         <p className="text-accent text-xs font-mono tracking-widest mb-2">
           {t("aboutPage.eyebrow")}
         </p>

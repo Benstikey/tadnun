@@ -86,7 +86,7 @@ export default async function ContactPage({
               {/* Sector-specific testimonial */}
               {testimonial && (
                 <ScrollReveal delay={250}>
-                  <blockquote className="mt-10 max-w-lg border-s-2 border-accent/30 ps-5 py-1">
+                  <blockquote className="mt-10 max-w-lg border-s-2 border-accent/25 ps-5 py-1">
                     <p className="text-[14px] text-foreground/60 leading-relaxed italic">
                       &ldquo;{locale === "ar" ? testimonial.quoteAr : locale === "en" ? testimonial.quoteEn : testimonial.quote}&rdquo;
                     </p>

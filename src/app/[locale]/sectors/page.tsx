@@ -72,7 +72,7 @@ export default async function SectorsListPage({ params }: { params: Promise<{ lo
             <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-5">
               {t("sectorsPage.eyebrow")}
             </p>
-            <h1 className="font-serif italic text-4xl sm:text-5xl lg:text-[4rem] leading-[1.06] tracking-tight text-foreground">
+            <h1 className="font-serif italic text-4xl sm:text-5xl lg:text-[4rem] leading-[1.1] tracking-tight text-foreground">
               {t("sectorsPage.title")}{" "}
               <span className="text-accent">{t("sectorsPage.titleAccent")}</span>
             </h1>
@@ -166,7 +166,7 @@ export default async function SectorsListPage({ params }: { params: Promise<{ lo
                   </div>
 
                   {/* Pain quote */}
-                  <blockquote className="border-s-2 border-accent/20 ps-4">
+                  <blockquote className="border-s-2 border-accent/25 ps-4">
                     <p className="text-[13px] text-foreground/55 italic leading-relaxed line-clamp-2">
                       &ldquo;{quote}&rdquo;
                     </p>
@@ -209,7 +209,7 @@ export default async function SectorsListPage({ params }: { params: Promise<{ lo
             <p className="text-[11px] font-mono tracking-[0.2em] text-accent uppercase mb-4">
               {t("sectorsPage.otherEyebrow")}
             </p>
-            <h2 className="font-serif italic text-2xl sm:text-3xl tracking-tight text-foreground max-w-lg leading-[1.15]">
+            <h2 className="font-serif italic text-2xl sm:text-3xl tracking-tight text-foreground max-w-lg leading-[1.1]">
               {t("sectorsPage.otherTitle")}
             </h2>
             <p className="mt-4 text-muted text-base leading-relaxed max-w-2xl">
