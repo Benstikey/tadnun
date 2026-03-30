@@ -50,7 +50,7 @@ const tourism: SectorSequence = {
 <p>On a aidé des riads à récupérer 40% de leurs réservations en direct — site de réservation propre, paiement CMI, synchronisation automatique avec Booking et Airbnb pour éviter les doubles réservations.</p>
 <p>Un riad à Marrakech a réduit sa dépendance aux OTA de moitié en 4 mois.</p>
 <p>Ça mérite 15 minutes ?</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step2: {
@@ -61,7 +61,7 @@ const tourism: SectorSequence = {
 <p>Aujourd'hui : site de réservation avec paiement CMI, channel manager synchronisé, check-in digital. 40% de réservations en direct en 4 mois.</p>
 <p>Adapté à votre taille et votre budget — pas un logiciel enterprise surdimensionné.</p>
 <p>Ça peut marcher pour vous aussi ?</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step3: {
@@ -72,7 +72,7 @@ const tourism: SectorSequence = {
 <p>Avec 2030 qui approche, les hébergements à {{city}} qui auront un site de réservation directe et un channel manager auront un avantage énorme sur ceux qui dépendent encore à 100% des OTA.</p>
 <p>Si le sujet se pose un jour : tadnun.com/fr/sectors/tourism</p>
 <p>Belle saison à {{city}}.</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
 };
@@ -81,36 +81,34 @@ const tourism: SectorSequence = {
 
 const restaurants: SectorSequence = {
   step1: {
-    subject: "fiche Google Maps",
+    subject: "tables vides",
     bodyHtml: wrapHtml(`
 <p>Bonjour,</p>
-<p>Question rapide : combien de clients vous trouvent via Google Maps chaque semaine ?</p>
-<p>Un restaurateur à Marrakech avait le même profil que vous. Après optimisation de sa fiche Google et mise en place d'un système d'avis, il reçoit 40% de clients en plus le weekend. Les touristes le trouvent directement sur Maps.</p>
-<p>On a aussi intégré Glovo dans sa cuisine — zéro erreur de commande en 3 mois (avant : 6 commandes perdues par semaine).</p>
-<p>15 minutes pour voir ce qu'on peut faire ?</p>
-<p>Wassim</p>
+<p>Vendredi soir vous refusez du monde. Mardi vous avez des tables vides. Ce décalage, la plupart des restaurants à {{city}} le vivent — et la fiche Google Maps est souvent la raison.</p>
+<p>Un restaurateur à Marrakech avait exactement ce problème. Après avoir optimisé sa fiche et mis en place un vrai système d'avis, il reçoit ses clients en semaine aussi. Les touristes le trouvent directement sur Maps au lieu d'aller chez le voisin avec plus d'avis.</p>
+<p>Ça mérite 15 minutes ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step2: {
-    subject: "commandes Glovo",
+    subject: "erreurs de commande",
     bodyHtml: wrapHtml(`
 <p>Bonjour,</p>
-<p>Samira, gérante d'un fast-casual à Casablanca, perdait 6 commandes Glovo par semaine pendant le rush. Chaque erreur = un remboursement + un client perdu.</p>
-<p>Aujourd'hui : toutes les commandes (salle, Glovo, téléphone) arrivent sur un seul écran en cuisine. Zéro erreur en 3 mois, réduction du gaspillage de 12%.</p>
-<p>On peut faire la même chose pour vous — adapté à votre taille et vos plateformes.</p>
-<p>Intéressé ? Répondez simplement "oui".</p>
-<p>Wassim</p>
+<p>Samira gère un fast-casual à Casablanca. Pendant le rush, elle perdait des commandes Glovo chaque semaine — erreurs, remboursements, clients qui ne reviennent pas.</p>
+<p>On a centralisé toutes ses commandes (salle, Glovo, téléphone) sur un seul écran en cuisine. Résultat : zéro erreur en trois mois et moins de gaspillage.</p>
+<p>Si vous utilisez Glovo ou d'autres plateformes, ça pourrait vous parler. Intéressé ?</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step3: {
     subject: "dernier message",
     bodyHtml: wrapHtml(`
 <p>Bonjour,</p>
-<p>Je comprends que vous êtes occupé — c'est le métier.</p>
-<p>Avec 2030 et les 5 millions de visiteurs attendus, les restaurants à {{city}} qui seront visibles sur Google Maps et connectés aux plateformes de livraison auront un avantage énorme.</p>
+<p>Je comprends que c'est le rush permanent — pas de souci.</p>
+<p>Juste un chiffre : en 2030, le Maroc attend plus de 5 millions de visiteurs pour la Coupe du Monde. Ces touristes vont chercher où manger sur Google Maps. Les restaurants qui y seront bien référencés vont remplir leurs tables. Les autres non.</p>
 <p>Si le sujet se pose un jour : tadnun.com/fr/sectors/restaurants</p>
-<p>Bon service.</p>
-<p>Wassim</p>
+<p>Bon service à {{city}}.</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
 };
@@ -126,7 +124,7 @@ const agriculture: SectorSequence = {
 <p>Ça vous est peut-être déjà arrivé — ou vous connaissez quelqu'un à qui c'est arrivé.</p>
 <p>On a développé un système de suivi digital des traitements et de traçabilité export qui fonctionne même hors connexion. Chaque membre de la coopérative voit son relevé sur son téléphone.</p>
 <p>15 minutes pour en discuter ?</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step2: {
@@ -137,7 +135,7 @@ const agriculture: SectorSequence = {
 <p>Aujourd'hui : chaque membre reçoit son relevé par SMS. Traçabilité ONSSA automatisée. 60% de litiges en moins, zéro rejet export depuis la mise en place.</p>
 <p>Interface en darija, fonctionne hors ligne, conforme ONSSA.</p>
 <p>Ça pourrait vous intéresser ?</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step3: {
@@ -147,7 +145,7 @@ const agriculture: SectorSequence = {
 <p>Je ne veux pas vous déranger davantage. Si un jour la traçabilité ou la gestion de votre coopérative devient un sujet :</p>
 <p>tadnun.com/fr/sectors/agriculture</p>
 <p>Bonne récolte.</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
 };
@@ -162,7 +160,7 @@ const healthcare: SectorSequence = {
 <p>4 à 5 patients ne se présentent pas chaque jour — c'est 2 000 MAD de perdus quotidiennement. Et le temps passé à chercher un dossier papier dans 12 armoires, c'est du temps médical gaspillé.</p>
 <p>On a mis en place un système de rappels automatiques par SMS et WhatsApp qui réduit les absences de plus de 60%. Plus un dossier médical électronique conforme CNDP, avec facturation AMO/CNSS intégrée.</p>
 <p>15 minutes pour voir si ça peut vous aider ?</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step2: {
@@ -173,7 +171,7 @@ const healthcare: SectorSequence = {
 <p>Avec un dossier médical électronique, chaque consultation est retrouvable en 3 secondes. Les rappels SMS/WhatsApp réduisent les no-shows. La facturation AMO/CNSS se fait en quelques clics.</p>
 <p>Conforme CNDP, hébergé au Maroc, interface simple.</p>
 <p>Intéressé ? Un simple "oui" suffit.</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step3: {
@@ -183,7 +181,7 @@ const healthcare: SectorSequence = {
 <p>Je ne veux pas encombrer votre boîte mail. Si le sujet de la digitalisation de votre clinique se pose un jour :</p>
 <p>tadnun.com/fr/sectors/healthcare</p>
 <p>Bonne continuation.</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
 };
@@ -200,7 +198,7 @@ const realestate: SectorSequence = {
 <p>Et quand un MRE à Paris demande une visite virtuelle, il reçoit 5 photos WhatsApp. Il va voir l'agence qui a une vraie visite 3D.</p>
 <p>On a mis en place un outil pour des agences marocaines qui centralise tous les leads (Avito, Mubawab, Facebook, appels) dans un seul écran, avec relances automatiques. Résultat : <strong>2x plus de leads traités, zéro oubli de rappel.</strong></p>
 <p>Ça mérite 15 minutes ?</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step2: {
@@ -211,7 +209,7 @@ const realestate: SectorSequence = {
 <p>Avec 2030 qui approche, la demande MRE va exploser. Les agences à {{city}} qui n'ont pas de visite 3D et de portail client en ligne vont perdre ce marché au profit de celles qui l'ont.</p>
 <p>On aide des agences à mettre ça en place — visites virtuelles, publication centralisée sur toutes les plateformes, CRM avec suivi complet de chaque prospect. Adapté à votre taille, pas un logiciel géant surdimensionné.</p>
 <p>Ça vous parle ?</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step3: {
@@ -222,7 +220,7 @@ const realestate: SectorSequence = {
 <p>Avant de clore : avec la Coupe du Monde 2030 au Maroc, la demande immobilière va changer de dimension. Les agences qui auront un CRM, des visites 3D et une présence multi-plateforme auront un avantage énorme.</p>
 <p>Si le sujet se pose un jour : tadnun.com/fr/sectors/realestate</p>
 <p>Bonne continuation et bonnes ventes à {{city}}.</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
 };
@@ -238,7 +236,7 @@ const retail: SectorSequence = {
 <p>Un commerçant qu'on accompagne a découvert que son meilleur produit était en rupture depuis 10 jours. Il ne le savait même pas.</p>
 <p>On a mis en place un catalogue WhatsApp avec réponses automatiques, un POS connecté avec suivi de stock et alertes rupture, et le paiement mobile CMI.</p>
 <p>15 minutes pour voir ce qu'on peut faire ?</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step2: {
@@ -249,7 +247,7 @@ const retail: SectorSequence = {
 <p>On connecte votre point de vente, votre stock et votre catalogue WhatsApp. Quand un produit descend sous le seuil, vous êtes alerté. Quand un client demande un prix sur WhatsApp, la réponse part automatiquement.</p>
 <p>Simple, en français et darija.</p>
 <p>Ça vous parle ?</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step3: {
@@ -259,7 +257,7 @@ const retail: SectorSequence = {
 <p>Pas de souci si ce n'est pas le bon moment. Si un jour vous cherchez à mieux gérer votre stock ou vos ventes :</p>
 <p>tadnun.com/fr/sectors/retail</p>
 <p>Bonnes ventes.</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
 };
@@ -275,7 +273,7 @@ const education: SectorSequence = {
 <p>On a développé un portail parents avec notes en temps réel, alertes d'absence automatiques, inscription et paiement en ligne avec reçu digital.</p>
 <p>Fini les "je n'étais pas au courant" et les "j'ai déjà payé".</p>
 <p>15 minutes pour en discuter ?</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step2: {
@@ -286,7 +284,7 @@ const education: SectorSequence = {
 <p>Avec un système d'inscription et de paiement en ligne, chaque transaction génère un reçu digital. Plus de discussion, plus d'ambiguïté.</p>
 <p>Le portail parents affiche les notes, les absences et le calendrier en temps réel. En darija et en français.</p>
 <p>Intéressé ?</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step3: {
@@ -296,7 +294,7 @@ const education: SectorSequence = {
 <p>Si un jour la gestion de votre école devient un sujet :</p>
 <p>tadnun.com/fr/sectors/education</p>
 <p>Bonne continuation.</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
 };
@@ -312,7 +310,7 @@ const logistics: SectorSequence = {
 <p>Si ça vous parle, on peut vous aider. On remplace les bons de livraison papier par un suivi digital en temps réel — vos clients suivent leur livraison, vos chauffeurs scannent et confirment.</p>
 <p>Moins d'appels, moins de litiges, plus de confiance.</p>
 <p>15 minutes pour en discuter ?</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step2: {
@@ -323,7 +321,7 @@ const logistics: SectorSequence = {
 <p>C'est ce qu'on met en place pour des sociétés de transport au Maroc.</p>
 <p>Adapté à votre taille — que vous ayez 3 ou 30 véhicules.</p>
 <p>Intéressé ?</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
   step3: {
@@ -333,7 +331,7 @@ const logistics: SectorSequence = {
 <p>Si un jour le suivi de vos livraisons devient un sujet :</p>
 <p>tadnun.com/fr/sectors/logistics</p>
 <p>Bonne route.</p>
-<p>Wassim</p>
+<p>Wassim<br>Fondateur, Tadnun</p>
     `),
   },
 };

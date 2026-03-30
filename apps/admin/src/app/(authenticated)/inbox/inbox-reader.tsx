@@ -101,11 +101,6 @@ export function InboxReader({ email }: Props) {
               <span className={email.delivered_at ? "text-[var(--foreground)]" : "text-[var(--muted)]"}>
                 {email.delivered_at ? "Delivered" : "Delivery pending"}
               </span>
-              {email.opened_at && (
-                <span className="text-[var(--foreground)]">
-                  Opened{email.open_count > 1 ? ` ${email.open_count}x` : ""} — {new Date(email.opened_at).toLocaleDateString("en", { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" })}
-                </span>
-              )}
               {email.bounced_at && (
                 <span className="text-[var(--danger)]">Bounced</span>
               )}

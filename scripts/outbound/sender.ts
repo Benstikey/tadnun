@@ -41,6 +41,7 @@ export async function runSender(): Promise<{ sent: number; failed: number }> {
         html: email.body_html,
         headers: {
           "X-Entity-Ref-ID": `tadnun-outbound-${email.id}`,
+          "X-Resend-Track-Opens": "false",
         },
       });
 
