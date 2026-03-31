@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { createClient } from "@supabase/supabase-js";
 
-const TO_EMAIL = "wassimbenchekroun0@gmail.com";
+const TO_EMAIL = "contact@tadnun.com";
 
 export async function POST(request: Request) {
   try {
