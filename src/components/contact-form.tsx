@@ -57,6 +57,7 @@ export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
+  const [loadedAt] = useState(() => Date.now());
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -69,6 +70,8 @@ export function ContactForm() {
       contact: (form.elements.namedItem("contact") as HTMLInputElement).value,
       sector: (form.elements.namedItem("sector") as HTMLSelectElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      website: (form.elements.namedItem("website") as HTMLInputElement).value,
+      _t: loadedAt,
     };
 
     try {
@@ -177,6 +180,12 @@ export function ContactForm() {
           className="w-full rounded-lg border border-border bg-background px-4 py-3.5 text-sm text-foreground placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent/60 focus:shadow-[0_0_0_3px_rgba(212,69,59,0.06)] transition-all duration-200 resize-none"
           placeholder={t("formMessagePlaceholder")}
         />
+      </div>
+
+      {/* Honeypot — hidden from humans, bots fill it */}
+      <div className="absolute opacity-0 -z-10 h-0 overflow-hidden" aria-hidden="true" tabIndex={-1}>
+        <label htmlFor="website">Website</label>
+        <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
       </div>
 
       {error && (
