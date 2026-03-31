@@ -115,6 +115,7 @@ export function ContactChatPreview() {
   const [inputValue, setInputValue] = useState("");
   const [step, setStep] = useState<"message" | "contact" | "done">("message");
   const [savedMessage, setSavedMessage] = useState("");
+  const [waiting, setWaiting] = useState(false);
   const chatRef = useRef<HTMLDivElement>(null);
 
   // Pre-resolve translations so they work inside setTimeout callbacks
@@ -130,10 +131,11 @@ export function ContactChatPreview() {
 
   async function handleSend() {
     const msg = inputValue.trim();
-    if (!msg || step === "done") return;
+    if (!msg || step === "done" || waiting) return;
 
     setInputValue("");
     setUserMessages((prev) => [...prev, { text: msg, time: currentTime() }]);
+    setWaiting(true);
 
     if (step === "message") {
       // Step 1: User sent their message → ask for contact info
@@ -143,6 +145,7 @@ export function ContactChatPreview() {
         setTyping(false);
         setReplyMessages((prev) => [...prev, { text: askContactText, time: currentTime() }]);
         setStep("contact");
+        setWaiting(false);
       }, 2500);
     } else if (step === "contact") {
       // Step 2: User sent their contact info → send everything to API
@@ -168,6 +171,7 @@ export function ContactChatPreview() {
         setTyping(false);
         setReplyMessages((prev) => [...prev, { text: autoReplyText, time: currentTime() }]);
         setStep("done");
+        setWaiting(false);
       }, 2500);
     }
   }
@@ -235,7 +239,7 @@ export function ContactChatPreview() {
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            disabled={step === "done"}
+            disabled={step === "done" || waiting}
             placeholder={
               step === "done"
                 ? t("sentPlaceholder")
@@ -247,7 +251,7 @@ export function ContactChatPreview() {
           />
           <button
             type="submit"
-            disabled={!inputValue.trim() || step === "done"}
+            disabled={!inputValue.trim() || step === "done" || waiting}
             className="w-9 h-9 rounded-full bg-[#008069] flex items-center justify-center shrink-0 disabled:opacity-40 transition-opacity"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
