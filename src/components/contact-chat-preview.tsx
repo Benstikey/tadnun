@@ -117,6 +117,10 @@ export function ContactChatPreview() {
   const [savedMessage, setSavedMessage] = useState("");
   const chatRef = useRef<HTMLDivElement>(null);
 
+  // Pre-resolve translations so they work inside setTimeout callbacks
+  const askContactText = t("askContact");
+  const autoReplyText = t("autoReply");
+
   // Auto-scroll to bottom when new messages appear
   useEffect(() => {
     if (chatRef.current) {
@@ -137,7 +141,7 @@ export function ContactChatPreview() {
       setTimeout(() => setTyping(true), 800);
       setTimeout(() => {
         setTyping(false);
-        setReplyMessages((prev) => [...prev, { text: t("askContact"), time: currentTime() }]);
+        setReplyMessages((prev) => [...prev, { text: askContactText, time: currentTime() }]);
         setStep("contact");
       }, 2500);
     } else if (step === "contact") {
@@ -162,7 +166,7 @@ export function ContactChatPreview() {
       setTimeout(() => setTyping(true), 800);
       setTimeout(() => {
         setTyping(false);
-        setReplyMessages((prev) => [...prev, { text: t("autoReply"), time: currentTime() }]);
+        setReplyMessages((prev) => [...prev, { text: autoReplyText, time: currentTime() }]);
         setStep("done");
       }, 2500);
     }
