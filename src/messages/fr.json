@@ -446,7 +446,9 @@
     "userMsg": "Bonjour ! Je veux digitaliser mon restaurant. Par où commencer ?",
     "replyMsg1": "Bienvenue ! On accompagne déjà 30+ restaurants au Maroc.",
     "replyMsg2": "On planifie un appel découverte gratuit de 15 min ? Quel créneau vous convient ?",
-    "inputPlaceholder": "Tapez un message"
+    "inputPlaceholder": "Tapez un message...",
+    "autoReply": "Merci pour votre message ! On vous recontacte très vite. 🙏",
+    "sentPlaceholder": "Message envoyé ✓"
   },
   "sectorsPage": {
     "eyebrow": "Secteurs",
