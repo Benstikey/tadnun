@@ -5,6 +5,7 @@ import { PageShell } from "@/components/page-shell";
 import { CtaBand } from "@/components/cta-band";
 import { PageTracker } from "@/components/page-tracker";
 import { BlogPostJsonLd } from "@/components/json-ld";
+import { BlogIllustration } from "@/components/blog-illustration";
 import { getBlogPost, getAllBlogSlugs } from "@/lib/blog";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
@@ -103,6 +104,11 @@ export default async function BlogPostPage({
             </p>
           )}
         </header>
+
+        {/* Sector illustration */}
+        <div className="mt-10 h-40 rounded-xl bg-foreground/[0.015] border border-border/40 flex items-center justify-center overflow-hidden">
+          <BlogIllustration sector={post.sector} className="w-full h-full text-foreground" />
+        </div>
 
         <div className="mt-10 border-t border-border" />
 

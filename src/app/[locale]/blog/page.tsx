@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { SectionHeading } from "@/components/section-heading";
+import { BlogIllustration } from "@/components/blog-illustration";
 import { getBlogPosts } from "@/lib/blog";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
@@ -103,8 +104,8 @@ export default async function BlogPage({
                       </svg>
                     </span>
                   </div>
-                  <div className="hidden lg:flex items-center justify-center rounded-xl bg-foreground/[0.03] border border-border/50 p-8">
-                    <span className="text-6xl font-serif italic text-foreground/10">Tadnun</span>
+                  <div className="hidden lg:flex items-center justify-center rounded-xl bg-foreground/[0.02] border border-border/40 p-6">
+                    <BlogIllustration sector={featured.sector} />
                   </div>
                 </a>
               </ScrollReveal>
@@ -119,6 +120,9 @@ export default async function BlogPage({
                       href={`/${locale}/blog/${post.slug}`}
                       className="group flex flex-col gap-4 rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:border-foreground/15 hover:shadow-md hover:-translate-y-0.5 h-full"
                     >
+                      <div className="h-24 -mx-1 -mt-1 mb-1 rounded-lg bg-foreground/[0.015] flex items-center justify-center overflow-hidden">
+                        <BlogIllustration sector={post.sector} className="w-full h-full text-foreground" />
+                      </div>
                       <div className="flex items-center gap-3">
                         <time className="text-[11px] font-mono text-muted tracking-wider">
                           {new Date(post.date).toLocaleDateString(locale, {
