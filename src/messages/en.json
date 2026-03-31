@@ -43,7 +43,7 @@
       "milestoneDeployed": "Project deployed",
       "milestoneTraining": "Patient Portal — team training next"
     },
-    "location": "🇲🇦  Serving businesses across Morocco"
+    "location": "Serving businesses across Morocco"
   },
   "sectors": {
     "eyebrow": "01",
@@ -136,7 +136,7 @@
     "subtitle": "We don't sell technology. We solve your real problems.",
     "items": {
       "local": {
-        "icon": "🇲🇦",
+        "icon": "🌍",
         "title": "Built for Morocco",
         "body": "French and Darija interfaces, CMI and mobile payment integration, WhatsApp Business compatibility. We know your market because we live in it."
       },

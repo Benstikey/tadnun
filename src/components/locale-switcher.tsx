@@ -5,10 +5,41 @@ import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { trackEvent } from "@/lib/analytics";
 
+function FlagFR() {
+  return (
+    <svg width="20" height="14" viewBox="0 0 20 14" className="rounded-[2px] shrink-0">
+      <rect width="7" height="14" fill="#002395" />
+      <rect x="7" width="6" height="14" fill="#fff" />
+      <rect x="13" width="7" height="14" fill="#ED2939" />
+    </svg>
+  );
+}
+
+function FlagGB() {
+  return (
+    <svg width="20" height="14" viewBox="0 0 60 42" className="rounded-[2px] shrink-0">
+      <rect width="60" height="42" fill="#012169" />
+      <path d="M0 0L60 42M60 0L0 42" stroke="#fff" strokeWidth="7" />
+      <path d="M0 0L60 42M60 0L0 42" stroke="#C8102E" strokeWidth="4" />
+      <path d="M30 0V42M0 21H60" stroke="#fff" strokeWidth="10" />
+      <path d="M30 0V42M0 21H60" stroke="#C8102E" strokeWidth="6" />
+    </svg>
+  );
+}
+
+function FlagMA() {
+  return (
+    <svg width="20" height="14" viewBox="0 0 20 14" className="rounded-[2px] shrink-0">
+      <rect width="20" height="14" fill="#C1272D" />
+      <polygon points="10,3 11.18,6.63 15,6.63 11.91,8.87 13.09,12.5 10,10.26 6.91,12.5 8.09,8.87 5,6.63 8.82,6.63" fill="none" stroke="#006233" strokeWidth="0.7" />
+    </svg>
+  );
+}
+
 const locales = [
-  { code: "fr", label: "Français", flag: "🇫🇷", short: "FR" },
-  { code: "en", label: "English", flag: "🇬🇧", short: "EN" },
-  { code: "ar", label: "العربية", flag: "🇲🇦", short: "AR" },
+  { code: "fr", label: "Français", Flag: FlagFR, short: "FR" },
+  { code: "en", label: "English", Flag: FlagGB, short: "EN" },
+  { code: "ar", label: "العربية", Flag: FlagMA, short: "AR" },
 ] as const;
 
 export function LocaleSwitcher({ dropUp = false }: { dropUp?: boolean }) {
@@ -60,7 +91,7 @@ export function LocaleSwitcher({ dropUp = false }: { dropUp?: boolean }) {
               : "Change language"
         }
       >
-        <span className="text-base leading-none">{current.flag}</span>
+        <current.Flag />
         <span className="font-medium">{current.short}</span>
         <svg
           width="10"
@@ -97,7 +128,7 @@ export function LocaleSwitcher({ dropUp = false }: { dropUp?: boolean }) {
                   : "text-foreground/70 hover:bg-foreground/[0.03] hover:text-foreground"
               }`}
             >
-              <span className="text-lg leading-none">{l.flag}</span>
+              <l.Flag />
               <span className="flex-1">{l.label}</span>
               {isActive && (
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-accent">

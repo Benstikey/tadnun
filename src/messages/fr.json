@@ -43,7 +43,7 @@
       "milestoneDeployed": "Projet déployé",
       "milestoneTraining": "Portail patient — formation équipe prévue"
     },
-    "location": "🇲🇦  Au service des entreprises marocaines"
+    "location": "Au service des entreprises marocaines"
   },
   "sectors": {
     "eyebrow": "01",
@@ -136,7 +136,7 @@
     "subtitle": "On ne vend pas de la technologie. On résout vos problèmes concrets.",
     "items": {
       "local": {
-        "icon": "🇲🇦",
+        "icon": "🌍",
         "title": "Conçu pour le Maroc",
         "body": "Interfaces en français et darija, intégration CMI et paiement mobile, compatibilité WhatsApp Business. On connaît votre marché parce qu'on y vit."
       },
