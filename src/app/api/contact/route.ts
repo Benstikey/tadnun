@@ -72,7 +72,7 @@ export async function POST(request: Request) {
     if (process.env.RESEND_API_KEY) {
       const resend = new Resend(process.env.RESEND_API_KEY);
       await resend.emails.send({
-        from: "Tadnun Contact <onboarding@resend.dev>",
+        from: "Tadnun <contact@tadnun.com>",
         to: TO_EMAIL,
         subject: `[Tadnun] New lead: ${name}${sector ? ` — ${sector}` : ""}`,
         html: `
