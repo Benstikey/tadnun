@@ -113,7 +113,8 @@ export function ContactChatPreview() {
   const [replyMessages, setReplyMessages] = useState<{ text: string; time: string }[]>([]);
   const [typing, setTyping] = useState(false);
   const [inputValue, setInputValue] = useState("");
-  const [sent, setSent] = useState(false);
+  const [step, setStep] = useState<"message" | "contact" | "done">("message");
+  const [savedMessage, setSavedMessage] = useState("");
   const chatRef = useRef<HTMLDivElement>(null);
 
   // Auto-scroll to bottom when new messages appear
@@ -125,34 +126,46 @@ export function ContactChatPreview() {
 
   async function handleSend() {
     const msg = inputValue.trim();
-    if (!msg || sent) return;
+    if (!msg || step === "done") return;
 
     setInputValue("");
     setUserMessages((prev) => [...prev, { text: msg, time: currentTime() }]);
 
-    // Send to API
-    try {
-      await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: "Chat visitor",
-          contact: "via chat widget",
-          message: msg,
-          _t: Date.now() - 5000, // pass time check
-        }),
-      });
-    } catch {
-      // silently fail — message is still shown in UI
-    }
+    if (step === "message") {
+      // Step 1: User sent their message → ask for contact info
+      setSavedMessage(msg);
+      setTimeout(() => setTyping(true), 800);
+      setTimeout(() => {
+        setTyping(false);
+        setReplyMessages((prev) => [...prev, { text: t("askContact"), time: currentTime() }]);
+        setStep("contact");
+      }, 2500);
+    } else if (step === "contact") {
+      // Step 2: User sent their contact info → send everything to API
+      const contactInfo = msg;
 
-    // Show typing then auto-reply
-    setTimeout(() => setTyping(true), 800);
-    setTimeout(() => {
-      setTyping(false);
-      setReplyMessages((prev) => [...prev, { text: t("autoReply"), time: currentTime() }]);
-      setSent(true);
-    }, 2500);
+      try {
+        await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: "Chat visitor",
+            contact: contactInfo,
+            message: savedMessage,
+            _t: Date.now() - 5000,
+          }),
+        });
+      } catch {
+        // silently fail
+      }
+
+      setTimeout(() => setTyping(true), 800);
+      setTimeout(() => {
+        setTyping(false);
+        setReplyMessages((prev) => [...prev, { text: t("autoReply"), time: currentTime() }]);
+        setStep("done");
+      }, 2500);
+    }
   }
 
   return (
@@ -218,13 +231,19 @@ export function ContactChatPreview() {
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            disabled={sent}
-            placeholder={sent ? t("sentPlaceholder") : t("inputPlaceholder")}
+            disabled={step === "done"}
+            placeholder={
+              step === "done"
+                ? t("sentPlaceholder")
+                : step === "contact"
+                  ? t("contactPlaceholder")
+                  : t("inputPlaceholder")
+            }
             className="flex-1 bg-white rounded-full px-4 py-2 text-[13px] text-[#111b21] placeholder:text-[#667781] outline-none disabled:opacity-60"
           />
           <button
             type="submit"
-            disabled={!inputValue.trim() || sent}
+            disabled={!inputValue.trim() || step === "done"}
             className="w-9 h-9 rounded-full bg-[#008069] flex items-center justify-center shrink-0 disabled:opacity-40 transition-opacity"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="white">

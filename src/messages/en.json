@@ -447,7 +447,9 @@
     "replyMsg1": "Welcome! Great to hear that. We work with 30+ restaurants across Morocco.",
     "replyMsg2": "Let's book a free 15-min call to understand your needs. When works for you?",
     "inputPlaceholder": "Type a message...",
-    "autoReply": "Thanks for your message! We'll get back to you very soon. 🙏",
+    "askContact": "Great! So we can get back to you, drop your number or email 👇",
+    "contactPlaceholder": "Your email or phone...",
+    "autoReply": "Thanks! We'll get back to you very soon. 🙏",
     "sentPlaceholder": "Message sent ✓"
   },
   "sectorsPage": {
