@@ -49,7 +49,7 @@ export default async function CompareDetailPage({
         description={page.description ?? null}
       />
       <PageTracker event="compare_page_viewed" params={{ slug, locale }} />
-      <article className="mx-auto max-w-3xl px-6 pt-20 pb-16">
+      <article className="article-content mx-auto max-w-3xl px-6 pt-20 pb-16">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-[12px] text-muted mb-10">
           <a href={`/${locale}`} className="hover:text-foreground transition-colors">
@@ -66,7 +66,7 @@ export default async function CompareDetailPage({
           <span className="text-[10px] font-mono uppercase tracking-wider text-accent bg-accent/[0.06] rounded-full px-2.5 py-0.5">
             {page.type === "vs" ? `Tadnun vs ${page.competitor}` : page.type === "alternative" ? `${t("compare.altLabel")} ${page.competitor}` : page.competitor}
           </span>
-          <h1 className="mt-4 font-serif italic text-3xl sm:text-4xl lg:text-[2.75rem] tracking-tight text-foreground leading-[1.1]">
+          <h1 className="mt-4 font-serif italic tracking-tight text-foreground">
             {page.title}
           </h1>
           {page.description && (
@@ -82,13 +82,14 @@ export default async function CompareDetailPage({
         <div
           className="mt-10 prose prose-neutral max-w-none
             prose-headings:font-serif prose-headings:italic prose-headings:tracking-tight
-            prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
-            prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3
+            prose-h2:mt-10 prose-h2:mb-3
+            prose-h3:mt-8 prose-h3:mb-2
             prose-p:text-[15px] prose-p:leading-relaxed prose-p:text-foreground/80
             prose-li:text-[15px] prose-li:text-foreground/80
             prose-strong:text-foreground prose-strong:font-semibold
             prose-a:text-accent prose-a:no-underline hover:prose-a:underline
-            prose-blockquote:border-accent/30 prose-blockquote:text-foreground/60 prose-blockquote:italic"
+            prose-blockquote:border-accent/30 prose-blockquote:text-foreground/60 prose-blockquote:italic
+            prose-ol:ps-5 prose-ul:ps-5"
           dangerouslySetInnerHTML={{ __html: page.content }}
         />
 

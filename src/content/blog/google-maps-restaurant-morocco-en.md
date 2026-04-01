@@ -1,7 +1,7 @@
 ---
 title: "Google Maps for Restaurants: The Complete Guide for Morocco"
 description: "70% of tourists and young Moroccans search 'restaurant nearby' on Google before going out. Here's how to optimize your Google Maps listing and attract more customers."
-date: "2026-03-28"
+date: "2026-04-01"
 locale: en
 sector: restaurants
 ---

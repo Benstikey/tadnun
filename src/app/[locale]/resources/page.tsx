@@ -56,7 +56,7 @@ export default async function ResourcesPage({
           <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-5">
             {t("eyebrow")}
           </p>
-          <h1 className="font-serif italic text-4xl sm:text-5xl lg:text-[4rem] leading-[1.06] tracking-tight text-foreground">
+          <h1 className="font-serif italic text-4xl sm:text-5xl lg:text-[4rem] leading-[1.1] tracking-tight text-foreground">
             {t("title")}
           </h1>
           <p className="mt-6 text-muted text-lg leading-relaxed max-w-xl">
@@ -92,11 +92,11 @@ export default async function ResourcesPage({
                 </p>
 
                 {/* Download CTA */}
-                <span className="mt-auto inline-flex items-center gap-1.5 text-[13px] font-semibold text-accent">
+                <span className="mt-auto inline-flex items-center gap-1 text-[12px] font-semibold text-accent">
                   {t("download")}
                   <svg
-                    width="14"
-                    height="14"
+                    width="12"
+                    height="12"
                     viewBox="0 0 16 16"
                     fill="none"
                     className="transition-transform duration-200 group-hover:translate-y-0.5"

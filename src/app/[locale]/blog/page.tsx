@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
 import { ScrollReveal } from "@/components/scroll-reveal";
-import { SectionHeading } from "@/components/section-heading";
 import { BlogIllustration } from "@/components/blog-illustration";
+import { BlogGrid } from "@/components/blog-grid";
 import { getBlogPosts } from "@/lib/blog";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
@@ -40,6 +40,17 @@ export default async function BlogPage({
   const tBlog = await getTranslations({ locale, namespace: "blog" });
   const posts = await getBlogPosts(locale);
 
+  const sectorKeys = [
+    "agriculture", "restaurants", "tourism", "healthcare",
+    "retail", "education", "realestate", "logistics",
+  ];
+  const sectorNames: Record<string, string> = {
+    business: locale === "fr" ? "Business" : locale === "ar" ? "أعمال" : "Business",
+  };
+  for (const key of sectorKeys) {
+    sectorNames[key] = t(`sectors.items.${key}.name`);
+  }
+
   const featured = posts[0];
   const rest = posts.slice(1);
 
@@ -71,7 +82,16 @@ export default async function BlogPage({
           <>
             {/* ─── Featured article ─── */}
             {featured && (
+              <>
               <ScrollReveal>
+                <h2 className="font-serif italic text-2xl sm:text-3xl tracking-tight text-foreground leading-[1.1]">
+                  {tBlog("featuredTitle")}
+                </h2>
+                <p className="mt-3 text-muted text-[15px] leading-relaxed max-w-lg">
+                  {tBlog("featuredDesc")}
+                </p>
+              </ScrollReveal>
+              <ScrollReveal className="mt-6">
                 <a
                   href={`/${locale}/blog/${featured.slug}`}
                   className="group grid lg:grid-cols-2 gap-8 rounded-2xl border border-border bg-surface p-6 sm:p-8 lg:p-10 transition-all duration-300 hover:border-foreground/15 hover:shadow-lg hover:-translate-y-0.5"
@@ -109,49 +129,21 @@ export default async function BlogPage({
                   </div>
                 </a>
               </ScrollReveal>
+              </>
             )}
 
-            {/* ─── Article grid ─── */}
+            {/* ─── Filterable article grid ─── */}
             {rest.length > 0 && (
-              <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {rest.map((post, i) => (
-                  <ScrollReveal key={post.slug} delay={i * 60}>
-                    <a
-                      href={`/${locale}/blog/${post.slug}`}
-                      className="group flex flex-col gap-4 rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:border-foreground/15 hover:shadow-md hover:-translate-y-0.5 h-full"
-                    >
-                      <div className="h-24 -mx-1 -mt-1 mb-1 rounded-lg bg-foreground/[0.015] flex items-center justify-center overflow-hidden">
-                        <BlogIllustration sector={post.sector} className="w-full h-full text-foreground" />
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <time className="text-[11px] font-mono text-muted tracking-wider">
-                          {new Date(post.date).toLocaleDateString(locale, {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                          })}
-                        </time>
-                        {post.sector && (
-                          <span className="text-[10px] font-mono uppercase tracking-wider text-accent bg-accent/[0.06] rounded-full px-2.5 py-0.5">
-                            {t(`sectors.items.${post.sector}.name`)}
-                          </span>
-                        )}
-                      </div>
-                      <h3 className="font-serif italic text-foreground text-base leading-snug tracking-tight group-hover:text-accent transition-colors">
-                        {post.title}
-                      </h3>
-                      <p className="text-muted text-[14px] leading-relaxed line-clamp-3">
-                        {post.description}
-                      </p>
-                      <span className="mt-auto inline-flex items-center gap-1 text-[12px] font-semibold text-accent">
-                        {t("common.learnMore")}
-                        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" className="rtl:-scale-x-100 transition-transform duration-200 group-hover:translate-x-0.5">
-                          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </span>
-                    </a>
-                  </ScrollReveal>
-                ))}
+              <div className="mt-10">
+                <BlogGrid
+                  locale={locale}
+                  posts={rest}
+                  sectorNames={sectorNames}
+                  labels={{
+                    all: locale === "fr" ? "Tous" : locale === "ar" ? "الكل" : "All",
+                    learnMore: t("common.learnMore"),
+                  }}
+                />
               </div>
             )}
           </>

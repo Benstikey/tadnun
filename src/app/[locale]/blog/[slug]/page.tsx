@@ -53,7 +53,7 @@ export default async function BlogPostPage({
         sector={post.sector ?? null}
       />
       <PageTracker event="blog_article_read" params={{ slug, locale, sector: post.sector || "none" }} />
-      <article className="mx-auto max-w-3xl px-6 pt-20 pb-16">
+      <article className="article-content mx-auto max-w-3xl px-6 pt-20 pb-16">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-[12px] text-muted mb-10">
           <a href={`/${locale}`} className="hover:text-foreground transition-colors">
@@ -95,7 +95,7 @@ export default async function BlogPostPage({
               </a>
             )}
           </div>
-          <h1 className="font-serif italic text-3xl sm:text-4xl lg:text-[2.75rem] tracking-tight text-foreground leading-[1.1]">
+          <h1 className="font-serif italic tracking-tight text-foreground">
             {post.title}
           </h1>
           {post.description && (
@@ -116,8 +116,8 @@ export default async function BlogPostPage({
         <div
           className="mt-10 prose prose-neutral max-w-none
             prose-headings:font-serif prose-headings:italic prose-headings:tracking-tight
-            prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
-            prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3
+            prose-h2:mt-10 prose-h2:mb-3
+            prose-h3:mt-8 prose-h3:mb-2
             prose-p:text-[15px] prose-p:leading-relaxed prose-p:text-foreground/80
             prose-li:text-[15px] prose-li:text-foreground/80
             prose-strong:text-foreground prose-strong:font-semibold

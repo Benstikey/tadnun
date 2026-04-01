@@ -3,6 +3,7 @@ title: "Combien coute la digitalisation d'une PME au Maroc ? Le vrai calcul"
 description: "Odoo, freelances, SaaS etrangers ou solution sur mesure ? Avant de comparer les prix, calculez ce que vous perdez chaque mois a ne rien faire. Voici le vrai cout de la digitalisation pour une PME marocaine."
 date: "2026-03-28"
 locale: fr
+sector: business
 ---
 
 ## La question que tout le monde pose en premier

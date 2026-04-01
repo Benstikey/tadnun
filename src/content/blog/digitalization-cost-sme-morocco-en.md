@@ -3,6 +3,7 @@ title: "How Much Does Digitalization Cost for a Moroccan SME? The Real Calculati
 description: "Odoo, freelancers, foreign SaaS, or a custom solution? Before comparing prices, calculate what you're losing every month by doing nothing. Here's the real cost of digitalization for a Moroccan SME."
 date: "2026-03-28"
 locale: en
+sector: business
 ---
 
 ## The Question Everyone Asks First
