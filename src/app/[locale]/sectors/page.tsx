@@ -5,6 +5,7 @@ import { SectorIcon } from "@/components/icons";
 import { IconBox } from "@/components/icon-box";
 import { sectorDetails } from "@/data/sector-details";
 import { SectorsHeroVisual } from "@/components/sectors-hero-visual";
+import { AllSectorsVisual } from "@/components/all-sectors-visual";
 import type { Metadata } from "next";
 
 const sectorKeys = [
@@ -206,31 +207,38 @@ export default async function SectorsListPage({ params }: { params: Promise<{ lo
       <section className="mx-auto max-w-6xl px-6 pb-20">
         <ScrollReveal>
           <div className="rounded-2xl border border-border bg-surface/40 p-6 sm:p-10 lg:p-14">
-            <p className="text-[11px] font-mono tracking-[0.2em] text-accent uppercase mb-4">
-              {t("sectorsPage.otherEyebrow")}
-            </p>
-            <h2 className="font-serif italic text-2xl sm:text-3xl tracking-tight text-foreground max-w-lg leading-[1.1]">
-              {t("sectorsPage.otherTitle")}
-            </h2>
-            <p className="mt-4 text-muted text-base leading-relaxed max-w-2xl">
-              {t("sectorsPage.otherBody")}
-            </p>
-            <div className="mt-8 flex flex-wrap gap-2">
-              {otherIndustries.map((ind, i) => (
-                <span key={i} className="text-[12px] px-3 py-1.5 rounded-full border border-border/80 text-muted bg-background">
-                  {ind}
-                </span>
-              ))}
-              <span className="text-[12px] px-3 py-1.5 rounded-full border border-border/80 text-muted bg-background italic">
-                + {locale === "fr" ? "votre secteur" : locale === "ar" ? "قطاعك" : "your sector"}
-              </span>
+            <div className="flex flex-col md:flex-row md:items-center gap-10">
+              <div className="md:w-[60%] shrink-0">
+                <p className="text-[11px] font-mono tracking-[0.2em] text-accent uppercase mb-4">
+                  {t("sectorsPage.otherEyebrow")}
+                </p>
+                <h2 className="font-serif italic text-2xl sm:text-3xl tracking-tight text-foreground max-w-lg leading-[1.1]">
+                  {t("sectorsPage.otherTitle")}
+                </h2>
+                <p className="mt-4 text-muted text-base leading-relaxed max-w-2xl">
+                  {t("sectorsPage.otherBody")}
+                </p>
+                <div className="mt-8 flex flex-wrap gap-2">
+                  {otherIndustries.map((ind, i) => (
+                    <span key={i} className="text-[12px] px-3 py-1.5 rounded-full border border-border/80 text-muted bg-background">
+                      {ind}
+                    </span>
+                  ))}
+                  <span className="text-[12px] px-3 py-1.5 rounded-full border border-border/80 text-muted bg-background italic">
+                    + {locale === "fr" ? "votre secteur" : locale === "ar" ? "قطاعك" : "your sector"}
+                  </span>
+                </div>
+                <a
+                  href={`/${locale}/contact`}
+                  className="mt-8 inline-flex items-center justify-center rounded-full bg-foreground px-8 py-3.5 text-sm font-semibold text-background hover:bg-foreground/90 active:scale-[0.97] transition-all hover:-translate-y-px"
+                >
+                  {t("sectorsPage.otherCta")}
+                </a>
+              </div>
+              <div className="hidden md:flex md:w-[40%] items-center justify-center">
+                <AllSectorsVisual />
+              </div>
             </div>
-            <a
-              href={`/${locale}/contact`}
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-foreground px-8 py-3.5 text-sm font-semibold text-background hover:bg-foreground/90 active:scale-[0.97] transition-all hover:-translate-y-px"
-            >
-              {t("sectorsPage.otherCta")}
-            </a>
           </div>
         </ScrollReveal>
       </section>
