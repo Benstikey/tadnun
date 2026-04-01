@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
 import { CtaBand } from "@/components/cta-band";
 import { PageTracker } from "@/components/page-tracker";
-import { ComparePageJsonLd } from "@/components/json-ld";
+import { ComparePageJsonLd } from "@/components/schema/compare-page-json-ld";
 import { getComparePage, getAllCompareSlugs } from "@/lib/compare";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";

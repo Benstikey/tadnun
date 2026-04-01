@@ -4,6 +4,8 @@
  * meets editorial magazine aesthetics.
  */
 
+import type React from "react";
+
 function Agriculture({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 400 200" fill="none" className={className}>

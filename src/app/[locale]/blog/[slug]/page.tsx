@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
 import { CtaBand } from "@/components/cta-band";
 import { PageTracker } from "@/components/page-tracker";
-import { BlogPostJsonLd } from "@/components/json-ld";
+import { BlogPostJsonLd } from "@/components/schema/blog-post-json-ld";
 import { BlogIllustration } from "@/components/blog-illustration";
 import { getBlogPost, getAllBlogSlugs } from "@/lib/blog";
 

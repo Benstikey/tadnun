@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
-import { Vision2030Visual } from "@/components/visuals";
+import { Vision2030Visual } from "@/components/visuals/vision-2030-visual";
 import { SectorIntegrationHub } from "@/components/integration-hub";
 import { RealityVisual } from "@/components/reality-visual";
 import { ScrollReveal } from "@/components/scroll-reveal";

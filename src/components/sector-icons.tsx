@@ -1,5 +1,3 @@
-"use client";
-
 interface SectorSvgProps {
   size?: number;
   strokeWidth?: number;

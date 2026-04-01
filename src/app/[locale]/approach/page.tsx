@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
-import { ApproachTimeline, AnimatedStat } from "@/components/visuals";
+import { AnimatedStat } from "@/components/visuals/animated-stat";
+import { ApproachTimeline } from "@/components/visuals/approach-timeline";
 import { BeforeAfterRow } from "@/components/before-after-row";
 import { ExpertiseIcon } from "@/components/icons";
 import { ScrollReveal } from "@/components/scroll-reveal";

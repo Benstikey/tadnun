@@ -5,7 +5,7 @@ import { PageShell } from "@/components/page-shell";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { CtaBand } from "@/components/cta-band";
-import { SectorJsonLd } from "@/components/json-ld";
+import { SectorJsonLd } from "@/components/schema/sector-json-ld";
 import { sectorDetails } from "@/data/sector-details";
 import { getCityData, cities } from "@/data/cities";
 import { validSectors, type SectorKey } from "@/lib/sector-context";

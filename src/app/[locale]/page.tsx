@@ -1,13 +1,13 @@
 import { useTranslations, useLocale } from "next-intl";
 import { SectorIcon } from "@/components/icons";
 import { IconBox } from "@/components/icon-box";
-import { UrgencyRace } from "@/components/visuals";
+import { UrgencyRace } from "@/components/visuals/urgency-race";
 import { HeroDashboard } from "@/components/hero-dashboard";
 import { CtaBand } from "@/components/cta-band";
 import { PageShell } from "@/components/page-shell";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { FaqSection } from "@/components/faq";
-import { HomeFaqJsonLd } from "@/components/json-ld";
+import { HomeFaqJsonLd } from "@/components/schema/home-faq-json-ld";
 import { TrackedLink } from "@/components/tracked-link";
 import { sectorDetails } from "@/data/sector-details";
 import { CalculatorPromoVisual } from "@/components/calculator-promo-visual";

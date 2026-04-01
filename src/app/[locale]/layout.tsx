@@ -6,7 +6,7 @@ import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
-import { JsonLd } from "@/components/json-ld";
+import { JsonLd } from "@/components/schema/json-ld";
 import "./globals.css";
 
 const GTM_ID = "GTM-MPT7HMNM";
