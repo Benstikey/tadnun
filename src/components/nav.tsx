@@ -41,13 +41,18 @@ export function Nav() {
   const sectorSuffix = activeSector ? `?sector=${activeSector}` : "";
   const sectorName = activeSector ? t(`sectors.items.${activeSector}.name`) : null;
 
+  const [toolsOpen, setToolsOpen] = useState(false);
+
   const navLinks: { href: string; label: string; accent?: boolean }[] = [
     { href: `/${locale}/sectors`, label: t("nav.sectors") },
     { href: `/${locale}/approach${sectorSuffix}`, label: t("nav.approach") },
     { href: `/${locale}/about${sectorSuffix}`, label: t("nav.about") },
     { href: `/${locale}/blog`, label: t("nav.blog") },
+  ];
+
+  const toolsItems = [
+    { href: `/${locale}/tools/quiz`, label: t("quiz.start") },
     { href: `/${locale}/calculator`, label: t("calculator.nav") },
-    { href: `/${locale}/tools/quiz`, label: t("quiz.start"), accent: true },
   ];
 
   return (
@@ -92,15 +97,53 @@ export function Nav() {
                   key={link.href}
                   href={link.href}
                   onClick={() => trackEvent("nav_link_clicked", { label: link.label, href: link.href })}
-                  className={`nav-link-underline text-[13px] px-3.5 py-2.5 rounded-lg transition-all ${
-                    link.accent
-                      ? "text-accent font-medium hover:bg-accent/[0.06]"
-                      : "text-muted hover:text-foreground hover:bg-foreground/[0.04]"
-                  }`}
+                  className="nav-link-underline text-[13px] px-3.5 py-2.5 rounded-lg transition-all text-muted hover:text-foreground hover:bg-foreground/[0.04]"
                 >
                   {link.label}
                 </a>
               ))}
+
+              {/* Tools dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setToolsOpen(true)}
+                onMouseLeave={() => setToolsOpen(false)}
+              >
+                <button
+                  type="button"
+                  className="nav-link-underline text-[13px] px-3.5 py-2.5 rounded-lg transition-all text-muted hover:text-foreground hover:bg-foreground/[0.04] inline-flex items-center gap-1"
+                >
+                  {t("nav.tools")}
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" className={`transition-transform ${toolsOpen ? "rotate-180" : ""}`}>
+                    <path d="M2 4l3 3 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                {toolsOpen && (
+                  <div className="absolute top-full start-0 pt-1 z-50">
+                    <div className="rounded-xl border border-border bg-background shadow-lg py-1.5 min-w-[180px]">
+                      {toolsItems.map((item) => (
+                        <a
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => { setToolsOpen(false); trackEvent("nav_link_clicked", { label: item.label, href: item.href }); }}
+                          className="block px-4 py-2.5 text-[13px] text-muted hover:text-foreground hover:bg-foreground/[0.04] transition-colors"
+                        >
+                          {item.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Offer — accent */}
+              <a
+                href={`/${locale}/offre`}
+                onClick={() => trackEvent("nav_link_clicked", { label: t("nav.offer"), href: `/${locale}/offre` })}
+                className="nav-link-underline text-[13px] px-3.5 py-2.5 rounded-lg transition-all text-accent font-medium hover:bg-accent/[0.06]"
+              >
+                {t("nav.offer")}
+              </a>
             </div>
           </div>
 
@@ -179,15 +222,31 @@ export function Nav() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`py-3.5 text-[16px] transition-colors border-b border-border/50 last:border-0 ${
-                    link.accent
-                      ? "text-accent font-medium"
-                      : "text-foreground/70 hover:text-foreground"
-                  }`}
+                  className="py-3.5 text-[16px] transition-colors border-b border-border/50 text-foreground/70 hover:text-foreground"
                 >
                   {link.label}
                 </a>
               ))}
+              {/* Tools group */}
+              <p className="pt-4 pb-1 text-[11px] font-mono uppercase tracking-[0.15em] text-muted/50">{t("nav.tools")}</p>
+              {toolsItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="py-3.5 text-[16px] transition-colors border-b border-border/50 text-foreground/70 hover:text-foreground ps-3"
+                >
+                  {item.label}
+                </a>
+              ))}
+              {/* Offer — accent */}
+              <a
+                href={`/${locale}/offre`}
+                onClick={() => setMobileOpen(false)}
+                className="py-3.5 text-[16px] transition-colors text-accent font-medium"
+              >
+                {t("nav.offer")}
+              </a>
             </div>
             <div className="flex items-center justify-between mt-5 pt-4 border-t border-border/50">
               <LocaleSwitcher dropUp />

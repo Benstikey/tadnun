@@ -10,6 +10,8 @@
     "blog": "Blog",
     "skills": "Expertise",
     "cta": "Nous contacter",
+    "tools": "Outils",
+    "offer": "Notre offre",
     "skipToContent": "Aller au contenu",
     "ariaLabel": "Navigation principale",
     "openMenu": "Ouvrir le menu",
@@ -742,6 +744,115 @@
       "title": "Estimez vos économies en 30 secondes",
       "description": "Sélectionnez votre secteur, cochez ce que vous faites encore à la main, et découvrez combien vous pouvez récupérer chaque mois.",
       "cta": "Lancer le simulateur"
+    }
+  },
+  "offre": {
+    "hero": {
+      "eyebrow": "Offre digitalisation",
+      "title": "Votre activité perd de l'argent <accent>chaque jour</accent> sans outils digitaux.",
+      "subtitle": "On construit les outils qui vous font gagner du temps, des clients et de l'argent — adaptés au marché marocain, à votre secteur, à votre équipe.",
+      "cta": "Discuter sur WhatsApp",
+      "responseTime": "Réponse en moins d'une heure",
+      "whatsappPrefill": "Bonjour, je souhaite discuter de la digitalisation de mon activité.",
+      "trust1": "150+ entreprises",
+      "trust2": "8 secteurs",
+      "trust3": "14 villes",
+      "trust4": "Sans engagement"
+    },
+    "pain": {
+      "eyebrow": "Le coût de l'inaction",
+      "title": "Chaque mois sans outils digitaux vous coûte <accent>des dizaines de milliers de dirhams.</accent>",
+      "items": {
+        "0": { "stat": "120,000", "unit": "DH/mois", "desc": "perdus en messages WhatsApp non répondus", "detail": "20 messages ignorés/jour × 200 DH de panier moyen" },
+        "1": { "stat": "330,000", "unit": "DH/an", "desc": "envoyés en commissions aux plateformes", "detail": "Booking.com, Glovo, Jumia Food prennent 15-20%" },
+        "2": { "stat": "40,000", "unit": "DH/mois", "desc": "de rendez-vous non honorés", "detail": "4 à 5 patients par jour ne viennent pas" },
+        "3": { "stat": "400,000", "unit": "DH", "desc": "perdus sur un seul défaut de traçabilité", "detail": "Un lot export rejeté à la frontière européenne" }
+      },
+      "stat": "93% des entreprises marocaines n'ont aucune présence digitale.",
+      "punchline": "Vos concurrents avancent. Et vous ?"
+    },
+    "pillars": {
+      "eyebrow": "Ce qu'on construit",
+      "title": "Des outils <accent>sur mesure</accent>, pas des logiciels génériques.",
+      "subtitle": "On ne vend pas de la technologie. On résout des problèmes concrets avec des outils adaptés au marché marocain.",
+      "items": {
+        "0": {
+          "num": "01", "title": "Présence digitale",
+          "list": { "0": "Fiche Google optimisée avec gestion des avis", "1": "Site web professionnel avec prise de RDV en ligne", "2": "Catalogue WhatsApp avec réponses automatiques", "3": "Profils réseaux sociaux connectés" }
+        },
+        "1": {
+          "num": "02", "title": "Opérations internes",
+          "list": { "0": "CRM avec relances automatiques WhatsApp & SMS", "1": "Gestion de stock temps réel + alertes rupture", "2": "Facturation et tableaux de bord (revenus, marges)", "3": "Suivi des équipes et de la performance" }
+        },
+        "2": {
+          "num": "03", "title": "Intégrations marocaines",
+          "list": { "0": "CMI — Paiement par carte et mobile", "1": "CNSS / AMO — Déclarations automatisées", "2": "ONSSA — Traçabilité phytosanitaire export", "3": "DGI — Facturation électronique conforme" }
+        }
+      },
+      "footnote": "Aucune de ces intégrations marocaines n'est disponible nativement chez Odoo, HubSpot ou les freelances."
+    },
+    "cases": {
+      "eyebrow": "Résultats réels",
+      "title": "150+ entreprises transformées. <accent>Voici les chiffres.</accent>",
+      "items": {
+        "0": { "sector": "Restaurant", "city": "Marrakech", "problem": "Invisible sur Google, 0 avis en ligne", "result": "+40% de clients le week-end", "detail": "3× plus d'avis Google en 3 mois" },
+        "1": { "sector": "Riad", "city": "Fès", "problem": "85% des réservations via Booking.com", "result": "200 000 DH/an économisés", "detail": "45% de réservations directes en 6 mois" },
+        "2": { "sector": "Clinique", "city": "Casablanca", "problem": "4-5 no-shows par jour", "result": "+25 000 DH/mois récupérés", "detail": "−60% de rendez-vous non honorés" },
+        "3": { "sector": "Commerce", "city": "Tanger", "problem": "20 messages WhatsApp/jour non répondus", "result": "+35% de ventes", "detail": "100% des messages traités automatiquement" },
+        "4": { "sector": "Coopérative", "city": "Essaouira", "problem": "Litiges de paiement chaque saison", "result": "−60% de litiges entre membres", "detail": "0 rejet export depuis implémentation" },
+        "5": { "sector": "Immobilier", "city": "Casablanca", "problem": "40-60% des leads perdus sans relance", "result": "Taux de conversion triplé", "detail": "Réponse en < 5 min vs 48h avant" }
+      }
+    },
+    "compare": {
+      "eyebrow": "Pourquoi Tadnun",
+      "title": "Comparez. <accent>La différence est claire.</accent>",
+      "colOdoo": "Odoo / ERP",
+      "colAgency": "Agence",
+      "colFreelance": "Freelance",
+      "vsOdoo": "vs Odoo",
+      "vsAgency": "vs Agence",
+      "vsFreelance": "vs Freelance",
+      "rows": {
+        "target":       { "label": "Cible", "tadnun": "PME marocaines", "odoo": "Entreprises 50-500", "agency": "Variable", "freelance": "Variable" },
+        "darija":       { "label": "Interface darija", "tadnun": "Oui + saisie vocale", "odoo": "Non", "agency": "Non", "freelance": "Non" },
+        "integrations": { "label": "CMI, CNSS, ONSSA", "tadnun": "Natif, inclus", "odoo": "5-15K DH de dev", "agency": "Rarement", "freelance": "Non" },
+        "training":     { "label": "Formation sur site", "tadnun": "Incluse", "odoo": "Payante", "agency": "PDF ou rien", "freelance": "Non" },
+        "pricing":      { "label": "Tarification", "tadnun": "En MAD, tout compris", "odoo": "EUR/utilisateur/mois", "agency": "15-80K DH/projet", "freelance": "5-30K DH/projet" },
+        "support":      { "label": "Support WhatsApp", "tadnun": "Dédié, < 1h", "odoo": "Via tiers", "agency": "Email seulement", "freelance": "Non garanti" },
+        "offline":      { "label": "Mode hors-ligne", "tadnun": "Oui", "odoo": "Limité", "agency": "Non", "freelance": "Non" },
+        "ownership":    { "label": "Propriété du code", "tadnun": "100% à vous", "odoo": "Licence Odoo", "agency": "Négociable", "freelance": "Négociable" }
+      }
+    },
+    "process": {
+      "eyebrow": "Comment ça marche",
+      "title": "3 étapes. <accent>Zéro jargon.</accent>",
+      "items": {
+        "0": { "num": "01", "title": "On écoute", "body": "Appel découverte gratuit de 15 minutes. On comprend votre métier, vos blocages et vos objectifs avant d'écrire une seule ligne de code." },
+        "1": { "num": "02", "title": "On construit", "body": "Proposition sur mesure sous 48h avec périmètre, planning et prix exact. Développement itératif avec votre retour à chaque étape." },
+        "2": { "num": "03", "title": "On accompagne", "body": "Formation sur site en darija et français. Support WhatsApp dédié (réponse moyenne : 23 min). Vos outils évoluent avec votre activité." }
+      }
+    },
+    "pricing": {
+      "eyebrow": "Tarification",
+      "title": "Transparent. <accent>En dirhams.</accent> Sans surprise.",
+      "subtitle": "On adapte nos solutions et nos tarifs à votre réalité. Pas de licence par utilisateur, pas de frais en euros.",
+      "items": {
+        "0": { "title": "Prix exact sous 48h", "body": "Pas de devis à rallonge. Après l'appel découverte, vous recevez une proposition claire avec périmètre, planning et prix — en dirhams." },
+        "1": { "title": "Pas de frais cachés", "body": "Le prix convenu est le prix que vous payez. Facture conforme DGI à chaque paiement. Virement bancaire ou carte CMI." },
+        "2": { "title": "Sans engagement", "body": "Arrêtez quand vous voulez. Vos données vous appartiennent et on vous les exporte en format standard. Le code est à vous." }
+      }
+    },
+    "finalCta": {
+      "eyebrow": "Prochaine étape",
+      "title": "Un message WhatsApp<br></br><accent>et c'est parti.</accent>",
+      "subtitle": "Pas de commercial, pas de formulaire à 15 champs. Juste une vraie conversation sur votre activité. On répond en moins d'une heure.",
+      "cta": "Discuter sur WhatsApp",
+      "whatsappPrefill": "Bonjour, je souhaite discuter de la digitalisation de mon activité.",
+      "bar1": "8 secteurs",
+      "bar2": "14 villes",
+      "bar3": "3 langues",
+      "bar4": "150+ entreprises",
+      "bar5": "Fabriqué au Maroc"
     }
   }
 }

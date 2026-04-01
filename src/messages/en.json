@@ -10,6 +10,8 @@
     "blog": "Blog",
     "skills": "Expertise",
     "cta": "Contact Us",
+    "tools": "Tools",
+    "offer": "Our Offer",
     "skipToContent": "Skip to content",
     "ariaLabel": "Main navigation",
     "openMenu": "Open menu",
@@ -742,6 +744,115 @@
       "title": "Estimate your savings in 30 seconds",
       "description": "Pick your sector, check what you still do by hand, and see how much you can recover every month.",
       "cta": "Launch the simulator"
+    }
+  },
+  "offre": {
+    "hero": {
+      "eyebrow": "Digitalization offer",
+      "title": "Your business loses money <accent>every single day</accent> without digital tools.",
+      "subtitle": "We build the tools that save you time, win you clients and recover lost revenue — tailored to the Moroccan market, your sector, your team.",
+      "cta": "Chat on WhatsApp",
+      "responseTime": "Response in under one hour",
+      "whatsappPrefill": "Hi, I'd like to discuss digitalizing my business.",
+      "trust1": "150+ businesses",
+      "trust2": "8 sectors",
+      "trust3": "14 cities",
+      "trust4": "No commitment"
+    },
+    "pain": {
+      "eyebrow": "The cost of inaction",
+      "title": "Every month without digital tools costs you <accent>tens of thousands of dirhams.</accent>",
+      "items": {
+        "0": { "stat": "120,000", "unit": "MAD/mo", "desc": "lost to unanswered WhatsApp messages", "detail": "20 ignored messages/day × 200 MAD avg. basket" },
+        "1": { "stat": "330,000", "unit": "MAD/yr", "desc": "sent in platform commissions", "detail": "Booking.com, Glovo, Jumia Food take 15-20%" },
+        "2": { "stat": "40,000", "unit": "MAD/mo", "desc": "in missed appointments", "detail": "4 to 5 patients per day don't show up" },
+        "3": { "stat": "400,000", "unit": "MAD", "desc": "lost on a single traceability failure", "detail": "One export batch rejected at the EU border" }
+      },
+      "stat": "93% of Moroccan businesses have zero digital presence.",
+      "punchline": "Your competitors are moving. Are you?"
+    },
+    "pillars": {
+      "eyebrow": "What we build",
+      "title": "Custom tools <accent>built for you</accent>, not generic software.",
+      "subtitle": "We don't sell technology. We solve real problems with tools built for the Moroccan market.",
+      "items": {
+        "0": {
+          "num": "01", "title": "Digital presence",
+          "list": { "0": "Optimized Google listing with review management", "1": "Professional website with online booking", "2": "WhatsApp catalog with auto-replies", "3": "Connected social media profiles" }
+        },
+        "1": {
+          "num": "02", "title": "Internal operations",
+          "list": { "0": "CRM with automatic WhatsApp & SMS follow-ups", "1": "Real-time stock management + stockout alerts", "2": "Invoicing and dashboards (revenue, margins)", "3": "Team tracking and performance monitoring" }
+        },
+        "2": {
+          "num": "03", "title": "Moroccan integrations",
+          "list": { "0": "CMI — Card and mobile payments", "1": "CNSS / AMO — Automated declarations", "2": "ONSSA — Phytosanitary traceability for export", "3": "DGI — Compliant electronic invoicing" }
+        }
+      },
+      "footnote": "None of these Moroccan integrations are natively available in Odoo, HubSpot or from freelancers."
+    },
+    "cases": {
+      "eyebrow": "Real results",
+      "title": "150+ businesses transformed. <accent>Here are the numbers.</accent>",
+      "items": {
+        "0": { "sector": "Restaurant", "city": "Marrakech", "problem": "Invisible on Google, 0 reviews", "result": "+40% weekend customers", "detail": "3× more Google reviews in 3 months" },
+        "1": { "sector": "Riad", "city": "Fes", "problem": "85% of bookings via Booking.com", "result": "200,000 MAD/yr saved", "detail": "45% direct bookings in 6 months" },
+        "2": { "sector": "Clinic", "city": "Casablanca", "problem": "4-5 no-shows per day", "result": "+25,000 MAD/mo recovered", "detail": "−60% missed appointments" },
+        "3": { "sector": "Retail", "city": "Tangier", "problem": "20 unanswered WhatsApp/day", "result": "+35% in sales", "detail": "100% of messages handled automatically" },
+        "4": { "sector": "Cooperative", "city": "Essaouira", "problem": "Payment disputes every season", "result": "−60% member disputes", "detail": "0 export rejections since launch" },
+        "5": { "sector": "Real Estate", "city": "Casablanca", "problem": "40-60% of leads lost without follow-up", "result": "Conversion rate tripled", "detail": "Response in < 5 min vs 48h before" }
+      }
+    },
+    "compare": {
+      "eyebrow": "Why Tadnun",
+      "title": "Compare. <accent>The difference is clear.</accent>",
+      "colOdoo": "Odoo / ERP",
+      "colAgency": "Agency",
+      "colFreelance": "Freelance",
+      "vsOdoo": "vs Odoo",
+      "vsAgency": "vs Agency",
+      "vsFreelance": "vs Freelance",
+      "rows": {
+        "target":       { "label": "Target", "tadnun": "Moroccan SMEs", "odoo": "50-500 employee companies", "agency": "Variable", "freelance": "Variable" },
+        "darija":       { "label": "Darija interface", "tadnun": "Yes + voice input", "odoo": "No", "agency": "No", "freelance": "No" },
+        "integrations": { "label": "CMI, CNSS, ONSSA", "tadnun": "Native, included", "odoo": "5-15K MAD custom dev", "agency": "Rarely", "freelance": "No" },
+        "training":     { "label": "On-site training", "tadnun": "Included", "odoo": "Paid", "agency": "PDF or nothing", "freelance": "No" },
+        "pricing":      { "label": "Pricing", "tadnun": "In MAD, all-inclusive", "odoo": "EUR/user/month", "agency": "15-80K MAD/project", "freelance": "5-30K MAD/project" },
+        "support":      { "label": "WhatsApp support", "tadnun": "Dedicated, < 1h", "odoo": "Via third party", "agency": "Email only", "freelance": "Not guaranteed" },
+        "offline":      { "label": "Offline mode", "tadnun": "Yes", "odoo": "Limited", "agency": "No", "freelance": "No" },
+        "ownership":    { "label": "Code ownership", "tadnun": "100% yours", "odoo": "Odoo license", "agency": "Negotiable", "freelance": "Negotiable" }
+      }
+    },
+    "process": {
+      "eyebrow": "How it works",
+      "title": "3 steps. <accent>Zero jargon.</accent>",
+      "items": {
+        "0": { "num": "01", "title": "We listen", "body": "Free 15-minute discovery call. We understand your business, your blockers and your goals before writing a single line of code." },
+        "1": { "num": "02", "title": "We build", "body": "Custom proposal within 48h with scope, timeline and exact price. Iterative development with your feedback at every step." },
+        "2": { "num": "03", "title": "We support", "body": "On-site training in Darija and French. Dedicated WhatsApp support (avg. response: 23 min). Your tools evolve with your business." }
+      }
+    },
+    "pricing": {
+      "eyebrow": "Pricing",
+      "title": "Transparent. <accent>In dirhams.</accent> No surprises.",
+      "subtitle": "We adapt our solutions and pricing to your reality. No per-user licenses, no fees in euros.",
+      "items": {
+        "0": { "title": "Exact price in 48h", "body": "No drawn-out quotes. After the discovery call, you receive a clear proposal with scope, timeline and price — in dirhams." },
+        "1": { "title": "No hidden fees", "body": "The agreed price is the price you pay. DGI-compliant invoice with every payment. Bank transfer or CMI card." },
+        "2": { "title": "No lock-in", "body": "Cancel anytime. Your data belongs to you and we export it in standard format. The code is yours." }
+      }
+    },
+    "finalCta": {
+      "eyebrow": "Next step",
+      "title": "One WhatsApp message<br></br><accent>and we're off.</accent>",
+      "subtitle": "No salespeople, no 15-field forms. Just a real conversation about your business. We respond in under one hour.",
+      "cta": "Chat on WhatsApp",
+      "whatsappPrefill": "Hi, I'd like to discuss digitalizing my business.",
+      "bar1": "8 sectors",
+      "bar2": "14 cities",
+      "bar3": "3 languages",
+      "bar4": "150+ businesses",
+      "bar5": "Made in Morocco"
     }
   }
 }

@@ -46,10 +46,12 @@ export function Footer() {
                 { href: `/${locale}/`, label: t("common.home") },
                 { href: `/${locale}/approach`, label: t("nav.approach") },
                 { href: `/${locale}/about`, label: t("nav.about") },
+                { href: `/${locale}/offre`, label: t("nav.offer") },
                 { href: `/${locale}/blog`, label: t("nav.blog") },
                 { href: `/${locale}/compare`, label: t("compare.navLabel") },
                 { href: `/${locale}/resources`, label: t("resources.navLabel") },
                 { href: `/${locale}/tools/quiz`, label: t("quiz.navLabel") },
+                { href: `/${locale}/calculator`, label: t("calculator.nav") },
                 { href: `/${locale}/contact`, label: t("nav.cta") },
               ].map((link) => (
                 <a
