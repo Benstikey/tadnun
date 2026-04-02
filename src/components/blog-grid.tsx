@@ -45,7 +45,7 @@ export function BlogGrid({ locale, posts, sectorNames, labels }: Props) {
                   : "border-border text-muted hover:border-foreground/30 hover:text-foreground"
               }`}
             >
-              {sectorNames[s] || s}
+              {sectorNames[s] || s.charAt(0).toUpperCase() + s.slice(1)}
             </button>
           ))}
         </div>

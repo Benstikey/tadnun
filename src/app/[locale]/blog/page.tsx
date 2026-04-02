@@ -40,15 +40,30 @@ export default async function BlogPage({
   const tBlog = await getTranslations({ locale, namespace: "blog" });
   const posts = await getBlogPosts(locale);
 
-  const sectorKeys = [
+  // Core sectors with i18n names
+  const coreSectors = [
     "agriculture", "restaurants", "tourism", "healthcare",
     "retail", "education", "realestate", "logistics",
   ];
-  const sectorNames: Record<string, string> = {
-    business: locale === "fr" ? "Business" : locale === "ar" ? "أعمال" : "Business",
+  // Extra sectors — display names for sectors not in the main i18n file
+  const extraSectorNames: Record<string, Record<string, string>> = {
+    business:  { fr: "Business",              en: "Business",              ar: "أعمال" },
+    wellness:  { fr: "Bien-être & Spa",       en: "Wellness & Spa",        ar: "الرفاهية والسبا" },
+    auto:      { fr: "Automobile",            en: "Auto Repair",           ar: "إصلاح السيارات" },
+    events:    { fr: "Événementiel",          en: "Events & Weddings",     ar: "المناسبات والأعراس" },
+    beauty:    { fr: "Beauté & Coiffure",     en: "Beauty & Hair",         ar: "الجمال والحلاقة" },
+    fitness:   { fr: "Fitness & Sport",       en: "Fitness & Gyms",        ar: "اللياقة والرياضة" },
+    carrental: { fr: "Location de voitures",  en: "Car Rental",            ar: "كراء السيارات" },
+    photography: { fr: "Photographie",        en: "Photography",           ar: "التصوير" },
+    veterinary: { fr: "Vétérinaire",          en: "Veterinary",            ar: "الطب البيطري" },
+    printing:  { fr: "Imprimerie",            en: "Printing",              ar: "المطبعة" },
   };
-  for (const key of sectorKeys) {
+  const sectorNames: Record<string, string> = {};
+  for (const key of coreSectors) {
     sectorNames[key] = t(`sectors.items.${key}.name`);
+  }
+  for (const [key, names] of Object.entries(extraSectorNames)) {
+    sectorNames[key] = names[locale] || names.en;
   }
 
   const featured = posts[0];
