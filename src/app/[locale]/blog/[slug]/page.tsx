@@ -148,6 +148,8 @@ export default async function BlogPostPage({
         ctaKey="ctaBand.default.cta"
         descKey="ctaBand.default.desc"
         sectorKey={post.sector}
+        secondaryKey="ctaBand.default.secondary"
+        secondaryHref={`/${locale}/offre`}
       />
     </PageShell>
   );

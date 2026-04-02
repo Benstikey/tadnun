@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { PageShell } from "@/components/page-shell";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { CtaBand } from "@/components/cta-band";
 import { getComparePages } from "@/lib/compare";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
@@ -134,6 +135,16 @@ export default async function ComparePage({
           </>
         )}
       </section>
+
+      <div className="section-divide" />
+
+      <CtaBand
+        titleKey="ctaBand.default.title"
+        ctaKey="ctaBand.default.cta"
+        descKey="ctaBand.default.desc"
+        secondaryKey="ctaBand.default.secondary"
+        secondaryHref={`/${locale}/offre`}
+      />
     </PageShell>
   );
 }

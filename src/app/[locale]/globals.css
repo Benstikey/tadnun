@@ -319,3 +319,8 @@ h3 { font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem); }
   from { width: 0%; }
   to   { width: 100%; }
 }
+
+@keyframes borderShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}

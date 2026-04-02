@@ -253,12 +253,23 @@ export default async function SectorsListPage({ params }: { params: Promise<{ lo
             <p className="mt-4 text-background/55 max-w-md mx-auto text-base leading-relaxed">
               {t("sectorsPage.ctaBody")}
             </p>
-            <a
-              href={`/${locale}/contact`}
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-accent text-white px-10 py-4 text-[15px] font-semibold hover:bg-accent-dark active:scale-[0.97] transition-all hover:-translate-y-px shadow-lg shadow-accent/20"
-            >
-              {t("sectorsPage.ctaButton")}
-            </a>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href={`/${locale}/offre`}
+                className="inline-flex items-center justify-center rounded-full bg-accent text-white px-10 py-4 text-[15px] font-semibold hover:bg-accent-dark active:scale-[0.97] transition-all hover:-translate-y-px shadow-lg shadow-accent/20"
+              >
+                {t("sectorsPage.ctaButton")}
+              </a>
+              <a
+                href={`/${locale}/contact`}
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-background/70 border border-background/20 rounded-full px-5 py-2.5 hover:border-background/40 hover:text-background transition-all"
+              >
+                {t("common.letsTalk")}
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none" className="rtl:-scale-x-100 transition-transform group-hover:translate-x-0.5">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+            </div>
           </ScrollReveal>
         </div>
       </section>

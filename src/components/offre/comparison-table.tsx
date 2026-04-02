@@ -88,24 +88,24 @@ export function ComparisonTable() {
               </div>
             ))}
 
-            {/* Typical cost row */}
-            <div className="flex items-stretch mt-2">
-              <div className="flex-1 min-w-0 flex items-center py-5 px-3 bg-surface/60 rounded-s-xl border-t-2 border-border">
+            {/* Typical cost row — same structure as data rows */}
+            <div className="flex items-stretch">
+              <div className="flex-1 min-w-0 flex items-center py-4 px-3 bg-surface/40 rounded-s-xl rounded-ee-xl">
                 <div className="w-[148px] shrink-0">
                   <p className="text-[14px] font-semibold text-foreground">
                     {locale === "fr" ? "Coût typique" : locale === "ar" ? "التكلفة المعتادة" : "Typical cost"}
                   </p>
                 </div>
                 <div className="flex-1 grid grid-cols-3 gap-4 pe-6">
-                  <p className="text-[15px] font-bold text-red-500 leading-snug">50–150K <span className="text-[11px] font-normal">MAD/an</span></p>
-                  <p className="text-[15px] font-bold text-red-500 leading-snug">15–80K <span className="text-[11px] font-normal">MAD</span></p>
-                  <p className="text-[15px] font-bold text-red-500 leading-snug">5–30K <span className="text-[11px] font-normal">MAD</span></p>
+                  <p className="text-[13px] font-bold text-red-500 leading-snug">50–150K <span className="text-[11px] font-normal">MAD/an</span></p>
+                  <p className="text-[13px] font-bold text-red-500 leading-snug">15–80K <span className="text-[11px] font-normal">MAD</span></p>
+                  <p className="text-[13px] font-bold text-red-500 leading-snug">5–30K <span className="text-[11px] font-normal">MAD</span></p>
                 </div>
               </div>
-              <div className="w-[270px] shrink-0 flex items-center gap-3 px-6 py-5 border-t border-white/10">
-                <p className="text-[18px] font-bold text-emerald-400">
+              <div className="w-[270px] shrink-0 flex items-center gap-3 px-6 py-4 border-t border-white/10">
+                <span className="text-[18px] font-bold text-emerald-400">
                   à partir de 5K <span className="text-[12px] font-normal text-white/50">MAD</span>
-                </p>
+                </span>
               </div>
             </div>
           </div>

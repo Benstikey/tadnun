@@ -143,9 +143,31 @@ export default async function AboutPage({
                 eyebrow={t("aboutPage.differenceEyebrow")}
                 title={t("aboutPage.differenceTitle")}
               />
-              <p className="mt-6 text-muted text-[15px] leading-relaxed">
+              <p className="mt-2 text-accent text-[15px] font-medium italic">
+                {t("aboutPage.differenceTagline")}
+              </p>
+              <p className="mt-5 text-muted text-[15px] leading-relaxed">
                 {t("aboutPage.differenceBody")}
               </p>
+              <div className="mt-8 grid gap-5 sm:grid-cols-2">
+                {([1, 2, 3, 4] as const).map((i) => (
+                  <div key={i} className="flex gap-3">
+                    <div className="shrink-0 mt-0.5 w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center">
+                      <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8.5l3.5 3.5L13 5" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-[14px] font-semibold text-foreground leading-snug">
+                        {t(`aboutPage.differenceBullet${i}Title`)}
+                      </p>
+                      <p className="text-[13px] text-muted leading-relaxed mt-0.5">
+                        {t(`aboutPage.differenceBullet${i}Body`)}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </ScrollReveal>
 

@@ -11,6 +11,7 @@ import { HomeFaqJsonLd } from "@/components/schema/home-faq-json-ld";
 import { TrackedLink } from "@/components/tracked-link";
 import { sectorDetails } from "@/data/sector-details";
 import { CalculatorPromoVisual } from "@/components/calculator-promo-visual";
+import { OfferPitch } from "@/components/offer-pitch";
 
 const sectorKeys = [
   "agriculture", "restaurants", "tourism", "healthcare",
@@ -101,63 +102,7 @@ export default function Home() {
       </section>
 
       {/* ─── Offer pitch ─── */}
-      <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-        <ScrollReveal>
-          <div className="relative rounded-2xl overflow-hidden text-center">
-            {/* Background gradient */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background: "linear-gradient(160deg, #C4482A 0%, #a83520 40%, #8B2A15 100%)",
-              }}
-            />
-            {/* Subtle grain texture */}
-            <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")" }} />
-
-            <div className="relative px-6 py-16 sm:px-12 sm:py-20 lg:px-20 lg:py-24">
-              {/* Tag */}
-              <span className="inline-block text-[11px] font-mono tracking-[0.2em] uppercase text-white/50 border border-white/15 rounded-full px-4 py-1.5 mb-8">
-                {t("offerPitch.tag")}
-              </span>
-
-              {/* Headline */}
-              <h2 className="font-serif italic text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white leading-[1.1] max-w-2xl mx-auto">
-                {t("offerPitch.title")}
-              </h2>
-
-              {/* Cost tickers — the money you're losing */}
-              <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-                {(["line1", "line2", "line3"] as const).map((key) => (
-                  <div key={key} className="rounded-xl bg-white/[0.08] backdrop-blur-sm border border-white/10 px-6 py-4 min-w-[200px]">
-                    <p className="text-xl sm:text-2xl font-serif italic text-white tracking-tight">
-                      {t(`offerPitch.${key}`)}
-                    </p>
-                    <p className="text-[12px] text-white/40 mt-1">
-                      {t(`offerPitch.${key}sub`)}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Bottom line */}
-              <p className="mt-10 text-white/60 text-base max-w-lg mx-auto leading-relaxed">
-                {t("offerPitch.bottom")}
-              </p>
-
-              {/* CTA */}
-              <a
-                href={`/${locale}/offre`}
-                className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-white text-foreground px-8 py-3.5 text-sm font-semibold hover:bg-white/90 active:scale-[0.97] transition-all hover:-translate-y-px shadow-lg shadow-black/10"
-              >
-                {t("offerPitch.cta")}
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="rtl:-scale-x-100">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </ScrollReveal>
-      </section>
+      <OfferPitch />
 
       {/* ─── Sectors ─── */}
       <section id="sectors" aria-labelledby="sectors-heading" className="mx-auto max-w-6xl px-6 pt-24 pb-24">
@@ -421,7 +366,7 @@ export default function Home() {
         ctaKey="ctaBand.default.cta"
         descKey="ctaBand.default.desc"
         secondaryKey="ctaBand.default.secondary"
-        secondaryHref={`/${locale}/sectors`}
+        secondaryHref={`/${locale}/offre`}
       />
     </PageShell>
   );

@@ -330,7 +330,8 @@
       "cta": "Book my free consultation",
       "desc": "15 minutes to understand your needs. No commitment, no jargon. 150+ businesses have already taken the first step.",
       "seeSectors": "See sectors",
-      "secondary": "See sectors"
+      "secondary": "See our offer",
+      "secondarySectors": "See sectors"
     },
     "about": {
       "title": "We're not just another agency. We're your digital team.",
@@ -367,7 +368,16 @@
     "realityCommissionsValue": "300K MAD",
     "differenceEyebrow": "OUR DIFFERENCE",
     "differenceTitle": "Why Tadnun",
-    "differenceBody": "We don't sell technology. We solve real problems with tools adapted to the Moroccan market — Darija interfaces, CMI payment, WhatsApp support, accessible pricing.",
+    "differenceTagline": "Built here. For here.",
+    "differenceBody": "Most digital tools weren't designed for how Moroccan businesses actually work. They charge in euros, support in English, and assume you have an IT team. Tadnun is the opposite — tools that speak Darija, accept CMI payments, connect to CNSS and ONSSA, and come with real human support on WhatsApp.",
+    "differenceBullet1Title": "WhatsApp-first support",
+    "differenceBullet1Body": "Average response: 23 minutes. Not a chatbot. A real person who knows your project.",
+    "differenceBullet2Title": "Priced in dirhams",
+    "differenceBullet2Body": "No per-seat licenses in euros. One clear price, one DGI-compliant invoice.",
+    "differenceBullet3Title": "On-site training",
+    "differenceBullet3Body": "We come to your team, in your language, at your pace. Not a PDF.",
+    "differenceBullet4Title": "Your code, your data",
+    "differenceBullet4Body": "Cancel anytime. Export everything. Zero lock-in.",
     "visionEyebrow": "VISION 2030",
     "visionTitle": "Tomorrow's digital Morocco",
     "visionBody": "In 2030, Morocco hosts the World Cup. Millions of visitors will search for businesses online. The 93% of businesses without a digital presence simply won't exist. We're here to make sure that doesn't happen.",

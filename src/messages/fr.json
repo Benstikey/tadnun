@@ -330,7 +330,8 @@
       "cta": "Réserver ma consultation gratuite",
       "desc": "15 minutes pour comprendre vos besoins. Sans engagement, sans jargon. Plus de 150 entreprises ont déjà franchi le pas.",
       "seeSectors": "Voir les secteurs",
-      "secondary": "Voir les secteurs"
+      "secondary": "Voir notre offre",
+      "secondarySectors": "Voir les secteurs"
     },
     "about": {
       "title": "On n'est pas une agence de plus. On est votre équipe digitale.",
@@ -367,7 +368,16 @@
     "realityCommissionsValue": "300K DH",
     "differenceEyebrow": "NOTRE DIFFÉRENCE",
     "differenceTitle": "Pourquoi Tadnun",
-    "differenceBody": "On ne vend pas de la technologie. On résout des problèmes concrets avec des outils adaptés au marché marocain — interfaces en darija, paiement CMI, support WhatsApp, prix accessibles.",
+    "differenceTagline": "Conçu ici. Pour ici.",
+    "differenceBody": "La plupart des outils digitaux n'ont pas été conçus pour la réalité des entreprises marocaines. Ils facturent en euros, supportent en anglais, et supposent que vous avez une équipe IT. Tadnun, c'est l'inverse — des outils qui parlent darija, acceptent le paiement CMI, se connectent à la CNSS et l'ONSSA, et viennent avec un vrai support humain sur WhatsApp.",
+    "differenceBullet1Title": "Support WhatsApp-first",
+    "differenceBullet1Body": "Temps de réponse moyen : 23 minutes. Pas un chatbot. Une vraie personne qui connaît votre projet.",
+    "differenceBullet2Title": "Prix en dirhams",
+    "differenceBullet2Body": "Pas de licences par utilisateur en euros. Un prix clair, une facture conforme DGI.",
+    "differenceBullet3Title": "Formation sur site",
+    "differenceBullet3Body": "On vient chez vous, dans votre langue, à votre rythme. Pas un PDF.",
+    "differenceBullet4Title": "Votre code, vos données",
+    "differenceBullet4Body": "Résiliez quand vous voulez. Exportez tout. Zéro engagement.",
     "visionEyebrow": "VISION 2030",
     "visionTitle": "Le Maroc digital de demain",
     "visionBody": "En 2030, le Maroc accueille la Coupe du Monde. Des millions de visiteurs chercheront des entreprises en ligne. Les 93% d'entreprises sans présence digitale n'existeront tout simplement pas. On est là pour que ça n'arrive pas.",

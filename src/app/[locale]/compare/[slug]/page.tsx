@@ -113,6 +113,8 @@ export default async function CompareDetailPage({
         titleKey="ctaBand.default.title"
         ctaKey="ctaBand.default.cta"
         descKey="ctaBand.default.desc"
+        secondaryKey="ctaBand.default.secondary"
+        secondaryHref={`/${locale}/offre`}
       />
     </PageShell>
   );

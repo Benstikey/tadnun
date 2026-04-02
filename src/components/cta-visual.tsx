@@ -227,7 +227,7 @@ export function CtaVisual() {
       {badges.map((badge, i) => (
         <div
           key={badge.label}
-          className="absolute flex items-center gap-1.5 rounded-full bg-surface border border-border px-2.5 py-1 shadow-sm text-[10px] text-foreground/60 font-medium pointer-events-none"
+          className="absolute flex items-center gap-1.5 rounded-full bg-surface border border-border px-2.5 py-1 shadow-sm text-[10px] text-foreground/60 font-medium pointer-events-none whitespace-nowrap"
           style={{
             left: `${badge.x}%`,
             top: `${badge.y}%`,

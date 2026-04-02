@@ -4,6 +4,7 @@ import { PageShell } from "@/components/page-shell";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { BlogIllustration } from "@/components/blog-illustration";
 import { BlogGrid } from "@/components/blog-grid";
+import { CtaBand } from "@/components/cta-band";
 import { getBlogPosts } from "@/lib/blog";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
@@ -164,6 +165,16 @@ export default async function BlogPage({
           </>
         )}
       </section>
+
+      <div className="section-divide" />
+
+      <CtaBand
+        titleKey="ctaBand.default.title"
+        ctaKey="ctaBand.default.cta"
+        descKey="ctaBand.default.desc"
+        secondaryKey="ctaBand.default.secondary"
+        secondaryHref={`/${locale}/offre`}
+      />
     </PageShell>
   );
 }
