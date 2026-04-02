@@ -1,7 +1,7 @@
 ---
 title: "Google Maps pour restaurants : le guide complet au Maroc"
 description: "70% des touristes et jeunes Marocains cherchent 'restaurant a cote' sur Google avant de sortir. Voici comment optimiser votre fiche Google Maps et attirer plus de clients."
-date: "2026-03-28"
+date: "2026-04-01"
 locale: fr
 sector: restaurants
 ---

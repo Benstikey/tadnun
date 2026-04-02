@@ -47,6 +47,18 @@
     },
     "location": "Au service des entreprises marocaines"
   },
+  "offerPitch": {
+    "tag": "Notre offre",
+    "title": "Arrêtez de perdre de l'argent. Commencez à construire.",
+    "line1": "120 000 MAD/mois",
+    "line1sub": "perdus en messages sans réponse",
+    "line2": "330 000 MAD/an",
+    "line2sub": "versés en commissions aux plateformes",
+    "line3": "40 000 MAD/mois",
+    "line3sub": "en rendez-vous manqués",
+    "bottom": "On règle ça. Outils sur mesure, intégrations marocaines, support réel.",
+    "cta": "Voir comment ça marche"
+  },
   "sectors": {
     "eyebrow": "01",
     "title": "On connaît vos défis",

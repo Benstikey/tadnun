@@ -47,6 +47,18 @@
     },
     "location": "Serving businesses across Morocco"
   },
+  "offerPitch": {
+    "tag": "Our offer",
+    "title": "Stop losing money. Start building.",
+    "line1": "120,000 MAD/month",
+    "line1sub": "lost in unanswered messages",
+    "line2": "330,000 MAD/year",
+    "line2sub": "given away in platform commissions",
+    "line3": "40,000 MAD/month",
+    "line3sub": "in missed appointments",
+    "bottom": "We fix this. Custom tools, Moroccan integrations, real support.",
+    "cta": "See how it works"
+  },
   "sectors": {
     "eyebrow": "01",
     "title": "We know your challenges",
