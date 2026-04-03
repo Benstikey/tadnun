@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   title: "Offre Digitalisation — Tadnun",
   description:
     "Outils digitaux sur mesure pour les entreprises marocaines. Presence en ligne, operations, integrations CMI/CNSS/ONSSA. 150+ entreprises accompagnees.",
-  robots: { index: false, follow: false },
 };
 
 export default function OffrePage() {
