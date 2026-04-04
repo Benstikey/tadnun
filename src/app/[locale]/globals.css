@@ -324,3 +324,16 @@ h3 { font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem); }
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
+
+.animate-ticker {
+  display: inline-flex;
+  animation: tickerScroll linear infinite;
+}
+.animate-ticker-reverse {
+  display: inline-flex;
+  animation: tickerScroll linear infinite reverse;
+}
+@keyframes tickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

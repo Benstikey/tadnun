@@ -57,7 +57,14 @@
     "line3": "40 000 MAD/mois",
     "line3sub": "en rendez-vous manqués",
     "bottom": "On règle ça. Outils sur mesure, intégrations marocaines, support réel.",
-    "cta": "Voir comment ça marche"
+    "cta": "Voir comment ça marche",
+    "win1": "+40% de clients",
+    "win1sub": "grâce à Google Maps",
+    "win2": "200K MAD récupérés",
+    "win2sub": "en commissions économisées",
+    "win3": "−60% de no-shows",
+    "win3sub": "avec les rappels automatiques",
+    "withTadnun": "Avec Tadnun"
   },
   "sectors": {
     "eyebrow": "01",
