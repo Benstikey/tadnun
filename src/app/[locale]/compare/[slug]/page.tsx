@@ -25,7 +25,12 @@ export async function generateMetadata({
   return {
     title: `${page.title} — Tadnun`,
     description: page.description,
-    alternates: { canonical: pageUrl },
+    alternates: {
+      canonical: pageUrl,
+      languages: {
+        [locale]: pageUrl,
+      },
+    },
   };
 }
 
