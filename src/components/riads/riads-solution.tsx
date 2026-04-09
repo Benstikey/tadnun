@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { RiadsCtaButton } from "./riads-cta-button";
 
 export function RiadsSolution() {
   const t = useTranslations("riads.solution");
@@ -40,6 +41,11 @@ export function RiadsSolution() {
           </ScrollReveal>
         ))}
       </div>
+      <ScrollReveal delay={600}>
+        <div className="mt-12 flex justify-center">
+          <RiadsCtaButton label={t("cta")} />
+        </div>
+      </ScrollReveal>
     </section>
   );
 }

@@ -1,8 +1,9 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { ScrollReveal } from "@/components/scroll-reveal";
 
 export function RiadsMath() {
   const t = useTranslations("riads.math");
+  const locale = useLocale();
 
   const stats = [
     { value: t("stat1Value"), label: t("stat1Label") },
@@ -52,6 +53,19 @@ export function RiadsMath() {
               — {t("quoteAuthor")}
             </cite>
           </blockquote>
+        </ScrollReveal>
+        <ScrollReveal delay={700}>
+          <div className="mt-10 flex justify-center">
+            <a
+              href={`/${locale}/contact?sector=tourism`}
+              className="group inline-flex items-center gap-2 rounded-full bg-accent text-white px-8 py-3.5 text-[14px] font-semibold shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/35 active:scale-[0.97] transition-all duration-200 hover:-translate-y-0.5"
+            >
+              {t("cta")}
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="rtl:-scale-x-100 transition-transform duration-200 group-hover:translate-x-0.5">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+          </div>
         </ScrollReveal>
       </div>
     </section>

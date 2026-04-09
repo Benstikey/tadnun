@@ -928,7 +928,8 @@
       "stat3Value": "2 mois",
       "stat3Label": "De salaire employé envoyés chaque année à Amsterdam",
       "quote": "Je payais deux salaires à Booking.com chaque année. L'équivalent d'un membre de mon équipe, pour rien.",
-      "quoteAuthor": "Hassan, propriétaire, Riad Dar Al Madina, Fès"
+      "quoteAuthor": "Hassan, propriétaire, Riad Dar Al Madina, Fès",
+      "cta": "Calculez vos pertes en 2 min"
     },
     "solution": {
       "eyebrow": "CE QU'ON CONSTRUIT POUR VOUS",
@@ -945,7 +946,8 @@
       "pillar3Body": "Réponse instantanée aux demandes, catalogue de chambres, confirmations, rappels avant arrivée. En darija, français ou anglais.",
       "pillar4Num": "04",
       "pillar4Title": "Dashboard propriétaire",
-      "pillar4Body": "Taux d'occupation en temps réel, revenus par canal, avis Google Maps, commissions économisées. Un seul écran, votre business en entier."
+      "pillar4Body": "Taux d'occupation en temps réel, revenus par canal, avis Google Maps, commissions économisées. Un seul écran, votre business en entier.",
+      "cta": "Parlons de votre riad"
     },
     "case": {
       "eyebrow": "LES CHIFFRES RÉELS",
@@ -967,7 +969,8 @@
       "afterLabel": "Après Tadnun",
       "result": "200 000 DH économisés la première année.",
       "resultAccent": "Rentabilisé en 2 mois.",
-      "quote": "Le plus dur c'était d'y croire. Une fois que j'ai vu la première semaine de réservations directes, j'ai su que c'était fini avec Booking."
+      "quote": "Le plus dur c'était d'y croire. Une fois que j'ai vu la première semaine de réservations directes, j'ai su que c'était fini avec Booking.",
+      "cta": "Je veux les mêmes résultats"
     },
     "objection": {
       "eyebrow": "LA VRAIE QUESTION",
@@ -991,7 +994,8 @@
       "step2Body": "Site de réservation, channel manager, WhatsApp automatisé, dashboard propriétaire. Livré en maquette d'abord, puis en live après votre validation.",
       "step3Num": "03",
       "step3Title": "Semaine 3 — On forme",
-      "step3Body": "Formation sur place en français et darija. Support WhatsApp dédié pendant 3 mois. Votre équipe devient autonome."
+      "step3Body": "Formation sur place en français et darija. Support WhatsApp dédié pendant 3 mois. Votre équipe devient autonome.",
+      "cta": "Démarrer la semaine 1"
     },
     "pricing": {
       "eyebrow": "LE PRIX",

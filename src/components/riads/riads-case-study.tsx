@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { RiadsCtaButton } from "./riads-cta-button";
 
 export function RiadsCaseStudy() {
   const t = useTranslations("riads.case");
@@ -90,6 +91,11 @@ export function RiadsCaseStudy() {
             &ldquo;{t("quote")}&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+      <ScrollReveal delay={500}>
+        <div className="mt-8 flex justify-center">
+          <RiadsCtaButton label={t("cta")} />
+        </div>
       </ScrollReveal>
     </section>
   );

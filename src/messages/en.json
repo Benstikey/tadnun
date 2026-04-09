@@ -928,7 +928,8 @@
       "stat3Value": "2 months",
       "stat3Label": "Of employee salary sent to Amsterdam every year",
       "quote": "I was paying two salaries to Booking.com every year. The equivalent of one team member, for nothing.",
-      "quoteAuthor": "Hassan, owner, Riad Dar Al Madina, Fez"
+      "quoteAuthor": "Hassan, owner, Riad Dar Al Madina, Fez",
+      "cta": "Calculate your losses in 2 min"
     },
     "solution": {
       "eyebrow": "WHAT WE BUILD FOR YOU",
@@ -945,7 +946,8 @@
       "pillar3Body": "Instant replies to inquiries, room catalog, confirmations, pre-arrival reminders. In Darija, French or English.",
       "pillar4Num": "04",
       "pillar4Title": "Owner dashboard",
-      "pillar4Body": "Real-time occupancy, revenue per channel, Google Maps reviews, commissions saved. One screen, your entire business."
+      "pillar4Body": "Real-time occupancy, revenue per channel, Google Maps reviews, commissions saved. One screen, your entire business.",
+      "cta": "Let's talk about your riad"
     },
     "case": {
       "eyebrow": "REAL NUMBERS",
@@ -967,7 +969,8 @@
       "afterLabel": "After Tadnun",
       "result": "200,000 MAD saved in the first year.",
       "resultAccent": "Paid back in 2 months.",
-      "quote": "The hardest part was believing it. Once I saw the first week of direct bookings, I knew Booking was done for me."
+      "quote": "The hardest part was believing it. Once I saw the first week of direct bookings, I knew Booking was done for me.",
+      "cta": "I want the same results"
     },
     "objection": {
       "eyebrow": "THE REAL QUESTION",
@@ -991,7 +994,8 @@
       "step2Body": "Booking website, channel manager, automated WhatsApp, owner dashboard. Delivered as mockup first, then live after your approval.",
       "step3Num": "03",
       "step3Title": "Week 3 — We train",
-      "step3Body": "On-site training in French and Darija. Dedicated WhatsApp support for 3 months. Your team becomes autonomous."
+      "step3Body": "On-site training in French and Darija. Dedicated WhatsApp support for 3 months. Your team becomes autonomous.",
+      "cta": "Start week 1"
     },
     "pricing": {
       "eyebrow": "THE PRICE",
