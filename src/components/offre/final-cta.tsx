@@ -13,7 +13,7 @@ export function FinalCta() {
     <section className="bg-foreground text-background py-20 sm:py-28">
       <div className="mx-auto max-w-3xl px-6 text-center">
         <ScrollReveal>
-          <p className="text-accent text-[11px] font-mono tracking-[0.25em] uppercase mb-4">
+          <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-4">
             {t("eyebrow")}
           </p>
           <h2 className="font-serif italic text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.1]">

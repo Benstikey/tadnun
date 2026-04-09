@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!--
+    Tadnun Logo — Zellige Assembly
+    4 tiles converging but not yet complete — one tile slightly offset/rotated
+    to suggest "in progress" / digital transformation happening.
+    The gap between tiles represents the work Tadnun does: connecting the pieces.
+  -->
+
+  <!-- Top tile — fully placed -->
+  <path d="M40 8L28 24L40 40L52 24Z" fill="currentColor" opacity="0.12"/>
+  <path d="M40 8L28 24L40 40L52 24Z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+
+  <!-- Right tile — fully placed -->
+  <path d="M52 24L56 40L40 40L52 56Z" fill="currentColor" opacity="0.07"/>
+  <path d="M56 40L72 40L56 56L40 40Z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+
+  <!-- Bottom tile — fully placed -->
+  <path d="M40 40L52 56L40 72L28 56Z" fill="currentColor" opacity="0.04"/>
+  <path d="M40 40L52 56L40 72L28 56Z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+
+  <!-- Left tile — slightly offset (the piece being placed / transformation in progress) -->
+  <g transform="translate(-1.5, -0.5) rotate(-3, 24, 40)">
+    <path d="M40 40L24 56L8 40L24 24Z" fill="currentColor" opacity="0.08"/>
+    <path d="M40 40L24 56L8 40L24 24Z" stroke="currentColor" stroke-width="1.4" stroke-dasharray="0" fill="none"/>
+  </g>
+
+  <!-- Center glow point — where tiles meet -->
+  <circle cx="40" cy="40" r="2.5" fill="currentColor"/>
+
+  <!-- Subtle inner star pattern at center (zellige detail) -->
+  <path d="M40 35L42 38L45 38L42.5 40.5L43.5 44L40 42L36.5 44L37.5 40.5L35 38L38 38Z" fill="currentColor" opacity="0.2"/>
+</svg>

@@ -30,7 +30,6 @@ export async function resendEmail(emailId: number) {
     to: [prospect.email],
     subject: email.subject,
     html: email.body_html,
-    replyTo: "wassimbenchekroun0@gmail.com",
   });
 
   if (result.data?.id) {

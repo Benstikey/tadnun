@@ -1,8 +1,8 @@
 // ============================================================
 // Outbound GTM Automation — Email Verifier
 // ============================================================
-// Uses Abstract API for real SMTP mailbox verification,
-// with local checks as pre-filter to save API quota.
+// Uses Abstract Email Reputation API for real SMTP verification,
+// with local checks as pre-filter to save API quota (100/month).
 
 import dns from "dns/promises";
 import { ENV } from "./config";
@@ -27,7 +27,7 @@ const SUSPICIOUS_GMAIL = [
 export interface VerifyResult {
   valid: boolean;
   reason?: string;
-  score?: number; // 0-100 deliverability from Abstract API
+  score?: number; // 0-100 deliverability
 }
 
 /**
@@ -62,53 +62,69 @@ async function checkMx(domain: string): Promise<boolean> {
 }
 
 /**
- * Abstract API verification (real SMTP check, catch-all detection).
- * Free tier: 100/month. Only call for leads that pass local + MX checks.
+ * Abstract Email Reputation API (real SMTP check from their servers).
+ * Free tier: 100/month.
  */
-async function abstractApiCheck(email: string): Promise<VerifyResult> {
-  if (!ENV.ABSTRACT_API_KEY) {
-    // No API key — fall back to MX-only
+async function abstractReputationCheck(email: string): Promise<VerifyResult> {
+  const apiKey = ENV.ABSTRACT_API_KEY;
+  if (!apiKey) {
     return { valid: true, reason: "api key not set, mx valid" };
   }
 
   try {
-    const url = `https://emailvalidation.abstractapi.com/v1/?api_key=${ENV.ABSTRACT_API_KEY}&email=${encodeURIComponent(email)}`;
+    const url = `https://emailreputation.abstractapi.com/v1/?api_key=${apiKey}&email=${encodeURIComponent(email)}`;
     const res = await fetch(url);
     if (!res.ok) {
-      return { valid: true, reason: "api error, assumed valid" };
+      console.log(`  Abstract API error: ${res.status}`);
+      return { valid: true, reason: `api error ${res.status}, assumed valid` };
     }
 
     const data = await res.json() as {
-      deliverability: string; // DELIVERABLE, UNDELIVERABLE, RISKY, UNKNOWN
-      quality_score: number; // 0.01 - 0.99
-      is_valid_format: { value: boolean };
-      is_disposable_email: { value: boolean };
-      is_catchall_email: { value: boolean };
-      is_smtp_valid: { value: boolean };
-      is_mx_found: { value: boolean };
+      email_address: string;
+      email_deliverability: {
+        status: string; // deliverable, undeliverable, risky, unknown
+        status_detail: string;
+        is_smtp_valid: boolean;
+        is_mx_valid: boolean;
+      };
+      email_quality: {
+        score: number; // 0.01 - 0.99
+        is_disposable: boolean;
+        is_catchall: boolean;
+        is_free_email: boolean;
+        is_role: boolean;
+      };
+      email_risk: {
+        address_risk_status: string; // low, medium, high
+        domain_risk_status: string;
+      };
     };
 
-    const score = Math.round((data.quality_score ?? 0) * 100);
+    const score = Math.round((data.email_quality?.score ?? 0) * 100);
+    const deliverability = data.email_deliverability?.status;
 
-    if (data.deliverability === "UNDELIVERABLE") {
+    if (deliverability === "undeliverable") {
       return { valid: false, reason: "undeliverable (SMTP check failed)", score };
     }
-    if (data.is_disposable_email?.value) {
+    if (!data.email_deliverability?.is_smtp_valid && deliverability !== "unknown") {
+      return { valid: false, reason: "SMTP invalid", score };
+    }
+    if (data.email_quality?.is_disposable) {
       return { valid: false, reason: "disposable email", score };
     }
-    if (!data.is_smtp_valid?.value && data.deliverability !== "UNKNOWN") {
-      return { valid: false, reason: "SMTP invalid", score };
+    if (data.email_risk?.address_risk_status === "high") {
+      return { valid: false, reason: "high risk address", score };
     }
     if (score < 40) {
       return { valid: false, reason: `low quality score (${score})`, score };
     }
-    if (data.is_catchall_email?.value) {
-      // Catch-all domains accept any address — risky but not invalid
+    if (data.email_quality?.is_catchall) {
       return { valid: true, reason: "catch-all domain", score };
     }
 
-    return { valid: true, score };
-  } catch {
+    return { valid: true, reason: deliverability, score };
+  } catch (e) {
+    console.log(`  Abstract API timeout: ${e}`);
     return { valid: true, reason: "api timeout, assumed valid" };
   }
 }
@@ -117,7 +133,7 @@ async function abstractApiCheck(email: string): Promise<VerifyResult> {
  * Full email verification pipeline:
  * 1. Local syntax/blacklist checks (free, instant)
  * 2. MX record lookup (free, fast)
- * 3. Abstract API SMTP verification (100 free/month)
+ * 3. Abstract Email Reputation API (100 free/month, real SMTP from their servers)
  */
 export async function verifyEmail(email: string): Promise<VerifyResult> {
   // Step 1: Local pre-filter
@@ -130,7 +146,7 @@ export async function verifyEmail(email: string): Promise<VerifyResult> {
   const hasMx = await checkMx(domain);
   if (!hasMx) return { valid: false, reason: "no MX records" };
 
-  // Step 3: Abstract API (real SMTP + deliverability)
-  const api = await abstractApiCheck(email);
+  // Step 3: Abstract Email Reputation (real SMTP + deliverability)
+  const api = await abstractReputationCheck(email);
   return api;
 }

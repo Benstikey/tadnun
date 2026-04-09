@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { cities } from "@/data/cities";
 import { getBlogPosts } from "@/lib/blog";
 import { getComparePages } from "@/lib/compare";
+import { getCaseStudySlugs } from "@/data/case-studies";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tadnun.com";
 const LOCALES = ["fr", "en", "ar"] as const;
@@ -21,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
 
   // Static pages
-  const staticPages = ["", "/approach", "/about", "/contact", "/sectors", "/tools/quiz", "/blog", "/compare", "/resources", "/offre", "/calculator"];
+  const staticPages = ["", "/approach", "/about", "/contact", "/sectors", "/tools/quiz", "/blog", "/compare", "/resources", "/offre", "/calculator", "/case-studies"];
 
   for (const page of staticPages) {
     for (const locale of LOCALES) {
@@ -97,6 +98,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: new Date(),
         changeFrequency: "monthly",
         priority: 0.6,
+      });
+    }
+  }
+
+  // Case study pages
+  const caseStudySlugs = getCaseStudySlugs();
+  for (const slug of caseStudySlugs) {
+    for (const locale of LOCALES) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/case-studies/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.7,
+        alternates: {
+          languages: Object.fromEntries(
+            LOCALES.map((l) => [l, `${BASE_URL}/${l}/case-studies/${slug}`])
+          ),
+        },
       });
     }
   }

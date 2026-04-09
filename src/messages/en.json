@@ -885,5 +885,20 @@
       "bar4": "150+ businesses",
       "bar5": "Made in Morocco"
     }
+  },
+  "caseStudies": {
+    "metaTitle": "Case Studies — Real Results from Moroccan Businesses",
+    "metaDescription": "See how Moroccan restaurants, riads, clinics, and shops transformed their business with Tadnun. Real numbers, verifiable results.",
+    "eyebrow": "Case studies",
+    "title": "Real results. <accent>Real businesses.</accent>",
+    "subtitle": "Each case study tells the story of a Moroccan business that solved a specific problem — with the numbers to prove it.",
+    "navLabel": "Case studies",
+    "breadcrumb": "Case studies",
+    "problemTitle": "The problem",
+    "solutionTitle": "What we built",
+    "resultsTitle": "The results",
+    "timelineLabel": "Implementation time",
+    "otherTitle": "Other case studies",
+    "readMore": "Read the case"
   }
 }

@@ -51,7 +51,7 @@ export function InboxList({ emails, selectedId, onSelect, onCompose, currentPage
           <Search size={13} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-[var(--muted)]" />
           <input
             type="text"
-            placeholder="Search emails..."
+            placeholder="Search by subject, name, or email..."
             defaultValue={searchQuery}
             onChange={(e) => {
               const w = window as unknown as Record<string, ReturnType<typeof setTimeout>>;

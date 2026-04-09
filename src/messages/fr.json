@@ -885,5 +885,20 @@
       "bar4": "150+ entreprises",
       "bar5": "Fabriqué au Maroc"
     }
+  },
+  "caseStudies": {
+    "metaTitle": "Études de cas — Résultats réels d'entreprises marocaines",
+    "metaDescription": "Découvrez comment des restaurants, riads, cliniques et commerces marocains ont transformé leur activité avec Tadnun. Chiffres réels, résultats vérifiables.",
+    "eyebrow": "Études de cas",
+    "title": "Des résultats concrets. <accent>Des entreprises réelles.</accent>",
+    "subtitle": "Chaque étude de cas raconte l'histoire d'une entreprise marocaine qui a résolu un problème précis — avec les chiffres pour le prouver.",
+    "navLabel": "Études de cas",
+    "breadcrumb": "Études de cas",
+    "problemTitle": "Le problème",
+    "solutionTitle": "Ce qu'on a mis en place",
+    "resultsTitle": "Les résultats",
+    "timelineLabel": "Délai de mise en place",
+    "otherTitle": "Autres études de cas",
+    "readMore": "Lire l'étude"
   }
 }

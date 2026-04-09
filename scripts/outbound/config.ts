@@ -14,7 +14,7 @@ export const ENV = {
   RESEND_API_KEY: process.env.RESEND_API_KEY ?? "",
   SENDER_EMAIL: process.env.OUTBOUND_SENDER_EMAIL ?? "wassim@tadnun.com",
   SENDER_NAME: process.env.OUTBOUND_SENDER_NAME ?? "Wassim — Tadnun",
-  REPLY_TO_EMAIL: process.env.OUTBOUND_REPLY_TO_EMAIL ?? "wassimbenchekroun0@gmail.com",
+  REPLY_TO_EMAIL: process.env.OUTBOUND_REPLY_TO_EMAIL ?? "wassim@tadnun.com",
   ABSTRACT_API_KEY: process.env.ABSTRACT_API_KEY ?? "",
   SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL ?? "",
   SUPABASE_SERVICE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY ?? "",

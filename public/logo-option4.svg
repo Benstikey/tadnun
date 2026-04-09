@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!-- Tadnun Logo — Option 4: Zellige Cross -->
+  <!-- 4 dark charcoal diamond tiles at compass points, terracotta petals between them -->
+
+  <!-- Top diamond (pointing up) -->
+  <path d="M40 4 L56 20 L40 36 L24 20 Z" fill="#111111"/>
+  <!-- Right diamond (pointing right) -->
+  <path d="M44 40 L60 24 L76 40 L60 56 Z" fill="#111111"/>
+  <!-- Bottom diamond (pointing down) -->
+  <path d="M24 60 L40 44 L56 60 L40 76 Z" fill="#111111"/>
+  <!-- Left diamond (pointing left) -->
+  <path d="M4 40 L20 24 L36 40 L20 56 Z" fill="#111111"/>
+
+  <!-- NE terracotta petal (between top and right diamonds) -->
+  <path d="M40 36 L56 20 L60 24 L44 40 Z" fill="#C4553A"/>
+  <!-- SE terracotta petal (between right and bottom diamonds) -->
+  <path d="M44 40 L60 56 L56 60 L40 44 Z" fill="#C4553A"/>
+  <!-- SW terracotta petal (between bottom and left diamonds) -->
+  <path d="M40 44 L24 60 L20 56 L36 40 Z" fill="#C4553A"/>
+  <!-- NW terracotta petal (between left and top diamonds) -->
+  <path d="M36 40 L20 24 L24 20 L40 36 Z" fill="#C4553A"/>
+
+  <!-- Center dot -->
+  <circle cx="40" cy="40" r="3.5" fill="#C4553A"/>
+</svg>

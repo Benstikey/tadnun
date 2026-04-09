@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!--
+    Tadnun Logo — Option B: Zellige Grid Fragment
+    A fragment of the infinite zellige grid — 4 diamond shapes
+    meeting at a central point, like tiles being placed.
+    Represents connection, assembly, building something whole.
+  -->
+  <g stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none">
+    <!-- Top-left tile -->
+    <path d="M32 12L22 22L32 32L42 22Z"/>
+    <!-- Top-right tile (slightly offset for depth) -->
+    <path d="M42 22L52 32L42 42L32 32Z"/>
+    <!-- Bottom-right tile -->
+    <path d="M32 32L42 42L32 52L22 42Z"/>
+    <!-- Bottom-left tile -->
+    <path d="M22 22L12 32L22 42L32 32Z"/>
+  </g>
+  <!-- Center intersection — the point where everything connects -->
+  <circle cx="32" cy="32" r="2" fill="currentColor"/>
+  <!-- Corner accents — tile vertices -->
+  <circle cx="32" cy="12" r="1.2" fill="currentColor"/>
+  <circle cx="52" cy="32" r="1.2" fill="currentColor"/>
+  <circle cx="32" cy="52" r="1.2" fill="currentColor"/>
+  <circle cx="12" cy="32" r="1.2" fill="currentColor"/>
+</svg>

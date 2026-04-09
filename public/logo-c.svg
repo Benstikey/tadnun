@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!--
+    Tadnun Logo — Option C: Minimal Najma
+    The 8-point star stripped to its purest form — just the star outline.
+    No inner detail, just the silhouette that every Moroccan recognizes.
+    Works beautifully at small sizes (favicon, app icon).
+  -->
+  <path
+    d="M32 6L37.5 22.5L54 16L43.5 30L58 32L43.5 34L54 48L37.5 41.5L32 58L26.5 41.5L10 48L20.5 34L6 32L20.5 30L10 16L26.5 22.5Z"
+    stroke="currentColor"
+    stroke-width="1.6"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <circle cx="32" cy="32" r="2" fill="currentColor"/>
+</svg>

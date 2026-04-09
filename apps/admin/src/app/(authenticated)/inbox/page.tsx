@@ -55,7 +55,22 @@ export default async function InboxPage({ searchParams }: PageProps) {
   else if (params.filter === "failed") query = query.eq("status", "failed");
 
   if (params.step) query = query.eq("step", parseInt(params.step, 10));
-  if (params.q) query = query.or(`subject.ilike.%${params.q}%`);
+
+  if (params.q) {
+    // Search by subject OR by prospect name/email
+    const { data: matchingProspects } = await supabase
+      .from("prospects")
+      .select("id")
+      .or(`name.ilike.%${params.q}%,email.ilike.%${params.q}%`);
+
+    const prospectIds = (matchingProspects ?? []).map((p: { id: number }) => p.id);
+
+    if (prospectIds.length > 0) {
+      query = query.or(`subject.ilike.%${params.q}%,prospect_id.in.(${prospectIds.join(",")})`);
+    } else {
+      query = query.ilike("subject", `%${params.q}%`);
+    }
+  }
 
   const { data, count } = await query;
   const totalPages = Math.ceil((count ?? 0) / PAGE_SIZE);

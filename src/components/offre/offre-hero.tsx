@@ -12,12 +12,12 @@ export function OffreHero() {
   return (
     <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-48 lg:pb-32">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-accent/[0.04] rounded-full blur-3xl" />
+        <div className="absolute top-0 start-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-accent/[0.04] rounded-full blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-4xl px-6 text-center">
         <ScrollReveal>
-          <p className="text-accent text-[11px] font-mono tracking-[0.25em] uppercase mb-6">
+          <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-6">
             {t("eyebrow")}
           </p>
 
@@ -51,11 +51,11 @@ export function OffreHero() {
         </ScrollReveal>
 
         <ScrollReveal delay={400}>
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-muted/60 text-[13px]">
+          <div className="mt-16 flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-6 gap-y-3 text-muted/60 text-[13px]">
             {["trust1", "trust2", "trust3", "trust4"].map((key, i) => (
-              <span key={key}>
-                {i > 0 && <span className="hidden sm:inline text-border me-8">|</span>}
-                {t(key)}
+              <span key={key} className="flex items-center gap-3 sm:gap-6">
+                {i > 0 && <span className="text-border" aria-hidden="true">|</span>}
+                <span>{t(key)}</span>
               </span>
             ))}
           </div>
