@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { BlogIllustration } from "@/components/blog-illustration";
 import type { BlogPostMeta } from "@/lib/blog";
@@ -14,40 +14,109 @@ interface Props {
 
 export function BlogGrid({ locale, posts, sectorNames, labels }: Props) {
   const [active, setActive] = useState<string | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
 
   // Derive unique sectors from posts
   const sectors = Array.from(new Set(posts.map((p) => p.sector).filter(Boolean))) as string[];
 
   const filtered = active ? posts.filter((p) => p.sector === active) : posts;
 
+  const checkScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 2);
+    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 2);
+  }, []);
+
+  useEffect(() => {
+    checkScroll();
+    const el = scrollRef.current;
+    if (!el) return;
+    el.addEventListener("scroll", checkScroll, { passive: true });
+    window.addEventListener("resize", checkScroll);
+    return () => {
+      el.removeEventListener("scroll", checkScroll);
+      window.removeEventListener("resize", checkScroll);
+    };
+  }, [checkScroll]);
+
+  const scroll = (dir: "left" | "right") => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollBy({ left: dir === "left" ? -200 : 200, behavior: "smooth" });
+  };
+
   return (
     <>
-      {/* Sector filter pills */}
+      {/* Sector filter pills — horizontal scroll */}
       {sectors.length > 1 && (
-        <div className="flex flex-wrap gap-2 mb-10">
-          <button
-            onClick={() => setActive(null)}
-            className={`text-[12px] px-3.5 py-1.5 rounded-full border transition-all duration-200 cursor-pointer ${
-              active === null
-                ? "border-foreground bg-foreground text-background"
-                : "border-border text-muted hover:border-foreground/30 hover:text-foreground"
-            }`}
-          >
-            {labels.all}
-          </button>
-          {sectors.map((s) => (
+        <div className="relative mb-10 group/pills">
+          {/* Left arrow */}
+          {canScrollLeft && (
             <button
-              key={s}
-              onClick={() => setActive(active === s ? null : s)}
-              className={`text-[12px] px-3.5 py-1.5 rounded-full border transition-all duration-200 cursor-pointer ${
-                active === s
+              onClick={() => scroll("left")}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-background border border-border shadow-sm flex items-center justify-center text-muted hover:text-foreground hover:border-foreground/30 transition-all cursor-pointer"
+              aria-label="Scroll left"
+            >
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M10 4L6 8l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          )}
+
+          {/* Scrollable container */}
+          <div
+            ref={scrollRef}
+            className="flex gap-2 overflow-x-auto scrollbar-hide px-1 py-1"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            <button
+              onClick={() => setActive(null)}
+              className={`text-[12px] px-3.5 py-1.5 rounded-full border transition-all duration-200 cursor-pointer whitespace-nowrap shrink-0 ${
+                active === null
                   ? "border-foreground bg-foreground text-background"
                   : "border-border text-muted hover:border-foreground/30 hover:text-foreground"
               }`}
             >
-              {sectorNames[s] || s.charAt(0).toUpperCase() + s.slice(1)}
+              {labels.all}
             </button>
-          ))}
+            {sectors.map((s) => (
+              <button
+                key={s}
+                onClick={() => setActive(active === s ? null : s)}
+                className={`text-[12px] px-3.5 py-1.5 rounded-full border transition-all duration-200 cursor-pointer whitespace-nowrap shrink-0 ${
+                  active === s
+                    ? "border-foreground bg-foreground text-background"
+                    : "border-border text-muted hover:border-foreground/30 hover:text-foreground"
+                }`}
+              >
+                {sectorNames[s] || s.charAt(0).toUpperCase() + s.slice(1)}
+              </button>
+            ))}
+          </div>
+
+          {/* Right arrow */}
+          {canScrollRight && (
+            <button
+              onClick={() => scroll("right")}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-background border border-border shadow-sm flex items-center justify-center text-muted hover:text-foreground hover:border-foreground/30 transition-all cursor-pointer"
+              aria-label="Scroll right"
+            >
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M6 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          )}
+
+          {/* Fade edges */}
+          {canScrollLeft && (
+            <div className="absolute left-8 top-0 bottom-0 w-6 bg-gradient-to-r from-background to-transparent pointer-events-none z-[5]" />
+          )}
+          {canScrollRight && (
+            <div className="absolute right-8 top-0 bottom-0 w-6 bg-gradient-to-l from-background to-transparent pointer-events-none z-[5]" />
+          )}
         </div>
       )}
 
