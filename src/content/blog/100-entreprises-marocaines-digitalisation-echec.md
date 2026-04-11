@@ -1,8 +1,10 @@
 ---
 title: "J'ai analysé 100 entreprises marocaines qui ont essayé de se digitaliser. Voici pourquoi 80% ont échoué."
 description: "3 mois de recherche, 100 entretiens, 8 secteurs. Les vraies raisons pour lesquelles la digitalisation échoue au Maroc — et ce qui distingue les 20% qui réussissent."
-date: "2026-04-09"
+date: "2026-04-11"
 locale: fr
+featured: true
+image: /blog/100-entreprises-echec.svg
 ---
 
 ## 3 mois. 100 entreprises. 8 secteurs.

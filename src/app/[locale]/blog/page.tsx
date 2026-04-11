@@ -140,8 +140,14 @@ export default async function BlogPage({
                       </svg>
                     </span>
                   </div>
-                  <div className="hidden lg:flex items-center justify-center rounded-xl bg-foreground/[0.02] border border-border/40 p-6">
-                    <BlogIllustration sector={featured.sector} />
+                  <div className="hidden lg:flex items-center justify-center rounded-xl bg-foreground/[0.02] border border-border/40 overflow-hidden">
+                    {featured.image ? (
+                      <img src={featured.image} alt="" className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="p-6">
+                        <BlogIllustration sector={featured.sector} />
+                      </div>
+                    )}
                   </div>
                 </a>
               </ScrollReveal>

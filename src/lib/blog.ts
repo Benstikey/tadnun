@@ -32,6 +32,7 @@ export interface BlogPostMeta {
   date: string;
   sector?: string;
   image?: string;
+  featured?: boolean;
 }
 
 async function renderMarkdown(markdown: string): Promise<string> {
@@ -60,6 +61,7 @@ function getFilePosts(locale: string): BlogPostMeta[] {
       date: data.date,
       sector: data.sector,
       image: data.image,
+      featured: data.featured || false,
     });
   }
 
@@ -166,9 +168,13 @@ export async function getBlogPosts(locale: string): Promise<BlogPostMeta[]> {
   for (const p of filePosts) slugMap.set(p.slug, p);
   for (const p of dbPosts) slugMap.set(p.slug, p);
 
-  return Array.from(slugMap.values()).sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  return Array.from(slugMap.values()).sort((a, b) => {
+    // Featured posts always come first
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    // Then sort by date
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
 }
 
 export async function getBlogPost(slug: string): Promise<BlogPost | null> {
