@@ -42,11 +42,14 @@ export function QuizClient({ locale }: { locale: string }) {
   const t = useTranslations("quiz");
   const tSectors = useTranslations("sectors.items");
 
-  const [step, setStep] = useState<"intro" | "sector" | "questions" | "results">("intro");
+  const [step, setStep] = useState<"intro" | "sector" | "questions" | "capture" | "results">("intro");
   const [sector, setSector] = useState("");
   const [currentQ, setCurrentQ] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
+  const [captureName, setCaptureName] = useState("");
+  const [captureEmail, setCaptureEmail] = useState("");
+  const [captureSubmitting, setCaptureSubmitting] = useState(false);
 
   const rawScore = answers.reduce((sum, a) => sum + a, 0);
   const normalizedScore = Math.round((rawScore / 90) * 100);
@@ -72,7 +75,7 @@ export function QuizClient({ locale }: { locale: string }) {
       const total = newAnswers.reduce((s, a) => s + a, 0);
       const finalScore = Math.round((total / 90) * 100);
       trackEvent("quiz_completed", { score: finalScore, sector, level: getLevel(finalScore) });
-      setStep("results");
+      setStep("capture");
     }
   }
 
@@ -82,6 +85,24 @@ export function QuizClient({ locale }: { locale: string }) {
     setCurrentQ(0);
     setAnswers([]);
     setSelectedOption(null);
+    setCaptureName("");
+    setCaptureEmail("");
+  }
+
+  async function handleCapture(e: React.FormEvent) {
+    e.preventDefault();
+    if (!captureEmail) { setStep("results"); return; }
+    setCaptureSubmitting(true);
+    try {
+      await fetch("/api/quiz-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: captureName, email: captureEmail, sector, score: normalizedScore, level }),
+      });
+      trackEvent("quiz_lead_captured", { sector, score: normalizedScore });
+    } catch {}
+    setCaptureSubmitting(false);
+    setStep("results");
   }
 
   const whatsappText = encodeURIComponent(
@@ -191,6 +212,56 @@ export function QuizClient({ locale }: { locale: string }) {
             className="inline-flex items-center justify-center rounded-full bg-foreground px-8 py-3 text-sm font-semibold text-background hover:bg-foreground/90 active:scale-[0.97] transition-all cursor-pointer disabled:opacity-40 disabled:pointer-events-none"
           >
             {currentQ < QUESTION_KEYS.length - 1 ? t("next") : t("seeResults")}
+          </button>
+        </div>
+      </section>
+    );
+  }
+
+  // ─── Capture ───
+  if (step === "capture") {
+    return (
+      <section className="mx-auto max-w-2xl px-6 py-16 sm:py-24">
+        <div className="text-center mb-10">
+          <p className="text-accent text-[11px] font-mono tracking-[0.2em] uppercase mb-4">
+            {t("capture.eyebrow")}
+          </p>
+          <h2 className="font-serif italic text-3xl sm:text-4xl tracking-tight text-foreground">
+            {t("capture.title")}
+          </h2>
+          <p className="mt-3 text-muted text-sm leading-relaxed max-w-sm mx-auto">
+            {t("capture.desc")}
+          </p>
+        </div>
+        <form onSubmit={handleCapture} className="space-y-4 max-w-sm mx-auto">
+          <input
+            type="text"
+            placeholder={t("capture.namePlaceholder")}
+            value={captureName}
+            onChange={(e) => setCaptureName(e.target.value)}
+            className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground placeholder:text-muted focus:border-foreground/30 focus:outline-none focus:ring-2 focus:ring-foreground/10 transition-all"
+          />
+          <input
+            type="email"
+            placeholder={t("capture.emailPlaceholder")}
+            value={captureEmail}
+            onChange={(e) => setCaptureEmail(e.target.value)}
+            className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground placeholder:text-muted focus:border-foreground/30 focus:outline-none focus:ring-2 focus:ring-foreground/10 transition-all"
+          />
+          <button
+            type="submit"
+            disabled={captureSubmitting}
+            className="w-full rounded-full bg-foreground px-8 py-3.5 text-sm font-semibold text-background hover:bg-foreground/90 active:scale-[0.97] transition-all disabled:opacity-50 cursor-pointer"
+          >
+            {captureSubmitting ? "…" : t("capture.submit")}
+          </button>
+        </form>
+        <div className="mt-6 text-center">
+          <button
+            onClick={() => setStep("results")}
+            className="text-sm text-muted hover:text-foreground transition-colors cursor-pointer"
+          >
+            {t("capture.skip")} →
           </button>
         </div>
       </section>

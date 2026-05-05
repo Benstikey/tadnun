@@ -658,6 +658,15 @@
       "copied": "Copié !",
       "retake": "Refaire le test"
     },
+    "capture": {
+      "eyebrow": "Presque terminé",
+      "title": "Recevez votre analyse personnalisée",
+      "desc": "Laissez vos coordonnées et on vous envoie une analyse approfondie du potentiel digital de votre entreprise.",
+      "namePlaceholder": "Votre nom",
+      "emailPlaceholder": "Votre adresse email",
+      "submit": "Voir mes résultats",
+      "skip": "Passer"
+    },
     "meta": {
       "title": "Test de Maturité Digitale — Tadnun",
       "description": "Faites le test gratuit en 2 minutes pour découvrir le niveau de maturité digitale de votre entreprise. Score personnalisé et recommandations par secteur."

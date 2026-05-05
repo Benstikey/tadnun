@@ -658,6 +658,15 @@
       "copied": "Copied!",
       "retake": "Retake the test"
     },
+    "capture": {
+      "eyebrow": "Almost done",
+      "title": "Get your personalized analysis",
+      "desc": "Leave your details and we'll send you an in-depth analysis of your business's digital potential.",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "Your email address",
+      "submit": "See my results",
+      "skip": "Skip"
+    },
     "meta": {
       "title": "Digital Readiness Score — Tadnun",
       "description": "Take the free 2-minute test to discover your business's digital readiness level. Get a personalized score and recommendations for your sector."
