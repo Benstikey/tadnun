@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { createClient } from "@supabase/supabase-js";
 
-const TO_EMAIL = "contact@tadnun.com";
+const TO_EMAIL = "wassimbenchekroun@gmail.com";
 
 // Simple in-memory rate limiter (resets on cold start, good enough for serverless)
 const rateMap = new Map<string, { count: number; resetAt: number }>();

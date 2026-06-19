@@ -40,7 +40,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: "Quiz Tadnun <contact@tadnun.com>",
-      to: ["contact@tadnun.com"],
+      to: ["wassimbenchekroun@gmail.com"],
       subject: `Nouveau diagnostic — ${nameDisplay} · ${score}/100`,
       html: `
         <div style="font-family: sans-serif; color: #1a1a1a; max-width: 480px; line-height: 1.6;">
